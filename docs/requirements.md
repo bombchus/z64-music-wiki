@@ -1,6 +1,4 @@
-# Getting Started
-
-## Requirements
+# Requirements
 
 a
 

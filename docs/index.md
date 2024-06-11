@@ -1,5 +1,4 @@
-# WIP
-
-:smile: :pink_heart:
-<br>
-OOTRS and MMRS
+---
+template: home.html
+title: Zelda 64 Custom Music Wiki
+---
