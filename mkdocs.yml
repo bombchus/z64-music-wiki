@@ -1,14 +1,30 @@
+# Site Information
 site_name: Zelda 64 Custom Music Wiki
+site_url: https://bombchus.github.io/z64-music-wiki/
+site_description: >-
+  Documentation for creating custom music for Ocarina of Time and Majora's Mask
+  Mainly to be used in conjunction with OOT, MM, and OOTMM Randomizers
+
+# Repository Information
+#repo_name: bombchus/z64-music-wiki
+#repo_url: https://github.com/bombchus/z64-music-wiki
+
+# Copyright Information
+copyright: |
+  Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
+
+# Config
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.path
-    # - toc.integrate
+    #- toc.integrate
+    #- toc.follow
     - navigation.top
     - search.suggest
     - search.highlight
@@ -26,7 +42,7 @@ theme:
         icon: material/lightbulb
         name: Switch to Dark Mode
       primary: indigo
-      accent: deep purple
+      accent: light blue
 
     # dark mode, automatically assigned by default to users with dark OS theme
     - media: "(prefers-color-scheme: dark)"
@@ -34,21 +50,23 @@ theme:
       toggle:
         icon: material/lightbulb-outline
         name: Switch to Light Mode
-      primary: indigo
-      accent: deep purple
+      primary: custom
+      accent: custom
 
-# extra:
-  # social:
-    # - icon: fontawesome/brands/discord
-      # link: https://discord.gg/ootrandomizer
-      # name: Ocarina of Time Randomizer Discord
-    # - icon: fontawesome/brands/discord
-      # link: https://discord.gg/7jBRhhJ
-      # name: Majora's Mask Randomizer Discord
-    # - icon: fontawesome/brands/discord
-      # link: https://discord.gg/4QdtPBP6wf
-      # name: OOTMM Randomizer Discord
+# Additional Config
+#extra:
+  #social:
+    #- icon: fontawesome/brands/discord
+      #link: https://discord.gg/ootrandomizer
+      #name: Ocarina of Time Randomizer Discord
+    #- icon: fontawesome/brands/discord
+      #link: https://discord.gg/7jBRhhJ
+      #name: Majora's Mask Randomizer Discord
+    #- icon: fontawesome/brands/discord
+      #link: https://discord.gg/4QdtPBP6wf
+      #name: OOTMM Randomizer Discord
 
+# Extensions
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -56,6 +74,7 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
+        - includes/links.md
   - admonition
   - pymdownx.arithmatex:
       generic: true
@@ -71,6 +90,18 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+# Plugins
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - git-committers:
+      repository: bombchus/z64-music-wiki
+      branch: main
+  #- git-authors
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
 extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
@@ -78,6 +109,7 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
 
 # Page Tree
 nav:
@@ -88,7 +120,4 @@ nav:
     - a: a.md
   - Advanced:
     - Tuning: tuning.md
-
-# copyright information
-copyright: |
-  Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
+    - Formmask: formmask.md
