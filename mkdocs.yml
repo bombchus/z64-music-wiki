@@ -41,8 +41,8 @@ theme:
       toggle:
         icon: material/lightbulb
         name: Switch to Dark Mode
-      primary: indigo
-      accent: light blue
+      primary: deep purple
+      accent: deep purple
 
     # dark mode, automatically assigned by default to users with dark OS theme
     - media: "(prefers-color-scheme: dark)"
@@ -50,8 +50,8 @@ theme:
       toggle:
         icon: material/lightbulb-outline
         name: Switch to Light Mode
-      primary: custom
-      accent: custom
+      primary: deep purple
+      accent: deep purple
 
 # Additional Config
 #extra:
