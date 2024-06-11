@@ -70,5 +70,7 @@ nav:
   - Home: index.md
   - Getting Started:
     - Requirements: requirements.md
+
+# copyright information
 copyright: |
   Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
