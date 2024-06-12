@@ -131,5 +131,6 @@ nav:
   - Advanced:
     - Tuning: tuning.md
     - Formmask: formmask.md
-    - Custom Envelopes: adsr.md
+    - ADSR:
+      - Custom Envelopes: adsr.md
   - Vanilla Audiobank Reference: audiobank-ref.md

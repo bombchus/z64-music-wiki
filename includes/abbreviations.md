@@ -7,6 +7,7 @@
 *[ADSR]: Attack, Decay, Sustain, and Release
 *[MM]: Majora's Mask
 *[OOT]: Ocarina of Time
+*[OoT]: Ocarina of Time
 *[MMR]: Majora's Mask Randomizer
 *[OOTR]: Ocarina of Time Randomizer
 *[OOTMM]: Ocarina of Time & Majora's Mask Combo Randomizer
@@ -64,3 +65,4 @@
 *[cc100]: MIDI Control Change #100: RPN LSB
 *[cc#101]: MIDI Control Change #101: RPN MSB
 *[cc101]: MIDI Control Change #101: RPN MSB
+*[MD5]: Message Digest Algorithm 5
