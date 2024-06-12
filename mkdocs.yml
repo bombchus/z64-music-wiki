@@ -16,7 +16,7 @@ copyright: |
 # Config
 theme:
   name: material
-  custom_dir: docs/overrides
+  #custom_dir: docs/overrides
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
@@ -25,10 +25,11 @@ theme:
     - navigation.sections
     - navigation.indexes
     #- navigation.path
-    #- toc.integrate
-    #- toc.follow
     - navigation.expand
     - navigation.top
+    - navigation.footer
+    #- toc.integrate
+    #- toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -57,8 +58,8 @@ theme:
       accent: deep purple
 
 # Additional Config
-#extra:
-  #social:
+extra:
+  social:
     #- icon: fontawesome/brands/discord
       #link: https://discord.gg/ootrandomizer
       #name: Ocarina of Time Randomizer Discord
@@ -68,6 +69,9 @@ theme:
     #- icon: fontawesome/brands/discord
       #link: https://discord.gg/4QdtPBP6wf
       #name: OOTMM Randomizer Discord
+    #- icon: fontawesome/brands/bluesky
+      #link: https://bsky.app/profile/bombchus.bsky.social
+      #name: Bluesky
 
 # Extensions
 markdown_extensions:
@@ -89,6 +93,7 @@ markdown_extensions:
   - pymdownx.mark
   - abbr
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -126,4 +131,5 @@ nav:
   - Advanced:
     - Tuning: tuning.md
     - Formmask: formmask.md
+    - Custom Envelopes: adsr.md
   - Vanilla Audiobank Reference: audiobank-ref.md
