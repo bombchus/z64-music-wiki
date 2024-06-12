@@ -23,8 +23,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.indexes
     #- navigation.path
-    - toc.integrate
+    #- toc.integrate
     #- toc.follow
     - navigation.expand
     - navigation.top
@@ -91,6 +92,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
 
 # Plugins
 plugins:
@@ -123,3 +126,4 @@ nav:
   - Advanced:
     - Tuning: tuning.md
     - Formmask: formmask.md
+  - Vanilla Audiobank Reference: audiobank-ref.md
