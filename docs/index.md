@@ -27,17 +27,17 @@ hide:
     display: none;
   }
 </style>
-<!-- image style { style="width:1440px; height:580px;" } -->
+
 <!-- Splash Image -->
 <figure markdown="span">
-  ![](assets/images/illustration.png)
+  ![](assets/images/splash.png){ width="1260" height="580" }
   </figcaption>
 </figure>
 
 <!-- Create Discord Server Grid Buttons -->
 <div class="grid cards" markdown>
 
--   :fontawesome-brands-discord:{ .lg .middle } __MMR Discord__
+-   :fontawesome-brands-discord:{ .lg .middle } __&nbsp;MMR Discord__
   
     ---
 
@@ -45,7 +45,7 @@ hide:
 
     [:material-link-variant: Click Here to Join](https://discord.gg/7jBRhhJ)
 
--   :fontawesome-brands-discord:{ .lg .middle } __Darunia's Joy Discord__
+-   :fontawesome-brands-discord:{ .lg .middle } __&nbsp;Darunia's Joy Discord__
 
     ---
 
@@ -57,7 +57,7 @@ hide:
 
 <div class="grid cards" markdown>
 
--   :fontawesome-brands-discord:{ .lg .middle } __OOTMM Discord__
+-   :fontawesome-brands-discord:{ .lg .middle } __&nbsp;OOTMM Discord__
 
     ---
 
