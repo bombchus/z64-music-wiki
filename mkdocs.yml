@@ -21,7 +21,7 @@ theme:
   favicon: assets/favicon.png
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
+    #- navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     #- navigation.path

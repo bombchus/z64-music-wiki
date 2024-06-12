@@ -1,8 +1,8 @@
 # Using Formmask
-Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable and disable specific sequence channels depending on Link's curren form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
+Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
 
 ???+ warning
-    At the time of writing this Formmask does not currently work with fanfares or combat music, so you cannot use it with the following categories:
+    At the time of writing this Formmask does not currently work with fanfares or combat music, so you cannot use it with the following sequence categories:
 
     === "Group Categories"
         | Category | Group Name |
@@ -33,7 +33,7 @@ Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable a
 ## Creating a Formmask File
 A `.formmask` file is simply a `.json` (or plain text) file with its filename extension changed to `.formmask`. Inside the file is a single `.json` array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
 
-!!! note
+!!! info
     The filename itself uses the same naming as a sequence or audiobank file! e.g. `0x03.formmask`
 
 ### JSON Array Formatting
@@ -87,10 +87,10 @@ The formatting for a `.json` array is as follows:
 
 The first sixteen array values are for the channels of your sequence, and the seventeenth array value is for cumulative foms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other channels without the set form or state when that form or state is active.
 
-!!! note
+!!! info
     You can specify a channel and cumulative forms & states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks.
 
-## Allowed Form & State Values
+### Allowed Form & State Values
 Below is a list of the forms & states available to be assigned via Formmask.
 
 | Form or State | Description |

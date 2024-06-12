@@ -19,25 +19,21 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 * MIDI program numbers you can use to access the instruments, drums, or sound effects
 * MIDI note ranges for the different drum samples within the percussion kits
 
-!!! info "Zelda 64 Note Numbers"
+!!! info "Index Number to Note Number"
     For instruments the pointer index value is equivalent to the program number, however for drums & sound effects the pointer index value is equivalent to the MIDI note number minus `21`.
 
 !!! info "MIDI Notation"
-    All notes (e.g. `C5 (60)`) are using MIDI notes, they are not using piano notes. Using piano notes, the equivalent to MIDI `60` would be `C4` instead of `C5`.
+    All notes (e.g. `C5 (60)`) are using MIDI notation, they are not using piano notation. Using piano notation, the equivalent to MIDI note `60` would be `C4` instead of `C5`.
+
+-----
 
 === "Ocarina of Time Audiobanks"
-    
-    <br>
-    # Ocarina of Time Vanilla Audiobank Reference
 
-    !!! info "Information Parity"
-        The information here is at parity with the latest ROM description located [here](), and will always try to be updated to be in parity with the latest ROM description updates hosted in this repository.
-
-    !!! info "Instrument Notes"
+    !!! info "Instrument Names"
         Some instruments are named after the closest instrument known by the community, though some are named after the name of the sample that was used to create the instrument (e.g. Shine, Fantasia, Spaceosphere, Enigmatic).
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
-        # Audiobank 0x00 (SFX Bank)
+
         Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -332,7 +328,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
-        # Audiobank 0x01 (Actor Sounds)
+
         Audiobank `0x01` is the second of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -478,7 +474,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
-        # Audiobank 0x02 (Ambient Sounds)
+
         Audiobank `0x02` is used pretty much for basically every ambient sound in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -491,9 +487,6 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         * `NUM_DRUM: 0`
         * `NUM_SFX: 0`
         * `ATnum: 0`
-
-        !!! info
-            This audiobank has no drums or sound effects.
 
         ## Instruments (Program Name: 0x00 to 0x14)
         Below is a list of the "instruments" inside of audiobank `0x02`. These work exactly as regular instruments do, you can even import them into a custom audiobank as an instrument and use it in a sequence just like any regular instrument; and this is a common structure for the sound effects within the game.
@@ -530,7 +523,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x03 (Main Orchestra)"
-        # Audiobank 0x03 (Main Orchestra)
+
         Audiobank `0x03` is one of the largest regular audiobanks which makes it the best candidate to overwrite when making a custom audiobank.
 
         Sequences that use this audiobank are listed below:
@@ -699,7 +692,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x04 (Deku Tree)"
-        # Audiobank 0x04 (Deku Tree)
+
         Sequences that use this audiobank are listed below:
         
         * `0x1C: Inside the Deku Tree & Secret Grottos`
@@ -727,7 +720,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x05 (Hylian Troupe)"
-        # Audiobank 0x05 (Hylian Troupe)
+
         Sequences that use this audiobank are listed below:
         
         * `0x1D: Hyrule Castle Town`
@@ -849,7 +842,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x06 (Title Screen)"
-        # Audiobank 0x06 (Title Screen)
+
         Sequences that use this audiobank are listed below:
         
         * `0x1E: Title Screen`
@@ -890,7 +883,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x07 (Jabu-Jabu's Belly)"
-        # Audiobank 0x07 (Jabu-Jabu's Belly)
+
         Audiobank `0x06` is a bit of a special audiobank, it uses a different audiotable than other audiobanks and the offsets reference data later in the audiotable causing the ADPCM data for their samples to be split; however, `SEQ64` will automatically update their sample location upon importing.
 
         Sequences that use this audiobank are listed below:
@@ -1009,7 +1002,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x08 (Kakariko Village (Guitar))"
-        # Audiobank 0x08 (Kakariko Village (Guitar))
+
         Sequences that use this audiobank are listed below:
         
         * `0x27: Kakariko Village (Guitar, Child) [1]`
@@ -1128,7 +1121,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x09 (Harp & Strings)"
-        # Audiobank 0x09 (Harp & Strings)
+
         Sequences that use this audiobank are listed below:
         
         * `0x28: Great Fairy's Fountain`
@@ -1259,7 +1252,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0A (Fire Temple)"
-        # Audiobank 0x0A (Fire Temple)
+
         This audiobank entry contains data not only for Ocarina of Time version `1.0`, but also version `1.2` of the game where the chants have been "removed" (the sequence has been changed, and the audiobank expanded instead of actually removing the data [needs confirmation]).
 
         Sequences that use this audiobank are listed below:
@@ -1386,7 +1379,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0B (Dodongo's Cavern)"
-        # Audiobank 0x0B (Dodongo's Cavern)
+
         Sequences that use this audiobank are listed below:
         
         * `0x18: Dodongo's Cavern`
@@ -1416,7 +1409,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0C (Forest Temple)"
-        # Audiobank 0x0C (Forest Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2C: Forest Temple`
@@ -1445,7 +1438,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0D (Lon Lon Ranch)"
-        # Audiobank 0x0D (Lon Lon Ranch)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2F: Lon Lon Ranch`
@@ -1487,7 +1480,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0E (Goron City)"
-        # Audiobank 0x0E (Goron City)
+
         Audiobank `0x0E` is a bit of a special audiobank, it uses a different audiotable than other audiobanks and the offsets reference data later in the audiotable causing the ADPCM data for their samples to be split; however, `SEQ64` will automatically update their sample location upon importing.
 
         Sequences that use this audiobank are listed below:
@@ -1520,7 +1513,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0F (Kokiri Forest)"
-        # Audiobank 0x0F (Kokiri Forest)
+
         Sequences that use this audiobank are listed below:
         
         * `0x3C: Kokiri Forest`
@@ -1562,7 +1555,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x10 (Spirit Temple)"
-        # Audiobank 0x10 (Spirit Temple)
+
         Audiobank `0x10` is a bit of a special audiobank, it uses a different audiotable than other audiobanks and the offsets reference data later in the audiotable causing the ADPCM data for their samples to be split; however, `SEQ64` will automatically update their sample location upon importing.
 
         Sequences that use this audiobank are listed below:
@@ -1681,7 +1674,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x11 (Horse Race)"
-        # Audiobank 0x11 (Horse Race)
+
         Sequences that use this audiobank are listed below:
         
         * `0x40: Horse Race`
@@ -1724,7 +1717,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x12 (Warp Songs)"
-        # Audiobank 0x12 (Warp Songs)
+
         Sequences that use this audiobank are listed below:
         
         * `0x25: Warp Song: "Prelude of Light"`
@@ -1853,7 +1846,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x13 (Chamber of the Sages)"
-        # Audiobank 0x13 (Chamber of the Sages)
+
         Sequences that use this audiobank are listed below:
         
         * `0x4D: Chamber of the Sages`
@@ -1885,7 +1878,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x14 (Minigame Shop)"
-        # Audiobank 0x14 (Minigame Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x4E: Minigame Shop`
@@ -2005,7 +1998,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x15 (Zora's Domain)"
-        # Audiobank 0x15 (Zora's Domain)
+
         Sequences that use this audiobank are listed below:
         
         * `0x50: Zora's Domain`
@@ -2124,7 +2117,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x16 (Item Shop)"
-        # Audiobank 0x16 (Item Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x55: Item Shop`
@@ -2244,7 +2237,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x17 (Ice Cavern)"
-        # Audiobank 0x17 (Ice Cavern)
+
         Sequences that use this audiobank are listed below:
         
         * `0x58: Ice Cavern`
@@ -2274,7 +2267,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x18 (Shadow Temple)"
-        # Audiobank 0x18 (Shadow Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x5B: Shadow Temple`
@@ -2309,7 +2302,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x19 (Water Temple)"
-        # Audiobank 0x19 (Water Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x5C: Water Temple`
@@ -2343,7 +2336,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1A (Piano (Unused))"
-        # Audiobank 0x1A (Piano (Unused))
+
         This audiobank is not used anywhere in-game.
 
         The number of instruments, drum, and sound effects, as well as the audiotable the audiobank uses, are listed below:
@@ -2382,7 +2375,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1B (Gerudo Valley)"
-        # Audiobank 0x1B (Gerudo Valley)
+
         Sequences that use this audiobank are listed below:
         
         * `0x5F: Gerudo Valley`
@@ -2420,7 +2413,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1C (Potion Shop)"
-        # Audiobank 0x1C (Potion Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x60: Potion Shop`
@@ -2451,7 +2444,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1D (Koume & Kotake's Theme)"
-        # Audiobank 0x1D (Koume & Kotake's Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x61: Koume & Kotake's Theme`
@@ -2570,7 +2563,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1E (Ganondorf's Organ)"
-        # Audiobank 0x1E (Ganondorf's Organ)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2E: Ganon's Tower`
@@ -2601,7 +2594,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1F (Inside Ganon's Castle)"
-        # Audiobank 0x1F (Inside Ganon's Castle)
+
         Sequences that use this audiobank are listed below:
         
         * `0x63: Inside Ganon's Castle`
@@ -2635,7 +2628,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x20 (Adversarial Orchestra)"
-        # Audiobank 0x20 (Adversarial Orchestra)
+
         Sequences that use this audiobank are listed below:
         
         * `0x5E: Fanfare: Seal of the Six Sages!`
@@ -2764,7 +2757,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x21 (Ending Orchestra [1])"
-        # Audiobank 0x21 (Ending Orchestra [1])
+  
         Sequences that use this audiobank are listed below:
         
         * `0x67: End Credits & Staff Roll [1]`
@@ -2891,7 +2884,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x22 (Ending Orchestra [2])"
-        # Audiobank 0x22 (Ending Orchesta [2])
+
         Sequences that use this audiobank are listed below:
         
         * `0x68: End Credits & Staff Roll [2]`
@@ -3017,7 +3010,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x23 (Fanfare Orchestra)"
-        # Audiobank 0x23 (Fanfare Orchestra)
+
         Sequences that use this audiobank are listed below:
         
         * `0x20: Fanfare: Game Over!`
@@ -3145,7 +3138,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x24 (Kaepora Gaebora's Theme)"
-        # Audiobank 0x24 (Kaepora Gaebora's Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x5A: Kaepora Gaebora's Theme`
@@ -3186,7 +3179,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x25 (Unused Bank)"
-        # Audiobank 0x25 (Unused Bank)
+
         Audiobank `0x25` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it's most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
 
         The number of instruments, drum, and sound effects, as well as the audiotable the audiobank uses, are listed below:
@@ -3213,17 +3206,11 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
 === "Majora's Mask Audiobanks"
 
-    <br>
-    # Majora's Mask Audiobank Reference
-
-    !!! info "Information Parity"
-        The information here is at parity with the latest ROM description located [here](), and will always try to be updated to be in parity with the latest ROM description updates hosted in this repository.
-
     !!! info "Instrument Names"
         Some instruments are named after the closest instrument known by the community, though some are named after the name of the sample that was used to create the instrument (e.g. ELVES, PIT HIT 1, OMINOUSITY, EERIE WIND, TUNNEL RAIN, Mystic Pad, ICELAND 1, Fantasia, DANGER).
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
-        # Audiobank 0x00 (SFX Bank)
+
         Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -3632,7 +3619,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
-        # Audiobank 0x01 (Actor Sounds)
+
         Audiobank `0x01` is the second of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -3899,7 +3886,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
-        # Audiobank 0x02 (Ambient Sounds)
+
         Audiobank `0x02` is used pretty much for basically every ambient sound in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
@@ -3951,7 +3938,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x03 (Main Orchestra)"
-        # Audiobank 0x03 (Main Orchestra)
+
         Audiobank `0x03` is one of the largest regular audiobanks which makes it the best candidate to overwrite when making a custom audiobank.
 
         Sequences that use this audiobank are listed below:
@@ -4096,7 +4083,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x04 (Woods of Mystery)"
-        # Audiobank 0x04 (Woods of Mystery)
+
         Sequences that use this audiobank are listed below:
         
         * `0x3E: Woods of Mystery`
@@ -4217,7 +4204,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x05 (Music Box House & Guru-Guru)"
-        # Audiobank 0x05 (Music Box House & Guru-Guru)
+
         Sequences that use this audiobank are listed below:
         
         * `0x0E: Old Koume's Boat Cruise`
@@ -4337,7 +4324,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x06 (Fairy's Fountain)"
-        # Audiobank 0x06 (Fairy's Fountain)
+
         Sequences that use this audiobank are listed below:
         
         * `0x18: File Select`
@@ -4463,7 +4450,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x07 (Romani Ranch)"
-        # Audiobank 0x07 (Romani Ranch)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2F: Romani Ranch`
@@ -4505,7 +4492,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x08 (Gorman Brothers' Theme)"
-        # Audiobank 0x08 (Gorman Brothers' Troupe)
+
         Sequences that use this audiobank are listed below:
         
         * `0x40: Horse Race`
@@ -4549,7 +4536,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x09 (Bremen March)"
-        # Audiobank 0x09 (Bremen March)
+
         Sequences that use this audiobank are listed below:
         
         * `0x53: Bremen March`
@@ -4673,7 +4660,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0A (Minigame Shop)"
-        # Audiobank 0x0A (Minigame Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x46: Minigame Shop Theme`
@@ -4793,7 +4780,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0B (Zora Hall)"
-        # Audiobank 0x0B (Zora Hall)
+
         Sequences that use this audiobank are listed below:
         
         * `0x36: Zora Hall`
@@ -4912,7 +4899,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0C (Item Shop)"
-        # Audiobank 0x0C (Item Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x44: Item Shop`
@@ -5032,7 +5019,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0D (Curiosity Shop)"
-        # Audiobank 0x0D (Curiosity Shop)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2C: Marine Research Lab & Curiosity Shop`
@@ -5063,7 +5050,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0E (Koume & Kotake's Theme)"
-        # Audiobank 0x0E (Koume & Kotake's Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x43: Koume & Kotake's Theme`
@@ -5182,7 +5169,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x0F (Fanfare Orchestra)"
-        # Audiobank 0x0F (Fanfare Orchestra)
+
         Sequences that use this audiobank are listed below:
         
         * `0x20: Fanfare: Game Over!`
@@ -5314,7 +5301,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x10 (Kaepora Gaebora's Theme)"
-        # Audiobank 0x10 (Kaepora Gaebora's Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x45: Kaepora Gaebora's Theme`
@@ -5355,7 +5342,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x11 (Skull Kid's Band)"
-        # Audiobank 0x11 (Skull Kid's Band)
+
         Sequences that use this audiobank are listed below:
         
         * `0x04: Majora's Theme`
@@ -5486,7 +5473,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x12 (Giants' Theme)"
-        # Audiobank 0x12 (Giants' Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2D: Giants' Theme`
@@ -5530,7 +5517,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x13 (The Indigo-Gos)"
-        # Audiobank 0x13 (The Indigo-Gos)
+
         Sequences that use this audiobank are listed below:
         
         * `0x4D: New Wave Bossa Nova (Lulu's Voice Returns) [1]`
@@ -5665,7 +5652,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x14 (Woodfall Temple)"
-        # Audiobank 0x14 (Woodfall Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x1C: Woodfall Temple`
@@ -5697,7 +5684,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x15 (Snowhead Temple)"
-        # Audiobank 0x15 (Snowhead Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x13: Snowhead`
@@ -5737,7 +5724,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x16 (Aliens & Great Bay Temple)"
-        # Audiobank 0x16 (Aliens & Great Bay Temple)
+
         Sequences that use this audiobank are listed below:
         
         * `0x0D: Aliens' Theme`
@@ -5772,7 +5759,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x17 (Astral Observatory & Final Hours)"
-        # Audiobank 0x17 (Astral Observatory & Final Hours)
+
         Sequences that use this audiobank are listed below:
         
         * `0x05: Clock Tower`
@@ -5816,7 +5803,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x18 (Swordsman's School)"
-        # Audiobank 0x18 (Swordsman's School)
+
         Sequences that use this audiobank are listed below:
         
         * `0x50: Swordsman's School`
@@ -5937,7 +5924,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x19 (Termina Troupe)"
-        # Audiobank 0x19 (Termina Troupe)
+
         Sequences that use this audiobank are listed below:
         
         * `0x06: Stone Tower Temple`
@@ -6067,7 +6054,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1A (Cave)"
-        # Audiobank 0x1A (Cave)
+
         Sequences that use this audiobank are listed below:
         
         * `0x06: Inside a Cave`
@@ -6097,7 +6084,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1B (Happy Mask Salesman)"
-        # Audiobank 0x1B (Happy Mask Salesman)
+
         Sequences that use this audiobank are listed below:
         
         * `0x0A: Happy Mask Salesman's Theme`
@@ -6217,7 +6204,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1C (Southern Swamp)"
-        # Audiobank 0x1C (Southern Swamp)
+
         Sequences that use this audiobank are listed below:
         
         * `0x0C: Southern Swamp`
@@ -6255,7 +6242,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1D (Great Bay Coast)"
-        # Audiobank 0x1D (Great Bay Coast)
+
         Sequences that use this audiobank are listed below:
         
         * `0x10: Great Bay Coast`
@@ -6292,7 +6279,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1E (Ikana Canyon)"
-        # Audiobank 0x1E (Ikana Canyon)
+
         Sequences that use this audiobank are listed below:
         
         * `0x11: Ikana Canyon`
@@ -6327,7 +6314,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x1F (Rosa Sisters)"
-        # Audiobank 0x1F (Rosa Sisters)
+
         Sequences that use this audiobank are listed below:
         
         * `0x2A: Rosa Sisters' Theme`
@@ -6361,7 +6348,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x20 (Milk Bar)"
-        # Audiobank 0x20 (Milk Bar)
+
         Sequences that use this audiobank are listed below:
         
         * `0x3C: Milk Bar`
@@ -6488,7 +6475,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x21 (Epic Orchestra)"
-        # Audiobank 0x21 (Epic Orchestra)
+
         Sequences that use this audiobank are listed below:
         
         * `0x6F: Ancient Castle of Ikana`
@@ -6618,7 +6605,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x22 (Kamaro's Theme)"
-        # Audiobank 0x22 (Kamaro's Theme)
+
         Sequences that use this audiobank are listed below:
         
         * `0x71: Kamaro's Theme`
@@ -6645,7 +6632,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x23 (Title Screen)"
-        # Audiobank 0x23 (Title Screen)
+
         Sequences that use this audiobank are listed below:
         
         * `0x76: Title Screen`
@@ -6771,7 +6758,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x24 (Ending Orchestra [1])"
-        # Audiobank 0x24 (Ending Orchestra [1])
+
         Sequences that use this audiobank are listed below:
         
         * `0x74: End Credits & Staff Roll [1]`
@@ -6896,7 +6883,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x25 (Ending Orchestra [2])"
-        # Audiobank 0x25 (Ending Orchestra [2])
+
         Sequences that use this audiobank are listed below:
         
         * `0x7F: End Credits & Staff Roll [2]`
@@ -7021,7 +7008,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x26 (Goron's Theme)"
-        # Audiobank 0x26 (Goron's Theme)
+
         Audiobank `0x26` is a bit of a special audiobank, it uses a different audiotable than other audiobanks and the offsets reference data later in the audiotable causing the ADPCM data for their samples to be split; however, `SEQ64` will automatically update their sample location upon importing.
 
         Sequences that use this audiobank are listed below:
@@ -7056,7 +7043,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x27 (Keaton's Quiz)"
-        # Audiobank 0x27 (Keaton's Quiz)
+
         Sequences that use this audiobank are listed below:
         
         * `0x73: Keaton's Quiz`
@@ -7090,7 +7077,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         ```
 
     ??? audiobank "Audiobank 0x28 (Unused Bank)"
-        # Audiobank 0x28 (Unused Bank)
+
         Audiobank `0x28` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it's most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
 
         The number of instruments, drum, and sound effects, as well as the audiotable the audiobank uses, are listed below:
@@ -7118,20 +7105,21 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         0x04. Junk [5]
         ```
 
-# Waveform Instruments
-The waveform instruments are a collection of synth waves available at all times for all audiobanks. These instruments cannot be assigned via a MIDI program name as they go over the 7-Bit data value limit of `127 (0x7F)` (they are accessed using `128 (0x80)` and above), so they must be assigned inside the sequence.
+=== "Waveform Instruments"
 
-!!! warning "Instrument 0x87 and Above"
-    "Waveforms" above `0x87` are not actual instruments with actual sample data like `0x80` to `0x87`, they instead use compiled assembly code and interpret it as if it were sample data. The starting address uses the audio thread and adds a random offset between `0x0000` and `0xFFF0`; this is volatile and may cause issues so it is recommended to avoid using them.
+    The waveform instruments are a collection of synth waves available at all times for all audiobanks. These instruments cannot be assigned via a MIDI program name as they go over the 7-Bit data value limit of `127 (0x7F)` (they are accessed using `128 (0x80)` and above), so they must be assigned inside the sequence.
 
-**List of Waveforms:**
-```
-0x80. Saw Wave
-0x81. Triangle Wave
-0x82. Sine Wave
-0x83. Step Wave (Modified Square Wave)
-0x84. Buzz Pulse Wave [1] (White Noise)
-0x85. Buzz Pulse Wave [2] (White Noise)
-0x86. Pulse Wave (Duty Cycle 12.5%)
-0x87. Pulse Wave (Duty Cycle 25%)
-```
+    !!! warning "Instrument 0x87 and Above"
+        "Waveforms" above `0x87` are not actual instruments with actual sample data like `0x80` to `0x87`, they instead use compiled assembly code and interpret it as if it were sample data. The starting address uses the audio thread and adds a random offset between `0x0000` and `0xFFF0`; this is volatile and may cause issues so it is recommended to avoid using them.
+
+    **List of Waveforms:**
+    ```
+    0x80. Saw Wave
+    0x81. Triangle Wave
+    0x82. Sine Wave
+    0x83. Step Wave (Modified Square Wave)
+    0x84. Buzz Pulse Wave [1] (White Noise)
+    0x85. Buzz Pulse Wave [2] (White Noise)
+    0x86. Pulse Wave (Duty Cycle 12.5%)
+    0x87. Pulse Wave (Duty Cycle 25%)
+    ```
