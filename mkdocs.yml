@@ -133,4 +133,6 @@ nav:
     - Formmask: formmask.md
     - ADSR:
       - Custom Envelopes: adsr.md
+    - Custom Sample Injection:
+      - Converting Samples: a.md
   - Vanilla Audiobank Reference: audiobank-ref.md
