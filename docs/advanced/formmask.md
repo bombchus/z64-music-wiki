@@ -1,3 +1,7 @@
+---
+icon: material/code-json
+---
+
 # Using Formmask
 Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
 
@@ -107,3 +111,5 @@ Below is a list of the forms & states available to be assigned via Formmask.
 
 ## Testing a Formmask Sequence
 To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use `D-Pad Up` and `D-Pad Down`, and to cycle through cumulative states you can use `D-Pad Left` and `D-Pad Right`.
+
+-----

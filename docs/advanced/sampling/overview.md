@@ -56,6 +56,8 @@ Before getting started, below is a list of tools that are used for custom sample
     ??? tip "Recommendation"
         It is recommended to avoid using `Seq64` to edit audiobanks and instead use a text editor capable of editing `.xml` files. There's a learning curve, however it will bypass any bugs that `Seq64` introduces.
 
+-----
+
 ## Summary of Creating New Instruments, Drums, and Sound Effects
 Before beginning, it may be beneficial to understand the general workflow for custom sample injection, as well as garner basic information on what sample files actually are. Please understand that the workflow presented here is not set in stone, it is a guideline to help you create your own workflow that works for you; the wiki follows the presented workflow in how information and pages are structured and presented.
 

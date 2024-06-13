@@ -1,3 +1,7 @@
+---
+icon: material/code-braces
+---
+
 # Custom Envelopes
 
 === ":material-code-braces: &nbsp;C"

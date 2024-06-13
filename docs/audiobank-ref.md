@@ -2,6 +2,7 @@
 hide:
   #- navigation
   - toc
+icon: fontawesome/solid/file-waveform
 ---
 
 # Vanilla Audiobank Reference
@@ -7123,3 +7124,5 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
     0x86. Pulse Wave (Duty Cycle 12.5%)
     0x87. Pulse Wave (Duty Cycle 25%)
     ```
+
+-----

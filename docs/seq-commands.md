@@ -1,3 +1,6 @@
+---
+icon: material/hexadecimal
+---
 
 ## Pitch Bend (±2 Semitones) `0xEE`
 === ":material-code-braces: &nbsp;C"

@@ -1,3 +1,7 @@
+---
+icon: material/waveform
+---
+
 # Instrument Tuning
 
 ## Tuning Calculation
