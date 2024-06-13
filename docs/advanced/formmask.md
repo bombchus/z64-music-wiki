@@ -1,7 +1,7 @@
 # Using Formmask
 Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
 
-???+ warning
+!!! warning "Non-Useable Categories"
     At the time of writing this Formmask does not currently work with fanfares or combat music, so you cannot use it with the following sequence categories:
 
     === "Group Categories"
