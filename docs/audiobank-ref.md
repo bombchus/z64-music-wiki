@@ -7115,14 +7115,14 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     **List of Waveforms:**
     ```
-    0x80. Saw Wave
+    0x80. Sawtooth Wave
     0x81. Triangle Wave
     0x82. Sine Wave
-    0x83. Step Wave (Modified Square Wave)
-    0x84. Buzz Pulse Wave [1] (White Noise)
-    0x85. Buzz Pulse Wave [2] (White Noise)
-    0x86. Pulse Wave (Duty Cycle 12.5%)
-    0x87. Pulse Wave (Duty Cycle 25%)
+    0x83. Square Wave
+    0x84. White Noise
+    0x85. D_801D4790
+    0x86. Pulse Wave (Duty Cycle: 12.5%)
+    0x87. Pulse Wave (Duty Cycle: 25%)
     ```
 
 -----
