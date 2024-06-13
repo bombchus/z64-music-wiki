@@ -39,7 +39,7 @@ A `.formmask` file is simply a `.json` (or plain text) file with its filename ex
 ### JSON Array Formatting
 The formatting for a `.json` array is as follows:
 
-=== "Template"
+=== ":material-code-json: &nbsp;Template"
     ``` json
     [
         "Channel 0",
@@ -62,7 +62,7 @@ The formatting for a `.json` array is as follows:
     ]
     ```
 
-=== "Example"
+=== ":material-code-json: &nbsp;Example"
     ``` json
     [
         "Human, Deku",

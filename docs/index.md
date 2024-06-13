@@ -30,7 +30,7 @@ hide:
 
 <!-- Splash Image -->
 <figure markdown="span">
-  ![](assets/images/splash.png){ width="1260" height="580" }
+  ![](assets/images/splash.png){ width="1400" height="580" }
   </figcaption>
 </figure>
 

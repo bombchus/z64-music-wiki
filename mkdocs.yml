@@ -22,7 +22,7 @@ theme:
   features:
     - navigation.tabs
     #- navigation.tabs.sticky
-    - navigation.sections
+    #- navigation.sections
     - navigation.indexes
     #- navigation.path
     - navigation.expand
@@ -99,6 +99,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 
 # Plugins
 plugins:
@@ -133,11 +138,15 @@ nav:
     - Formmask: advanced/formmask.md
     - ADSR:
       - Custom Envelopes: advanced/adsr/envelopes.md
+      - Audiobank Envelopes: advanced/adsr/abenvelope.md
+      - Sequence Envelopes: advanced/adsr/seqenvelope.md
     - Custom Sample Injection:
-      - Overview: advanced/sampling/overview.md
+      - Injection Overview: advanced/sampling/overview.md
+    - MIDI:
+      - Advanced MIDI Overview: advanced/midi/overview.md
   - Vanilla ROM Documentation:
     #- Audiobank Documentation:
     - Audiobank Reference: audiobank-ref.md
     #- Sample Documentation:
     - Sample Reference: vanilla-samples.md
-    - Sequence Commands: a.md
+    - Sequence Commands: seq-commands.md

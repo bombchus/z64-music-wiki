@@ -40,3 +40,28 @@
 .md-typeset h1, .md-typeset h2, .md-typeset h3 {
   font-weight: 400;
 }
+
+/* Navigation Section changes, I prefer dropdowns to no dropdowns */
+label#__nav_4_1_label.md-nav__link > .md-ellipsis,
+label#__nav_4_2_label.md-nav__link > .md-ellipsis,
+label#__nav_4_3_label.md-nav__link > .md-ellipsis,
+label#__nav_4_4_label.md-nav__link > .md-ellipsis,
+label#__nav_4_5_label.md-nav__link > .md-ellipsis {
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+}
+
+/*
+label#__nav_4_1_label.md-nav__link:hover > .md-ellipsis,
+label#__nav_4_1_label.md-nav__link:focus > .md-ellipsis,
+label#__nav_4_2_label.md-nav__link:hover > .md-ellipsis,
+label#__nav_4_2_label.md-nav__link:focus > .md-ellipsis,
+label#__nav_4_3_label.md-nav__link:hover > .md-ellipsis,
+label#__nav_4_3_label.md-nav__link:focus > .md-ellipsis,
+label#__nav_4_4_label.md-nav__link:hover > .md-ellipsis,
+label#__nav_4_4_label.md-nav__link:focus > .md-ellipsis,
+label#__nav_4_5_label.md-nav__link:hover > .md-ellipsis,
+label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
+  color: var(--md-accent-fg-color);
+}
+*/

@@ -1,6 +1,6 @@
 # Custom Envelopes
 
-=== "C"
+=== ":material-code-braces: &nbsp;C"
 
     ```c
     EnvelopePoint gDefaultEnvelope[] = {
@@ -11,7 +11,7 @@
     };
     ```
 
-=== "XML"
+=== ":material-xml: &nbsp;XML"
 
     ```xml
     <item address="0" name="gDefaultEnvelope">
@@ -36,7 +36,7 @@
     </item>
     ```
 
-=== "Binary"
+=== ":material-hexadecimal: &nbsp;Binary"
 
     ```
     0001 7D00 03E8 7D00 FFFF 0000 0000 0000
