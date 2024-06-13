@@ -1,9 +1,17 @@
 ---
 hide:
   #- navigation
-  - toc
-icon: fontawesome/solid/file-waveform
+  #- toc
+icon: material/playlist-music
 ---
+
+<style>
+  /* Hide Table of Contents without reducing width */
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    display: none;
+  }
+
+</style>
 
 # Vanilla Audiobank Reference
 

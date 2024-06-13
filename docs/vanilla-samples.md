@@ -1,6 +1,6 @@
 ---
 hide:
-  - toc
+  #- toc
 icon: material/waveform
 ---
 
@@ -10,7 +10,11 @@ icon: material/waveform
     width: 100%;
   }
   .md-typeset__table table:not([class]) {
-    display: table
+    display: table;
+  }
+  /* Hide Table of Contents without reducing width */
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    display: none;
   }
 
 </style>
