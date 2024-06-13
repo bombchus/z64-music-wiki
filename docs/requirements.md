@@ -1,6 +1,5 @@
 # Requirements
 
-
 ???+ success "ROM MD5 Checksum"
 
     An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.

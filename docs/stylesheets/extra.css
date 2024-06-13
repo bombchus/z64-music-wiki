@@ -17,6 +17,7 @@
           mask-image: var(--md-admonition-icon--audiobank);
 }
 
+/* Custom Sample Admonition to contain sample address tables in collapsable elements */
 :root {
   --md-admonition-icon--waveform: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>waveform</title><path d="M22 12L20 13L19 14L18 13L17 16L16 13L15 21L14 13L13 15L12 13L11 17L10 13L9 22L8 13L7 19L6 13L5 14L4 13L2 12L4 11L5 10L6 11L7 5L8 11L9 2L10 11L11 7L12 11L13 9L14 11L15 3L16 11L17 8L18 11L19 10L20 11L22 12Z" /></svg>')
 }
@@ -34,6 +35,26 @@
   background-color: rgba(164, 123, 234, 1);
   -webkit-mask-image: var(--md-admonition-icon--waveform);
           mask-image: var(--md-admonition-icon--waveform);
+}
+
+/* Custom Attention Admonition */
+:root {
+  --md-admonition-icon--attention: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>alert-octagram</title><path d="M2.2,16.06L3.88,12L2.2,7.94L6.26,6.26L7.94,2.2L12,3.88L16.06,2.2L17.74,6.26L21.8,7.94L20.12,12L21.8,16.06L17.74,17.74L16.06,21.8L12,20.12L7.94,21.8L6.26,17.74L2.2,16.06M13,17V15H11V17H13M13,13V7H11V13H13Z" /></svg>')
+}
+
+.md-typeset .admonition.attention,
+.md-typeset details.attention {
+  border-color: rgba(234, 225, 123, 0.9);
+}
+.md-typeset .attention > .admonition-title,
+.md-typeset .attention > summary {
+  background-color: rgba(234, 225, 123, 0.1);
+}
+.md-typeset .attention > .admonition-title::before,
+.md-typeset .attention > summary::before {
+  background-color: rgba(234, 225, 123, 0.9);
+  -webkit-mask-image: var(--md-admonition-icon--attention);
+          mask-image: var(--md-admonition-icon--attention);
 }
 
 /* Header Font Weight Change */
