@@ -1,10 +1,10 @@
 ---
 hide:
-  - navigation
+  #- navigation
   - toc
 ---
 
-# Vanilla Audiobank References
+# Vanilla Audiobank Reference
 
 Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Majora's Mask, every entry contains the following information:
 

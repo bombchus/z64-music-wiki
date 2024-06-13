@@ -66,3 +66,4 @@
 *[cc#101]: MIDI Control Change #101: RPN MSB
 *[cc101]: MIDI Control Change #101: RPN MSB
 *[MD5]: Message Digest Algorithm 5
+*[GM]: General MIDI

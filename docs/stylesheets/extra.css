@@ -1,20 +1,39 @@
 /* Custom Audiobank Admonition to contain Audiobanks in collapsable elements */
 :root {
-  --md-admonition-icon--audiobank: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v336c0 44.2-43 80-96 80s-96-35.8-96-80 43-80 96-80c11.2 0 22 1.6 32 4.6V147l-256 76.8V432c0 44.2-43 80-96 80S0 476.2 0 432s43-80 96-80c11.2 0 22 1.6 32 4.6V128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>')
+  --md-admonition-icon--audiobank: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v224h112c6.1 0 11.6 3.4 14.3 8.8l17.7 35.4 49.7-99.4c2.7-5.4 8.3-8.8 14.3-8.8s11.6 3.4 14.3 8.8l27.6 55.2H352c8.8 0 16 7.2 16 16s-7.2 16-16 16h-80c-6.1 0-11.6-3.4-14.3-8.8L240 275.8l-49.7 99.4c-2.7 5.4-8.3 8.8-14.3 8.8s-11.6-3.4-14.3-8.8L134.1 320H32v128c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H288c-17.7 0-32-14.3-32-32V0H96zm192 0v128h128L288 0z"/></svg>')
 }
 .md-typeset .admonition.audiobank,
 .md-typeset details.audiobank {
-  border-color: rgba(169, 179, 255, 0.5);
+  border-color: rgba(164, 123, 234, 1);
 }
 .md-typeset .audiobank > .admonition-title,
 .md-typeset .audiobank > summary {
-  background-color: rgba(85, 90, 129, 0.2);
+  background-color: rgba(164, 123, 234, 0.1);
 }
 .md-typeset .audiobank > .admonition-title::before,
 .md-typeset .audiobank > summary::before {
-  background-color: rgba(169, 179, 255, 0.5);
+  background-color: rgba(164, 123, 234, 1);
   -webkit-mask-image: var(--md-admonition-icon--audiobank);
           mask-image: var(--md-admonition-icon--audiobank);
+}
+
+:root {
+  --md-admonition-icon--waveform: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>waveform</title><path d="M22 12L20 13L19 14L18 13L17 16L16 13L15 21L14 13L13 15L12 13L11 17L10 13L9 22L8 13L7 19L6 13L5 14L4 13L2 12L4 11L5 10L6 11L7 5L8 11L9 2L10 11L11 7L12 11L13 9L14 11L15 3L16 11L17 8L18 11L19 10L20 11L22 12Z" /></svg>')
+}
+
+.md-typeset .admonition.waveform,
+.md-typeset details.waveform {
+  border-color: rgba(164, 123, 234, 1);
+}
+.md-typeset .waveform > .admonition-title,
+.md-typeset .waveform > summary {
+  background-color: rgba(164, 123, 234, 0.1);
+}
+.md-typeset .waveform > .admonition-title::before,
+.md-typeset .waveform > summary::before {
+  background-color: rgba(164, 123, 234, 1);
+  -webkit-mask-image: var(--md-admonition-icon--waveform);
+          mask-image: var(--md-admonition-icon--waveform);
 }
 
 /* Header Font Weight Change */

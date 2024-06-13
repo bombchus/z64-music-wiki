@@ -132,7 +132,9 @@ nav:
     - Tuning: advanced/tuning.md
     - Formmask: advanced/formmask.md
     - ADSR:
-      - Custom Envelopes: advanced/adsr.md
+      - Custom Envelopes: advanced/adsr/envelopes.md
     - Custom Sample Injection:
-      - Converting Samples: a.md
-  - Vanilla Audiobank Reference: audiobank-ref.md
+      - Converting Samples: advanced/sampling/info.md
+  - Vanilla Samples and Audiobank Information: 
+    - Audiobank Reference: audiobank-ref.md
+    - Sample Reference: vanilla-samples.md

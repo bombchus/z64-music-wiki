@@ -3,11 +3,11 @@
 === "C"
 
     ```c
-    gDefaultEnvelope[] = {
-      { 1, 32000 },
-      { 1000, 32000 },
-      { ADSR_HANG, 0 },
-      { ADSR_DISABLE, 0 },
+    EnvelopePoint gDefaultEnvelope[] = {
+        { 1, 32000 },
+        { 1000, 32000 },
+        { ADSR_HANG, 0 },
+        { ADSR_DISABLE, 0 },
     };
     ```
 
