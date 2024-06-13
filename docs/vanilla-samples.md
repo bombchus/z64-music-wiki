@@ -17,7 +17,7 @@ icon: material/waveform
 
 # Vanilla Sample Addresses
 
-Below is a list of every sample address in the vanilla ROM of Ocarina of Time and Majora's Mask
+Below is a list containing all of the samples in the Ocarina of Time and Majora's Mask ROMs in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to highest instrument sample for each instrument. Some instruments however do not fit into GM, so they are placed in the table where they would most likely fit instead.
 
 === "Ocarina of Time Samples"
 
@@ -41,7 +41,7 @@ Below is a list of every sample address in the vanilla ROM of Ocarina of Time an
         `Giants' Voice` to `CARTOON, YELL - FUNNY TARZAN YELL 01`  
         `Metal Bang` to `CARTOON, HIT - BIG, HEAVY METALLIC HIT`
 
-    Below is a list containing all of the instrument samples in audiobanks `0x03` to `0x27` on the Majora's Mask ROM in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to highest instrument sample for each instrument. Some instruments however do not fit into GM, so they are placed in the table where they would most likely fit instead.
+    Below is a list of instrument samples located in audiobanks `0x03` to `0x27`. Audiobank `0x28` does not contain any useful sample data so it has been omitted.
 
     ??? waveform "Instrument Sample Table"
         | Sample Name | Sample Address (DEC) | Sample Address (HEX) | Audiotable |
