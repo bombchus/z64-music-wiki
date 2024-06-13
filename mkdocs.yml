@@ -135,6 +135,9 @@ nav:
       - Custom Envelopes: advanced/adsr/envelopes.md
     - Custom Sample Injection:
       - Converting Samples: advanced/sampling/info.md
-  - Vanilla Samples and Audiobank Information: 
+  - Vanilla ROM Documentation:
+    #- Audiobank Documentation:
     - Audiobank Reference: audiobank-ref.md
+    #- Sample Documentation:
     - Sample Reference: vanilla-samples.md
+    - Sequence Commands: a.md
