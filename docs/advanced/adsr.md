@@ -2,7 +2,7 @@
 
 === "C"
 
-    ``` c
+    ```c
     gDefaultEnvelope[] = {
       { 1, 32000 },
       { 1000, 32000 },
@@ -13,7 +13,7 @@
 
 === "XML"
 
-    ``` xml
+    ```xml
     <item address="0" name="gDefaultEnvelope">
       <struct name="ABEnvelope">
         <field name="Delay" datatype="int16", ispointer="0"

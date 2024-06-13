@@ -127,12 +127,12 @@ nav:
   - Getting Started:
     - Requirements: requirements.md
   - Basic:
-    - a: a.md
+    - a: basic/a.md
   - Advanced:
-    - Tuning: tuning.md
-    - Formmask: formmask.md
+    - Tuning: advanced/tuning.md
+    - Formmask: advanced/formmask.md
     - ADSR:
-      - Custom Envelopes: adsr.md
+      - Custom Envelopes: advanced/adsr.md
     - Custom Sample Injection:
       - Converting Samples: a.md
   - Vanilla Audiobank Reference: audiobank-ref.md
