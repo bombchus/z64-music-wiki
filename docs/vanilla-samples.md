@@ -37,8 +37,8 @@ Below is a list of every sample address in the vanilla ROM of Ocarina of Time an
     ## Instrument Samples
 
     ??? info "Sample Names to Possibly Be Changed"
-        Giants' Voice: `CARTOON, YELL - FUNNY TARZAN YELL 01`  
-        Metal Bang: `CARTOON, HIT - BIG, HEAVY METALLIC HIT`
+        `Giants' Voice` to `CARTOON, YELL - FUNNY TARZAN YELL 01`  
+        `Metal Bang` to `CARTOON, HIT - BIG, HEAVY METALLIC HIT`
 
     Below is a list containing all of the instrument samples in audiobanks `0x03` to `0x27` on the Majora's Mask ROM in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to highest instrument sample for each instrument. Some instruments however do not fit into GM, so they are placed in the table where they would most likely fit instead.
 
