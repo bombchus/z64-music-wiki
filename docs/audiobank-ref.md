@@ -15,6 +15,16 @@ icon: material/playlist-music
 
 # Vanilla Audiobank Reference
 
+<div class="grid cards" markdown>
+
+-   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
+  
+    ---
+
+    This page is a work in progress and requires further editing.
+
+</div>
+
 Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Majora's Mask, every entry contains the following information:
 
 * Audiobank index value

@@ -1,5 +1,15 @@
 # Overview of Custom Sample Injection
 
+<div class="grid cards" markdown>
+
+-   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
+  
+    ---
+
+    This page is a work in progress and requires further editing.
+
+</div>
+
 !!! warning
     Custom sample injection is for creating non-vanilla sampled instruments, drums, or sound effects and assumes you already have a decent understanding of music creation and custom audiobanks, this is not a beginner's guide to music creation.
 

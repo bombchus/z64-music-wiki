@@ -2,6 +2,16 @@
 icon: material/waveform
 ---
 
+<div class="grid cards" markdown>
+
+-   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
+  
+    ---
+
+    This page is a work in progress and requires further editing.
+
+</div>
+
 # Sample Tuning
 
 ## — Tuning (Modular)
@@ -34,6 +44,10 @@ As an example if our sample has a root key of `72 (C6)` with a sample rate of `3
 
 !!! info
     For — tuning your note speeds are manually caculated, as every drum and sound effect has a single sample assigned to a single specific note, where the tuning float is equal to the note speed, as the note speed of your sample's root key is always assumed to be equal to `60 (C5)`'s note speed.
+
+## Tuning Calculation
+
+### Sample Rate Correction
 
 $(Root\hspace{1 mm}Key-Coarse\hspace{1 mm}Tune)-(\frac{Fine\hspace{1 mm}Tune}{100})=-24\log_4(Float)+60$
 

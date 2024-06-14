@@ -37,6 +37,26 @@
           mask-image: var(--md-admonition-icon--waveform);
 }
 
+/* Custom General Dropdown Admonition */
+:root {
+  --md-admonition-icon--dropdown: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>text</title><path d="M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z" /></svg>')
+}
+
+.md-typeset .admonition.dropdown,
+.md-typeset details.dropdown {
+  border-color: rgba(140, 142, 149, 1);
+}
+.md-typeset .dropdown > .admonition-title,
+.md-typeset .dropdown > summary {
+  background-color: rgba(140, 142, 149, 0.1);
+}
+.md-typeset .dropdown > .admonition-title::before,
+.md-typeset .dropdown > summary::before {
+  background-color: rgba(140, 142, 149, 1);
+  -webkit-mask-image: var(--md-admonition-icon--dropdown);
+          mask-image: var(--md-admonition-icon--dropdown);
+}
+
 /* Custom Attention Admonition */
 :root {
   --md-admonition-icon--attention: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>alert-octagram</title><path d="M2.2,16.06L3.88,12L2.2,7.94L6.26,6.26L7.94,2.2L12,3.88L16.06,2.2L17.74,6.26L21.8,7.94L20.12,12L21.8,16.06L17.74,17.74L16.06,21.8L12,20.12L7.94,21.8L6.26,17.74L2.2,16.06M13,17V15H11V17H13M13,13V7H11V13H13Z" /></svg>')

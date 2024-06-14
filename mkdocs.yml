@@ -132,7 +132,7 @@ nav:
   - Getting Started:
     - Requirements: requirements.md
   - Basic:
-    - a: basic/a.md
+    - rename: basic/rename.md
   - Advanced:
     - Tuning: advanced/tuning.md
     - Formmask: advanced/formmask.md

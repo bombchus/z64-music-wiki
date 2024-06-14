@@ -43,7 +43,7 @@ hide:
 
     For extra help with MMR related music issues you can join the Majora's Mask Randomzier Discord Server
 
-    [:material-link-variant: Click Here to Join](https://discord.gg/7jBRhhJ)
+    **[:material-link-variant: Click Here to Join](https://discord.gg/7jBRhhJ)**
 
 -   :fontawesome-brands-discord:{ .lg .middle } __&nbsp;Darunia's Joy Discord__
 
@@ -51,7 +51,7 @@ hide:
 
     For extra help with OOTR related music issues you can join the Darunia's Joy Discord Server
 
-    [:material-link-variant: Click Here to Join](https://discord.gg/EVpd499gkS)
+    **[:material-link-variant: Click Here to Join](https://discord.gg/EVpd499gkS)**
 
 </div>
 
@@ -63,7 +63,7 @@ hide:
 
     For extra help with OOTMM music related issues you can join the Ocarina of Time & Majora's Mask Combo Randomizer Discord Server
 
-    [:material-link-variant: Click Here to Join](https://discord.gg/4QdtPBP6wf)
+    **[:material-link-variant: Click Here to Join](https://discord.gg/4QdtPBP6wf)**
 
 </div>
 
