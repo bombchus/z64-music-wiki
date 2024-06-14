@@ -79,9 +79,7 @@ $f(x)=Float\div\frac{32000}{x}$
 
 
 === "16000Hz"
-    <figure markdown="span">
-      ![](https://bombchus.github.io/z64-music-wiki/assets/images/sampleratecorrection-16000hz-dark.png#only-dark)
-      </figcaption>
-    </figure>
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/sampleratecorrection-16000hz-dark.png#only-dark)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/sampleratecorrection-16000hz-dark.png#only-light)
 
 -----
