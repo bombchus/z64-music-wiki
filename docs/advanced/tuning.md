@@ -17,7 +17,7 @@ So to get our sample's root key to the correct note speed we need to use the fol
 As an example if our sample has a root key of `72 (C6)` with a sample rate of `32000Hz` and we want it to play `60 (C5)` then we need to achieve a note speed of `2` for our sample to be tuned to the correct pitch; to do this we divide `1` by `0.5`, with `0.5` being the tuning float value for `72 (C6)`.
 
 !!! info
-    For — tuning your note speeds are automatically calculated where the tuning float determines the sample root key's note speed in relation to `60 (C5)`
+    For — tuning your note speeds are automatically calculated, as every instrument has a sample assigned to a range of specific notes, where the tuning float determines the sample root key's note speed in relation to `60 (C5)`
 
 
 ## — Tuning (Static)
@@ -33,7 +33,7 @@ So to get our sample's root key to the correct note speed we need to use the fol
 As an example if our sample has a root key of `72 (C6)` with a sample rate of `32000Hz` and we want it to play `60 (C5)` then we need to achieve a note speed of `0.5` for our sample to be tuned to the correct pitch; to do this we multiply `1` by `0.5`, with `0.5` being the tuning float we would use as with — tuning the note speed is equal to the tuning float value.
 
 !!! info
-    For — tuning your note speeds are manually caculated where the tuning float is equal to the note speed, as the note speed of your sample's root key is always assumed to be equal to `60 (C5)`'s note speed.
+    For — tuning your note speeds are manually caculated, as every drum and sound effect has a single sample assigned to a single specific note, where the tuning float is equal to the note speed, as the note speed of your sample's root key is always assumed to be equal to `60 (C5)`'s note speed.
 
 $(Root\hspace{1 mm}Key-Coarse\hspace{1 mm}Tune)-(\frac{Fine\hspace{1 mm}Tune}{100})=-24\log_4(Float)+60$
 
