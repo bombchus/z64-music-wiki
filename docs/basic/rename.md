@@ -206,7 +206,7 @@ Music groups determine where your sequence will play in-game, this information i
     | GanondorfAppears | `Ganondorf Appears` | — | — |
 
 ### Making a Categories File for Majora's Mask
-To make a categories file for an `.mmrs` file all you need to do is create a text file with the name `categories.txt` and put whatever group and individual category values you want the area your song to play in inside the file separated by a dash (e.g. `1-2-3`).
+To make a categories file for an `.mmrs` file all you need to do is create a text file with the name `categories.txt` and put whatever group and individual category values you want the area your song to play in inside the file separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
 
 #### Categories
 There are two different types of categories: group categories, and individual categories. Group categories contain a number of sequences a song can be assigned to, and individual categories assign a song to a specific sequence.
@@ -285,5 +285,141 @@ There are two different types of categories: group categories, and individual ca
     | `12F` | Romani Ranch | `17D` | Tatl & Tael Reunited (Generic Reunion Theme) |
     | `130` | Goron Village | `17E` | Fanfare: The Moon Destroyed! |
     | `131` | Mayor Dotour's Office | — | — |
+
+## Making a Metadata File
+!!! alert
+    Metadata files have not currently been presented to or adopted by any of the randomizers, this is just a concept and is not implemented; **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
+
+??? note
+    YAML is better for readbility and editing for the end user despite it being harder to parse it would most likely be the preferred way should any of the three communities decide to adopt a single metadata format to allow a single randomizer song format. However... there is still the problem of game separated audiobanks and categories to deal with; this can be solved by applying game specific data inside the metadata file instead of in the files themselves. TOML would most likely be second preference due to readbility and editing still being easy, but it also parses easier than YAML. JSON sucks, no one likes editing JSON files despite them being easy... they don't allow for comments so instructions must be obtained from outside the files themselves leaving end users having to rummage through discord channels (looking at you MMR and OOTMM...) to find the information they need. I hate JSON, it's dumb to edit and hard to read...
+
+    My, read Bombchus', preference is YAML > TOML > literally anything else > JSON
+
+=== ":material-code-braces: &nbsp;metadata.yml"
+    ``` yaml
+    %YAML 1.2
+    # The following file is a metadata file for custom music in The Legend of Zelda: Ocarina of Time
+    # and The Legend of Zelda: Majora's Mask
+    #
+    # This is a YAML file, YAML uses indentation instead of brackets; this makes it easier to read
+    # however YAML itself is not as easy to parse as something like JSON or TOML. For the purpose
+    # of the custom music communities for Zelda64 randomizers this file should be kept as simple
+    # and easy to understand as possible.
+    #
+    # Allowed Game Values: "oot", "mm", "ootmm"
+    #     This key determines which game to pull adpcm data and audiobank information from.
+    #     A value of "oot" determines the base game to be OOT, a value of "mm" determines
+    #     the base game to be MM, and a value of "ootmm" determines the game is interchangeable
+    #     idk how this would work... interchangeability is something to discuss
+    #
+    # Allowed Song Type Values: "bgm", "fanfare"
+    #     The song type key determines whether or not the song is classfied as a bgm or fanfare.
+    #     Do not miscategorize bgms as fanfares it will cause issues in both OOT and MM!!!
+    #
+    # Allowed Audiobank Values: "0x##", "custom"
+    #     The audiobank key determines which audiobank the game you set in the game key will use,
+    #     however if you are using a custom audiobank then you should change the value to "custom"
+    #     as this indicates the bank needs to be inserted.
+    #
+    ---
+    game: "oot"
+
+    metadata:
+        song name: "placeholder"
+        song type: "bgm"
+        audiobank: "0x03"
+        categories:
+            # To change the categories, please use an array with comma separated values
+            # e.g. ["value", "value"]
+            #
+            # MMR categories: <link>
+            mmr: ["0", "2"]
+            # OOTR categories: https://thesounddefense.github.io/musicgroups/
+            ootr: ["Fields", "Dungeon"]
+
+        # Place your custom samples here e.g. - "my_sound.zsound": "0x12345678"
+        # If you have no custom samples then leave the key and value empty as it currently is
+        samples:
+            - "": ""
+
+    # Optional plain text metadata to also be contained within the metadata.yml file
+    # This could be used for accreditation or something else, doesn't need to use the same format
+    # To make multiline keys you need to use the character ">" after the key e.g. "accreditation: >"
+    accreditation: >
+        Origin Game:        <placeholder>
+        Song Name:          <placeholder>
+        Categories:         <placeholder>
+        Original Composers: <placeholder>
+        Sequence Converter: <placeholder>
+        Sampling:           No Sampling/Light Sampling/Heavy Sampling
+        Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
+
+        Notes: <extra notes or comments about the song go here>
+
+        Original Song: <link>
+    ```
+
+=== ":material-code-braces: &nbsp;metadata.toml"
+    ``` toml
+    # The following file is a metadata file for custom music in The Legend of Zelda: Ocarina of Time
+    # and The Legend of Zelda: Majora's Mask
+    #
+    # This is a YAML file, YAML uses indentation instead of brackets; this makes it easier to read
+    # however YAML itself is not as easy to parse as something like JSON or TOML. For the purpose
+    # of the custom music communities for Zelda64 randomizers this file should be kept as simple
+    # and easy to understand as possible.
+    #
+    # Allowed Game Values: "oot", "mm", "ootmm"
+    #     This key determines which game to pull adpcm data and audiobank information from.
+    #     A value of "oot" determines the base game to be OOT, a value of "mm" determines
+    #     the base game to be MM, and a value of "ootmm" determines the game is interchangeable
+    #     idk how this would work... interchangeability is something to discuss
+    #
+    # Allowed Song Type Values: "bgm", "fanfare"
+    #     The song type key determines whether or not the song is classfied as a bgm or fanfare.
+    #     Do not miscategorize bgms as fanfares it will cause issues in both OOT and MM!!!
+    #
+    # Allowed Audiobank Values: "0x##", "custom"
+    #     The audiobank key determines which audiobank the game you set in the game key will use,
+    #     however if you are using a custom audiobank then you should change the value to "custom"
+    #     as this indicates the bank needs to be inserted.
+    #
+    game = "oot"
+
+    [metadata]
+      songname   = "placeholder"
+      songtype   = "bgm"
+      audiobank  = "0x03"
+      # To change the categories, please use an array with comma separated values
+      # e.g. ["value", "value"]
+      #
+      categories.mmr = ["1","2"]
+      # OOTR categories: https://thesounddefense.github.io/musicgroups/
+      categories.ootr = ["Fields","Dungeon"]
+
+    # Place your custom samples here e.g. - "my_sound.zsound": "0x12345678"
+    # If you have no custom samples then leave the key and value as "none" as it currently is
+    # Empty quoted keys are allowed, but highly discouraged
+    [samples]
+      "none" = "none"
+
+    # Optional plain text metadata to also be contained within the metadata.toml file
+    # This could be used for accreditation or something else, doesn't need to use the same format
+    # To make multiline keys you need to use triple quotes after the key and on the final line
+    [accreditation]
+        credits = """
+                Origin Game:        <placeholder>
+                Song Name:          <placeholder>
+                Categories:         <placeholder>
+                Original Composers: <placeholder>
+                Sequence Converter: <placeholder>
+                Sampling:           No Sampling/Light Sampling/Heavy Sampling
+                Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
+
+                Notes: <extra notes or comments about the song go here>
+
+                Original Song: <link>
+                """
+    ```
 
 -----
