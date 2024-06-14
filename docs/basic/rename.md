@@ -16,16 +16,17 @@ To make a META file for an `.ootrs` file you will need to create a text file wit
 The META file's structure is presented below:
 
 === "Template (Vanilla Audiobank)"
+    <div class="annotate" markdown>
     ```
     Songname
     0x00
     bgm/fanfare
     musicgroups
     ```
+    </div>
 
 === "Template (Custom Audiobank)"
     <div class="annotate" markdown>
-
     ```
     Songname
     -
@@ -33,22 +34,22 @@ The META file's structure is presented below:
     musicgroups
     ZSOUND:filename.zsound:######## (1)
     ```
-
     </div>
 
     1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
 
 === "Example (Vanilla Audiobank)"
+    <div class="annotate" markdown>
     ```
     Mario Kart Wii - Moonview Highway
     0x03
     bgm
     Fields,Town,Dungeon
     ```
+    </div>
 
 === "Example (Custom Audiobank)"
     <div class="annotate" markdown>
-
     ```
     Mario Kart Wii - Moonview Highway
     -
@@ -62,7 +63,6 @@ The META file's structure is presented below:
     ZSOUND:SAW0-60.zsound:44653600
     ZSOUND:SAW0-72.zsound:44653601
     ```
-
     </div>
 
     1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
