@@ -290,11 +290,6 @@ There are two different types of categories: group categories, and individual ca
 !!! alert
     Metadata files have not currently been presented to or adopted by any of the randomizers, this is just a concept and is not implemented; **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
 
-??? note
-    YAML is better for readbility and editing for the end user despite it being harder to parse it would most likely be the preferred way should any of the three communities decide to adopt a single metadata format to allow a single randomizer song format. However... there is still the problem of game separated audiobanks and categories to deal with; this can be solved by applying game specific data inside the metadata file instead of in the files themselves. TOML would most likely be second preference due to readbility and editing still being easy, but it also parses easier than YAML. JSON sucks, no one likes editing JSON files despite them being easy... they don't allow for comments so instructions must be obtained from outside the files themselves leaving end users having to rummage through discord channels (looking at you MMR and OOTMM...) to find the information they need. I hate JSON, it's dumb to edit and hard to read...
-
-    My, read Bombchus', preference is YAML > TOML > literally anything else > JSON
-
 === ":material-code-braces: &nbsp;metadata.yml"
     ``` yaml
     %YAML 1.2
