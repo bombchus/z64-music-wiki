@@ -30,7 +30,7 @@ hide:
 
 <!-- Splash Image -->
 <figure markdown="span">
-  ![](assets/images/splash.png){ width="1400" height="580" }
+  ![](https://bombchus.github.io/z64-music-wiki/assets/images/splash.png){ width="1400" height="580" }
   </figcaption>
 </figure>
 
