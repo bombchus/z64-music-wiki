@@ -56,4 +56,7 @@ icon: material/code-braces
     0001 7D00 03E8 7D00 FFFF 0000 0000 0000
     ```
 
+![](https://bombchus.github.io/z64-music-wiki/assets/images/pianoenvelope-dark.png#only-dark)
+![](https://bombchus.github.io/z64-music-wiki/assets/images/pianoenvelope-light.png#only-light)
+
 -----
