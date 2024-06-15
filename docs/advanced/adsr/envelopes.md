@@ -17,7 +17,7 @@ icon: material/code-braces
 === ":material-code-braces: &nbsp;C"
 
     ```c
-    EnvelopePoint gDefaultEnvelope[] = {
+    EnvelopePoint gDefaultEnvelope[4] = {
         { 1, 32000 },
         { 1000, 32000 },
         { ADSR_HANG, 0 },
