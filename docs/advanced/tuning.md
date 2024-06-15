@@ -90,6 +90,4 @@ $f(x)=Float\div\frac{32000}{x}$
     ![](https://bombchus.github.io/z64-music-wiki/assets/images/sampleratecorrection-64000hz-dark.png#only-dark)
     ![](https://bombchus.github.io/z64-music-wiki/assets/images/sampleratecorrection-64000hz-light.png#only-light)
 
-![](https://bombchus.github.io/z64-music-wiki/assets/images/piano.png)
-
 -----
