@@ -85,7 +85,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some sound effects using the instrument structure have multiple samples, the sound effects using multiple samples indicate which region contains which sound effect sample (e.g. `0x00: Low: SFX name, Mid: SFX Name, High: SFX Name`). Any sound effects without multiple regions use the mid (primary) sample.
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Dirt Footstep SFX?
         0x01. Sand Footstep SFX?
         0x02. Stone Footstep SFX
@@ -192,7 +192,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Sound effects can only have one sample per sound effect, but some sound effect indexes point to the same sample in the audiobank. The indexes that use the same sample as another index are marked: `[Same sample as (index value)]`
 
         **Sound Effect List:**
-        ```
+        ``` linenums="0"
         0x00. [absfxlist:0]
         0x01. [absfxlist:1]
         0x02. [absfxlist:2]
@@ -339,7 +339,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some DAWs start with program number `0`, and others start with program number `1`; because of this you may need to offset your program number assignment by a value of `1`.
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. [abdrumlist:0]
         0x01. [abdrumlist:1]
         0x02. [abdrumlist:2]
@@ -374,7 +374,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some sound effects using the instrument structure have multiple samples, the sound effects using multiple samples indicate which region contains which sound effect sample (e.g. `0x00: Low: SFX name, Mid: SFX Name, High: SFX Name`). Any sound effects without multiple regions use the mid (primary) sample.
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Pop/Thud SFX (Shabom?)
         0x01. Dodongo Roar SFX
         0x02. Balloon Inflate SFX
@@ -440,7 +440,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Sound effects can only have one sample per sound effect, but some sound effect indexes point to the same sample in the audiobank. The indexes that use the same sample as another index are marked: `[Same sample as (index value)]`
 
         **Sound Effect List:**
-        ```
+        ``` linenums="0"
         0x00. [absfxlist:0]
         0x01. [absfxlist:1]
         0x02. [absfxlist:2]
@@ -488,7 +488,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         Below is a list of the "drums" inside of audiobank `0x00`. There's one single drum pointer, but it's just a null pointer value with no sample being pointed to.
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         ```
 
@@ -517,7 +517,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Bird Chirp SFX 1
         0x02. Bird Chitter SFX
@@ -607,7 +607,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. Clarinet
@@ -643,7 +643,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -733,7 +733,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Enigmatic
         0x01. Enigmatic ALT
         ```
@@ -762,7 +762,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Ocarina
         0x02. Bassoon
@@ -793,7 +793,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine Slap [1]
         0x01. Tambourine Slap [2]
         0x02. Tambourine Slap [3]
@@ -883,7 +883,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Ocarina
         0x02. ⛔ (nullptr)
@@ -926,7 +926,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Wind
         0x01. ⛔ (nullptr)
         0x02. Synth Strings
@@ -953,7 +953,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Trip Hopping Kick [1]
         0x01. Trip Hopping Kick [2]
         0x02. Trip Hopping Kick [3]
@@ -1044,7 +1044,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harmonica
         0x01. Nylon Guitar (Release: 233)
         0x02. Nylon Guitar (Release: 234)
@@ -1072,7 +1072,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine Slap [1]
         0x01. Tambourine Slap [2]
         0x02. Tambourine Slap [3]
@@ -1170,7 +1170,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harp
         0x01. Harp
         0x02. Harp
@@ -1203,7 +1203,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -1298,7 +1298,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Chant 1 & 2
         0x01. Chant 3
         0x02. Chant 3
@@ -1330,7 +1330,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Lute & Tambourine Low [1]
         0x01. Lute & Tambourine Low [2]
         0x02. Lute & Tambourine Low [3]
@@ -1420,7 +1420,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Wind Roar
         0x01. Lore Drone
         0x02. Metal Grind
@@ -1450,7 +1450,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Digi Pad 04
         0x01. Flute Chant
         0x02. Bamboo Chimes
@@ -1479,7 +1479,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Malon Voice (Release: 248)
         0x01. Malon Voice (Release: 247)
         0x02. Sustain Guitar
@@ -1523,7 +1523,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bent Drum
         0x01. Conga & Slap
         0x02. Cuica
@@ -1554,7 +1554,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. Clarinet
@@ -1598,7 +1598,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Digi Pad 04 ALT
         0x01. Synth Strings
         0x02. Duduk ALT
@@ -1625,7 +1625,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Gong [1]
         0x01. Gong [2]
         0x02. Gong [3]
@@ -1717,7 +1717,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Banjo
         0x01. Banjo
         0x02. ⛔ (nullptr)
@@ -1764,7 +1764,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harp
         0x01. Harp
         0x02. ⛔ (nullptr)
@@ -1797,7 +1797,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -1889,7 +1889,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Female Choir
         0x01. Female Choir
         0x02. Harp
@@ -1919,7 +1919,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Clarinet
         0x02. Clarinet
@@ -1949,7 +1949,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -2039,7 +2039,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Steel Drum
         0x01. Digi Pad 04
         0x02. Nylon Guitar
@@ -2068,7 +2068,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Conga Closed [1]
         0x01. Conga Closed [2]
         0x02. Conga Closed [3]
@@ -2158,7 +2158,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Nylon Guitar
         0x01. Accordion
         0x02. Pizz. Double Bass
@@ -2188,7 +2188,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Conga Closed [1]
         0x01. Conga Closed [2]
         0x02. Conga Closed [3]
@@ -2278,7 +2278,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Fantasia
         0x01. Fantasia ALT
         0x02. Wind
@@ -2308,7 +2308,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Djembe
         0x01. Wind Roar
         0x02. Lore Drone & Shine
@@ -2343,7 +2343,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Gong & Chimes
         0x02. ⛔ (nullptr)
@@ -2375,7 +2375,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. ⛔ (nullptr)
         0x02. ⛔ (nullptr)
@@ -2416,7 +2416,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Trumpet
         0x01. Trombone
         0x02. Nylon Guitar (Release: 233)
@@ -2454,7 +2454,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Djembe
         0x02. ⛔ (nullptr)
@@ -2485,7 +2485,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Djembe
         0x02. ⛔ (nullptr)
@@ -2514,7 +2514,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Gong [1]
         0x01. Gong [2]
         0x02. Gong [3]
@@ -2604,7 +2604,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Pipe Organ
         0x01. Pipe Organ
         0x02. Pipe Organ
@@ -2635,7 +2635,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Wind Roar
         0x02. Lore Drone & Shine
@@ -2672,7 +2672,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Female Choir
         0x02. Male Choir
@@ -2708,7 +2708,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -2799,7 +2799,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Malon Voice (Release: 248)
         0x01. Malon Voice (Release: 247)
         0x02. Clarinet
@@ -2835,7 +2835,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -2925,7 +2925,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Ocarina
         0x02. Bassoon
@@ -2961,7 +2961,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -3054,7 +3054,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. ⛔ (nullptr)
         0x02. ⛔ (nullptr)
@@ -3089,7 +3089,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Orchestra Bass Drum [1]
         0x01. Orchestra Bass Drum [2]
         0x02. Orchestra Bass Drum [3]
@@ -3179,7 +3179,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Oboe
         0x02. ⛔ (nullptr)
@@ -3218,7 +3218,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Junk [1]
         0x01. Junk [2]
         ```
@@ -3272,7 +3272,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some sound effects using the instrument structure have multiple samples, the sound effects using multiple samples indicate which region contains which sound effect sample (e.g. `0x00: Low: SFX name, Mid: SFX Name, High: SFX Name`). Any sound effects without multiple regions use the mid (primary) sample.
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Dirt Footstep SFX
         0x01. Sand Footstep SFX
         0x02. Stone Footstep SFX?
@@ -3409,7 +3409,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Sound effects can only have one sample per sound effect, but some sound effect indexes point to the same sample in the audiobank. The indexes that use the same sample as another index are marked: `[Same sample as (index value)]`
 
         **Sound Effect List:**
-        ```
+        ``` linenums="0"
         0x00. Link Voice (Attack 1)
         0x01. Link Voice (Attack 2)
         0x02. Link Voice (Attack 3)
@@ -3618,7 +3618,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some DAWs start with program number `0`, and others start with program number `1`; because of this you may need to offset your program number assignment by a value of `1`.
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine
         0x01. Sand Footstep SFX
         0x02. Garbage Data
@@ -3664,7 +3664,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Some sound effects using the instrument structure have multiple samples, the sound effects using multiple samples indicate which region contains which sound effect sample (e.g. `0x00: Low: SFX name, Mid: SFX Name, High: SFX Name`). Any sound effects without multiple regions use the mid (primary) sample.
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Balloon Inflating SFX 1
         0x01. Wallmaster Rising SFX
         0x02. Balloon Inflating SFX 2
@@ -3805,7 +3805,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
             Sound effects can only have one sample per sound effect, but some sound effect indexes point to the same sample in the audiobank. The indexes that use the same sample as another index are marked: `[Same sample as (index value)]`
 
         **Sound Effect List:**
-        ```
+        ``` linenums="0"
         0x00. Link Voice? (Damage Voice?)
         0x01. Link Voice? (Damage Scream?)
         0x02. Link Voice? (Attack Voice 1?)
@@ -3900,7 +3900,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         Below is a list of the "drums" inside of audiobank `0x00`. There's one single drum pointer, but it's just a null pointer value with no sample being pointed to.
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         ```
 
@@ -3932,7 +3932,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Bird Chirp SFX 1
         0x02. Bird Chitter SFX
@@ -3998,7 +3998,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. Clarinet
@@ -4034,7 +4034,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -4124,7 +4124,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Ocarina
         0x02. Bassoon
@@ -4155,7 +4155,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine Slap [1]
         0x01. Tambourine Slap [2]
         0x02. Tambourine Slap [3]
@@ -4247,7 +4247,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harmonica
         0x01. Nylon Str. Guitar
         0x02. Nylon Str. Guitar
@@ -4275,7 +4275,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine Slap [1]
         0x01. Tambourine Slap [2]
         0x02. Tambourine Slap [3]
@@ -4368,7 +4368,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harp
         0x01. Harp
         0x02. Harp
@@ -4401,7 +4401,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -4491,7 +4491,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Lulu's Voice (Release: 248)
         0x01. Lulu's Voice (Release: 247)
         0x02. Sustain E. Guitar
@@ -4536,7 +4536,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Banjo
         0x01. Banjo
         0x02. ⛔ (nullptr)
@@ -4578,7 +4578,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Harp
         0x01. Harp
         0x02. ⛔ (nullptr)
@@ -4611,7 +4611,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -4701,7 +4701,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Clarinet
         0x02. Clarinet
@@ -4731,7 +4731,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -4821,7 +4821,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Steel Drum
         0x01. Digi Pad 04
         0x02. Nylon Str. Guitar
@@ -4850,7 +4850,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Conga Closed [1]
         0x01. Conga Closed [2]
         0x02. Conga Closed [3]
@@ -4940,7 +4940,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Nylon Str. Guitar
         0x01. Bandoneon
         0x02. Pizz. Double Bass
@@ -4970,7 +4970,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Conga Closed [1]
         0x01. Conga Closed [2]
         0x02. Conga Closed [3]
@@ -5060,7 +5060,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Djembe
         0x02. ⛔ (nullptr)
@@ -5091,7 +5091,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Djembe
         0x02. ⛔ (nullptr)
@@ -5120,7 +5120,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Gong [1]
         0x01. Gong [2]
         0x02. Gong [3]
@@ -5217,7 +5217,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. ⛔ (nullptr)
         0x02. ⛔ (nullptr)
@@ -5252,7 +5252,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -5342,7 +5342,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Oboe
         0x02. ⛔ (nullptr)
@@ -5388,7 +5388,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Chinese Gong
         0x01. Shehnai
         0x02. ⛔ (nullptr)
@@ -5424,7 +5424,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -5519,7 +5519,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Ocarina
         0x01. Trumpet (B3)
         0x02. Steel Str. Guitar
@@ -5568,7 +5568,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Fretless Bass
         0x01. Tenor Saxophone
         0x02. Muted E. Guitar
@@ -5603,7 +5603,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -5693,7 +5693,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Tabla
         0x01. Bongo & Slap
         0x02. Surdo
@@ -5726,7 +5726,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Fantasia
         0x01. ⛔ (nullptr)
         0x02. EERIE WIND
@@ -5766,7 +5766,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. TUNNEL RAIN
         0x01. Metal Bang
         0x02. Metal Knock
@@ -5804,7 +5804,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Synth Strings
         0x01. Synth Strings ALT (Release: 235)
         0x02. ICELAND 1
@@ -5844,7 +5844,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. ⛔ (nullptr)
         0x02. ⛔ (nullptr)
@@ -5875,7 +5875,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -5971,7 +5971,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. Ocarina
         0x02. Bassoon ALT (Splits: 42 & 127)
@@ -6005,7 +6005,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Tambourine Slap [1]
         0x01. Tambourine Slap [2]
         0x02. Tambourine Slap [3]
@@ -6095,7 +6095,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. OMINOUSITY
         0x01. PIT HIT 1
         0x02. Hi-Hat Noise ALT
@@ -6125,7 +6125,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Kagura Suzu
         0x01. Shehnai
         0x02. Metal Knock
@@ -6155,7 +6155,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -6245,7 +6245,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bouzouki
         0x01. ⛔ (nullptr)
         0x02. Bassoon ALT (Splits: 42 & 127)
@@ -6283,7 +6283,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Sustain E. Guitar ALT (Attack Time: 32)
         0x01. ⛔ (nullptr)
         0x02. ⛔ (nullptr)
@@ -6320,7 +6320,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. OMINOUSITY
         0x01. Piano
         0x02. DANGER
@@ -6355,7 +6355,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Djembe
         0x02. Shehnai
@@ -6390,7 +6390,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Fretless Bass
         0x01. Tenor Saxophone
         0x02. ⛔ (nullptr)
@@ -6426,7 +6426,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Kick Drum [1]
         0x01. Kick Drum [2]
         0x02. Kick Drum [3]
@@ -6520,7 +6520,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. Female Choir
@@ -6556,7 +6556,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -6646,7 +6646,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         ```
 
@@ -6673,7 +6673,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. Clarinet
@@ -6709,7 +6709,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -6799,7 +6799,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Fretless Bass
         0x02. Tenor Saxophone
@@ -6834,7 +6834,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Kick Drum [1]
         0x01. Kick Drum [2]
         0x02. Kick Drum [3]
@@ -6924,7 +6924,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Piccolo
         0x01. Oboe
         0x02. French Horn
@@ -6959,7 +6959,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Drum List:**
-        ```
+        ``` linenums="0"
         0x00. Concert Bass Drum [1]
         0x01. Concert Bass Drum [2]
         0x02. Concert Bass Drum [3]
@@ -7053,7 +7053,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Bent Conga
         0x01. Conga & Slap
         0x02. Cuica
@@ -7084,7 +7084,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. ⛔ (nullptr)
         0x01. Djembe
         0x02. Shehnai
@@ -7116,7 +7116,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         The list is structured and named like so: `Pointer index in HEX: Name of SFX`
 
         **Instrument List:**
-        ```
+        ``` linenums="0"
         0x00. Junk [1]
         0x01. Junk [2]
         0x02. Junk [3]
@@ -7132,7 +7132,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
         "Waveforms" above `0x87` are not actual instruments with actual sample data like `0x80` to `0x87`, they instead use compiled assembly code and interpret it as if it were sample data. The starting address uses the audio thread and adds a random offset between `0x0000` and `0xFFF0`; this is volatile and may cause issues so it is recommended to avoid using them.
 
     **List of Waveforms:**
-    ```
+    ``` linenums="0"
     0x80. Sawtooth Wave
     0x81. Triangle Wave
     0x82. Sine Wave
