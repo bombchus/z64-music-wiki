@@ -162,6 +162,10 @@ Ocarina of Time and Majora's Mask use 4-Point envelope structure, however
     Release refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
 
 === "Hold"
+
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-hold-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-hold-dark.png#only-dark)
+
     Hold refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
 
 -----
