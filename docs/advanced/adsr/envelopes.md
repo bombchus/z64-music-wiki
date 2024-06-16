@@ -130,6 +130,16 @@ In the example below we will assume the sample's waveform is `2s` in total lengt
 
 Ocarina of Time and Majora's Mask use 4-Point envelope structure, however 
 
-![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr.png)
+![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-light.png#only-light)
+![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-dark.png#only-dark)
+
+=== "Attack"
+    Attack refers to the time it takes from when a key is first pressed to the time it takes the sound of a sound to go from zero amplitude to max amplitude
+
+=== "Decay"
+
+=== "Sustain"
+
+=== "Release"
 
 -----
