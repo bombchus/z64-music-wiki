@@ -128,7 +128,8 @@ In the example below we will assume the sample's waveform is `2s` in total lengt
     </item>
     ```
 
-![](https://bombchus.github.io/z64-music-wiki/assets/images/pianoenvelope-dark.png#only-dark)
-![](https://bombchus.github.io/z64-music-wiki/assets/images/pianoenvelope-light.png#only-light)
+Ocarina of Time and Majora's Mask use 4-Point envelope structure, however 
+
+![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr.png)
 
 -----
