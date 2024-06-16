@@ -82,7 +82,9 @@ placeholder
 
 ## Majora's Mask ROM Requirements
 
-For your Majora's Mask ROM to work with all the tools required to create music for the game you will need to make sure your ROM is an NTSC-U version 1 ROM and not NTSC-J version 1 or version 1.1 or PAL. The tools used to create custom music for Majora's Mask only support or have information available for NTSC-U due to the difference in data between NTSC-J and NTSC-U, because unlike Ocarina of Time, where the game had all the same data for both NTSC regions and the text could easily be toggled between Japanese and English, Majora's Mask has multiple differences between both NTSC regions (e.g. Owl Quicksaves not being present in NTSC-J but being present in NTSC-U and PAL).
+To be able to work with the tools required for custom music creation your Majora's Mask ROM will need to be an NTSC-U version 1.0 ROM; your ROM cannot be NTSC-J version 1.0 or 1.1, nor can it be a PAL version 1.0 ROM. The tools used to create music for Majora's Mask only support or have information available for NTSC-U version 1.0, and unlike how NTSC versions work for Ocarina of Time there are multiple changes between the ROMs for NTSC versions of the game that make them vastly different (e.g. Owl Quicksaves being added in NTSC-U where they were absent from NTSC-J, or Zora Swimming physics being altered from NTSC-J to NTSC-U, etc).
+
+To make sure you have an unmodified and correct version of the ROM, there are MD5 checksums available below to cross reference for both compressed ROMs and decompressed ROMs.
 
 ???+ success "ROM MD5 Checksum"
 
@@ -102,7 +104,7 @@ For your Majora's Mask ROM to work with all the tools required to create music f
 
 ## placeholder
 
-![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
-![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
+![](assets/images/samples/piano-range-light.png#only-light){ .on-glb }
+![](assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
 -----

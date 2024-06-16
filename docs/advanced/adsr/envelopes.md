@@ -128,41 +128,41 @@ In the example below we will assume the sample's waveform is `2s` in total lengt
     </item>
     ```
 
-![](../assets/images/adsr/adsr-light.png#only-light)
-![](../assets/images/adsr/adsr-dark.png#only-dark)
+![](../../assets/images/adsr/adsr-light.png#only-light){ .on-glb }
+![](../../assets/images/adsr/adsr-dark.png#only-dark){ .on-glb }
 
 === "Attack"
 
-    ![](../assets/images/adsr/adsr-attack-light.png#only-light)
-    ![](../assets/images/adsr/adsr-attack-dark.png#only-dark)
+    ![](../../assets/images/adsr/adsr-attack-light.png#only-light)
+    ![](../../assets/images/adsr/adsr-attack-dark.png#only-dark)
 
     Attack refers to the time it takes from when a key is first pressed the sound of a sample to go from zero amplitude to the max attack amplitude. The longer your attack is the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
 
 === "Decay"
 
-    ![](../assets/images/adsr/adsr-decay-light.png#only-light)
-    ![](../assets/images/adsr/adsr-decay-dark.png#only-dark)
+    ![](../../assets/images/adsr/adsr-decay-light.png#only-light)
+    ![](../../assets/images/adsr/adsr-decay-dark.png#only-dark)
 
     Decay refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer your decay is the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
 
 === "Sustain"
 
-    ![](../assets/images/adsr/adsr-sustain-light.png#only-light)
-    ![](../assets/images/adsr/adsr-sustain-dark.png#only-dark)
+    ![](../../assets/images/adsr/adsr-sustain-light.png#only-light)
+    ![](../../assets/images/adsr/adsr-sustain-dark.png#only-dark)
 
     Sustain refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher your sustain is the less of a decrease your amplitude will have from the max attack amplitude.
 
 === "Release"
 
-    ![](../assets/images/adsr/adsr-release-light.png#only-light)
-    ![](../assets/images/adsr/adsr-release-dark.png#only-dark)
+    ![](../../assets/images/adsr/adsr-release-light.png#only-light)
+    ![](../../assets/images/adsr/adsr-release-dark.png#only-dark)
 
     Release refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
 
 === "Hold"
 
-    ![](../assets/images/adsr/adsr-hold-light.png#only-light)
-    ![](../assets/images/adsr/adsr-hold-dark.png#only-dark)
+    ![](../../assets/images/adsr/adsr-hold-light.png#only-light)
+    ![](../../assets/images/adsr/adsr-hold-dark.png#only-dark)
 
     Hold refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
 
