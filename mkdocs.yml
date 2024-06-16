@@ -12,8 +12,6 @@ site_description: >-
 # Copyright Information
 copyright: |
   Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
-  —
-  <a href="#__consent">Manage your cookie settings</a>
 
 # Config
 theme:
@@ -74,17 +72,6 @@ extra:
     #- icon: fontawesome/brands/bluesky
       #link: https://bsky.app/profile/bombchus.bsky.social
       #name: Bluesky
-  consent:
-    title: Cookie Consent
-    description: >-
-      This website uses Github cookies. Cookies are small text files placed on your device to store data so web servers can use it later.
-      Github and their third party partners use cookies to remember your preferences and settings, help you sign in, sho you personalized ads,
-      and analyze how well their websites are working. For more info, see the Cookies and other similar technologies
-    cookies:
-      analytics: github
-    actions:
-      - accept
-      - manage
 
 # Extensions
 markdown_extensions:
