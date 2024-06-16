@@ -58,7 +58,7 @@ theme:
       accent: deep purple
 
 # Additional Config
-extra:
+#extra:
   #social:
     #- icon: fontawesome/brands/discord
       #link: https://discord.gg/ootrandomizer
