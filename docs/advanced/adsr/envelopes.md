@@ -134,15 +134,31 @@ Ocarina of Time and Majora's Mask use 4-Point envelope structure, however
 ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-dark.png#only-dark)
 
 === "Attack"
+
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-attack-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-attack-dark.png#only-dark)
+
     Attack refers to the time it takes from when a key is first pressed the sound of a sample to go from zero amplitude to the max attack amplitude. The longer your attack is the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
 
 === "Decay"
+
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-decay-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-decay-dark.png#only-dark)
+
     Decay refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer your decay is the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
 
 === "Sustain"
+
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-sustain-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-sustain-dark.png#only-dark)
+
     Sustain refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher your sustain is the less of a decrease your amplitude will have from the max attack amplitude.
 
 === "Release"
+
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-release-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-release-dark.png#only-dark)
+
     Release refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
 
 === "Hold"
