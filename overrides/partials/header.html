@@ -35,19 +35,19 @@
     aria-label="{{ lang.t('header') }}"
   >
 
-    <!-- Link to home -->
-    <!--
+    <!-- Logo Link to home -->
+    <!-- title="{{ config.site_name | e }}" -->
     <a
       href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-      title="{{ config.site_name | e }}"
       class="md-header__button md-logo"
       aria-label="{{ config.site_name }}"
       data-md-component="logo"
     >
       {% include "partials/logo.html" %}
     </a>
-    -->
 
+    <!-- Remove Logo Link to Home -->
+    <!--
     <a
       title=""
       class="md-header__button md-logo"
@@ -56,6 +56,7 @@
     >
       {% include "partials/logo.html" %}
     </a>
+    -->
 
     <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">

@@ -79,15 +79,15 @@ $f(x)=Float\div\frac{32000}{x}$
 
 
 === "16000Hz"
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-16000hz-dark.png#only-dark)
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-16000hz-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-16000hz-dark.png#only-dark)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-16000hz-light.png#only-light)
 
 === "32000Hz"
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-32000hz-dark.png#only-dark)
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-32000hz-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-32000hz-dark.png#only-dark)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-32000hz-light.png#only-light)
 
 === "64000Hz"
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-64000hz-dark.png#only-dark)
-    ![](https://bombchus.github.io/z64-music-wiki/assets/images/tuning/waveform-64000hz-light.png#only-light)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-64000hz-dark.png#only-dark)
+    ![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/waveform-64000hz-light.png#only-light)
 
 -----

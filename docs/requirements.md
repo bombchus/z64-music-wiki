@@ -10,35 +10,7 @@
 
 </div>
 
-# Requirements
-
-???+ success "ROM MD5 Checksum"
-
-    An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
-
-    === "OoT (Compressed)"
-        `Legend of Zelda, The - Ocarina of Time (U) (V1.0)`
-        ```
-        5bd1fe107bf8106b2ab6650abecd54d6
-        ```
-
-    === "OoT (Decompressed)"
-        `Legend of Zelda, The - Ocarina of Time (U) (V1.0)`
-        ```
-        6f7957f08d564ae255b25d54b9eb6774
-        ```
-
-    === "MM (Compressed)"
-        `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
-        ```
-        2a0a8acb61538235bc1094d297fb6556
-        ```
-
-    === "MM (Decompressed)"
-        `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
-        ```
-        05fd2b38816173f92ab279c059fabbfb
-        ```
+placeholder
 
 ???+ info "ROM Byte Ordering"
 
@@ -50,32 +22,89 @@
 
     === "Little Endian (`.n64`)"
         For Ocarina of Time the title will be arranged as such in Little Endian byte ordering:
-        ```
+        ``` linenums="0"
          EHTEGELO DNEZ F ADL....C....ELZ
         ```
         For Majora's Mask the title will be arranged as such in Little Endian byte ordering:
-        ```
+        ``` linenums="0"
         DLEZAM AAROJM S' KSA....N....ESZ
         ```
 
     === "Big Endian (`.z64`)"
         For Ocarina of Time the title will be arranged as such in Big Endian byte ordering:
-        ```
+        ``` linenums="0"
         THE LEGEND OF ZELDA .......CZLE.
         ```
         For Majora's Mask the title will be arranged as such in Big Endian byte ordering:
-        ```
+        ``` linenums="0"
         ZELDA MAJORA'S MASK .......NZSE.
         ```
 
     === "Byteswapped (`.v64`)"
         For Ocarina of Time the title will be arranged as such in Byteswapped byte ordering:
-        ```
+        ``` linenums="0"
         HT EELEGDNO  FEZDL A......C.LZ.E
         ```
         For Majora's Mask the title will be arranged as such in Byteswapped byte ordering:
-        ```
+        ``` linenums="0"
         EZDL AAMOJARS'M SA K......N.SZ.E
         ```
+
+## Ocarina of Time ROM Requirements
+
+???+ success "ROM MD5 Checksum"
+
+    An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
+
+    === "Compressed (NTSC-U)"
+        `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
+        ``` linenums="0"
+        5bd1fe107bf8106b2ab6650abecd54d6
+        ```
+
+    === "Decompressed (NTSC-U)"
+        `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
+        ``` linenums="0"
+        6f7957f08d564ae255b25d54b9eb6774
+        ```
+
+    === "Compressed (NTSC-J)"
+        `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
+        ``` linenums="0"
+        9f04c8e68534b870f707c247fa4b50fc
+        ```
+
+    === "Decompressed (NTSC-J)"
+        `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
+        ``` linenums="0"
+        361f0a3bfc21289928d0f671517a6897
+        ```
+
+## Majora's Mask ROM Requirements
+
+For your Majora's Mask ROM to work with all the tools required to create music for the game you will need to make sure your ROM is an NTSC-U version 1 ROM and not NTSC-J version 1 or version 1.1 or PAL. The tools used to create custom music for Majora's Mask only support or have information available for NTSC-U due to the difference in data between NTSC-J and NTSC-U, because unlike Ocarina of Time, where the game had all the same data for both NTSC regions and the text could easily be toggled between Japanese and English, Majora's Mask has multiple differences between both NTSC regions (e.g. Owl Quicksaves not being present in NTSC-J but being present in NTSC-U and PAL).
+
+???+ success "ROM MD5 Checksum"
+
+    An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
+
+    === "Compressed (NTSC-U)"
+        `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
+        ``` linenums="0"
+        2a0a8acb61538235bc1094d297fb6556
+        ```
+
+    === "Decompressed (NTSC-U)"
+        `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
+        ``` linenums="0"
+        05fd2b38816173f92ab279c059fabbfb
+        ```
+
+
+
+## placeholder
+
+![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-dark.png#only-dark)
+![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-light.png#only-light)
 
 -----
