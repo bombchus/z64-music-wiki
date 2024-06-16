@@ -134,12 +134,18 @@ Ocarina of Time and Majora's Mask use 4-Point envelope structure, however
 ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr-dark.png#only-dark)
 
 === "Attack"
-    Attack refers to the time it takes from when a key is first pressed to the time it takes the sound of a sound to go from zero amplitude to max amplitude
+    Attack refers to the time it takes from when a key is first pressed the sound of a sample to go from zero amplitude to the max attack amplitude. The longer your attack is the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
 
 === "Decay"
+    Decay refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer your decay is the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
 
 === "Sustain"
+    Sustain refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher your sustain is the less of a decrease your amplitude will have from the max attack amplitude.
 
 === "Release"
+    Release refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
+
+=== "Hold"
+    Hold refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
 
 -----
