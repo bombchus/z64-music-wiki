@@ -117,6 +117,12 @@ plugins:
   #- git-authors
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - glightbox:
+      effect: zoom
+      draggable: false
+      background: none
+      shadow: none
+      manual: true
 
 extra_javascript:
   - javascripts/katex.js
