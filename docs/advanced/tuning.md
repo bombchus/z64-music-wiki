@@ -2,6 +2,8 @@
 icon: material/waveform
 ---
 
+# Sample Tuning
+
 <div class="grid cards" markdown>
 
 -   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
@@ -11,8 +13,6 @@ icon: material/waveform
     This page is a work in progress and requires further editing.
 
 </div>
-
-# Sample Tuning
 
 ## — Tuning (Modular)
 !!! warning "Attention"

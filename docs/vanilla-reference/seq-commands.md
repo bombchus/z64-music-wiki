@@ -2,6 +2,8 @@
 icon: material/hexadecimal
 ---
 
+# Sequence Commands
+
 <div class="grid cards" markdown>
 
 -   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__

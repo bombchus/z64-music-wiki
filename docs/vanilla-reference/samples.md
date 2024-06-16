@@ -19,7 +19,7 @@ icon: material/waveform
 
 </style>
 
-# Vanilla Sample Addresses
+# Sample Reference
 
 <div class="grid cards" markdown>
 

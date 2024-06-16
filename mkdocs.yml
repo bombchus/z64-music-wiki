@@ -146,6 +146,6 @@ nav:
     - MIDI:
       - Advanced MIDI Overview: advanced/midi/overview.md
   - Vanilla References:
-    - Audiobank Reference: audiobank-ref.md
-    - Sample Reference: vanilla-samples.md
-    - Sequence Commands: seq-commands.md
+    - Audiobank Reference: vanilla-reference/audiobanks.md
+    - Sample Reference: vanilla-reference/samples.md
+    - Sequence Commands: vanilla-reference/seq-commands.md

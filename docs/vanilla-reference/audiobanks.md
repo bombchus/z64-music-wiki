@@ -13,7 +13,7 @@ icon: material/playlist-music
 
 </style>
 
-# Vanilla Audiobank Reference
+# Audiobank Reference
 
 <div class="grid cards" markdown>
 
