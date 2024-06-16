@@ -107,6 +107,16 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 }
 */
 
+/* Change Logo Height */
 .md-header__button.md-logo img {
-  height: 3rem;
+  height: 2.5rem;
+}
+.md-header__button:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+/* Change tab navigation height */
+.md-tabs {
+  z-index: 1;
 }

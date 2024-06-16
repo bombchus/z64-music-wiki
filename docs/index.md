@@ -10,6 +10,10 @@ hide:
 
 <!-- Remove unwanted elements -->
 <style>
+  .md-header__title > .md-header__ellipsis {
+    font-weight: 700;
+  }
+
   /* Remove the Page Header */
   .md-typeset h1,
   .md-content__button {
