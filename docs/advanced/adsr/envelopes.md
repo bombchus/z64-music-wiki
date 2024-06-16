@@ -17,7 +17,7 @@ icon: material/code-braces
 === ":material-code-braces: &nbsp;C"
 
     ```c
-    EnvelopePoint gDefaultEnvelope[4] = {
+    EnvelopePoint gDefaultEnvelope[] = {
         { 1, 32000 },
         { 1000, 32000 },
         { ADSR_HANG, 0 },
@@ -128,8 +128,6 @@ In the example below we will assume the sample's waveform is `2s` in total lengt
     </item>
     ```
 
-Ocarina of Time and Majora's Mask use 4-Point envelope structure, however 
-
 ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr/adsr-light.png#only-light)
 ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr/adsr-dark.png#only-dark)
 
@@ -167,5 +165,9 @@ Ocarina of Time and Majora's Mask use 4-Point envelope structure, however
     ![](https://bombchus.github.io/z64-music-wiki/assets/images/adsr/adsr-hold-dark.png#only-dark)
 
     Hold refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
+
+-----
+
+Ocarina of Time and Majora's Mask use a multi-point envelope structure, however instruments and drums are limited to 4 data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
 
 -----
