@@ -52,6 +52,10 @@ placeholder
 
 ## Ocarina of Time ROM Requirements
 
+To be able to work with the tools required for custom music creation your Ocarina of Time ROM will need to be any NTSC region version 1.0 ROM; NTSC region versions 1.1, 1.2, and PAL region ROMs will not work. The tools used to create music for Ocarina of Time only support or have information available for NTSC region version 1.0 ROMs because the developers of the tools decided on using NTSC region version 1.0 ROMs instead of any other version, however for Ocarina of Time it does not matter if your ROM is NTSC-J or NTSC-U as the only difference between the NTSC-J and NTSC-U region ROMs is a toggle determining whether or not the language should be in Japanese or English.[^1]
+
+To make sure you have an unmodified version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed Ocarina of TIme NTSC version 1.0 ROMs
+
 ???+ success "ROM MD5 Checksum"
 
     An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
@@ -82,9 +86,9 @@ placeholder
 
 ## Majora's Mask ROM Requirements
 
-To be able to work with the tools required for custom music creation your Majora's Mask ROM will need to be an NTSC-U version 1.0 ROM; your ROM cannot be NTSC-J version 1.0 or 1.1, nor can it be a PAL version 1.0 ROM. The tools used to create music for Majora's Mask only support or have information available for NTSC-U version 1.0, and unlike how NTSC versions work for Ocarina of Time there are multiple changes between the ROMs for NTSC versions of the game that make them vastly different (e.g. Owl Quicksaves being added in NTSC-U where they were absent from NTSC-J, or Zora Swimming physics being altered from NTSC-J to NTSC-U, etc).
+To be able to work with the tools required for custom music creation your Majora's Mask ROM will need to be an NTSC-U version 1.0 ROM; NTSC-J versions 1.0, 1.1, and PAL region ROMs will not work. The tools used to create music for Majora's Mask only support or have information available for NTSC-U version 1.0 because the developers of the tools decided on using NTSC-U version 1.0 instead of any other version, and unlike how NTSC versions work for Ocarina of Time there are multiple changes between the ROMs for NTSC versions of the game that make them vastly different (e.g. Owl Quicksaves being added in NTSC-U where they were absent from NTSC-J, or Zora Swimming physics being altered from NTSC-J to NTSC-U, etc).[^2]
 
-To make sure you have an unmodified and correct version of the ROM, there are MD5 checksums available below to cross reference for both compressed ROMs and decompressed ROMs.
+To make sure you have an unmodified and correct version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed Majora's Mask NTSC-U version 1.0 ROMs.
 
 ???+ success "ROM MD5 Checksum"
 
@@ -108,3 +112,7 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
 ![](assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
 -----
+
+[^1]: For a full breakdown of every difference between versions in The Legend of Zelda: Ocarina of Time, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences") on version differences.
+
+[^2]: For a full breakdown of every difference between versions in The Legend of Zelda: Majora's Mask, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Majora%27s_Mask/Program_Revision_Differences "The Legend of Zelda: Majora's Mask Program Revision Differences") on program revisions.
