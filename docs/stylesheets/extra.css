@@ -120,3 +120,8 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 .md-tabs {
   z-index: 1;
 }
+
+/* Don't change cursor when hovering search overlay */
+.md-search__overlay {
+  cursor: auto;
+}
