@@ -121,7 +121,7 @@ plugins:
       effect: zoom
       draggable: false
       background: none
-      shadow: none
+      shadow: false
       manual: true
 
 extra_javascript:

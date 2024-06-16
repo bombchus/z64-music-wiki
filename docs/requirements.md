@@ -104,7 +104,7 @@ For your Majora's Mask ROM to work with all the tools required to create music f
 
 ## placeholder
 
-![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-dark.png#only-dark)
-![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-light.png#only-light)
+![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
+![](https://bombchus.github.io/z64-music-wiki/assets/images/samples/piano-range-light.png#only-light){ .on-glb }
 
 -----
