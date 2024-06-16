@@ -145,9 +145,7 @@ nav:
       - Injection Overview: advanced/sampling/overview.md
     - MIDI:
       - Advanced MIDI Overview: advanced/midi/overview.md
-  - Vanilla ROM Documentation:
-    #- Audiobank Documentation:
+  - Vanilla References:
     - Audiobank Reference: audiobank-ref.md
-    #- Sample Documentation:
     - Sample Reference: vanilla-samples.md
     - Sequence Commands: seq-commands.md
