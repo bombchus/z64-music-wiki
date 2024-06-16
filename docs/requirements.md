@@ -100,12 +100,9 @@ For your Majora's Mask ROM to work with all the tools required to create music f
         05fd2b38816173f92ab279c059fabbfb
         ```
 
-
-
 ## placeholder
 
-![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
-
 ![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
+![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
 -----

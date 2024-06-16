@@ -79,15 +79,15 @@ $f(x)=Float\div\frac{32000}{x}$
 
 
 === "16000Hz"
-    ![](../assets/images/samples/waveform-16000hz-dark.png#only-dark)
     ![](../assets/images/samples/waveform-16000hz-light.png#only-light)
+    ![](../assets/images/samples/waveform-16000hz-dark.png#only-dark)
 
 === "32000Hz"
-    ![](../assets/images/samples/waveform-32000hz-dark.png#only-dark)
     ![](../assets/images/samples/waveform-32000hz-light.png#only-light)
+    ![](../assets/images/samples/waveform-32000hz-dark.png#only-dark)
 
 === "64000Hz"
-    ![](../assets/images/samples/waveform-64000hz-dark.png#only-dark)
     ![](../assets/images/samples/waveform-64000hz-light.png#only-light)
+    ![](../assets/images/samples/waveform-64000hz-dark.png#only-dark)
 
 -----
