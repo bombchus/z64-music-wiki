@@ -128,3 +128,16 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 .md-search__overlay {
   cursor: auto;
 }
+
+/* remove lightbox navigation */
+.glightbox-clean .gprev {
+  top: -100%!important;
+}
+.glightbox-clean .gnext {
+  top: -100%!important;
+}
+
+/* change lightbox overlay color */
+.goverlay {
+  background: rgba(0,0,0,.8)!important;
+}

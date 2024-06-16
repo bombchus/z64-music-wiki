@@ -118,10 +118,12 @@ plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - glightbox:
-      loop: true
+      touchNavigation: false
       effect: zoom
+      width: 80%
+      zoomable: false
       draggable: false
-      background: none
+      background: none #var(--md-default-bg-color)
       shadow: false
       manual: true
 
