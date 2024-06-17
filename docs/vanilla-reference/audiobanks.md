@@ -25,7 +25,7 @@ icon: material/playlist-music
 
 </div>
 
-Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Majora's Mask, every entry contains the following information:
+Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and *Majora's Mask*, every entry contains the following information:
 
 * Audiobank index value
 * Audiobank name (Same as the ROM Description name)
@@ -53,7 +53,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
 
-        Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
 
@@ -348,7 +348,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
 
-        Audiobank `0x01` is the second of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x01` is the second of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -494,7 +494,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
 
-        Audiobank `0x02` is used pretty much for basically every ambient sound in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3230,7 +3230,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
 
-        Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x00` is the first of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3639,7 +3639,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
 
-        Audiobank `0x01` is the second of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x01` is the second of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3906,7 +3906,7 @@ Below is a list of every audiobank in the vanilla ROM of Ocarina of Time and Maj
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
 
-        Audiobank `0x02` is used pretty much for basically every ambient sound in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in `N64 Soundlist Tool` (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         

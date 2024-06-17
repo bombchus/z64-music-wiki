@@ -50,9 +50,9 @@ icon: material/code-braces
     </item>
     ```
 
-Below is a graphical representation of the envelope of the Piano instrument, the ADSR values for Ocarina of Time and Majora's Mask are linear values with the time being in microseconds. A value of `1` for your envelope data is equal to ~`4000µs (0.004s)`.
+Below is a graphical representation of the envelope of the Piano instrument, the ADSR values for Ocarina of Time and Majora's Mask are linear values with the time being in microseconds. A value of `1` for your envelope data is equal to ~4000 µs (0.004 s).
 
-In the example below we will assume the sample's waveform is `2s` in total length, so over `8000µs (0.008s)` the sample goes from zero amplitude to ~`99%` amplitude, then once it reaches ~`99%` amplitude it returns to zero amplitude over the course of `960000µs (0.96s)` and remains at zero amplitude for `4000µs (0.004s)` and then it will remain at zero amplitude indefinitely due to the value of `-1` being the special command `#!c ADSR_HANG`.
+In the example below we will assume the sample's waveform is 2 s in total length, so over 8000 µs (0.008 s) the sample goes from zero amplitude to ~99% amplitude, then once it reaches ~99% amplitude it returns to zero amplitude over the course of 960000 µs (0.96 s) and remains at zero amplitude for 4000 µs (0.004 s) and then it will remain at zero amplitude indefinitely due to the value of `-1` being the special command `ADSR_HANG`.
 
 ```c hl_lines="2"
 #define ADSR_DISABLE 0
@@ -136,38 +136,38 @@ In the example below we will assume the sample's waveform is `2s` in total lengt
     ![](../../assets/images/adsr/adsr-attack-light.png#only-light)
     ![](../../assets/images/adsr/adsr-attack-dark.png#only-dark)
 
-    Attack refers to the time it takes from when a key is first pressed the sound of a sample to go from zero amplitude to the max attack amplitude. The longer your attack is the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
+    **Attack** refers to the time it takes from when a key is first pressed the sound of a sample to go from zero amplitude to the max attack amplitude. The longer your attack is the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
 
 === "Decay"
 
     ![](../../assets/images/adsr/adsr-decay-light.png#only-light)
     ![](../../assets/images/adsr/adsr-decay-dark.png#only-dark)
 
-    Decay refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer your decay is the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
+    **Decay** refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer your decay is the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
 
 === "Sustain"
 
     ![](../../assets/images/adsr/adsr-sustain-light.png#only-light)
     ![](../../assets/images/adsr/adsr-sustain-dark.png#only-dark)
 
-    Sustain refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher your sustain is the less of a decrease your amplitude will have from the max attack amplitude.
+    **Sustain** refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher your sustain is the less of a decrease your amplitude will have from the max attack amplitude.
 
 === "Release"
 
     ![](../../assets/images/adsr/adsr-release-light.png#only-light)
     ![](../../assets/images/adsr/adsr-release-dark.png#only-dark)
 
-    Release refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
+    **Release** refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer your release is the longer it will take for the sound to fade out from your sustain amplitude to zero amplitude.
 
 === "Hold"
 
     ![](../../assets/images/adsr/adsr-hold-light.png#only-light)
     ![](../../assets/images/adsr/adsr-hold-dark.png#only-dark)
 
-    Hold refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
+    **Hold** refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer your hold is the longer your sound will remain at max attack amplitude before beginning to decay to sustain amplitude.
 
 -----
 
-Ocarina of Time and Majora's Mask use a multi-point envelope structure, however instruments and drums are limited to 4 data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
+*Ocarina of Time* and *Majora's Mask* use a multi-point envelope structure, however instruments and drums are limited to four data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
 
 -----

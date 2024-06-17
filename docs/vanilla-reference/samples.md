@@ -31,7 +31,7 @@ icon: material/waveform
 
 </div>
 
-Below is a list containing all of the samples in the Ocarina of Time and Majora's Mask ROMs in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to highest instrument sample for each instrument. Some instruments however do not fit into GM, so they are placed in the table where they would most likely fit instead.
+Below is a list containing all of the samples in the *Ocarina of Time* and *Majora's Mask* ROMs in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to highest instrument sample for each instrument. Some instruments however do not fit into GM, so they are placed in the table where they would most likely fit instead.
 
 === "Ocarina of Time Samples"
 

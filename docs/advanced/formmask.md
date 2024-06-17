@@ -3,7 +3,7 @@ icon: material/code-json
 ---
 
 # Using Formmask
-Added in `v1.15.0.21` of the Majora's Mask Randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
+Added in `v1.15.0.21` of the *Majora's Mask* randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
 
 !!! warning "Non-Useable Categories"
     At the time of writing this Formmask does not currently work with fanfares or combat music, so you cannot use it with the following sequence categories:
@@ -89,7 +89,7 @@ The formatting for a `.json` array is as follows:
     ]
     ```
 
-The first sixteen array values are for the channels of your sequence, and the seventeenth array value is for cumulative foms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other channels without the set form or state when that form or state is active.
+The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other channels without the set form or state when that form or state is active.
 
 !!! info
     You can specify a channel and cumulative forms & states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
@@ -110,6 +110,6 @@ Below is a list of the forms & states available to be assigned via Formmask.
 | `SpikeRolling` | The channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
-To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use `D-Pad Up` and `D-Pad Down`, and to cycle through cumulative states you can use `D-Pad Left` and `D-Pad Right`.
+To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use *D-Pad up* and *D-Pad down*, and to cycle through cumulative states you can use *D-Pad left* and *D-Pad right*.
 
 -----
