@@ -92,6 +92,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.mark
+  - def_list
   - abbr
   - attr_list
   - md_in_html
@@ -128,6 +129,9 @@ plugins:
       background: none #var(--md-default-bg-color)
       shadow: false
       manual: true
+  - minify:
+      minify_css: true
+      css_files: stylesheets/extra.css
 
 extra_javascript:
   - javascripts/katex.js

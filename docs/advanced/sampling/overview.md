@@ -74,23 +74,23 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 ### Custom Sample Injection Workflow
 <div class="annotate" markdown>
 
-- **Step 1:** Obtain a `.wav` file your will use for your sampled instrument, drum, or sound effect
+1. Obtain a `.wav` file your will use for your sampled instrument, drum, or sound effect
     - Resample your `.wav` file to `32000Hz` (1)
     - Add or remove loop points to the `.wav` file using `Polyphone` or `z64Audio` as needed
-- **Step 2:** Find your `.wav` file's tuning float value
+2. Find your `.wav` file's tuning float value
     - Find your `.wav` file's root key (2)
-- **Step 3:** Convert your `.wav` file to a `.bin` (or `.zsound`) file using the `Sample Creation Tools` or obtain a sample from a different Nintendo 64 game using `N64 Soundlist Tool`
+3. Convert your `.wav` file to a `.bin` (or `.zsound`) file using the `Sample Creation Tools` or obtain a sample from a different Nintendo 64 game using `N64 Soundlist Tool`
     - Convert your codebook ADPCM predictor data from `.bin` to `.xml`
     - Convert your loopbook ADPCM predictor data from `.bin` to `.xml` (3)
-- **Step 4:** Create your sampled instrument's, drum's, or sound effect's audiobank (4)
+4. Create your sampled instrument's, drum's, or sound effect's audiobank (4)
     - Edit the splits, release rate, tuning float, and ADSR values in the audiobank
     - Copy and paste your codebook ADPCM predictor data into `<books>`
     - Copy and paste your loopbook ADPCM predictor data into `<loops>` (5)
-- **Step 5:** Set up your sampled instrument's, drum's, or sound effect's unique sample address marker
+5. Set up your sampled instrument's, drum's, or sound effect's unique sample address marker
     - For Ocarina of Time Randomizer rename `*.wav.vadpcm.bin` to `*.zsound` and add `ZSOUND:*.zsound:########` to your `.meta` file
     - For Majora's Mask Randomizer rename `*.wav.vadpcm.bin` to `*_########.zsound`
     - ~~Rename `*.wav.vadpcm.bin` to `*.zsound` and add `- "*.zsound": "########"` to the `samples:` section of your `metadata.yml` file~~ (6)
-- **Step 6:** Test your sampled instrument, drum, or sound effect in-game to make sure it works
+6. Test your sampled instrument, drum, or sound effect in-game to make sure it works
     - Create an `.ootrs` or `.mmrs` and test your sample using the audiobank and a test sequence in the randomizer (7)
 
 </div>

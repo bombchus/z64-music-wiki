@@ -1,3 +1,9 @@
+/*
+ *
+ * CUSTOM ADMONITIONS
+ *
+ */
+
 /* Custom Audiobank Admonition to contain Audiobanks in collapsable elements */
 :root {
   --md-admonition-icon--audiobank: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>playlist-music</title><path d="M15,6H3V8H15V6M15,10H3V12H15V10M3,16H11V14H3V16M17,6V14.18C16.69,14.07 16.35,14 16,14A3,3 0 0,0 13,17A3,3 0 0,0 16,20A3,3 0 0,0 19,17V8H22V6H17Z" /></svg>')
@@ -77,12 +83,26 @@
           mask-image: var(--md-admonition-icon--alert);
 }
 
-/* Header Font Weight Change */
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
-  font-weight: 400;
+/*
+ *
+ * MARKDOWN HEADER CHANGES
+ *
+ */
+
+/* Header font weight change */
+.md-typeset h1 {
+  font-weight: 700;
+}
+.md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  font-weight: 700;
 }
 
-/* Navigation Section changes, I prefer dropdowns to no dropdowns */
+/* 
+ *
+ * SIDEBAR NAVIGATION CHANGES
+ *
+ */
+/* Change text font weight and color for link navigation */
 label#__nav_4_1_label.md-nav__link > .md-ellipsis,
 label#__nav_4_2_label.md-nav__link > .md-ellipsis,
 label#__nav_4_3_label.md-nav__link > .md-ellipsis,
@@ -92,6 +112,7 @@ label#__nav_4_5_label.md-nav__link > .md-ellipsis {
   color: var(--md-default-fg-color--light);
 }
 
+/* Change text hover color for link navigation */
 /*
 label#__nav_4_1_label.md-nav__link:hover > .md-ellipsis,
 label#__nav_4_1_label.md-nav__link:focus > .md-ellipsis,
@@ -107,6 +128,11 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 }
 */
 
+/*
+ *
+ * LOGO CHANGES
+ *
+ */
 /* Change Logo Height */
 .md-header__button.md-logo img {
   height: 2.5rem;
@@ -119,16 +145,31 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 }
 */
 
+/*
+ *
+ * TAB NAVIGATION CHANGES
+ *
+ */
 /* Change tab navigation height */
 .md-tabs {
   z-index: 1;
 }
 
+/*
+ *
+ * SEARCH CHANGES
+ *
+ */
 /* Don't change cursor when hovering search overlay */
 .md-search__overlay {
   cursor: auto;
 }
 
+/*
+ *
+ * GALLERY LIGHTBOX CHANGES
+ *
+ */
 /* remove lightbox navigation */
 .glightbox-clean .gprev {
   top: -100%!important;
