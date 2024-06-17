@@ -66,28 +66,70 @@ The formatting for a `.json` array is as follows:
     ]
     ```
 
-=== ":material-code-json: &nbsp;Example"
-    ``` json
+=== ":material-code-json: &nbsp;Example 1"
+    
+    <div class="annotate">
+    
+    ``` yaml
     [
-        "Human, Deku",
-        "All",
-        "All",
-        "Human, Deku, Goron",
-        "All",
-        "Zora",
-        "All",
-        "Human, Goron",
+        "All",#(1)!
         "All",
         "All",
         "All",
-        "Human",
         "All",
-        "Zora, Swim",
-        "Epona",
-        "SpikeRolling",
-        "Epona, SpikeRolling, Swim"
+        "All",
+        "All",
+        "Swim",#(2)!
+        "Swim",
+        "All",
+        "Combat",#(3)!
+        "Combat",
+        "Combat",
+        "Swim",
+        "All",
+        "All",
+        "Epona, SpikeRolling"#(4)!
     ]
     ```
+
+    </div>
+
+    1. Channels 0, 1, 2, 3, 4, 5, 6, 9, 14, and 15 are enabled when Link is any form (Hylian, Deku, Goron, or Zora), and all other channels will be disabled.
+    2. Channels 7, 8, and 13 are enabled when Link is swimming and all other channels will be disabled.
+    3. Channels 10, 11, and 12 are enabled when Link is in combat and all other channels will be disabled.
+    4. When Link is in the Epona or SpikeRolling state all currently enabled channels will stay enabled; no new channels will enabled or disabled as no channel depends on these states to be enabled.
+
+=== ":material-code-json: &nbsp;Example 2"
+    
+    <div class="annotate">
+    
+    ``` yaml
+    [
+        "All",#(1)!
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "All",
+        "Swim",#(2)!
+        "All",
+        "Combat",
+        "All",
+        "All",
+        "Epona, SpikeRolling, Combat"#(3)!
+    ]
+    ```
+
+    </div>
+
+    1. Channels 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14 and 15 are enabled when Link is any form (Hylian, Deku, Goron, or Zora), and all other channels will be disabled.
+    2. Channel 11 is enabled when Link is swimming and all other channels will be disabled.
+    3. When Link is in the Epona, SpikeRolling, or Combat states all currently enabled channels will stay enabled; if Link is in combat then channel 13 will be enabled alongside any other enabled channels.
 
 The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
 
