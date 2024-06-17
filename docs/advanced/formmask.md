@@ -6,7 +6,7 @@ icon: material/code-json
 Added in `v1.15.0.21` of the *Majora's Mask* randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
 
 !!! warning "Non-Useable Categories"
-    At the time of writing this Formmask does not currently work with fanfares or combat music, so you cannot use it with the following sequence categories:
+    At the time of writing this Formmask does not currently work with fanfares or combat music, if you use formmask with them then the randomizer will just play all available channels instead, because of this it is discouraged to use formmask with any of the following categories:
 
     === "Group Categories"
         | Category | Group Name |
@@ -89,7 +89,7 @@ The formatting for a `.json` array is as follows:
     ]
     ```
 
-The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other non-cumulative channels without the set form or state when that form or state is active.
+The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
 
 !!! info
     You can specify a channel and cumulative forms & states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
