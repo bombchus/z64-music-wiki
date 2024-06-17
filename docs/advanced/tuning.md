@@ -81,19 +81,19 @@ $f(x)=Float\div\frac{32000}{x}$
 
 In the images below you can see a visual representation of how a sample's speed will be affected. All the samples are assumed to be the same sound sample recorded at the same pitch, but are resampled at varying sample rates.
 
-=== "16000 Hz Sample Rate"
+=== "Sample at 16000 Hz"
     ![](../assets/images/samples/waveform-16000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-16000hz-dark.png#only-dark)
 
     With a sample rate of 16000 Hz, half the master sample rate, and tuned to the root key without any form of sample rate correction the sample will end up playing at twice the note speed it should play therefore causing the pitch to be too high.
 
-=== "32000 Hz Sample Rate"
+=== "Sample at 32000 Hz"
     ![](../assets/images/samples/waveform-32000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-32000hz-dark.png#only-dark)
 
     With a sample rate of 32000 Hz, matching the master sample rate, and tuned to the root key without any form of sample rate correction the sample will end up playing at the exact note speed it should play therefore causing the pitch to be unaltered.
 
-=== "64000 Hz Sample Rate"
+=== "Sample at 64000 Hz"
     ![](../assets/images/samples/waveform-64000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-64000hz-dark.png#only-dark)
 
