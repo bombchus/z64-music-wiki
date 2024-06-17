@@ -12,6 +12,10 @@
 
 placeholder
 
+## General ROM Requirements
+
+decompressed ROM with big endian byte ordering
+
 ???+ info "ROM Byte Ordering"
 
     If your ROM has the file format of either `.n64` (Little Endian) or `.v64` (Byteswapped) you will need to use [Tool64](https://www.zophar.net/download_file/2854 "Click to download Tool64") to change the byte order of the ROM as the tools used to edit the ROM require it to use Big Endian (`.z64`) byte ordering.

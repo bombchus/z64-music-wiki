@@ -89,7 +89,7 @@ The formatting for a `.json` array is as follows:
     ]
     ```
 
-The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other channels without the set form or state when that form or state is active.
+The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a state is non-cumulative it will disable all other non-cumulative channels without the set form or state when that form or state is active.
 
 !!! info
     You can specify a channel and cumulative forms & states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
