@@ -47,8 +47,6 @@ As an example if our sample has a root key of `72 (C6)` with a sample rate of 32
 
 ## Tuning Calculation
 
-### Sample Rate Correction
-
 $(Root\hspace{1 mm}Key-Coarse\hspace{1 mm}Tune)-(\frac{Fine\hspace{1 mm}Tune}{100})=-24\log_4(Float)+60$
 
 $x=(Root\hspace{1 mm}Key-Coarse\hspace{1 mm}Tune)-(\frac{Fine\hspace{1 mm}Tune}{100})$
@@ -77,16 +75,17 @@ $f(x)=Float\times\frac{32000}{x}$
 
 $f(x)=Float\div\frac{32000}{x}$
 
+### Sample Rate Correction
 
-=== "16000Hz"
+=== "16000 Hz"
     ![](../assets/images/samples/waveform-16000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-16000hz-dark.png#only-dark)
 
-=== "32000Hz"
+=== "32000 Hz"
     ![](../assets/images/samples/waveform-32000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-32000hz-dark.png#only-dark)
 
-=== "64000Hz"
+=== "64000 Hz"
     ![](../assets/images/samples/waveform-64000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-64000hz-dark.png#only-dark)
 
