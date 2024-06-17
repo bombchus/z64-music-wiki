@@ -18,7 +18,7 @@ The META file's structure is presented below:
 === "Template (Vanilla Audiobank)"
     <div class="annotate" markdown>
     ```
-    sequencename
+    songname
     0x00
     bgm/fanfare
     musicgroups
@@ -28,7 +28,7 @@ The META file's structure is presented below:
 === "Template (Custom Audiobank)"
     <div class="annotate" markdown>
     ```
-    sequencename
+    songname
     -
     bgm/fanfare
     musicgroups
@@ -67,7 +67,7 @@ The META file's structure is presented below:
 
     1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
 
-The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally `Game Name - sequence Name` will work unless a sequence with that name already exists and the user uses both sequences.
+The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally `Game Name - Song Name` will work unless a sequence with that name already exists and the user uses both sequences.
 
 ??? tip "Recommendation"
     It is recommended that you do not use quotation marks in the sequence name as it will make it harder for people creating a cosmetic plandomizer file.
@@ -85,7 +85,7 @@ Music groups determine where your sequence will play in-game, this information i
 === "Low Specificity"
     **Background Music:**
 
-    | Music Group | sequence Name |
+    | Music Group | Sequence Name |
     | :-- | :-- |
     | Overworld | `Hyrule Field` `Lost Woods` `Gerudo Valley` `Market` `Kakariko Child` `Kakariko Adult` `Lon Lon Ranch` `Kokiri Forest` `Goron City` `Zora's Domain` `Castle Courtyard` `Horse Race` `Minigame` `Shooting Gallery` `Fairy Fountain` `File Select` `Temple of Time` `Chamber of the Sages` `House` `Shop` `Potion Shop` `Windmill Hut` |
     | Dungeon | `Inside the Deku Tree` `Grotto` `Dodongo's Cavern` `Death Mountain Crater` `Dampé Race` `Gerudo Training Ground` `Jabu-Jabu` `Forest Temple` `Fire Temple` `Ice Cavern` `Water Temple` `Spirit Temple` `Shadow Temple` `Bottom of the Well` `Castle Underground` `Castle Escape` |
@@ -94,15 +94,15 @@ Music groups determine where your sequence will play in-game, this information i
 
     **Fanfares:**
 
-    | Music Group | sequence Name |
+    | Music Group | Sequence Name |
     | :-- | :-- |
-    | EventFanfare | `Item Get` `Heart Container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn sequence` `Boss Defeated` `Epona Race Goal` `Escape from Ranch` `Zelda Turns Around` `Treasure Chest` `Master Sword` `Door of Time` `Ganondorf Appears` `Game Over` |
-    | sequenceFanfare | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` `Saria's sequence` `Epona's sequence` `Zelda's Lullaby` `Sun's sequence` `sequence of Time` `sequence of Storms` |
+    | EventFanfare | `Item Get` `Heart Container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn Song` `Boss Defeated` `Epona Race Goal` `Escape from Ranch` `Zelda Turns Around` `Treasure Chest` `Master Sword` `Door of Time` `Ganondorf Appears` `Game Over` |
+    | SongFanfare | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
 === "Mid Specificity"
     **Background Music:**
 
-    | Music Group | sequence name |
+    | Music Group | Sequence name |
     | :-- | :-- |
     | Outdoors | `Hyrule Field` `Lost Woods` `Gerudo Valley` `Market` `Kakariko Child` `Kakariko Adult` `Lon Lon Ranch` `Kokiri Forest` `Goron City` `Zora's Domain` `Castle Courtyard` `Horse Race` `Minigame` |
     | Indoors | `Shooting Gallery` `Fairy Fountain` `File Select` `Temple of Time` `Chamber of the Sages` `House` `Shop` `Potion Shop` `Windmill Hut` |
@@ -112,22 +112,22 @@ Music groups determine where your sequence will play in-game, this information i
     | BigFight | `Boss Battle` `Fire Boss` `Ganondorf Battle` `Ganon Battle` |
     | HeroTheme | `Title Theme` `Zelda's Theme` `Sheik's Theme` `Deku Tree` `Kaepora Gaebora` `Fairy Flying` |
     | VillainTheme | `Ganondorf Theme` `Kotake & Koume` `Ingo Theme` |
-    | ItemFanfare | `Item Get` `Heart container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn sequence` |
+    | ItemFanfare | `Item Get` `Heart container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn Song` |
 
     **Fanfares:**
 
-    | Music Group | sequence Name |
+    | Music Group | Sequence Name |
     | :-- | :-- |
     | SuccessFanfare | `Boss Defeated` `Epona Race Goal` `Escape from Ranch` `Zelda Turns Around` |
     | BigFanfare | `Treasure Chest` `Master Sword` `Door of Time` `Ganondorf Appears` |
     | GameOver | `Game Over` |
-    | Warpsequence | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
-    | Utilitysequence | `Saria's sequence` `Epona's sequence` `Zelda's Lullaby` `Sun's sequence` `sequence of Time` `sequence of Storms` |
+    | WarpSong | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
+    | UtilitySong | `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
 === "High Specificity"
     **Background Music:**
 
-    | Music Group | sequence Name |
+    | Music Group | Sequence Name |
     | :-- | :-- |
     | Fields | `Hyrule Field` `Lost Woods` `Gerudo Valley` |
     | Town | `Market` `Kakariko Child` `Kakariko Adult` `Lon Lon Ranch` `Kokiri Forest` `Goron City` `Zora's Domain` `Castle Courtyard` |
@@ -148,19 +148,19 @@ Music groups determine where your sequence will play in-game, this information i
 
     **Fanfares:**
 
-    | Music Group | sequence Name |
+    | Music Group | Sequence Name |
     | :-- | :-- |
-    | ItemFanfare | `Item Get` `Heart container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn sequence` |
+    | ItemFanfare | `Item Get` `Heart container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn Song` |
     | SuccessFanfare | `Boss Defeated` `Epona Race Goal` `Escape from Ranch` `Zelda Turns Around` |
     | BigFanfare | `Treasure Chest` `Master Sword` `Door of Time` `Ganondorf Appears` |
     | GameOver | `Game Over` |
-    | Warpsequence | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
-    | Utilitysequence | `Saria's sequence` `Epona's sequence` `Zelda's Lullaby` `Sun's sequence` `sequence of Time` `sequence of Storms` |
+    | WarpSong | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
+    | UtilitySong | `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
 === "Exact Specificity"
     **Background Music:**
 
-    | Music Group | sequence Name | Music Group | sequence Name |
+    | Music Group | Sequence Name | Music Group | Sequence Name |
     | :-- | :-- | :-- | :-- |
     | HyruleField | `Hyrule Field` | ForestTemple | `Forest Temple` |
     | LostWoods | `Lost Woods` | FireTemple | `Fire Temple` |
@@ -189,21 +189,21 @@ Music groups determine where your sequence will play in-game, this information i
 
     **Fanfares:**
 
-    | Music Group | sequence Name | Music Group | sequence Name |
+    | Music Group | Sequence Name | Music Group | Sequence Name |
     | :-- | :-- | :-- | :-- |
     | ItemGet | `Item Get` | GameOver | `Game Over` |
     | HeartContainerGet | `Heart Container Get` | PreludeOfLight | `Prelude of Light` |
     | SpiritStoneGet | `Spirit Stone Get` | BoleroOfFire | `Bolero of Fire` |
     | HeartPieceGet | `Heart Piece Get` | MinuetOfForest | `Minuet of Forest` |
     | MedallionGet | `Medallion Get` | SerenadeOfWater | `Serenade of Water` |
-    | Learnsequence | `Learn sequence` | RequiemOfSpirit | `Requiem of Spirit` |
+    | LearnSong | `Learn Song` | RequiemOfSpirit | `Requiem of Spirit` |
     | BossDefeated | `Boss Defeated` | NocturneOfShadow | `Nocturne of Shadow` |
-    | EponaRaceGoal | `Epona Race Goal` | Sariassequence | `Saria's sequence` |
-    | EscapeFromRanch | `Escape from Ranch`| Eponassequence | `Epona's sequence` |
+    | EponaRaceGoal | `Epona Race Goal` | SariasSong | `Saria's Song` |
+    | EscapeFromRanch | `Escape from Ranch`| EponasSong | `Epona's Song` |
     | ZeldaTurnsAround | `Zelda Turns Around` | ZeldasLullaby | `Zelda's Lullaby` |
-    | TreasureChest | `Treasure Chest` | Sunssequence | `Sun's sequence` |
-    | MasterSword | `Master Sword` | sequenceOfTime | `sequence of Time` |
-    | DoorOfTime | `Door of Time` | sequenceOfStorms | `sequence of Storms` |
+    | TreasureChest | `Treasure Chest` | SunsSong | `Sun's Song` |
+    | MasterSword | `Master Sword` | SongOfTime | `Song of Time` |
+    | DoorOfTime | `Door of Time` | SongOfStorms | `Song of Storms` |
     | GanondorfAppears | `Ganondorf Appears` | — | — |
 
 ### Making a Categories File for Majora's Mask
@@ -224,13 +224,13 @@ There are two different types of categories known as "group categories", and "in
     | `0` | Fields | `Termina Field` `Snowhead` `Great Bay Coast` `Ikana Canyon` `Southern Swamp` `Romani Ranch` `Deku Palace` `Mystery Woods` |
     | `1` | Towns | `Great Bay Coast` `Ikana Canyon` `Southern Swamp` `Clock Town (Day 1)` `Clock Town (Day 2)` `Clock Town (Day 3)` `Goron Village` `Romani Ranch` `Zora Hall` `Deku Palace` `Fairy's Fountain` `Gorman Brothers' Theme` `Mystery Woods` `Zelda's Theme` |
     | `2` | Dungeons | `Inside a Cave` `Snowhead Temple` `Great Bay Temple` `Pirates' Fortress` `Ancient Castle of Ikana` `Stone Tower Temple` `Stone Tower Temple (Inverted)` `Woodfall Temple` |
-    | `3` | Indoors | `Goron Village` `Zora Hall` `Clock Tower Interior` `Guru-Guru's Theme` `Milk Bar` `Inside a House` `Item Shop` `Minigame Shop` `Marine Research Lab & Curiosity Shop` `Astral Observatory` `Music Box House: "Farewell to Gibdo"` `Cremia's Carriage` `Old Koume's Boat Cruise` `Mayor Dotour's Office` `Swordsman's School` `Sharp's Curse: "Melody of Darkness"` `Fairy's Fountain` `File Select` `Koume & Kotake's Theme` `Mystery Woods` `Zelda's Theme` `sequence of Healing Theme` `Giants' Theme` |
+    | `3` | Indoors | `Goron Village` `Zora Hall` `Clock Tower Interior` `Guru-Guru's Theme` `Milk Bar` `Inside a House` `Item Shop` `Minigame Shop` `Marine Research Lab & Curiosity Shop` `Astral Observatory` `Music Box House: "Farewell to Gibdo"` `Cremia's Carriage` `Old Koume's Boat Cruise` `Mayor Dotour's Office` `Swordsman's School` `Sharp's Curse: "Melody of Darkness"` `Fairy's Fountain` `File Select` `Koume & Kotake's Theme` `Mystery Woods` `Zelda's Theme` `Song of Healing Theme` `Giants' Theme` |
     | `4` | Minigames | `Milk Bar` `Minigame Shop` `Music Box House: "Farewell to Gibdo"` `Goron Race` `Timed Minigame` `Cremia's Carriage` `Old Koume's Boat Cruise` `Horse Race` `Swordsman's School` `Mystery Woods` `Battle: Regular Enemy` |
     | `5` | Action Cutscenes | `Timed Minigame` `Mayor Dotour's Office` `Aliens' Theme` `Swordsman's School` `Sharp's Curse: "Melody of Darkness"` `Pursuit Theme` `Mask Reveal` `Battle: Regular Enemy` |
-    | `6` | Calm Cutscenes & Character Themes | `Clock Tower Interior` `Guru-Guru's Theme` `Marine Research Lab & Curiosity Shop` `Music Box House: "Farewell to Gibdo"` `Cremia's Carriage` `Old Koume's Boat Cruise` `Mayor Dotour's Office` `Aliens' Theme` `Sharp's Curse: "Melody of Darkness"` `Majora's Theme` `Fairy's Fountain` `File Select` `Keaton's Quiz` `Koume & Kotake's Theme` `Gorman Brothers' Theme` `Mystery Woods` `Zelda's Theme` `Tatl & Tael Reunited` `sequence of Healing Theme` `Giants' Theme` |
+    | `6` | Calm Cutscenes & Character Themes | `Clock Tower Interior` `Guru-Guru's Theme` `Marine Research Lab & Curiosity Shop` `Music Box House: "Farewell to Gibdo"` `Cremia's Carriage` `Old Koume's Boat Cruise` `Mayor Dotour's Office` `Aliens' Theme` `Sharp's Curse: "Melody of Darkness"` `Majora's Theme` `Fairy's Fountain` `File Select` `Keaton's Quiz` `Koume & Kotake's Theme` `Gorman Brothers' Theme` `Mystery Woods` `Zelda's Theme` `Tatl & Tael Reunited` `Song of Healing Theme` `Giants' Theme` |
     | `7` | Combat & Boss Fights | `Pursuit Theme` `Battle: Miniboss` `Battle: Dungeon Boss` `Battle: Majora's Mask` `Battle: Majora's Incarnation` `Battle: Majora's Wrath` |
-    | `8` | Item Get, Minigame Win, and Soaring | `Fanfare: Event Success!` `Fanfare: Get an Item!` `Fanfare: Get a Heart Container!` `Fanfare: Get a Mask!` `Fanfare: Get a Heart Piece!` `Fanfare: The Truth Revealed!` `Fanfare: Goron Race Victory!` `Fanfare: Horse Race Victory!` `Fanfare: Learned a sequence!` `Fanfare: sequence of Soaring` `Fanfare: Temple Appears!` |
-    | `9` | Game Over | `Fanfare: Event Failure [1]` `Fanfare: Event Failure [2]` `Fanfare: Game Over!` `Fanfare: Boss Defeated!` `Fanfare: sequence of Soaring` `Fanfare: Temple Appears!` |
+    | `8` | Item Get, Minigame Win, and Soaring | `Fanfare: Event Success!` `Fanfare: Get an Item!` `Fanfare: Get a Heart Container!` `Fanfare: Get a Mask!` `Fanfare: Get a Heart Piece!` `Fanfare: The Truth Revealed!` `Fanfare: Goron Race Victory!` `Fanfare: Horse Race Victory!` `Fanfare: Learned a Song!` `Fanfare: Song of Soaring` `Fanfare: Temple Appears!` |
+    | `9` | Game Over | `Fanfare: Event Failure [1]` `Fanfare: Event Failure [2]` `Fanfare: Game Over!` `Fanfare: Boss Defeated!` `Fanfare: Song of Soaring` `Fanfare: Temple Appears!` |
     | `10` | Area Cleared | `Fanfare: Boss Defeated!` `Fanfare: Temple Clear! (Short) [1]` `Fanfare: Temple Clear! (Long) [2]` `Fanfare: The Moon Destroyed!` `Fanfare: The Giants' Farewell!` |
     | `16` | Special | `Cutscene: Giants' Theme` `Cutscene: Title Screen` |
 
@@ -251,7 +251,7 @@ There are two different types of categories known as "group categories", and "in
     | `107` | Stone Tower Temple (Inverted) | `13B` | Inside a Cave |
     | `108` | Fanfare: Event Failure [1] | `13C` | Milk Bar |
     | `109` | Fanfare: Event Failure [2] | `13D` | Fanfare: The Truth Revealed! |
-    | `10B` | sequence of Healing Theme | `13E` | Woods of Mystery |
+    | `10B` | Song of Healing Theme | `13E` | Woods of Mystery |
     | `10C` | Southern Swamp | `13F` | Fanfare: Goron Race Victory! |
     | `10D` | Aliens' Theme | `140` | Horse Race |
     | `10E` | Old Koume's Boat Cruise | `141` | Fanfare: Horse Race Victory! |
@@ -261,8 +261,8 @@ There are two different types of categories known as "group categories", and "in
     | `112` | Deku Palace | `145` | Kaepora Gaebora's Theme |
     | `113` | Snowhead | `146` | Minigame Shop |
     | `114` | Pirates' Fortress | `150` | Swordsman's School |
-    | `115` | Clock Town (Day 1) | `152` | Fanfare: Learned a sequence! |
-    | `116` | Clock Town (Day 2) | `155` | Fanfare: sequence of Soaring |
+    | `115` | Clock Town (Day 1) | `152` | Fanfare: Learned a Song! |
+    | `116` | Clock Town (Day 2) | `155` | Fanfare: Song of Soaring |
     | `117` | Clock Town (Day 3) | `157` | Final Hours |
     | `118` | File Select | `165` | Snowhead Temple |
     | `119` | Fanfare: Event Success! | `166` | Great Bay Temple |
@@ -308,8 +308,8 @@ There are two different types of categories known as "group categories", and "in
     #     the base game to be MM, and a value of "ootmm" determines the game is interchangeable
     #     idk how this would work... interchangeability is something to discuss
     #
-    # Allowed sequence Type Values: "bgm", "fanfare"
-    #     The sequence type key determines whether or not the sequence is classfied as a bgm or fanfare.
+    # Allowed Song Type Values: "bgm", "fanfare"
+    #     The song type key determines whether or not the song is classfied as a bgm or fanfare.
     #     Do not miscategorize bgms as fanfares it will cause issues in both OOT and MM!!!
     #
     # Allowed Audiobank Values: "0x##", "custom"
@@ -321,8 +321,8 @@ There are two different types of categories known as "group categories", and "in
     game: "oot"
 
     metadata:
-        sequence name: "placeholder"
-        sequence type: "bgm"
+        song name: "placeholder"
+        song type: "bgm"
         audiobank: "0x03"
         categories:
             # To change the categories, please use an array with comma separated values
@@ -343,16 +343,16 @@ There are two different types of categories known as "group categories", and "in
     # To make multiline keys you need to use the character ">" after the key e.g. "accreditation: >"
     accreditation: >
         Origin Game:        <placeholder>
-        sequence Name:          <placeholder>
+        Song Name:          <placeholder>
         Categories:         <placeholder>
         Original Composers: <placeholder>
         Sequence Converter: <placeholder>
         Sampling:           No Sampling/Light Sampling/Heavy Sampling
-        sequence Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
+        Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
 
-        Notes: <extra notes or comments about the sequence go here>
+        Notes: <extra notes or comments about the song go here>
 
-        Original sequence: <link>
+        Original Song: <link>
     ```
 
 === ":material-code-braces: &nbsp;metadata.toml"
@@ -371,8 +371,8 @@ There are two different types of categories known as "group categories", and "in
     #     the base game to be MM, and a value of "ootmm" determines the game is interchangeable
     #     idk how this would work... interchangeability is something to discuss
     #
-    # Allowed sequence Type Values: "bgm", "fanfare"
-    #     The sequence type key determines whether or not the sequence is classfied as a bgm or fanfare.
+    # Allowed Song Type Values: "bgm", "fanfare"
+    #     The song type key determines whether or not the song is classfied as a bgm or fanfare.
     #     Do not miscategorize bgms as fanfares it will cause issues in both OOT and MM!!!
     #
     # Allowed Audiobank Values: "0x##", "custom"
@@ -383,8 +383,8 @@ There are two different types of categories known as "group categories", and "in
     game = "oot"
 
     [metadata]
-      sequencename   = "placeholder"
-      sequencetype   = "bgm"
+      songname   = "placeholder"
+      songtype   = "bgm"
       audiobank  = "0x03"
       # To change the categories, please use an array with comma separated values
       # e.g. ["value", "value"]
@@ -405,16 +405,16 @@ There are two different types of categories known as "group categories", and "in
     [accreditation]
         credits = """
                 Origin Game:        <placeholder>
-                sequence Name:          <placeholder>
+                Song Name:          <placeholder>
                 Categories:         <placeholder>
                 Original Composers: <placeholder>
                 Sequence Converter: <placeholder>
                 Sampling:           No Sampling/Light Sampling/Heavy Sampling
-                sequence Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
+                Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
 
-                Notes: <extra notes or comments about the sequence go here>
+                Notes: <extra notes or comments about the song go here>
 
-                Original sequence: <link>
+                Original Song: <link>
                 """
     ```
 
