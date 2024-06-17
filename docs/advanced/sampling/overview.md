@@ -74,24 +74,24 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 ### Custom Sample Injection Workflow
 <div class="annotate" markdown>
 
-> 1. Obtain a `.wav` file your will use for your sampled instrument, drum, or sound effect
->     - Resample your `.wav` file to `32000Hz` (1)
->     - Add or remove loop points to the `.wav` file using `Polyphone` or `z64Audio` as needed
-> 2. Find your `.wav` file's tuning float value
->     - Find your `.wav` file's root key (2)
-> 3. Convert your `.wav` file to a `.bin` (or `.zsound`) file using the `Sample Creation Tools` or obtain a sample from a different Nintendo 64 game using `N64 Soundlist Tool`
->     - Convert your codebook ADPCM predictor data from `.bin` to `.xml`
->     - Convert your loopbook ADPCM predictor data from `.bin` to `.xml` (3)
-> 4. Create your sampled instrument's, drum's, or sound effect's audiobank (4)
->     - Edit the splits, release rate, tuning float, and ADSR values in the audiobank
->     - Copy and paste your codebook ADPCM predictor data into `<books>`
->     - Copy and paste your loopbook ADPCM predictor data into `<loops>` (5)
-> 5. Set up your sampled instrument's, drum's, or sound effect's unique sample address marker
->     - For Ocarina of Time Randomizer rename `*.wav.vadpcm.bin` to `*.zsound` and add `ZSOUND:*.zsound:########` to your `.meta` file
->     - For Majora's Mask Randomizer rename `*.wav.vadpcm.bin` to `*_########.zsound`
->     - ~~Rename `*.wav.vadpcm.bin` to `*.zsound` and add `- "*.zsound": "########"` to the `samples:` section of your `metadata.yml` file~~ (6)
-> 6. Test your sampled instrument, drum, or sound effect in-game to make sure it works
->     - Create an `.ootrs` or `.mmrs` and test your sample using the audiobank and a test sequence in the randomizer (7)
+- **Step 1:** Obtain a `.wav` file your will use for your sampled instrument, drum, or sound effect
+    - Resample your `.wav` file to `32000Hz` (1)
+    - Add or remove loop points to the `.wav` file using `Polyphone` or `z64Audio` as needed
+- **Step 2:** Find your `.wav` file's tuning float value
+    - Find your `.wav` file's root key (2)
+- **Step 3:** Convert your `.wav` file to a `.bin` (or `.zsound`) file using the `Sample Creation Tools` or obtain a sample from a different Nintendo 64 game using `N64 Soundlist Tool`
+    - Convert your codebook ADPCM predictor data from `.bin` to `.xml`
+    - Convert your loopbook ADPCM predictor data from `.bin` to `.xml` (3)
+- **Step 4:** Create your sampled instrument's, drum's, or sound effect's audiobank (4)
+    - Edit the splits, release rate, tuning float, and ADSR values in the audiobank
+    - Copy and paste your codebook ADPCM predictor data into `<books>`
+    - Copy and paste your loopbook ADPCM predictor data into `<loops>` (5)
+- **Step 5:** Set up your sampled instrument's, drum's, or sound effect's unique sample address marker
+    - For Ocarina of Time Randomizer rename `*.wav.vadpcm.bin` to `*.zsound` and add `ZSOUND:*.zsound:########` to your `.meta` file
+    - For Majora's Mask Randomizer rename `*.wav.vadpcm.bin` to `*_########.zsound`
+    - ~~Rename `*.wav.vadpcm.bin` to `*.zsound` and add `- "*.zsound": "########"` to the `samples:` section of your `metadata.yml` file~~ (6)
+- **Step 6:** Test your sampled instrument, drum, or sound effect in-game to make sure it works
+    - Create an `.ootrs` or `.mmrs` and test your sample using the audiobank and a test sequence in the randomizer (7)
 
 </div>
 
@@ -101,7 +101,9 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 4. If you are not using an audiobank template, then you will need to either create an audiobank from scratch or edit an existing audiobank from Ocarina of Time or Majora's Mask using `Seq64`.
 5. This is only required if the `Sample Creation Tools` output a `.bin` file containing your sample's loopbook ADPCM predictor data.
 6. `metadata.yml` has not been presented to or adopted by the developers of any randomizer, however it is a simple but effective system that will hopefully be adopted and added in the future.
-7. Optionally, you could inject the sample onto a decompressed ROM, however it is much more tedious and doesn't ensure that the sample will not collide with other data added by the randomizer.<br><br> "Believe me... I know too much about data collision; I have literally injected hundreds of samples" — Bombchus
+7. Optionally, you could inject the sample onto a decompressed ROM, however it is much more tedious and doesn't ensure that the sample will not collide with other data added by the randomizer.
+
+-----
 
 There are a few ways to obtain samples to inject, the first way is ripping and injecting other Nintendo 64 games' sample files, and codebook & loopbook ADPCM predictor data using `N64 Soundlist Tool`. The second way is obtaining a soundfont (`.sf2`) that has already ripped sample files as `.wav` files and using those `.wav` files to create your sampled instrument, drum, or sound effect. The third way is to create your own samples using a DAW or sampling software to create a `.wav` file then using those `.wav` files to create your sampled instrument, drum, or sound effect.
 

@@ -105,6 +105,8 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.tasklist:
+      #clickable_checkbox: true
 
 # Plugins
 plugins:
