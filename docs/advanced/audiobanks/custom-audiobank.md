@@ -16,8 +16,7 @@ placeholder
     Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
 
 !!! alert ":material-code-braces: C Code Warning"
-    I am unsure if dots are needed before values, and if the envelope values need to be different...
-    It might be easier just to build a bank using Sauraen's "AudiobankToC" instead of building it from scratch, assuming you're even working with `C` editing tools in the first place.
+    `C` code for audiobanks may need to be confirmed and edited depending on the tools being worked with.
 
 ## Audiobank Metadata
 
