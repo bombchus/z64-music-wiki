@@ -32,7 +32,7 @@ The META file's structure is presented below:
     
     ```
     songname
-    -
+    - (2)
     bgm/fanfare
     musicgroups
     ZSOUND:filename.zsound:######## (1)
@@ -41,6 +41,7 @@ The META file's structure is presented below:
     </div>
 
     1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
+    2. If you are using a custom audiobank you will use a hypen `-` instead of the number of the audiobank your sequence uses.
 
 === "Example"
 
@@ -59,7 +60,7 @@ The META file's structure is presented below:
 
     ```
     Mario Kart Wii - Moonview Highway
-    -
+    - (2)
     bgm
     Fields,Town,Dungeon
     ZSOUND:EORG253.zsound:41B3ABEC (1)
@@ -70,10 +71,11 @@ The META file's structure is presented below:
     ZSOUND:SAW0-60.zsound:44653600
     ZSOUND:SAW0-72.zsound:44653601
     ```
-    
+
     </div>
 
     1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
+    2. If you are using a custom audiobank you will use a hypen `-` instead of the number of the audiobank your sequence uses.
 
 The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally `Game Name - Song Name` will work unless a sequence with that name already exists and the user uses both sequences.
 
