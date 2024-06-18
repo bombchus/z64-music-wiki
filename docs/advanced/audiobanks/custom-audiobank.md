@@ -12,7 +12,7 @@
 
 placeholder
 
-addresses don't need to be in any particular order except for the header data(?)
+addresses don't need to be in any particular order except for the header data(?)  
 for xml, the order is very strict due to SEQ6 hardcoding the data format
 
 !!! warning
