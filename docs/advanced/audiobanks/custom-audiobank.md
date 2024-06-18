@@ -40,8 +40,9 @@ for xml, the order is very strict due to SEQ6 hardcoding the data format
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    <!-- ABIndexEntry Struct -->
+    <!-- Audiobank Index Entry -->
     <abindexentry>
+      <!-- ABIndexEntry Struct -->
       <struct name="ABIndexEntry">
         <!-- Audiobank Address in the Audiobank Index -->
         <field name="addr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Bank (in Audiobank)"
