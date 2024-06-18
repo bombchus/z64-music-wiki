@@ -300,7 +300,7 @@ There are two different types of categories known as "group categories", and "in
     | `131` | Mayor Dotour's Office | — | — |
 
 ## Making a Metadata File
-!!! alert
+!!! alert "Warning"
     Metadata files have not currently been presented to or adopted by any of the randomizers, this is just a concept and is not implemented; **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
 
 === ":material-code-braces: &nbsp;metadata.yml"
