@@ -15,6 +15,71 @@ placeholder
 addresses don't need to be in any particular order except for the header data(?)  
 for xml, the order is very strict due to SEQ6 hardcoding the data format
 
+??? info "Important XML Info"
+    For XML audiobanks, all your structures must be contained within a bank that contains some metadata information tag:
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!-- Above is the XML declaration, do not remove it -->
+
+    <bank NUM_INST="0" NUM_DRUM="0" NUM_SFX="0" ATnum="0">
+      <!-- All your audiobank information is contained within the tags-->
+    </bank>
+    ```
+
+    You audiobanks must also be structured in a very specific way, otherwise SEQ64 will not be able to read your audiobank and will throw errors:
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <bank NUM_INST="0" NUM_DRUM="0" NUM_SFX="0" ATnum="0">
+      <!-- Audiobank Index Entry -->
+      <abindexentry>
+        <!-- Insert your structure here -->
+      </abindexentry>
+      <!-- Audiobank Header -->
+      <abheader>
+        <!-- Insert your structure here -->
+      </abheader>
+      <!-- ABBank -->
+      <abbank>
+        <!-- Insert your structure here -->
+      </abbank>
+      <!-- Audiobank Drum List -->
+      <abdrumlist>
+        <!-- Insert your drum list here -->
+      </abdrumlist>
+      <!-- Audiobank SFX List -->
+      <absfxlist>
+        <!-- Insert your sfx list here -->
+      </absfxlist>
+      <!-- Audiobank Instruments -->
+      <instruments>
+        <!-- Insert your item(s) here -->
+      </instruments>
+      <!-- Audiobank Drums -->
+      <drums>
+        <!-- Insert your tem(s) here -->
+      </drums>
+      <!-- For OOT and MM leave this as-is -->
+      <sfx/>
+      <!-- Audiobank Envelope -->
+      <envelopes>
+        <!-- Insert your item(s) here -->
+      </envelopes>
+      <!-- Audiobank Samples -->
+      <samples>
+        <!-- Insert your item(s) here -->
+      </samples>
+      <!-- Audiobank Codebooks -->
+      <aladpcmbooks>
+        <!-- Insert your item(s) here -->
+      </aladpcmbooks>
+      <!-- Audiobank Loopbooks -->
+      <aladpcmloops>
+        <!-- Insert your item(s) here -->
+      </aladpcmloops>
+    </bank>
+    ```
+
 !!! warning
     Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
 
