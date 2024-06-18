@@ -182,3 +182,12 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 .goverlay {
   background: rgba(0,0,0,.8)!important;
 }
+
+/*
+ *
+ * GENERAL CHANGES
+ *
+ */
+ .md-typeset {
+  font-size: .7rem;
+ }

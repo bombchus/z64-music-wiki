@@ -38,7 +38,48 @@ addresses don't need to be in any particular order except for the header data(?)
     ```
 
 === ":material-xml: &nbsp;XML"
-    placeholder
+    ```xml
+    <!-- ABIndexEntry Struct -->
+    <abindexentry>
+      <struct name="ABIndexEntry">
+        <!-- Audiobank Address in the Audiobank Index -->
+        <field name="addr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Bank (in Audiobank)"
+               ptrto="ABHeader" value="0"/>
+        <!-- Size of the Audiobank in Bytes -->
+        <field name="len" datatype="uint32" ispointer="0" isarray="0" meaning="Bank Length"
+               value="0"/>
+        <!-- Sample Mediums: 0 = RAM, 1 = UNK, 2 = ROM, 3 = Disk Drive, 5 = RAM (Unloaded) -->
+        <field name="sampleMedium" datatype="uint8" ispointer="0" isarray="0" meaning="none"
+               defaultval="2" value="2"/>
+        <!-- Sequence Players: 0 = SFX, 1 = Fanfares, 2 = BGM, 3 = Cutscene SFX -->
+        <field name="seqPlayer" datatype="uint8" ispointer="0" isarray="0" meaning="none"
+               defaultval="2" value="2"/>
+        <!-- Audio Tables: 0 = @000000, 1 = @000000, 2 = @538CC0 -->
+        <field name="tablenum" datatype="uint8" ispointer="0" isarray="0" meaning="Sample Table number"
+               value="1"/>
+        <!-- All vanilla audiobanks have 0xFF as their fontId -->
+        <field name="fontId" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+               defaultval="255" value="255"/>
+        <!-- Defines amount of instruments inside the Audiobank -->
+        <field name="NUM_INST" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_INST"
+               value="1"/>
+        <!-- Defines amount of drums inside the Audiobank -->
+        <field name="NUM_DRUM" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_DRUM"
+               value="0"/>
+        <!--
+            0x00 has a value of 1 for this, and is the only audiobank containing a value other than
+            zero for it; Sauraen's audiobank.h file does not include this value in the index structure.
+            Decomp does not include this value in the index structure.
+            OoT 0x00 has a value of 0 for this... ???
+        -->
+        <field name="unknownG" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+               defaultval="0" value="0"/>
+        <!-- Defines amount of sound effects inside the Audiobank -->
+        <field name="NUM_SFX" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_SFX"
+               value="0"/>
+      </struct>
+    </abindexentry>
+    ```
 
 === ":material-hexadecimal: &nbsp;Binary"
     ```bin
@@ -78,7 +119,31 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- ABHeader -->
+    <abheader>
+      <!-- ABHeader Struct -->
+      <struct name="ABheader">
+    </abheader>
+    <!--ABBank -->
+    <abbank>
+      <!--ABBank Struct -->
+      <struct name="ABBank">
+        <!-- Pointer to ABDrumlist-->
+        <field name="drumptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Drum List"
+               ptrto="ABDrumList" value="0"/>
+        <!-- Pointer to ABSFXList -->
+        <field name="sfxptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr SFX List"
+               ptrto="ABSFXList" value="0"/>
+        <!-- Audiobank Instrument List -->
+        <field name="instlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Insts"
+               ptrto="ABInstrument" arraylenvar="NUM_INST">
+          <!-- Instrument Pointer -->
+          <element datatype="uint32" ispointer="1" ptrto="ABInstrument" value="0"
+                  index="0"/>
+          <!-- Add more instrument pointers here -->
+        </field>
+      </struct>
+    </abbank>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -112,7 +177,20 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!--Audiobank Drum List -->
+    <abdrumlist address="80">
+      <!--ABDrumList Struct -->
+      <struct name="ABDrumList">
+        <field name="drumlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Drums"
+               ptrto="ABDrum" arraylenvar="NUM_DRUM">
+          <!-- INDEX 00 (MIDI Drum Note 21:A1) -->
+          <element datatype="uint32" ispointer="1" ptrto="ABDrum" value="00" index="0"/>
+          <!-- INDEX 01 (MIDI Drum Note 22:A#1) -->
+          <element datatype="uint32" ispointer="1" ptrto="ABDrum" value="0" index="-1"/>
+          <!-- Add more drum pointer elements here -->
+        </field>
+      </struct>
+    </abdrumlist>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -155,7 +233,65 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Instruments -->
+    <instruments>
+      <!-- Instrument Item -->
+      <item address="0" name="Instrument Name" map="program" program="0">
+        <!-- ABInstrument Struct -->
+        <struct name="ABInstrument">
+          <!-- Relocation Offset -->
+          <field name="relocOffset" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+                value="0"/>
+          <!-- Low Sample max key, Mid Sample min key -->
+          <field name="Low/Mid Split" datatype="uint8" ispointer="0" isarray="0"
+                meaning="Split Point 1" value="0"/>
+          <!-- Mid Sample max key, High Sample min key -->
+          <field name="Mid/High Split" datatype="uint8" ispointer="0" isarray="0"
+                meaning="Split Point 2" value="127"/>
+          <!-- Decay Index (Release Rate) -->
+          <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
+                meaning="Release Rate" value="255"/>
+          <!-- Envelope Pointer -->
+          <field name="Envelope Pointer" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Envelope"
+                 ptrto="ABEnvelope" value="0" index="0"/>
+          <!-- Sample Pointer Array -->
+          <field name="Sample Pointer Array" datatype="ABSound" ispointer="0" isarray="1" meaning="List of 3 Sounds for Splits"
+                arraylenfixed="3">
+            <element datatype="ABSound" ispointer="0" value="0">
+              <struct name="ABSound">
+                <!-- Low Sample Pointer -->
+                <field name="Sample Pointer (Low)" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Sample"
+                      ptrto="ABSample" value="0" index="-1"/>
+                <!-- Low Sample Tuning Float Value -->
+                <field name="Tuning" datatype="float32" ispointer="0" isarray="0" meaning="Tuning Float"
+                      value="0"/>
+              </struct>
+            </element>
+            <element datatype="ABSound" ispointer="0" value="0">
+              <struct name="ABSound">
+                <!-- Mid Sample Pointer -->
+                <field name="Sample Pointer (Mid)" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Sample"
+                      ptrto="ABSample" value="0" index="0"/>
+                <!-- Mid Sample Tuning Float Value-->
+                <field name="Tuning" datatype="float32" ispointer="0" isarray="0" meaning="Tuning Float"
+                      value="1"/>
+              </struct>
+            </element>
+            <element datatype="ABSound" ispointer="0" value="0">
+              <struct name="ABSound">
+                <!-- High Sample Pointer -->
+                <field name="Sample Pointer (High)" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Sample"
+                      ptrto="ABSample" value="0" index="-1"/>
+                <!-- High Sample Tuning Float Value -->
+                <field name="Tuning" datatype="float32" ispointer="0" isarray="0" meaning="Tuning Float"
+                      value="0"/>
+              </struct>
+            </element>
+          </field>
+        </struct>
+      </item>
+      <!-- Insert more instrument items here -->
+    </instruments>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -197,7 +333,41 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Drums -->
+    <drums>
+    <!-- Drum Item -->
+      <item address="0" name="Drum Name">
+        <!-- ABDrum Struct -->
+        <struct name="ABDrum">
+          <!-- Decay Index (Release Rate) -->
+          <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
+                 meaning="Release Rate" value="255"/>
+          <!-- Drum Pan (used when 0xDC is 0)-->
+          <field name="Pan" datatype="uint8" ispointer="0" isarray="0" meaning="Pan"
+                 value="0"/>
+          <!-- Unknown (one of the two values is relocOffset) -->
+          <field name="unknown3" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+                 defaultval="0" value="0"/>
+          <field name="unknown4" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+                 defaultval="0" value="0"/>
+          <field name="Drum Sound" datatype="ABSound" ispointer="0" isarray="0"
+                 meaning="Drum Sound" value="0">
+            <struct name="ABSound">
+              <!-- Drum Sample Pointer -->
+              <field name="Sample Pointer" datatype="uint32" ispointer="1" isarray="0"
+                     meaning="Ptr Sample" ptrto="ABSample" value="128" index="0"/>
+              <!-- Sample Tuning Float Value -->
+              <field name="Tuning" datatype="float32" ispointer="0" isarray="0" meaning="Tuning Float"
+                     value="1"/>
+            </struct>
+          </field>
+          <!-- Envelope Pointer -->
+          <field name="Envelope Pointer" datatype="uint32" ispointer="1" isarray="0"
+                 meaning="Ptr Envelope" ptrto="ABEnvelope" value="112" index="0"/>
+        </struct>
+      </item>
+      <!-- Add more drum items here -->
+    </drums>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -237,7 +407,40 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Envelopes -->
+    <envelopes>
+      <!-- Envelope Item -->
+      <item address="0" name="Envelope Name">
+        <!-- ABEnvelope Struct -->
+        <struct name="ABEnvelope">
+          <!-- Delay Value 1 (Time) -->
+          <field name="delay1" datatype="int16" ispointer="0" isarray="0"
+                 meaning="none" value="2"/>
+          <!-- Argument Value 1 (Amplitude) -->
+          <field name="arg1" datatype="uint16" ispointer="0" isarray="0"
+                 meaning="none" value="32700"/>
+          <!-- Delay Value 2 (Time) -->
+          <field name="delay2" datatype="int16" ispointer="0" isarray="0"
+                 meaning="none" value="298"/>
+          <!-- Argument Value 2 (Amplitude) -->
+          <field name="arg2" datatype="uint16" ispointer="0" isarray="0"
+                 meaning="none" value="0"/>
+          <!-- Delay Value 2 (Time) -->
+          <field name="delay3" datatype="int16" ispointer="0" isarray="0"
+                 meaning="none" value="1"/>
+          <!-- Argument Value 3 (Amplitude) -->
+          <field name="arg3" datatype="uint16" ispointer="0" isarray="0"
+                 meaning="none" value="0"/>
+          <!-- Delay Value 4 (Time) -->
+          <field name="delay4" datatype="int16" ispointer="0" isarray="0" meaning="none"
+                 value="-1"/>
+          <!-- Argument Value 4 (Amplitude) -->
+          <field name="arg4" datatype="uint16" ispointer="0" isarray="0" meaning="none"
+                 value="0"/>
+        </struct>
+      </item>
+      <!-- Add more envelope items here -->
+    </envelopes>
     ```
 
     !!! warning
@@ -281,7 +484,39 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Samples -->
+    <samples>
+      <!-- Sample Item -->
+      <item address="128" name="SAMPLE NAME">
+        <!--ABSample Struct -->
+        <struct name="ABSample">
+          <!--
+              One unknown value should contain data for a sample medium, and another for the codec;
+              there should also be a value for a relocation offset and unk_bit26 (defines used samples?).
+              Not every field needs to be present?
+              Sauraen's audiobank.h structure includes the codec, medium, relocation offset, and unk_bit26.
+              Decomp's structure includes the codec, medium, relocation offset, and unk_bit26.
+          -->
+          <field name="unknown1" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+                 value="0"/>
+          <field name="unknown2" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+                 value="0"/>
+          <!-- Sample Size in Bytes -->
+          <field name="Sample Size (ROM Insert Size)" datatype="uint16" ispointer="0" isarray="0"
+                 meaning="Sample Length" value="0"/>
+          <!-- Sample Address Pointer -->
+          <field name="Sample Address" datatype="uint32" ispointer="0" isarray="0"
+                 meaning="Sample Address (in Sample Table)" ptrto="ATSample" value="0"/>
+          <!-- Sample Loopbook Pointer -->
+          <field name="Loopbook" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr ALADPCMLoop"
+                 ptrto="ALADPCMLoop" value="0" index="0"/>
+          <!-- Sample Codebook Pointer -->
+          <field name="Codebook" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr ALADPCMBook"
+                 ptrto="ALADPCMBook" value="0" index="0"/>
+        </struct>
+      </item>
+      <!-- Add more sample items here -->
+    </samples>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -320,7 +555,126 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Codebooks -->
+    <aladpcmbooks>
+      <!-- Codebook Item -->
+      <item address="0" name="Codebook Name">
+        <!-- ALADPCMBook Struct -->
+        <struct name="ALADPCMBook" NUM_PRED="4">
+          <!-- Codebook Order -->
+          <field name="order" datatype="int32" ispointer="0" isarray="0" meaning="None"
+                value="4"/>
+          <!-- Number of Predictors -->
+          <field name="npredictors" datatype="int32" ispointer="0" isarray="0"
+                meaning="NUM_PRED" value="4"/>
+          <!-- Codebook Predictor Arrays -->
+          <field name="book" datatype="ALADPCMPredictor" ispointer="0" isarray="1"
+                meaning="Array of Predictors" arraylenvar="NUM_PRED">
+            <!-- Codebook Predictor Array 1 -->
+            <element datatype="ALADPCMPredictor" ispointer="0" value="0">
+              <struct name="ALADPCMPredictor">
+                <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
+                      arraylenfixed="16">
+                  <!-- COPY & PASTE YOUR PREDICTOR FIRST ARRAY HERE!! -->
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                </field>
+              </struct>
+            </element>
+            <!-- Codebook Predictor Array 2 -->
+            <element datatype="ALADPCMPredictor" ispointer="0" value="0">
+              <struct name="ALADPCMPredictor">
+                <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
+                      arraylenfixed="16">
+                  <!-- COPY & PASTE YOUR PREDICTOR SECOND ARRAY HERE!! -->
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                </field>
+              </struct>
+            </element>
+            <!-- Codebook Predictor Array 3 -->
+            <element datatype="ALADPCMPredictor" ispointer="0" value="0">
+              <struct name="ALADPCMPredictor">
+                <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
+                      arraylenfixed="16">
+                  <!-- COPY & PASTE YOUR PREDICTOR THIRD ARRAY HERE!! -->
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                </field>
+              </struct>
+            </element>
+            <!-- Codebook Predictor Array 4 -->
+            <element datatype="ALADPCMPredictor" ispointer="0" value="0">
+              <struct name="ALADPCMPredictor">
+                <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
+                      arraylenfixed="16">
+                  <!-- COPY & PASTE YOUR PREDICTOR FOURTH ARRAY HERE!! -->
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                </field>
+              </struct>
+            </element>
+          </field>
+        </struct>
+      </item>
+      <!-- Add more codebook items here -->
+    </aladpcmbooks>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
@@ -363,7 +717,58 @@ addresses don't need to be in any particular order except for the header data(?)
 
 === ":material-xml: &nbsp;XML"
     ```xml
-    placeholder
+    <!-- Audiobank Loopbooks -->
+    <aladpcmloops>
+    <!-- Loopbook Item -->
+      <item address="0" name="Loopbook Name">
+        <!-- ALADPCMLoop Struct -->
+        <struct name="ALADPCMLoop" HAS_TAIL="0">
+          <!-- Loop Start -->
+          <field name="Loop Start" datatype="uint32" ispointer="0" isarray="0" meaning="Loop Start"
+                 value="0"/>
+          <!-- Loop End (If Loop Count = 0 then it becomes Number of Samples)-->
+          <field name="Loop End (Sample Length)" datatype="uint32" ispointer="0" isarray="0" meaning="Loop End"
+                 value="0"/>
+          <!-- Loop Count -->
+          <field name="Loop Count" datatype="uint32" ispointer="0" isarray="0" meaning="Loop Count"
+                 defaultval="-1" value="-1"/>
+          <!-- Number of Samples -->
+          <field name="Number of Samples" datatype="uint32" ispointer="0" isarray="0"
+                 meaning="None" defaultval="0" value="0"/>
+          <!-- Predictor State -->
+          <field name="Tail Data" datatype="ALADPCMTail" ispointer="0" isarray="1"
+                 meaning="Tail Data (if Loop Start != 0)" arraylenvar="HAS_TAIL">
+            <!-- If Loop Count != 0 insert the array, otherwise remove the array -->
+            <!-- Loopbook Predictor Array -->
+            <element datatype="ALADPCMTail" ispointer="0" value="0">
+              <struct name="ALADPCMTail">
+                <field name="some_adpcm_data" datatype="int16" ispointer="0" isarray="1"
+                       meaning="None" arraylenfixed="16">
+                  <!-- COPY & PASTE YOUR LOOP PREDICTOR ARRAY HERE!! -->
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                  <element datatype="int16" ispointer="0" value="0"/>
+                </field>
+              </struct>
+            </element> <!-- End of Loopbook Predictor Array -->
+          </field> <!-- Closing tag for Predictor State -->
+        </struct>
+      </item>
+      <!-- Add more loopbook items here -->
+    </aladpcmloops>
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
