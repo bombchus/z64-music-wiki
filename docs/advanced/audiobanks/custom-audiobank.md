@@ -13,6 +13,7 @@
 placeholder
 
 addresses don't need to be in any particular order except for the header data(?)
+for xml, the order is very strict due to SEQ6 hardcoding the data format
 
 !!! warning
     Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
