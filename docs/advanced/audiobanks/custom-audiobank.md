@@ -12,6 +12,8 @@
 
 placeholder
 
+addresses don't need to be in any particular order except for the header data(?)
+
 !!! warning
     Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
 
@@ -231,7 +233,7 @@ placeholder
     ```
 
     !!! warning
-        Envelopes inside of an audiobank can only be an array of four values!
+        Envelopes inside of an audiobank can only be four values long!
 
 === ":material-xml: &nbsp;XML"
     ```xml
@@ -239,7 +241,7 @@ placeholder
     ```
 
     !!! warning
-        Envelopes inside of an audiobank can only be an array of four values!
+        Envelopes inside of an audiobank can only be four values long!
 
 === ":material-hexadecimal: &nbsp;Binary"
     ```bin
@@ -258,7 +260,7 @@ placeholder
     - `zz zz`: Envelope argument value 4
 
     !!! warning
-        Envelopes inside of an audiobank can only be an array of four values!
+        Envelopes inside of an audiobank can only be four values long!
 
 ## Audiobank Samples
 
