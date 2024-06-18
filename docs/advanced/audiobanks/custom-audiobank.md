@@ -12,8 +12,9 @@
 
 placeholder
 
-addresses don't need to be in any particular order except for the header data(?)  
-for xml, the order is very strict due to SEQ6 hardcoding the data format
+### Data Ordering
+
+For C and Binary, items don't need to be in any particular order except for the header data; so long as all the addresses match the order of data shouldn't matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however indexes must be correct.
 
 ??? info "Important XML Info"
     For XML audiobanks, all your structures must be contained within a bank that contains some metadata information tag:
@@ -79,6 +80,8 @@ for xml, the order is very strict due to SEQ6 hardcoding the data format
       </aladpcmloops>
     </bank>
     ```
+
+-----
 
 !!! warning
     Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
