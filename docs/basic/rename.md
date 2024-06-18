@@ -219,14 +219,18 @@ Music groups determine where your sequence will play in-game, this information i
 ### Making a Categories File for Majora's Mask
 To make a categories file for an `.mmrs` file all you need to do is create a text file with the name `categories.txt` and put whatever group and individual category values you want the area your sequence to play in inside the file separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
 
+!!! alert "Warning"
+    You cannot use both hypens and commas to separate your categories, you must use one or the other.
+
 #### Categories
 There are two different types of categories known as "group categories", and "individual categories". Group categories contain a number of sequences a sequence can be assigned to, and individual categories assign a sequence to a specific sequence.
 
-=== "Group Categories"
-    ??? warning "Issues With Looping Fanfares"
-        Categories `8`, `9`, and `10` are fanfare categories, miscategorizing a looping sequence as any of these fanfare categories can cause various issues and possibly softlock a player in various areas (e.g. Doggy Racetrack).
+??? warning "Issues With Looping Fanfares"
+    Group categories `8`, `9`, `10`, as well as individual categories `108`, `109`, `119`, `120`, `121`, `122`, `124`, `137`, `139`, `13D`, `13F`, `141`, `152`, `155`, `177`, `178`, `179`, `17C`, and `17E`, are fanfare categories, miscategorizing a looping sequence as any of these fanfare categories can cause various issues and possibly softlock a player in various areas (e.g. Doggy Racetrack).
 
-    ??? info "Category 16"
+=== "Group Categories"
+
+    ??? info ""Special" Group Category"
         Category `16` contains two cutscene sequences which will cut your sequence short if it loops, so it is recommended to put non-looping sequences in this category or to just use the individual category for these <br>sequences instead.
 
     | Value | Group Name | Sequence Name |
@@ -245,8 +249,6 @@ There are two different types of categories known as "group categories", and "in
     | `16` | Special | `Cutscene: Giants' Theme` `Cutscene: Title Screen` |
 
 === "Individual Categories"
-    ??? warning "Issues With Looping Fanfares"
-        Categories `108`, `109`, `119`, `120`, `121`, `122`, `124`, `137`, `139`, `13D`, `13F`, `141`, `152`, `155`, `177`, `178`, `179`, `17C`, and `17E` are fanfare categories, miscategorizing a looping sequence as any of these fanfare categories can cause various issues and possibly softlock a player in various areas (e.g. Doggy Racetrack).
 
     ??? info "Missing Sequences"
         Sequences that are missing from this list are normally just pointers to other sequences that have no real sequence assigned to them. These sequences have been omitted from the list. There's also certain sequences that require extra sequence data to play properly in-game that the randomizer doesn't randomize which are also omitted.
