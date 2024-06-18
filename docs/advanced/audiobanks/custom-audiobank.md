@@ -13,7 +13,7 @@
 placeholder
 
 !!! warning
-    Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp.
+    Audiobanks as they are used in-game are slightly different than the structure of `soundfont.h` used by decomp. Tools may also use different naming and formatting and allow for more or less flexibility, this page must be edited again to accomodate for any new `C` based tools that may and will eventually arise from decomp.
 
 !!! alert ":material-code-braces: C Code Warning"
     I am unsure if dots are needed before values, and if the envelope values need to be different...
