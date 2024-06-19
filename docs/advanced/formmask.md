@@ -39,7 +39,7 @@ This page details how to use the Formmask feature added in `v1.15.0.21` of the *
 A `.formmask` file is simply a `.json` (or plain text) file with its filename extension changed to `.formmask`. Inside the file is a single `.json` array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
 
 !!! info "Filename"
-    The filename itself uses the same naming as a sequence or audiobank file! e.g. `0x03.seq` will be `0x03.formmask`
+    The filename itself uses the same naming as a sequence or audiobank file (e.g. `0x03.seq` will be `0x03.formmask`)!
 
 ### JSON Array Formatting
 The formatting for a `.json` array is as follows:
