@@ -15,6 +15,8 @@ hide:
 
 </div>
 
+This page details how sample tuning works in great detail for instruments, drums, and sound effects in *Ocarina of Time* and *Majora's Mask* so that you can ensure your samples will be properly tuned.
+
 ## — Tuning (Modular)
 !!! warning "Attention"
     **Only Instruments use — tuning**

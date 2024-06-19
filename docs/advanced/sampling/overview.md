@@ -10,6 +10,8 @@
 
 </div>
 
+This page details the basics of custom sample injection for *Ocarina of Time* and *Majora's Mask* for use with the *Ocarina of Time* and *Majora's Mask* randomizers. This page *does not* detail injecting a sample directly into the ROM without the use of the randomizer program.
+
 !!! warning
     Custom sample injection is for creating non-vanilla sampled instruments, drums, or sound effects and assumes you already have a decent understanding of music creation and custom audiobanks, this is not a beginner's guide to music creation.
 

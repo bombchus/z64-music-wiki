@@ -10,7 +10,7 @@
 
 </div>
 
-This page will explain the requirements for ROMs so that you will be able to use them to create and test your custom music for *Ocarina of Time* and *Majora's Mask*.
+This page details the requirements for ROMs of *Ocarina of Time* and *Majora's Mask* so that you will be able to use them to assist in creating cusom music by testing your sequences, and audiobanks, in-game to check for any errors as well as help you make any adjustments you may want to your custom music.
 
 ## General ROM Requirements
 To be able to work with the tools required for custom music creation edit your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1243`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it isn't already.

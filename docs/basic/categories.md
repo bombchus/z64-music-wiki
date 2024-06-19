@@ -10,6 +10,8 @@
 
 </div>
 
+This page details how to categorize your custom music for the *Ocarina of Time* and *Majora's Mask* randomizers, as well as the *Ocarina of Time & Majora's Mask* combo randomizer, so that your sequence will play in the appropriate scenes in-game.
+
 ### Making a META File for Ocarina of Time
 To make a META file for an `.ootrs` file you will need to create a text file with the extension `.meta` that has the same filename as your sequence (e.g. `mkwii-moonview.seq` will have a META file with the name `mkwii-moonview.meta`).
 

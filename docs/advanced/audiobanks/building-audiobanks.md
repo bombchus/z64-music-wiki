@@ -1,4 +1,4 @@
-# Building a Custom Audiobank from Scratch
+# Building a Custom Audiobank
 
 <div class="grid cards" markdown>
 
@@ -10,7 +10,7 @@
 
 </div>
 
-placeholder
+This page details building an audiobank completely from scratch in C, XML, and as a Binary file.
 
 ### Data Ordering
 

@@ -4,7 +4,7 @@ hide:
 ---
 
 # Using Formmask
-Added in `v1.15.0.21` of the *Majora's Mask* randomizer is the ability to enable and disable specific sequence channels depending on Link's current form or state. This feature is known as "Formmask", and it allows you to have more dynamics with your sequences.
+This page details how to use the Formmask feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
 
 !!! warning "Non-Useable Categories"
     At the time of writing this Formmask does not currently work with fanfares or combat music, if you use formmask with them then the randomizer will just play all available channels instead, because of this it is discouraged to use formmask with any of the following categories:
