@@ -16,7 +16,7 @@ This page is where you will find links to the various tools and resources used i
     This page, as well as the wiki itself, can not and will not supply you with any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
 
 ## Tools
-Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the rools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
+Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ### Link to Tools
 - **SEQ64**
@@ -65,6 +65,9 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     **nDEC** is used to decompress your ROM so that you are able to edit it in SEQ64. nDEC is simple enough to use as there is a file bundled with the program in the link provided that does all the work for you. Should you need detailed instructions on how to decompress your ROM you can find them on the ROM requirements page of the wiki.
 
 ## Obtaining a ROM
-Along with the tools above, you will need to obtain a ROM of *Ocarina of Time* and/or *Majora's Mask* and decompress it using a decompression tool. Sharing ROM files is illegal as the files are copyrighted by Nintendo, so this wiki cannot share links to any websites containing the ROM files. MD5 and *CRC32* values are *quite useful* when checking to make sure your ROM is the correct version you need for using the tools both of which are provided on the ROM requirements page to check your ROM file is correct and does not contain any errors. If you have the capability, it is best to dump the ROM yourself from hardware, however all Virtual Console and Nintendo Switch Online versions of *Ocarina of Time* are version 1.2 and not version 1.0; for *The Legend of Zelda: Collector's Edition* the ROM files for *Ocarina of Time* and *Majora's Mask* are ROMs that were compiled specifically for *The Legend of Zelda: Collector's Edition* and cannot be used at all.
+Along with the tools above, you will need to obtain a ROM of *Ocarina of Time* and/or *Majora's Mask* and decompress it using a decompression tool. Sharing ROM files is illegal as the files are copyrighted by Nintendo, so this wiki cannot share links to any websites containing the ROM files. MD5 and *CRC32* values are *quite useful* when checking to make sure your ROM is the correct version you need for using the tools both of which are provided on the ROM requirements page to check your ROM file is correct and does not contain any errors.
+
+!!! info "Dumping ROMs"
+    If you have the capability, it is best to dump the ROM yourself from hardware, however all Virtual Console and Nintendo Switch Online versions of *Ocarina of Time* are version 1.2 and not version 1.0; for *The Legend of Zelda: Collector's Edition* the ROM files for *Ocarina of Time* and *Majora's Mask* are ROMs that were compiled specifically for *The Legend of Zelda: Collector's Edition* and cannot be used at all.
 
 -----
