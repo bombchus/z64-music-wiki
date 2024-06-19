@@ -148,11 +148,13 @@ nav:
   - Home: index.md
   - Getting Started:
     #- starting/index.md
-    - Requirements: requirements.md
-  - Basic:
+    - Tools & Resources: getting-started/tools.md
+    - ROM Requirements: getting-started/requirements.md
+  - Basic Info:
     - basic/index.md
+    - Music Creation Overview: basic/overview.md
     - Categorizing Sequences: basic/categories.md
-  - Advanced:
+  - Advanced Info:
     - advanced/index.md
     - Tuning: advanced/tuning.md
     - Formmask: advanced/formmask.md

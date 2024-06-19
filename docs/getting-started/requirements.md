@@ -1,4 +1,4 @@
-# Getting Started
+# ROM Requirements
 
 <div class="grid cards" markdown>
 
@@ -10,11 +10,11 @@
 
 </div>
 
-placeholder
-
 ## General ROM Requirements
 
 decompressed ROM with big endian byte ordering
+
+To be able to edit your ROM in SEQ64, you will need to decompress your ROM and make sure that your ROM's byte ordering is "Big Endian" and not "Little Endian" or "Byteswapped".
 
 ???+ info "ROM Byte Ordering"
 
@@ -60,32 +60,36 @@ To be able to work with the tools required for custom music creation your *Ocari
 
 To make sure you have an unmodified version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed *Ocarina of Time* NTSC version 1.0 ROMs
 
-???+ success "ROM MD5 Checksum"
+???+ success "ROM MD5 and CRC32 Checksums"
 
     An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
 
     === "Compressed (NTSC-U)"
         `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
         ``` linenums="0"
-        5bd1fe107bf8106b2ab6650abecd54d6
+        CRC32: cd16c529
+          MD5: 5bd1fe107bf8106b2ab6650abecd54d6
         ```
 
     === "Decompressed (NTSC-U)"
         `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
         ``` linenums="0"
-        6f7957f08d564ae255b25d54b9eb6774
+        CRC32: b94d8af1
+          MD5: 6f7957f08d564ae255b25d54b9eb6774
         ```
 
     === "Compressed (NTSC-J)"
         `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
         ``` linenums="0"
-        9f04c8e68534b870f707c247fa4b50fc
+        CRC32: d423e8b0
+          MD5: 9f04c8e68534b870f707c247fa4b50fc
         ```
 
     === "Decompressed (NTSC-J)"
         `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
         ``` linenums="0"
-        361f0a3bfc21289928d0f671517a6897
+        CRC32: 49a3439c
+          MD5: 361f0a3bfc21289928d0f671517a6897
         ```
 
 ## Majora's Mask ROM Requirements
@@ -101,21 +105,21 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
     === "Compressed (NTSC-U)"
         `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
         ``` linenums="0"
-        2a0a8acb61538235bc1094d297fb6556
+        CRC32: b428d8a7
+          MD5: 2a0a8acb61538235bc1094d297fb6556
         ```
 
     === "Decompressed (NTSC-U)"
         `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
         ``` linenums="0"
-        05fd2b38816173f92ab279c059fabbfb
+        CRC32: 33751c40
+          MD5: 05fd2b38816173f92ab279c059fabbfb
         ```
 
 ## placeholder
 
-![](assets/images/samples/piano-range-light.png#only-light){ .on-glb }
-![](assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
-
------
+![](../../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
+![](../../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
 [^1]: For a full breakdown of every difference between versions in *The Legend of Zelda: Ocarina of Time*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences") on version differences.
 

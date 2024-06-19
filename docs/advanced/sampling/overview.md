@@ -35,11 +35,11 @@ Before getting started, below is a list of tools that are used for custom sample
 ### Link to Tools
 - **[Sample Creation Tools](#)**
 - **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools)**
-- **[Polyphone](https://www.polyphone-soundfonts.com/download)**
+- **[Polyphone](https://www.polyphone-soundfonts.com/download)** <small>recommended</small>
 - **[Audacity](https://www.audacityteam.org/download/)**
-- **[Z64 Tuning Calculator](#)**
+- **[Z64 Tuning Calculator](#)** <small>recommended</small>
 - **[Z64 ADSR Converter](#)**
-- **[Audiobank Templates](#)**
+- **[Audiobank Templates](#)** <small>recommended</small>
 
 #### Brief Summary of Tools
 === "Sample Creation Tools"
@@ -54,11 +54,11 @@ Before getting started, below is a list of tools that are used for custom sample
 === "Audacity"
     **Audacity** is *optional*, but extremely useful for resampling `.wav` files as well as sample editing, before converting, as well.
 
-=== "Z64 Tuning Calculator"
-    The **Z64 Tuning Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
+=== "Tuning Calculator"
+    The **Tuning Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
 
-=== "Z64 ADSR Converter"
-    The **Z64 ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
+=== "ADSR Converter"
+    The **ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
 
 === "Audiobank Templates"
     The **Audiobank Templates** are *optional*, but are made specifically for the creation of sampled instruments, drums, and sound effects and can be edited in SEQ64 or a text editor capable of editing `.xml` files. The Audiobank Templates contain placeholder data to be edited specifically for either instruments, drums, or sound effects.
