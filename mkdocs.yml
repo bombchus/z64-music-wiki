@@ -156,8 +156,8 @@ nav:
     - Categorizing Sequences: basic/categories.md
   - Advanced Info:
     - advanced/index.md
-    - Tuning: advanced/tuning.md
     - Formmask: advanced/formmask.md
+    - Tuning: advanced/tuning.md
     - Audiobanks:
       - Building an Audiobank: advanced/audiobanks/building-audiobanks.md
     - ADSR:
