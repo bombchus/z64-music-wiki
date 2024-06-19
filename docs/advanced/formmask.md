@@ -4,7 +4,7 @@ hide:
 ---
 
 # Using Formmask
-This page details how to use the Formmask feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
+This page details how to use the **Formmask** feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
 
 !!! warning "Non-Useable Categories"
     At the time of writing this Formmask does not currently work with fanfares or combat music, if you use formmask with them then the randomizer will just play all available channels instead, because of this it is discouraged to use formmask with any of the following categories:
@@ -36,13 +36,13 @@ This page details how to use the Formmask feature added in `v1.15.0.21` of the *
         | `13D` | Fanfare: The Truth Revealed! | — | — |
 
 ## Creating a Formmask File
-A `.formmask` file is simply a `.json` (or plain text) file with its filename extension changed to `.formmask`. Inside the file is a single `.json` array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
+A `.formmask` file is just a `.json` (or `.txt`) file with its filename extension changed to `.formmask`. Inside the file is a single JSON array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
 
 !!! info "Filename"
-    The filename itself uses the same naming as a sequence or audiobank file (e.g. `0x03.seq` will be `0x03.formmask`)!
+    The filename itself uses the same naming as a sequence or audiobank file (e.g. `0x03.seq` will be `0x03.formmask`).
 
 ### JSON Array Formatting
-The formatting for a `.json` array is as follows:
+The formatting for a JSON array is as follows:
 
 === ":material-code-json: &nbsp;Template"
     <div class="annotate" markdown>
@@ -128,27 +128,27 @@ The formatting for a `.json` array is as follows:
     2. Channel 11 is enabled when Link is swimming and all other channels will be disabled.
     3. When Link is in the Epona, SpikeRolling, or Combat states all currently enabled channels will stay enabled; if Link is in combat then channel 13 will be enabled alongside any other enabled channels.
 
-The first 16 array values are for the channels of your sequence, and the 17th array value is for cumulative forms & states. Cumulative forms & states applied to channels will cause those channels to play on top of already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
+The first 16 array values are for the channels of your sequence, and the 17th array value is for *cumulative* forms and states. Cumulative forms and states applied to a sequence will cause the channels with cumulative forms and states to continue playing with already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
 
 !!! info
-    You can specify a channel and cumulative forms & states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
+    You can specify a channel and cumulative forms and states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
 
 ### Allowed Form & State Values
-Below is a list of the forms & states available to be assigned via Formmask.
+Below is a list of the forms and states available to be assigned via Formmask.
 
 | Form or State | Description |
 | --- | --- |
-| `Human` | The channel will be enabled while Link is a Hylian |
-| `Deku` | The channel will be enabled whil Link is a Deku |
-| `Goron` | The channel will be enabled while Link is a Goron |
-| `Zora` | The channel will be enabled while Link is a Zora |
-| `All` | The Channel will be enabled for all of Link's different forms |
-| `Swim` | The channel will be enabled while Link is swimming in the water |
-| `Combat` | The channel will be enabled while Link is near or fighting an enemy |
-| `Epona` | The channel will be enabled while Link is riding Epona |
-| `SpikeRolling` | The channel will be enabled while Goron Link is rolling with spikes |
+| `Human` | The assigned channel will be enabled while Link is a Hylian |
+| `Deku` | The assigned channel will be enabled whil Link is a Deku |
+| `Goron` | The assigned channel will be enabled while Link is a Goron |
+| `Zora` | The assigned channel will be enabled while Link is a Zora |
+| `All` | The assigned channel will be enabled for all of Link's different forms |
+| `Swim` | The assigned channel will be enabled while Link is swimming in the water |
+| `Combat` | The assigned channel will be enabled while Link is near or fighting an enemy |
+| `Epona` | The assigned channel will be enabled while Link is riding Epona |
+| `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
-To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use *D-Pad up* and *D-Pad down*, and to cycle through cumulative states you can use *D-Pad left* and *D-Pad right*.
+To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use D-Pad Up and D-Pad Down, and to cycle through cumulative states you can use D-Pad Left and D-Pad Right.
 
 -----
