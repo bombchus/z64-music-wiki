@@ -166,7 +166,8 @@ nav:
       - Audiobank Envelopes: advanced/adsr/abenvelope.md
       - Sequence Envelopes: advanced/adsr/seqenvelope.md
     - Custom Sample Injection:
-      - Injection Overview: advanced/sampling/overview.md
+      - Sample Injection Overview: advanced/sampling/overview.md
+      - WAV File Conversion: advanced/sampling/wav-conversion.md
     - MIDI:
       - Advanced MIDI Overview: advanced/midi/overview.md
   - Vanilla References:

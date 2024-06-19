@@ -1,4 +1,4 @@
-# Music Creation Tools and Resources
+# Custom Music Creation Tools and Resources
 
 <div class="grid cards" markdown>
 
@@ -15,7 +15,7 @@ This page is where you will find links to the various tools and resources used i
 !!! alert "Warning"
     This page, as well as the wiki itself, can not and will not supply you with any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
 
-## Tools
+## Custom Music Creation Tools
 Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ### Link to Tools
@@ -66,6 +66,8 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 === "nDEC"
     **nDEC** is used to decompress your ROM so that you are able to edit it in SEQ64. nDEC is simple enough to use as there is a file bundled with the program in the link provided that does all the work for you. Should you need detailed instructions on how to decompress your ROM you can find them on the ROM requirements page of the wiki.
+
+-----
 
 ## Obtaining a ROM
 Along with the tools above, you will need to obtain a ROM of *Ocarina of Time* and/or *Majora's Mask* and decompress it using a decompression tool. Sharing ROM files is illegal as the files are copyrighted by Nintendo, so this wiki cannot share links to any websites containing the ROM files. MD5 and *CRC32* values are *quite useful* when checking to make sure your ROM is the correct version you need for using the tools both of which are provided on the ROM requirements page to check your ROM file is correct and does not contain any errors.

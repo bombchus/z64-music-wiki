@@ -15,7 +15,7 @@ placeholder blurb
 
 <div class="grid cards" markdown>
 
-- :material-brush-variant: __[placeholder]__ placeholder
+- :material-brush-variant: __[placeholder]__ – placeholder
 - :material-format-font: __[placeholder]__ – placeholder
 - :material-google-downasaur: __[placeholder]__ – placeholder
 - :material-cards-variant: __[placeholder]__ – placeholder

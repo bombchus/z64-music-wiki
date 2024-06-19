@@ -31,7 +31,7 @@ The majority of the work for sampled instrument's, drum's, and sound effect's sa
 ??? tip "Recomendation"
     It is recommended that you read through the custom sample injection wiki pages fully once while following along with the process, then going over it again as many times as needed until you fully understand the process. Should you require any further help it's best to inquire within the [:fontawesome-brands-discord: MMR](https://discord.gg/8qbreUM) or [:fontawesome-brands-discord: Darunia's Joy](https://discord.gg/EVpd499gkS) discord servers.
 
-## Tools
+## Sample Injection Tools
 Before getting started, below is a list of tools that are used for custom sample injection, not every tool may be required, but it is recommended to download all the rools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ### Link to Tools
