@@ -59,7 +59,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     The **Soundfont** will allow you to preview your music similar to how it would sound in-game using a DAW capable of music playback with a soundfont allowing you to easily modify your music before you convert it. The soundfonts don't sound exactly like how in-game sounds will sound, however it is close enough to give you a good idea of how it will sound.
 
 === "N64 Emulator"
-    An **N64 Emulator** is used to preview your music in-game, this will allow you to make sure there are no problems with the sequence or audiobank in-game. The emulators linked above are mostly standalone Nintendo 64 emulators, with only ares being a multi-system emulator. It is recommended to *avoid* RetroArch and other multi-system emulators.
+    An **N64 Emulator** is used to preview your music in-game, this will allow you to make sure there are no problems with the sequence or audiobank in-game. The emulators linked above are mostly standalone Nintendo 64 emulators, with only ares being a multi-system emulator. It is recommended to *avoid* RetroArch and other multi-system emulators and frontends.
 
 === "nDEC"
     **nDEC** is used to decompress your ROM so that you are able to edit it in SEQ64. nDEC is simple enough to use as there is a file bundled with the program in the link provided that does all the work for you. Should you need detailed instructions on how to decompress your ROM you can find them on the ROM requirements page of the wiki.
