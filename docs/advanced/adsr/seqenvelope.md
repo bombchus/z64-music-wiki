@@ -1,5 +1,6 @@
 ---
-icon: material/hexadecimal
+hide:
+#icon: material/hexadecimal
 ---
 
 <div class="grid cards" markdown>

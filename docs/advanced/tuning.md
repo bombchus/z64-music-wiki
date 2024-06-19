@@ -1,5 +1,6 @@
 ---
-icon: material/waveform
+hide:
+#icon: material/waveform
 ---
 
 # Sample Tuning

@@ -1,5 +1,6 @@
 ---
-icon: material/xml
+hide:
+#icon: material/xml
 ---
 
 <div class="grid cards" markdown>

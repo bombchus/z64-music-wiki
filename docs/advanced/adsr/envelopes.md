@@ -1,5 +1,6 @@
 ---
-icon: material/code-braces
+hide:
+#icon: material/code-braces
 ---
 
 <div class="grid cards" markdown>

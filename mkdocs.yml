@@ -147,14 +147,17 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
+    #- starting/index.md
     - Requirements: requirements.md
   - Basic:
-    - rename: basic/rename.md
+    - basic/index.md
+    - Categorizing Sequences: basic/categories.md
   - Advanced:
+    - advanced/index.md
     - Tuning: advanced/tuning.md
     - Formmask: advanced/formmask.md
     - Audiobanks:
-      - Building an Audiobank: advanced/audiobanks/custom-audiobank.md
+      - Building an Audiobank: advanced/audiobanks/building-audiobanks.md
     - ADSR:
       - Custom Envelopes: advanced/adsr/envelopes.md
       - Audiobank Envelopes: advanced/adsr/abenvelope.md
@@ -164,6 +167,7 @@ nav:
     - MIDI:
       - Advanced MIDI Overview: advanced/midi/overview.md
   - Vanilla References:
+    - vanilla-reference/index.md
     - Audiobank Reference: vanilla-reference/audiobanks.md
     - Sample Reference: vanilla-reference/samples.md
     - Sequence Commands: vanilla-reference/seq-commands.md

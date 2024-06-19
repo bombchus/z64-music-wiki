@@ -2,7 +2,7 @@
 hide:
   #- navigation
   #- toc
-icon: material/playlist-music
+#icon: material/playlist-music
 ---
 
 <style>

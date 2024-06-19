@@ -1,5 +1,6 @@
 ---
-icon: material/code-json
+hide:
+#icon: material/code-json
 ---
 
 # Using Formmask

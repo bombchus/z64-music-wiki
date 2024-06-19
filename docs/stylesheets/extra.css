@@ -103,30 +103,21 @@
  *
  */
 /* Change text font weight and color for link navigation */
-label#__nav_4_1_label.md-nav__link > .md-ellipsis,
-label#__nav_4_2_label.md-nav__link > .md-ellipsis,
-label#__nav_4_3_label.md-nav__link > .md-ellipsis,
-label#__nav_4_4_label.md-nav__link > .md-ellipsis,
-label#__nav_4_5_label.md-nav__link > .md-ellipsis {
+.md-nav__item--section > .md-nav__link {
+  color: var(--md-default-fg-color--light);
+}
+/* Change navigation section link font weight and color */
+.md-nav__link[for] {
   font-weight: 700;
   color: var(--md-default-fg-color--light);
 }
-
-/* Change text hover color for link navigation */
-/*
-label#__nav_4_1_label.md-nav__link:hover > .md-ellipsis,
-label#__nav_4_1_label.md-nav__link:focus > .md-ellipsis,
-label#__nav_4_2_label.md-nav__link:hover > .md-ellipsis,
-label#__nav_4_2_label.md-nav__link:focus > .md-ellipsis,
-label#__nav_4_3_label.md-nav__link:hover > .md-ellipsis,
-label#__nav_4_3_label.md-nav__link:focus > .md-ellipsis,
-label#__nav_4_4_label.md-nav__link:hover > .md-ellipsis,
-label#__nav_4_4_label.md-nav__link:focus > .md-ellipsis,
-label#__nav_4_5_label.md-nav__link:hover > .md-ellipsis,
-label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
+/* Change side nav section link and icon color on focus and hover */
+.md-nav__link[for]:focus, .md-nav__link[href]:focus {
+  color: var(--md-default-fg-color--light);
+}
+.md-nav__link[for]:hover, .md-nav__link[href]:hover {
   color: var(--md-accent-fg-color);
 }
-*/
 
 /*
  *
@@ -177,7 +168,6 @@ label#__nav_4_5_label.md-nav__link:focus > .md-ellipsis {
 .glightbox-clean .gnext {
   top: -100%!important;
 }
-
 /* change lightbox overlay color */
 .goverlay {
   background: rgba(0,0,0,.8)!important;

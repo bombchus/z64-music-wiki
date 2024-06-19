@@ -1,7 +1,7 @@
 ---
 hide:
   #- toc
-icon: material/waveform
+#icon: material/waveform
 ---
 
 <style>
