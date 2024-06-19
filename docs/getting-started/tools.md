@@ -27,6 +27,9 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[ROM Description for Ocarina of Time ROM (NTSC-U) [v1.0]](#)** <small>v2.25.2024</small>
     - **[ROM Description for Majora's Mask (NTSC-U) [v1.0]](#)** `stable` <small>v2.25.2024</small>
     - **[ROM Description for Majora's Mask (NTSC-U) [v1.0]](#)** `experimental` <small>v4.10.2024</small>
+- **SEQ64 ABI File**
+    - **[Zelda ABI](#)** <small>±2 semitone pitch bend scale</small>
+    - **[Zelda ABI](#)** <small>±12 semitone pitch bend scale</small>
 - **MIDI Capable Digital Audio Workstation**
     - **[Fruity Loops Studio](https://www.image-line.com/fl-studio-download/)**
     - **[Sekaiju](https://openmidiproject.opal.ne.jp/Sekaiju_en.html)**

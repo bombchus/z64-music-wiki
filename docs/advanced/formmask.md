@@ -45,6 +45,7 @@ A `.formmask` file is simply a `.json` (or plain text) file with its filename ex
 The formatting for a `.json` array is as follows:
 
 === ":material-code-json: &nbsp;Template"
+    <div class="annotate" markdown>
     ``` json
     [
         "Channel 0",
@@ -66,11 +67,10 @@ The formatting for a `.json` array is as follows:
         "Cumulative States"
     ]
     ```
+    </div>
 
 === ":material-code-json: &nbsp;Example 1"
-    
-    <div class="annotate">
-    
+    <div class="annotate" markdown>
     ``` yaml
     [
         "All",#(1)!
@@ -92,7 +92,6 @@ The formatting for a `.json` array is as follows:
         "Epona, SpikeRolling"#(4)!
     ]
     ```
-
     </div>
 
     1. Channels 0, 1, 2, 3, 4, 5, 6, 9, 14, and 15 are enabled when Link is any form (Hylian, Deku, Goron, or Zora), and all other channels will be disabled.
@@ -101,9 +100,7 @@ The formatting for a `.json` array is as follows:
     4. When Link is in the Epona or SpikeRolling state all currently enabled channels will stay enabled; no new channels will enabled or disabled as no channel depends on these states to be enabled.
 
 === ":material-code-json: &nbsp;Example 2"
-    
-    <div class="annotate">
-    
+    <div class="annotate" markdown>
     ``` yaml
     [
         "All",#(1)!
@@ -125,7 +122,6 @@ The formatting for a `.json` array is as follows:
         "Epona, SpikeRolling, Combat"#(3)!
     ]
     ```
-
     </div>
 
     1. Channels 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14 and 15 are enabled when Link is any form (Hylian, Deku, Goron, or Zora), and all other channels will be disabled.
