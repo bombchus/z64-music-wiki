@@ -10,11 +10,10 @@
 
 </div>
 
+This page will explain the requirements for ROMs so that you will be able to use them to create and test your custom music for *Ocarina of Time* and *Majora's Mask*.
+
 ## General ROM Requirements
-
-decompressed ROM with big endian byte ordering
-
-To be able to edit your ROM in SEQ64, you will need to decompress your ROM and make sure that your ROM's byte ordering is "Big Endian" and not "Little Endian" or "Byteswapped".
+To be able to work with the tools required for custom music creation edit your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1243`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it isn't already.
 
 ???+ info "ROM Byte Ordering"
 
