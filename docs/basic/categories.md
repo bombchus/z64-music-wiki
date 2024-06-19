@@ -1,4 +1,4 @@
-# Categorizing Your Sequence
+# Categorizing Sequences
 
 <div class="grid cards" markdown>
 
