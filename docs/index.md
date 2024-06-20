@@ -29,6 +29,10 @@ hide:
   .md-source-file__fact {
     display: none;
   }
+
+  .md-typeset .headerlink {
+    display: none;
+  }
 </style>
 
 <!-- Splash Image -->
@@ -36,6 +40,8 @@ hide:
   ![](assets/images/splash.png){ width="1400" height="580" }
   </figcaption>
 </figure>
+
+## Need Help? Join One of the Discord Servers Below
 
 <!-- Create Discord Server Grid Buttons -->
 <div class="grid cards" markdown>
