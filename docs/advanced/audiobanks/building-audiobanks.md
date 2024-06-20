@@ -158,17 +158,17 @@ For C and Binary, items don't need to be in any particular order except for the 
     00 00 00 00 | ss tt uu vv ww xx yy zz
     ```
 
-    - `ss`: Sample medium (`sampleMedium`) for the samples the audiobank uses
-    - `tt`: Sequence player (`seqPlayer`) the audiobank uses
-    - `uu`: Audiotable (`tablenum`) the audiobank is in
-    - `vv`: "Soundfont ID" (`fontID`) of the audiobank
-    - `ww`: Number of instrument (`NUM_INST`) in the audiobank
-    - `xx`: Number of drums (`NUM_DRUM`) in the audiobank
-    - `yy`: Unknown value
-    - `zz`: Number of sound effects (`NUM_SFX`) in the audiobank
+    - `ss` = Sample medium (`sampleMedium`) for the samples the audiobank uses
+    - `tt` = Sequence player (`seqPlayer`) the audiobank uses
+    - `uu` = Audiotable (`tablenum`) the audiobank is in
+    - `vv` = "Soundfont ID" (`fontID`) of the audiobank
+    - `ww` = Number of instrument (`NUM_INST`) in the audiobank
+    - `xx` = Number of drums (`NUM_DRUM`) in the audiobank
+    - `yy` = Unknown value
+    - `zz` = Number of sound effects (`NUM_SFX`) in the audiobank
 
     !!! info "Unknown Value"
-        It is unknown what `yy` is however *Majora's Mask's* audiobank 0x00 has a value of `1` for `yy` with every other audiobank having a value of `0` for `yy`, and for *Ocarina of Time* has a value of `0` for `yy` for every audiobank.
+        It is unknown what `yy` is however *Majora's Mask's* audiobank 0x00 has a value of 1 for `yy` with every other audiobank having a value of 0 for `yy`, and for *Ocarina of Time* has a value of `0` for `yy` for every audiobank.
 
 ## Audiobank Header
 
@@ -223,10 +223,10 @@ For C and Binary, items don't need to be in any particular order except for the 
     00 00 00 00 | xx xx xx xx yy yy yy yy zz zz zz zz -- -- -- --
     ```
 
-    - `xx xx xx xx`: Drum List pointer address
-    - `yy yy yy yy`: SFX List pointer address
-    - `zz zz zz zz`: Instrument address pointer (`uint32`), there are as many address pointers as there are instruments defined by `NUM_INST`
-    - `--`: Padding to byte 16 for alignment
+    - `xx xx xx xx` = Drum List pointer address
+    - `yy yy yy yy` = SFX List pointer address
+    - `zz zz zz zz` = Instrument address pointer (`uint32`), there are as many address pointers as there are instruments defined by `NUM_INST`
+    - `--` = Padding to byte 16 for alignment
 
     !!! info "Instrument List"
         The "Instrument List" is built directly into the audiobank header, so instrument address pointers begin immediately after the SFX List.
@@ -270,8 +270,8 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | xx xx xx xx -- -- -- -- -- -- -- -- -- -- -- --
     ```
 
-    - `xx xx xx xx`: Drum address pointer, there are as many address pointers as there are drums defined by `NUM_DRUM`
-    - `--`: Padding to byte 16 for alignment
+    - `xx xx xx xx` = Drum address pointer, there are as many address pointers as there are drums defined by `NUM_DRUM`
+    - `--` = Padding to byte 16 for alignment
 
     !!! info "NULL Address Pointer"
         Addresses that have no information pointed to will be zeroed out, in this case it's important to pay attention to `NUM_INST`, `NUM_DRUM`, and `NUM_SFX` as they define how many addresses there will be in each pointer list; this is important to know because padding is also represented by zero values.
@@ -372,17 +372,17 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | ww ww ww ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `pp`: Relocation offset
-    - `qq`: Low sample max key and mid sample min key
-    - `rr`: Mid sample max key and high sample min key
-    - `ss`: Decay index
-    - `tt tt tt tt`: Envelope pointer address
-    - `uu uu uu uu`: Low sample pointer address
-    - `vv vv vv vv`: Low sample tuning float value
-    - `ww ww ww ww`: Mid sample pointer address
-    - `xx xx xx xx`: Mid sample tuning float value
-    - `yy yy yy yy`: High sample pointer address
-    - `zz zz zz zz`: High sample tuning float value
+    - `pp` = Relocation offset
+    - `qq` = Low sample max key and mid sample min key
+    - `rr` = Mid sample max key and high sample min key
+    - `ss` = Decay index
+    - `tt tt tt tt` = Envelope pointer address
+    - `uu uu uu uu` = Low sample pointer address
+    - `vv vv vv vv` = Low sample tuning float value
+    - `ww ww ww ww` = Mid sample pointer address
+    - `xx xx xx xx` = Mid sample tuning float value
+    - `yy yy yy yy` = High sample pointer address
+    - `zz zz zz zz` = High sample tuning float value
 
 ## Audiobank Drums
 
@@ -447,13 +447,13 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | tt uu vv ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `tt`: Decay index
-    - `uu`: Drum pan
-    - `vv`: Unknown value
-    - `ww`: Unknown value
-    - `xx xx xx xx`: Sample pointer address
-    - `yy yy yy yy`: Sample tuning float value
-    - `zz zz zz zz`: Envelope pointer address
+    - `tt` = Decay index
+    - `uu` = Drum pan
+    - `vv` = Unknown value
+    - `ww` = Unknown value
+    - `xx xx xx xx` = Sample pointer address
+    - `yy yy yy yy` = Sample tuning float value
+    - `zz zz zz zz` = Envelope pointer address
 
     !!! info "Unknown Value"
         One of these unknown values is the relocation offset, however the other value is completely unknown.
@@ -523,14 +523,14 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | ss ss tt tt uu uu vv vv ww ww xx xx yy yy zz zz
     ```
 
-    - `ss ss`: Envelope delay value 1
-    - `tt tt`: Envelope argument value 1
-    - `uu uu`: Envelope delay value 2
-    - `vv vv`: Envelope argument value 2
-    - `ww ww`: Envelope delay value 3
-    - `xx xx`: Envelope argument value 3
-    - `yy yy`: Envelope delay value 4
-    - `zz zz`: Envelope argument value 4
+    - `ss ss` = Envelope delay value 1
+    - `tt tt` = Envelope argument value 1
+    - `uu uu` = Envelope delay value 2
+    - `vv vv` = Envelope argument value 2
+    - `ww ww` = Envelope delay value 3
+    - `xx xx` = Envelope argument value 3
+    - `yy yy` = Envelope delay value 4
+    - `zz zz` = Envelope argument value 4
 
     !!! warning
         Envelopes inside of an audiobank can only be four values long!
@@ -596,12 +596,12 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `uu`: Unknown value
-    - `vv`: Unknown value
-    - `ww ww`: Sample size in bytes
-    - `xx xx xx xx`: Sample address pointer
-    - `yy yy yy yy`: Loopbook address pointer
-    - `zz zz zz zz`: Cdebook address pointer
+    - `uu` = Unknown value
+    - `vv` = Unknown value
+    - `ww ww` = Sample size in bytes
+    - `xx xx xx xx` = Sample address pointer
+    - `yy yy yy yy` = Loopbook address pointer
+    - `zz zz zz zz` = Cdebook address pointer
 
     !!! info "Unknown Value"
         It is currently unknown what these values are, they could be `codec`, `medium`, `unk_bit26`, or `relocOffset`.
@@ -758,11 +758,11 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | zC zC zD zD zE zE zF zF -- -- -- -- -- -- -- --
     ```
 
-    - `ww ww ww ww`: Order value
-    - `xx xx xx xx`: Number of predictors value
-    - `y# y#`: Codebook array value
-    - `z# z#`: Codebook array value
-    - `--`: Padding to byte 16 for alignment
+    - `ww ww ww ww` = Order value
+    - `xx xx xx xx` = Number of predictors value
+    - `y# y#` = Codebook array value
+    - `z# z#` = Codebook array value
+    - `--` = Padding to byte 16 for alignment
 
     !!! info "Codebook Array"
         Codebook arrays are an array of 16 `int16` values with the number of arrays being used by vanilla samples at two arrays and the number of arrays being used by custom samples at four arrays.
@@ -850,11 +850,11 @@ For C and Binary, items don't need to be in any particular order except for the 
     ## ## ## ## | z8 z8 z9 z9 zA zA zB zB zC zC zD zD zE zE zF zF
     ```
 
-    - `vv vv vv vv`: Loop start value
-    - `ww ww ww ww`: Loop end value
-    - `xx xx xx xx`: Loop count value
-    - `yy yy yy yy`: Number of samples value
-    - `z# Z#`: Loopbook array value
+    - `vv vv vv vv` = Loop start value
+    - `ww ww ww ww` = Loop end value
+    - `xx xx xx xx` = Loop count value
+    - `yy yy yy yy` = Number of samples value
+    - `z# z#` = Loopbook array value
 
     !!! info "Loopbook Array"
         Loopbook arrays are an array of 16 `int16` values with the array only being present if "Loop Count" is not equal to zero.

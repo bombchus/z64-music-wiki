@@ -6,6 +6,8 @@ hide:
 # Using Formmask
 This page details how to use the **Formmask** feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
 
+A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora; with a state referring to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
+
 !!! warning "Non-Useable Categories"
     At the time of writing this Formmask does not currently work with fanfares or combat music, if you use formmask with them then the randomizer will just play all available channels instead, because of this it is discouraged to use formmask with any of the following categories:
 
@@ -128,27 +130,37 @@ The formatting for a JSON array is as follows:
     2. Channel 11 is enabled when Link is swimming and all other channels will be disabled.
     3. When Link is in the Epona, SpikeRolling, or Combat states all currently enabled channels will stay enabled; if Link is in combat then channel 13 will be enabled alongside any other enabled channels.
 
-The first 16 array values are for the channels of your sequence, and the 17th array value is for *cumulative* forms and states. Cumulative forms and states applied to a sequence will cause the channels with cumulative forms and states to continue playing with already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
+The first 16 array values are for the channels of your sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
 
 !!! info
-    You can specify a channel and cumulative forms and states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`).
+    You can specify a channel and cumulative states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`). These comma separated values don't need to have spaces between them.
 
 ### Allowed Form & State Values
 Below is a list of the forms and states available to be assigned via Formmask.
 
-| Form or State | Description |
-| --- | --- |
-| `Human` | The assigned channel will be enabled while Link is a Hylian |
-| `Deku` | The assigned channel will be enabled whil Link is a Deku |
-| `Goron` | The assigned channel will be enabled while Link is a Goron |
-| `Zora` | The assigned channel will be enabled while Link is a Zora |
-| `All` | The assigned channel will be enabled for all of Link's different forms |
-| `Swim` | The assigned channel will be enabled while Link is swimming in the water |
-| `Combat` | The assigned channel will be enabled while Link is near or fighting an enemy |
-| `Epona` | The assigned channel will be enabled while Link is riding Epona |
-| `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
+=== "Forms"
+    | Form | Description |
+    | --- | --- |
+    | `Human` | The assigned channel will be enabled while Link is a Hylian |
+    | `Deku` | The assigned channel will be enabled whil Link is a Deku |
+    | `Goron` | The assigned channel will be enabled while Link is a Goron |
+    | `Zora` | The assigned channel will be enabled while Link is a Zora |
+    | `All` | The assigned channel will be enabled for all of Link's different forms |
+
+=== "States"
+    | State | Description |
+    | --- | --- |
+    | `Swim` | The assigned channel will be enabled while Link is swimming in the water |
+    | `Combat` | The assigned channel will be enabled while Link is near or fighting an enemy |
+    | `Epona` | The assigned channel will be enabled while Link is riding Epona |
+    | `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
 To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use D-Pad Up and D-Pad Down, and to cycle through cumulative states you can use D-Pad Left and D-Pad Right.
+
+!!! info "Info <small>Needs confirmation</small>"
+    For non-cumulative forms and states the cycle is: Human, then Goron, then Zora, then Deku, then Swim, then Combat, then Epona, then SpikeRolling.
+
+    For cumulative states the cycle is: None, then Swim, then Combat, then Epona, then SpikeRolling.
 
 -----
