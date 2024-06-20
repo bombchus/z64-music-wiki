@@ -10,6 +10,11 @@
 
 </div>
 
+??? alert "A Word of Caution"
+    The ROMs of *Ocarina of Time* and *Majora's Mask* have a limited file space of 64 MiB decompressed, and it becomes 32 MiB when compressed. To retain compatibility with both Nintendo 64 hardware and Wii Virtual Console hardware your ROM should never go above 64 MiB *compressed*. The Nintendo 64 can theoretically handle 64 MiB ROMs, however Wii Virtual Console can only be expanded to allow 48 MiB due to the nature of the fact the Wii itself needs memory to run the operating system and emulator at the same time. Using custom samples can eat up this data very quickly if you sample file is large enough; it is recommended to keep samples themselves to around a max of 10 KiB when possible. Emulators on PC can go well above the 64 MiB and 48 MiB limit, however hardware compatibility is important.
+
+    Please be mindful that if you are releasing your creations publicly that you will not be the only person using them, so it is best to show some refrain. If you song file ends up anywhere near 500 KiB then it is likely too large, a good target to aim for would be no larger than 100 to 200 KiB.
+
 This page details the process of converting `.wav` files into sample files compatible with *Ocarina of Time* and *Majora's Mask*.
 
 ## placeholder

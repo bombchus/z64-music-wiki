@@ -178,6 +178,18 @@
  * GENERAL CHANGES
  *
  */
- .md-typeset {
+.md-typeset {
   font-size: .7rem;
- }
+}
+.md-tabs__list {
+  justify-content: center;
+}
+/*
+.md-nav {
+  font-size: .75rem;
+}
+*/
+.md-tabs__link {
+  font-size: .8rem;
+  line-height: 1;
+}

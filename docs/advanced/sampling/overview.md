@@ -10,13 +10,17 @@
 
 </div>
 
+??? alert "A Word of Caution"
+    The ROMs of *Ocarina of Time* and *Majora's Mask* have a limited file space of 64 MiB decompressed, and it becomes 32 MiB when compressed. To retain compatibility with both Nintendo 64 hardware and Wii Virtual Console hardware your ROM should never go above 64 MiB *compressed*. The Nintendo 64 can theoretically handle 64 MiB ROMs, however Wii Virtual Console can only be expanded to allow 48 MiB due to the nature of the fact the Wii itself needs memory to run the operating system and emulator at the same time. Using custom samples can eat up this data very quickly if you sample file is large enough; it is recommended to keep samples themselves to around a max of 10 KiB when possible. Emulators on PC can go well above the 64 MiB and 48 MiB limit, however hardware compatibility is important.
+
+    Please be mindful that if you are releasing your creations publicly that you will not be the only person using them, so it is best to show some refrain. If you song file ends up anywhere near 500 KiB then it is likely too large, a good target to aim for would be no larger than 100 to 200 KiB.
+
 This page details the basics of custom sample injection for *Ocarina of Time* and *Majora's Mask* for use with the *Ocarina of Time* and *Majora's Mask* randomizers. This page *does not* detail injecting a sample directly into the ROM without the use of the randomizer program.
 
 !!! warning
     Custom sample injection is for creating non-vanilla sampled instruments, drums, or sound effects and assumes you already have a decent understanding of music creation and custom audiobanks, this is not a beginner's guide to music creation.
 
     Please only continue with this guide if you are comfortable using custom audiobanks and dealing with a great deal of trial and error.
-
 
 ## Overview
 In the latest version of the *Ocarina of Time* and *Majora's Mask* randomizers it's possible to create brand new instruments using non-vanilla samples by injecting it into the ROM using the randomizer. Pages related to this feature will do their best to help you through the process of custom sample injection, however, not everything is easy or straightforward; some information is very complex and requires a somewhat thorough explanation.

@@ -15,6 +15,8 @@ copyright: |
 
 # Config
 theme:
+  #font:
+    #text: Carlito #Carlito #Asul #REM
   name: material
   custom_dir: overrides
   logo: assets/logo.png
@@ -168,6 +170,7 @@ nav:
     - Custom Sample Injection:
       - Sample Injection Overview: advanced/sampling/overview.md
       - WAV File Conversion: advanced/sampling/wav-conversion.md
+      - Troubleshooting: advanced/sampling/troubleshooting.md
     - MIDI:
       - Advanced MIDI Overview: advanced/midi/overview.md
   - Vanilla References:
