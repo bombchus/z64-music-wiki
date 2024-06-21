@@ -171,6 +171,8 @@ In the example below we will assume the sample's waveform is 2 s in total length
 
 *Ocarina of Time* and *Majora's Mask* use a multi-point envelope structure, however instruments and drums are limited to four data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
 
+<style>
+/*
 ### Creating New Sounds With Envelopes
 Using only envelopes it is possible to create new sounds without needing to use sample injection. After studying multiple soundfonts, such as the General MIDI soundfont, I <small>figure out way to remove first person speech</small> realized there were samples shared between different instruments, or drums but used to create new instruments and drums. One such example is hi-hats such as the closed hi-hat, pedaled hi-hat, and open hi-hat; *Majora's Mask* has a semi-open hi-hat sample that is perfect for this.
 
@@ -265,5 +267,7 @@ placeholder
     ```
     00 02 7F BC 00 18 00 00 FF FF 00 00 00 00 00 00
     ```
+*/
+</style>
 
 -----
