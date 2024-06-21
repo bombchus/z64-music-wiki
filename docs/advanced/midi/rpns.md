@@ -15,9 +15,6 @@ This page details a specific type of MIDI control change messages.
 ## About RPNs
 MIDI control changes include an **RPN**, which stands for Registered Parameter Numbers, which are extended. You can use RPNs in tandem with *Data Entry* messages to change various parameters in your `.mid` file. When using RPNs your first RPN (MIDI control change numbers 100 and 101; these can be sent in any order) should be sent in order to select the parameter you want to edit, then you send your Data Entry (MIDI control change numbers 6 and 38) message to set the value of the parameter. When your RPN messages are received, any Data Entry messages that are sent and received after in the same MIDI channel will change the parameter of your RPN messages; in order for your RPNs not to be changed by unwanted Data Entry messages you should send RPN Null messages so that the parameters won't be changed.
 
-## RPN MSB and LSB
-
-
 ### Pitch Bend Sensitivity
 This parameter allows you to change the pitch bend semitone range used in the channel the RPN and Data Entry messages have been sent to; it requires both Data Entry messages. The MIDI specification does not give information on the full range, meaning that it depends on the MIDI hardware or software you are using.
 
@@ -40,7 +37,7 @@ This parameter allows you to change the pitch bend semitone range used in the ch
 | Data Entry LSB | `llH` | Cent range |
 
 #### Example
-In the example below the pitch bend sensitivity is being set to ±12 semitones of pitch bend range instead of the default ±2 MIDI has normally. After the range is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
+In the example below the channel's pitch bend range is being set to ±12 semitones of range instead of the default ±2 MIDI has normally. After the range is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
 
 | Measures:Beats:Ticks | Event Kind | Value 1 | Value 2 | Value 3 |
 | :-: | --- | --- | --- | --- |
@@ -67,6 +64,18 @@ This parameter allows you to change the fine tune of programs in the channel the
 | Data Entry MSB | `mmH` | MSB of the 14 bit value |
 | Data Entry LSB | `llH` | LSB of the 14 bit value |
 
+#### Example
+In the example below the channel's fine tune is being set to have an increase of 50 cents. After the fine tune is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
+
+| Measures:Beats:Ticks | Event Kind | Value 1 | Value 2 | Value 3 |
+| :-: | --- | --- | --- | --- |
+| 00000:00:000 | Control Change | 101-RPN MSB | 0 | — |
+| 00000:00:000 | Control Change | 100-RPN LSB | 1 | — |
+| 00000:00:000 | Control Change | 6-Data Entry MSB | 96 | — |
+| 00000:00:000 | Control Change | 38-Data Entry LSB | 0 | — |
+| 00000:00:000 | Control Change | 101-RPN MSB | 127 | — |
+| 00000:00:000 | Control Change | 100-RPN LSB | 127 | — |
+
 ### Channel Coarse Tuning
 This parameter allows you to change the coarse tune of programs in the channel the RPN and Data Entry messages have been sent to; this only requires the Data Entry MSB message. If the 14 bit value of the Data Entry MSB message is 0x40 (64), then the tuning is central with A440 Hz. The full range gives a ±48 semitone range of tuning.
 
@@ -82,5 +91,17 @@ This parameter allows you to change the coarse tune of programs in the channel t
 | RPN LSB | `02H` | When set to a value of 2 alongside RPN MSB sets parameter to edit to Channel Coarse Tuning |
 | Data Entry MSB | `mmH` | Number of semitones to increase or decrease the tuning by |
 | Data Entry LSB | `llH` | Ignored and treated as a value of 0 |
+
+#### Example
+In the example below the channel's coarse tune is being set to have a decrease of one octave (12 semitones). After the coarse tune is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
+
+| Measures:Beats:Ticks | Event Kind | Value 1 | Value 2 | Value 3 |
+| :-: | --- | --- | --- | --- |
+| 00000:00:000 | Control Change | 101-RPN MSB | 0 | — |
+| 00000:00:000 | Control Change | 100-RPN LSB | 1 | — |
+| 00000:00:000 | Control Change | 6-Data Entry MSB | 52 | — |
+| 00000:00:000 | Control Change | 38-Data Entry LSB | 0 | — |
+| 00000:00:000 | Control Change | 101-RPN MSB | 127 | — |
+| 00000:00:000 | Control Change | 100-RPN LSB | 127 | — |
 
 -----
