@@ -41,7 +41,7 @@ MIDI using the GM specification normally has 127 possible instruments with Chann
 ??? info "Percussion Kits and Sound Effects"
     Percussion kist and sound effects in *Ocarina of Time* and *Majora's Mask* work almost identically to how they do in MIDI with different values corresponding to different individual drum sounds. The only difference is hat there is a single percussion kit per audiobank and is assigned to program 127 (0x7F) instead of being assigned to a specific channel.
 
-To properly assign the instruments you want you will need to find which instrument in the audiobank you are using corresponds to the equivalent MIDI program value. If you need to know which audiobank has which instruments, you can use the [vanilla audiobank references](../vanilla-reference/audiobanks) wiki page.
+To properly assign the instruments you want you will need to find which instrument in the audiobank you are using corresponds to the equivalent MIDI program value. If you need to know which audiobank has which instruments, you can use the [vanilla audiobank references](../../vanilla-reference/audiobanks) wiki page.
 
 ## Instrument Types
 In *Ocarina of Time* and *Majora's Mask* there are three different types of instrument types:
