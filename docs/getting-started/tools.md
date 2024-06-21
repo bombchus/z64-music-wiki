@@ -20,34 +20,34 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 ### Link to Tools
 - **SEQ64**
-    - **[v1.0.0](https://github.com/sauraen/seq64/releases/tag/V1.0){ target="_blank" }** <small>:material-open-in-new: </small><small>required for audiobank editing</small>
-    - **[v1.5.0](https://github.com/sauraen/seq64/releases/tag/V1.5){ target="_blank" }** <small>:material-open-in-new: </small><small>required for audiobank editing</small>
-    - **[v2.3.2](https://github.com/sauraen/seq64/releases/tag/2.3.2){ target="_blank" }** <small>:material-open-in-new: </small><small>recommended for sequence converting</small>
+    - **[v1.0.0](https://github.com/sauraen/seq64/releases/tag/V1.0){ target="_blank" }**<small> :material-open-in-new: </small><small>required for audiobank editing</small>
+    - **[v1.5.0](https://github.com/sauraen/seq64/releases/tag/V1.5){ target="_blank" }**<small> :material-open-in-new: </small><small>required for audiobank editing</small>
+    - **[v2.3.2](https://github.com/sauraen/seq64/releases/tag/2.3.2){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended for sequence converting</small>
 - **ROM Description**
     - *Ocarina of Time* `ntsc-u` `v1.0`
-        - **[ROM Description](#)** <small>:material-open-in-new: </small><small>v2.25.2024</small>
-        - **[ROM Description](#)** <small>:material-open-in-new: </small>`gm sample naming` <small>vX.XX.20XX</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small><small>v2.25.2024</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`gm sample naming` <small>vX.XX.20XX</small>
     - *Majora's Mask* `ntsc-u` `v1.0`
-        - **[ROM Description](#)** <small>:material-open-in-new: </small>`stable` <small>v2.25.2024</small>
-        - **[ROM Description](#)** <small>:material-open-in-new: </small>`experimental` <small>v4.10.2024</small>
-        - **[ROM Description](#)** <small>:material-open-in-new: </small>`experimental` `gm sample naming` <small>vX.XX.20XX</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`stable` <small>v2.25.2024</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` <small>v4.10.2024</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` `gm sample naming` <small>vX.XX.20XX</small>
 - **SEQ64 ABI File**
-    - **[Zelda ABI](#)** <small>:material-open-in-new: </small><small>±2 semitone pitch bend scale</small>
-    - **[Zelda ABI](#)** <small>:material-open-in-new: </small><small>±12 semitone pitch bend scale</small>
+    - **[Zelda ABI](#)**<small> :material-open-in-new: </small><small>±2 semitone pitch bend scale</small>
+    - **[Zelda ABI](#)**<small> :material-open-in-new: </small><small>±12 semitone pitch bend scale</small>
 - **MIDI Capable Digital Audio Workstation**
-    - **[Fruity Loops Studio](https://www.image-line.com/fl-studio-download/){ target="_blank" }** <small>:material-open-in-new: </small>
-    - **[Sekaiju](https://openmidiproject.opal.ne.jp/Sekaiju_en.html){ target="_blank" }** <small>:material-open-in-new: </small>
-    - **[REAPER](https://www.reaper.fm/download.php){ target="_blank" }** <small>:material-open-in-new: </small>
+    - **[Fruity Loops Studio](https://www.image-line.com/fl-studio-download/){ target="_blank" }**<small> :material-open-in-new: </small>
+    - **[Sekaiju](https://openmidiproject.opal.ne.jp/Sekaiju_en.html){ target="_blank" }**<small> :material-open-in-new: </small>
+    - **[REAPER](https://www.reaper.fm/download.php){ target="_blank" }**<small> :material-open-in-new: </small>
 - **Soundfont Files**
-    - **[Ocarina of Time Soundfont](#)** <small>:material-open-in-new: </small><small>v11.9.2023</small>
-    - **[Majora's Mask Soundfont](#)** <small>:material-open-in-new: </small><small>v2.20.2024</small>
+    - **[Ocarina of Time Soundfont](#)**<small> :material-open-in-new: </small><small>v11.9.2023</small>
+    - **[Majora's Mask Soundfont](#)**<small> :material-open-in-new: </small><small>v2.20.2024</small>
 - **Nintendo 64 Emulator**
-    - **[Simple64](https://github.com/simple64/simple64/releases){ target="_blank" }** <small>:material-open-in-new: </small><small>recommended emulator</small>
-    - **[Rosalie's Mupen GUI](https://github.com/Rosalie241/RMG/releases){ target="_blank" }** <small>:material-open-in-new: </small>
-    - **[ares](https://github.com/ares-emulator/ares/releases){ target="_blank" }** <small>:material-open-in-new: </small>
-    - **[Project64](https://www.pj64-emu.com/public-releases){ target="_blank" }** <small>:material-open-in-new: </small>
+    - **[Simple64](https://github.com/simple64/simple64/releases){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended emulator</small>
+    - **[Rosalie's Mupen GUI](https://github.com/Rosalie241/RMG/releases){ target="_blank" }**<small> :material-open-in-new: </small>
+    - **[ares](https://github.com/ares-emulator/ares/releases){ target="_blank" }**<small> :material-open-in-new: </small>
+    - **[Project64](https://www.pj64-emu.com/public-releases){ target="_blank" }**<small> :material-open-in-new: </small>
 - **ROM Decompression Tool**
-    - **[nDEC](#)** <small>:material-open-in-new: </small>
+    - **[nDEC](#)**<small> :material-open-in-new: </small>
 
 #### Brief Summary of Tools
 === "SEQ64"
