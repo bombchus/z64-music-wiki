@@ -149,7 +149,6 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
-    #- starting/index.md
     - Tools & Resources: getting-started/tools.md
     - ROM Requirements: getting-started/requirements.md
   - Basic Info:
@@ -160,7 +159,8 @@ nav:
   - Advanced Info:
     - advanced/index.md
     - Formmask: advanced/formmask.md
-    - Tuning: advanced/tuning.md
+    - Sample Tuning: advanced/tuning.md
+    #- Music Assembly Language: advanced/mus.md
     - Audiobanks:
       - Building an Audiobank: advanced/audiobanks/building-audiobanks.md
     - ADSR:
