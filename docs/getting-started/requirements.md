@@ -117,8 +117,8 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
 
 ## placeholder
 
-![](../../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
-![](../../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
+![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
+![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
 [^1]: For a full breakdown of every difference between versions in *The Legend of Zelda: Ocarina of Time*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences") on version differences.
 

@@ -21,6 +21,9 @@ theme:
   custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.png
+  icon:
+    tag:
+      default: material/tag
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -60,7 +63,7 @@ theme:
       accent: deep purple
 
 # Additional Config
-#extra:
+extra:
   #social:
     #- icon: fontawesome/brands/discord
       #link: https://discord.gg/ootrandomizer
@@ -74,6 +77,8 @@ theme:
     #- icon: fontawesome/brands/bluesky
       #link: https://bsky.app/profile/bombchus.bsky.social
       #name: Bluesky
+  tags:
+    Advanced: adv
 
 # Extensions
 markdown_extensions:
@@ -135,6 +140,7 @@ plugins:
   - minify:
       minify_css: true
       css_files: stylesheets/extra.css
+  - tags
 
 extra_javascript:
   - javascripts/katex.js
@@ -151,6 +157,7 @@ nav:
   - Getting Started:
     - Tools & Resources: getting-started/tools.md
     - ROM Requirements: getting-started/requirements.md
+    - Using SEQ64: getting-started/seq64.md
   - Basic Info:
     - basic/index.md
     - Music Creation Overview: basic/overview.md

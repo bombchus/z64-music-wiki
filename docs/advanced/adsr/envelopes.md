@@ -173,7 +173,7 @@ In the example below we will assume the sample's waveform is 2 s in total length
 
 <style>
 /*
-### Creating New Sounds With Envelopes
+### Sample Manipulation Using Envelopes
 Using only envelopes it is possible to create new sounds without needing to use sample injection. After studying multiple soundfonts, such as the General MIDI soundfont, I <small>figure out way to remove first person speech</small> realized there were samples shared between different instruments, or drums but used to create new instruments and drums. One such example is hi-hats such as the closed hi-hat, pedaled hi-hat, and open hi-hat; *Majora's Mask* has a semi-open hi-hat sample that is perfect for this.
 
 A lot of people in the community use the ride cymbal for hi-hats because the semi-opened hi-hat in *Majora's Mask* just doesn't fit, but you can use the hi-hat to create the other two hi-hats instead of using the ride cymbal by using a custom envelope.
