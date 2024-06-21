@@ -19,9 +19,9 @@ MIDI control changes include an **RPN**, which stands for Registered Parameter N
 This parameter allows you to change the pitch bend semitone range used in the channel the RPN and Data Entry messages have been sent to; it requires both Data Entry messages. The MIDI specification does not give information on the full range, meaning that it depends on the MIDI hardware or software you are using.
 
 !!! info
-    The default MIDI pitch bend sensitivity is ±2 semitones, *Ocarina of Time* and *Majora's Mask* have three different pitch bend ranges available assigned to different sequence commands: 0xDE has a cutom range, 0xD3 has a range of ±12 semitones, and 0xEE has a range of ±2 semitones; by default SEQ64 assigns pitch bends to 0xD3, however with SEQ64 `v2.X.X` you are able to change the sequence commands assigned to whatever MIDI control change you want in the ABI file.
+    The default MIDI pitch bend sensitivity is ±2 semitones, *Ocarina of Time* and *Majora's Mask* have three different pitch bend ranges available assigned to different sequence commands: Command "0xDE" has a cutom range, command "0xD3" has a range of ±12 semitones, and command "0xEE" has a range of ±2 semitones; by default SEQ64 assigns pitch bends to 0xD3, however with SEQ64 `v2.X.X` you are able to change the sequence commands assigned to whatever MIDI control change you want in the ABI file.
 
-    By using RPNs you can set the range in your `.mid` file to match the default pitch bend range in *Ocarina of Time* and *Majora's Mask*.
+    By using RPNs you can set the range in your `.mid` file to match the default pitch bend range set by SEQ64.
 
 #### Message Values
 | RPN MSB | RPN LSB | Data Entry MSB | Data Entry LSB |
