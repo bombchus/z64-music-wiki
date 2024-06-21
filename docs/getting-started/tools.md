@@ -24,9 +24,13 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[v1.5.0](https://github.com/sauraen/seq64/releases/tag/V1.5)** <small>required for audiobank editing</small>
     - **[v2.3.2](https://github.com/sauraen/seq64/releases/tag/2.3.2)** <small>recommended for sequence converting</small>
 - **ROM Description**
-    - **[ROM Description for Ocarina of Time ROM (NTSC-U) [v1.0]](#)** <small>v2.25.2024</small>
-    - **[ROM Description for Majora's Mask (NTSC-U) [v1.0]](#)** `stable` <small>v2.25.2024</small>
-    - **[ROM Description for Majora's Mask (NTSC-U) [v1.0]](#)** `experimental` <small>v4.10.2024</small>
+    - *Ocarina of Time* `ntsc-u` `v1.0`
+        - **[ROM Description](#)** <small>v2.25.2024</small>
+        - **[ROM Description](#)** `gm sample naming` <small>vX.XX.20XX</small>
+    - *Majora's Mask* `ntsc-u` `v1.0`
+        - **[ROM Description](#)** `stable` <small>v2.25.2024</small>
+        - **[ROM Description](#)** `experimental` <small>v4.10.2024</small>
+        - **[ROM Description](#)** `experimental` `gm sample naming` <small>vX.XX.20XX</small>
 - **SEQ64 ABI File**
     - **[Zelda ABI](#)** <small>±2 semitone pitch bend scale</small>
     - **[Zelda ABI](#)** <small>±12 semitone pitch bend scale</small>
