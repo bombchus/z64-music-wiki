@@ -70,7 +70,3 @@
 *[gm]: General MIDI
 *[ADPCM]: Adaptive Differential Pulse-Code Modulation
 *[SDK]: Software Development Kit
-*[ROM]: ROM Image
-*[ROMs]: ROM Images
-*[rom]: ROM Image
-*[roms]: ROM Images
