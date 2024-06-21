@@ -51,16 +51,11 @@ Learn more technical information about MIDI to create better sequences.
 
 <div class="grid cards" markdown>
 
-- :material-midi: __[Advanced MIDI Overview]__ – A Brief summary of MIDI and Sequences
-- :material-waveform: __[placeholder]__ – placeholder
-- :material-google-downasaur: __[placeholder]__ – placeholder
-- :material-cards-variant: __[placeholder]__ – placeholder
+- :material-open-in-new: <a href="midi/overview" target="_blank"><b>Advanced MIDI Overview</b></a> – placeholder
+- :material-open-in-new: <a href="midi/sysex" target="_blank"><b>SysEx Messages</b></a> – A brief summary of universal realtime SysEx messages and how to use them
+- :material-open-in-new: <a href="midi/rpns" target="_blank"><b>Registered Parameter Numbers</b></a> – A brief summary of Registered Parameter Numbers and how to use them
+- :material-open-in-new: <a href="" target="_blank"><b>placeholder</b></a> – placeholder
 
 </div>
-
-  [Advanced MIDI Overview]: midi/overview.md
-  [placeholder]: placeholder.md
-  [placeholder]: placeholder.md
-  [placeholder]: placeholder.md
 
 -----
