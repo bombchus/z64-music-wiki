@@ -171,4 +171,99 @@ In the example below we will assume the sample's waveform is 2 s in total length
 
 *Ocarina of Time* and *Majora's Mask* use a multi-point envelope structure, however instruments and drums are limited to four data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
 
+### Creating New Sounds With Envelopes
+Using only envelopes it is possible to create new sounds without needing to use sample injection. After studying multiple soundfonts, such as the General MIDI soundfont, I <small>figure out way to remove first person speech</small> realized there were samples shared between different instruments, or drums but used to create new instruments and drums. One such example is hi-hats such as the closed hi-hat, pedaled hi-hat, and open hi-hat; *Majora's Mask* has a semi-open hi-hat sample that is perfect for this.
+
+A lot of people in the community use the ride cymbal for hi-hats because the semi-opened hi-hat in *Majora's Mask* just doesn't fit, but you can use the hi-hat to create the other two hi-hats instead of using the ride cymbal by using a custom envelope.
+
+!!! info
+    If you don't play on using a custom audiobank, and you have channels to spare in your sequence, you can separate the hi-hat sample into its own channel and use a sequence embedded envelope to create the two missing hi-hat sounds.
+
+#### Closed Hi-Hat Envelope
+Below is the envelope to create a closed hi-hat out of the semi-open hi-hat in *Majora's Mask*. It cuts the sample almost immediately resulting in just a short hi-hat hit sound from the initial few seconds of the sample.
+
+??? warning "Note Length Warning"
+    Due to the way samples are handled in *Ocarina of Time* and *Majora's Mask*, a short enough note will cut the sample even shorter. This isn't usually a problem for the closed hi-hat, but if the sound is too short then you can try lengthening your closed hi-hat notes in your `.mid` file to give more time for the envelope to finish playing.
+
+=== ":material-code-braces: &nbsp;C"
+    ```c
+    EnvelopePoint CHH[4] = {
+      { 2, 32700 },
+      { 12, 0 },
+      { -1, 0 },
+      { 0, 0 },
+    };
+    ```
+
+=== ":material-xml: &nbsp;XML"
+    ```xml
+    <item address="0" name="CHH">
+      <struct name="ABEnvelope">
+        <field name="Delay 1" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="2"/>
+        <field name="Arg 1" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="32700"/>
+        <field name="Delay 2" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="12"/>
+        <field name="Arg 2" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Delay 3" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="-1"/>
+        <field name="Arg 3" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Delay 4" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Arg 4" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+      </struct>
+    </item>
+    ```
+
+=== ":material-hexadecimal: &nbsp;Binary"
+    ```
+    00 02 7F BC 00 0C 00 00 FF FF 00 00 00 00 00 00
+    ```
+
+#### Pedal Hi-Hat
+placeholder
+
+=== ":material-code-braces: &nbsp;C"
+    ```c
+    EnvelopePoint CHH[4] = {
+      { 2, 32700 },
+      { 24, 0 },
+      { -1, 0 },
+      { 0, 0 },
+    };
+    ```
+
+=== ":material-xml: &nbsp;XML"
+    ```xml
+    <item address="0" name="PHH">
+      <struct name="ABEnvelope">
+        <field name="Delay 1" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="2"/>
+        <field name="Arg 1" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="32700"/>
+        <field name="Delay 2" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="24"/>
+        <field name="Arg 2" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Delay 3" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="-1"/>
+        <field name="Arg 3" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Delay 4" datatype="int16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+        <field name="Arg 4" datatype="uint16" ispointer="0" isarray="0"
+               meaning="none" value="0"/>
+      </struct>
+    </item>
+    ```
+
+=== ":material-hexadecimal: &nbsp;Binary"
+    ```
+    00 02 7F BC 00 18 00 00 FF FF 00 00 00 00 00 00
+    ```
+
 -----
