@@ -24,28 +24,10 @@ When you first open SEQ64 you will see that everything is blank and none of the 
 === "Loading a  ROM"
     ![](../assets/images/seq64/seq64-load-rom.png){ .on-glb }
 
-    ```linenums="0" hl_lines="2"
-    │ ROM │ RomDesc │ Tools │ Help │
-    ├─ Load...
-    ├───────────────────
-    ├─ Byte Ordering...
-    ├───────────────────
-    ├─ Save
-    └─ Save As...
-    ```
-
     To load your ROM into SEQ64 simply click the "ROM" button, then click the "Load..." option from the context menu that appears.
 
 === "Loading a ROM Description"
     ![](../assets/images/seq64/seq64-load-romdesc.png){ .on-glb }
-
-    ```linenums="0" hl_lines="2"
-    │ ROM │ RomDesc │ Tools │ Help │
-          ├─ Load...
-          ├────────────
-          ├─ Save
-          └─ Save As...
-    ```
 
     To load your ROM description into SEQ64 simply click the "RomDesc" button, then click the "Load..." option from the context menu that appears.
 
