@@ -5,6 +5,8 @@ tags:
   - Advanced
 ---
 
+!!! alert "This page is about a feature only available in the Majora's Mask Randomizer"
+
 # Using Formmask
 This page details how to use the **Formmask** feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
 
