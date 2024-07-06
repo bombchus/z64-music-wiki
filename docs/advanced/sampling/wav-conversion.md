@@ -25,18 +25,61 @@ Unlike with N64 Soundlist Tool, obtaining all the data for the audiobank you wil
 ### Workflow
 placeholder
 
-## Resampling a WAV File
+## Resampling a WAV File <small>move to own page?</small> { #resampling-a-wav-file data-toc-label="Resampling a WAV File" }
+placeholder
+
+Resampling is an optional step in the process of converting a `.wav` file into a sample file. Resampling can reduce the file size of your sample file by lowering the sample rate reducing the amount of data contained within the file. Resampling can aldo ensure that your sample's sample rate will match the master sample rate of *Ocarina of Time* and *Majora's Mask* and eliminate the need for sample rate correction when tuning the sample.
+
+### Resampling using Audacity
+placeholder
+
+- Open your `.wav` in Audacity and make sure it is currently selected.
+- Click "Tracks" at the top of the Audacity window, then "Resample..." and select your desired sample rate.
+- Click "Audio Setup", then "Audio Settings..." and change the "Project Sample Rate" field to 32000 Hz in the "Quality" section of the "Audio Settings" menu.
+- Export your sample as a `.wav` file by clicking "File", then "Export", then "Export as WAV".
+***
+
+### Resampling using Polyphone
 placeholder
 
 ## Creating a Looping Sample
 placeholder
 
+### Looping using z64Audio
+placeholder
+
 ### Looping using Polyphone
 placeholder
 
-### Looping using z64audio
+- Open Polyphone, then click "New Soundfont"
+- Drag your `.wav` file into the Polyphone window.
+- Left-Click anywhere on the waveform visualization to set the "Loop Start" marker, Right-Click anywhere after your "Loop Start" marker to create your "Loop End" marker.
+- Once you've set up your loop markers click the toolbox icon at the top of the Polyphone window, then click "Auto Loop" (this will adjust your loop automatically for you).
+- Listen to your loop and adjust it as needed undoing any changes with ++ctrl+z++ or ++cmd+z++
+- Once you are content with how the loop sounds export your sample as a `.wav` file by clicking the toolbox icon at the top of the Polyphone window, then click "Wav Export...".
 
-## Tuning a Sample
+## Pitch Shifting a Sample <small>move to own page?</small> { #pitch-shifting-a-sample data-toc-label="Pitch Shifting a Sample" }
+Due to the hardware limitations of the Nintendo 64's Reality Signal Processor (RSP) being unable to pitch shift audio samples above 24 semitones and below 48 semitones from your sample's root key your sequence or MIDI file may require a pitch higher than you are able to achieve in-game. To get around this limitation you can pitch shift your sample out-of-game instead to change the sample's root key.
+
+!!! info "Audio Quality Degradation"
+    When pitch shifting a sample there will be degradation in the quality of the audio the farther you go from the sample's original root key, due to this fact it is recommended to only ever increase or decrease the pitch by 12 semitones at most in either direction.
+
+!!! info "Pitch Caps and Floors"
+    The Nintendo 64 Programming Manual makes a mention of the pitch cap and floor, however they describe it as having a max of 12 semitones above the sample's root key, and 24 semitones below the sample's root key. In *Ocarina of Time* and *Majora's Mask* it is the former instead of the latter described by the Nintendo 64 Programming Manual; the reason for the discrepancy is uncertain.
+
+### Pitch Shifting using Audacity
+placeholder
+
+### Pitch Shifting using Polyphone
+placeholder
+
+- Open Polyphone, then click "New Soundfont".
+- Drag your `.wav` file into the Polyphone window.
+- Click the toolbox icon at the top of the Polyphone window, then click "Transpose..."
+- Enter the amount of semitones to shift up or down, positive numbers increase the pitch with negative numbers decreasing the pitch.
+- Click "Okay" and Polyphone will shift the pitch of your sample, this will also adjust a sample's loop automatically as well.
+
+## Tuning a Sample <small>move to own page?</small> { #tuning-a-sample data-toc-label="Tuning a Sample" }
 placholder
 
 ### Finding the Sample's Root Key
