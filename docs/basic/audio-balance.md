@@ -34,5 +34,5 @@ Sequences in the tables below were recorded using BizHawk's built-in A/V recordi
     </p>
 
 <audio controls>
-  <source width="100%" src="../../../zora-cape-waterfall.wav" type="audio/wav">
+  <source width="100%" src="../../assets/audio/zora-cape-waterfall.wav" type="audio/wav">
 </audio>
