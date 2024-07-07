@@ -2,7 +2,7 @@
 
 <div class="grid cards" markdown>
 
--   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
+-   <img style="width:58.5px; height:auto; vertical-align: middle;" src="../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b>
   
     ---
 

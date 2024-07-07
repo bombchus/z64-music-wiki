@@ -2,18 +2,11 @@
 
 <div class="grid cards" markdown>
 
--   :material-file-document-edit:{ .lg } __&nbsp;THIS PAGE IS A WIP__
+-   <img style="width:58.5px; height:auto; vertical-align: middle;" src="../../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b>
   
     ---
 
-    <table style="border: none;">
-      <tbody>
-        <tr>
-          <td><a><img src="../assets/images/carpenters.png"></a></td>
-          <td><i>This page is a work in progress and requires further editing.</i></td>
-        </tr>
-      </tbody>
-    </table>
+    This page is a work in progress and requires further editing.
 
 </div>
 
