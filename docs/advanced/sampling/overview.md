@@ -39,13 +39,13 @@ The majority of the work for sampled instrument's, drum's, and sound effect's sa
 Before getting started, below is a list of tools that are used for custom sample injection, not every tool may be required, but it is recommended to download all the rools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ### Link to Tools
-- **[Sample Creation Tools](#)**
-- **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools)**
-- **[Polyphone](https://www.polyphone-soundfonts.com/download)** <small>recommended</small>
-- **[Audacity](https://www.audacityteam.org/download/)**
-- **[Z64 Tuning Calculator](#)** <small>recommended</small>
-- **[Z64 ADSR Converter](#)**
-- **[Audiobank Templates](#)** <small>recommended</small>
+- **[Sample Creation Tools](#){ target="_blank" }** <small> :material-open-in-new: </small>
+- **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
+- **[Polyphone](https://www.polyphone-soundfonts.com/download){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
+- **[Audacity](https://www.audacityteam.org/download/){ target="_blank" }** <small> :material-open-in-new: </small>
+- **[Z64 Tuning Calculator](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>v2024.07.07</small>
+- **[Z64 ADSR Converter](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>v2024.07.07</small>
+- **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
 
 #### Brief Summary of Tools
 === "Sample Creation Tools"
