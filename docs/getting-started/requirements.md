@@ -13,10 +13,10 @@
 This page details the requirements for ROMs of *Ocarina of Time* and *Majora's Mask* so that you will be able to use them to assist in creating cusom music by testing your sequences, and audiobanks, in-game to check for any errors as well as help you make any adjustments you may want to your custom music.
 
 ## General ROM Requirements
-To be able to use SEQ64 your ROM will need to be decompressed as SEQ64 cannot decompress Yaz0 files despite having tools for compression and decompression of these files in SEQ64 `v1.0` and `v1.5`.
+To be able to use SEQ64 with your ROM it will need to be decompressed, if it is not already decompressed, as SEQ64 cannot decompress Yaz0 files despite having tools for compression and decompression of these files in SEQ64 versions 1.0 and 1.5.
 
 ### Byte Ordering
-While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to work with the randomizers for custom music creation your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1243`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it isn't already.
+While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to work with the randomizers for custom music creation your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1243`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it is not already.
 
 ???+ info "ROM Byte Ordering"
 
@@ -24,7 +24,7 @@ While SEQ64 and emulators can work with all types of ROM byte ordering, to be ab
 
     To use Tool64 simply open the folder containing your ROM(s) then right click the ROM(s) that appear and select "Big Endian" from the context menu that appears.
 
-    If you're checking the ROM using a hex editor please refer to the ROM's internal name as it appears on the ROM in the hex editor using the information below (the title will be at the following address range `0x00000020` to `0x0000003F`):
+    If you are checking the ROM using a hex editor please refer to the ROM's internal name as it appears on the ROM in the hex editor using the information below (the title will be at the following address range `0x00000020` to `0x0000003F`):
 
     === "Little Endian (`.n64`)"
         For *Ocarina of Time* the ROM's internal name will be arranged as such in Little Endian byte ordering:
