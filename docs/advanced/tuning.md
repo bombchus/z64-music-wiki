@@ -18,13 +18,13 @@ hide:
 This page details how sample tuning works in great detail for instruments, drums, and sound effects in *Ocarina of Time* and *Majora's Mask* so that you can ensure your samples will be properly tuned.
 
 ## Types of Tuning
-In *Ocarina of Time* and *Majora's Mask* there are two different types of tuning, **[Range-Based] tuning** and **Key-Based tuning**. All instruments use [Range-Based] tuning, with all drums and sound effects using Key-Based tuning. The differences between these two types of tuning are explained in greater detail below.
+In *Ocarina of Time* and *Majora's Mask* there are two different types of tuning, **Channel-Based tuning** and **Key-Based tuning**. All instruments use Channel-Based tuning, with all drums and sound effects using Key-Based tuning. The differences between these two types of tuning are explained in greater detail below.
 
-### [Range-Based] Tuning (Relative)
+### Channel-Based Tuning
 !!! warning "Attention"
-    **Only Instruments use [Range-Based] tuning**
+    **Only Instruments use Channel-Based tuning**
 
-[Range-Based] tuning means that the sample's root key is tuned in relation to the tuning float of note 60 (C5) at 32000 Hz. This means that the lower the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be; the higher the tuning float value the lower the note speed will be, and by extension the lower the note's perceived will be.
+Channel-Based tuning or Range-Based tuning, also known to some as "relative" tuning, means that the sample's root key is tuned in relation to the tuning float of note 60 (C5) at 32000 Hz. This means that the lower the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be; the higher the tuning float value the lower the note speed will be, and by extension the lower the note's perceived will be.
 
 So to get our sample's root key to the correct note speed we need to use the following calculation:
 
@@ -33,14 +33,14 @@ So to get our sample's root key to the correct note speed we need to use the fol
 As an example if our sample has a root key of 72 (C6) with a sample rate of 32000 Hz and we want it to play 60 (C5) then we need to achieve a note speed of 2 for our sample to be tuned to the correct pitch; to do this we divide 1 by 0.5, with 0.5 being the tuning float value for 72 (C6).
 
 !!! info
-    For [Range-Based] tuning your note speeds are automatically calculated, as every instrument has a sample assigned to a range of specific notes, where the tuning float determines the sample root key's note speed in relation to 60 (C5).
+    For Channel-Based tuning your note speeds are automatically calculated, as every instrument has a sample assigned to a range of specific notes, where the tuning float determines the sample root key's note speed in relation to 60 (C5).
 
 
 ### Key-Based Tuning
 !!! warning "Attention"
     **Only Drums and Sound Effects use Key-Based tuning**
 
-Key-Based tuning means that the sample's root key is tuned as if it's always 60 (C5) at 32000 Hz. This means that the lower the tuning float value the lower the note speed will be, and by extension the lower the note's perceived pitch will be; the hight the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be.
+Key-Based tuning, also known to some as "absolute" tuning, means that the sample's root key is tuned as if it's always 60 (C5) at 32000 Hz. This means that the lower the tuning float value the lower the note speed will be, and by extension the lower the note's perceived pitch will be; the hight the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be.
 
 So to get our sample's root key to the correct note speed we need to use the following calculation:
 

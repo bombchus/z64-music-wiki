@@ -17,7 +17,7 @@ placeholder
 
 Sequences in the tables below were recorded using BizHawk's built-in A/V recording functionality at 100% volume with the output method set to "DirectSound"; no outside audio balancing was used in any of the audio files used to measure LUFS, all the audio was captured by the in-game engine.
 
-=== "Ocarina of Time LUFS"
+=== "Ocarina of Time Sequence Integrated LUFS"
     <p align="center" style="margin:0; line-height:0;">
     <iframe width="478" height="22" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ62-0hWDjPbk3tnEgfStxdpIxN-zjPzTwtiakQdc9PrnPk9MSm5QXCUhMlAwKHmOZu2c69nu97tEUn/pubhtml?gid=312306879&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A1:C1&amp;chrome=false"></iframe>
     </p>
@@ -25,7 +25,7 @@ Sequences in the tables below were recorded using BizHawk's built-in A/V recordi
     <iframe width="478" height="550" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ62-0hWDjPbk3tnEgfStxdpIxN-zjPzTwtiakQdc9PrnPk9MSm5QXCUhMlAwKHmOZu2c69nu97tEUn/pubhtml?gid=312306879&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A2:C111&amp;chrome=false"></iframe>
     </p>
 
-=== "Majora's Mask Sequence LUFS"
+=== "Majora's Mask Sequence Integrated LUFS"
     <p align="center" style="margin:0; line-height:0;">
     <iframe class="lufs-iframe" width="478" height="22" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ62-0hWDjPbk3tnEgfStxdpIxN-zjPzTwtiakQdc9PrnPk9MSm5QXCUhMlAwKHmOZu2c69nu97tEUn/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A1:C1&amp;chrome=false"></iframe>
     </p>

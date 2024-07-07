@@ -34,7 +34,7 @@ placeholder
         For a channel containing more than four voices sounding at once, SEQ64 will give the following error in the console window of debug output when importing a MIDI file: *`Channel # has more than 4 notes on at a time (at t=#)`*
 
 ### Assigning Appropriate MIDI Program Numbers
-In MIDI instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). You can generally only have one single instrument per channel, though you can swap the instrument at any point using a MIDI program change command.
+In MIDI instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). You can generally only have one single instrument per channel, however you can swap the instrument at any point using a MIDI program change message.
 
 MIDI using the GM specification normally has 127 possible instruments with Channel 10 always being reserved for percussion instruments (instead of using a program change to individual drums you instead change the entire kit itself with individual drum sounds being assigned to note values 35 to 81), and uses a single instrument bank. However in *Ocarina of Time* and *Majora's Mask* there are multiple instrument banks (called audiobanks, or soundfonts if you're working with decomp) and setting instruments depends entirely on the audiobank you are using. In vanilla audiobanks there will almost always be 1 (0x00) to 16 (0x0F) instruments with instrument 126 (0x7E) assigning the sound effects to a channel and instrument 127 (0x7F) assigning the percussion kit to a channel. Some audiobanks have less instruments, or different sound effects, or different percussion kits.
 

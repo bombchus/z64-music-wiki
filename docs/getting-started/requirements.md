@@ -6,7 +6,14 @@
   
     ---
 
-    This page is a work in progress and requires further editing.
+    <table style="border: none;">
+      <tbody>
+        <tr>
+          <td><a><img src="../assets/images/carpenters.png"></a></td>
+          <td><i>This page is a work in progress and requires further editing.</i></td>
+        </tr>
+      </tbody>
+    </table>
 
 </div>
 
