@@ -13,7 +13,7 @@
 This page details a specific type of MIDI control change messages.
 
 ## About RPNs
-MIDI control changes include an **RPN**, which stands for Registered Parameter Numbers, which are extended. You can use RPNs in tandem with *Data Entry* messages to change various parameters in your `.mid` file. When using RPNs your first RPN (MIDI control change numbers 100 and 101; these can be sent in any order) should be sent in order to select the parameter you want to edit, then you send your Data Entry (MIDI control change numbers 6 and 38) message to set the value of the parameter. When your RPN messages are received, any Data Entry messages that are sent and received after in the same MIDI channel will change the parameter of your RPN messages; in order for your RPNs not to be changed by unwanted Data Entry messages you should send RPN Null messages so that the parameters won't be changed.
+MIDI control changes include an **RPN**, which stands for Registered Parameter Numbers, which are extended. You can use RPNs in tandem with *Data Entry* messages to change various parameters in your `.mid` file. When using RPNs your first RPN (MIDI control change numbers 100 and 101; these can be sent in any order) should be sent in order to select the parameter you want to edit, then you send your Data Entry (MIDI control change numbers 6 and 38) message to set the value of the parameter. When your RPN messages are received, any Data Entry messages that are sent and received after in the same MIDI channel will change the parameter of your RPN messages; in order for your RPNs not to be changed by unwanted Data Entry messages you should send RPN Null messages so that the parameters will not be changed.
 
 ### Pitch Bend Sensitivity
 This parameter allows you to change the pitch bend semitone range used in the channel the RPN and Data Entry messages have been sent to; it requires both Data Entry messages. The MIDI specification does not give information on the full range, meaning that it depends on the MIDI hardware or software you are using.
@@ -65,7 +65,7 @@ This parameter allows you to change the fine tune of programs in the channel the
 | Data Entry LSB | `llH` | LSB of the 14 bit value |
 
 #### Example
-In the example below the channel's fine tune is being set to have an increase of 50 cents. After the fine tune is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
+In the example below the channel's fine tune is being set to have an increase of 50 cents. After the fine tune is set RPN Null commands are sent to ensure the data will not receive unwanted changes.
 
 | Measures:Beats:Ticks | Event Kind | Value 1 | Value 2 | Value 3 |
 | :-: | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ This parameter allows you to change the coarse tune of programs in the channel t
 | Data Entry LSB | `llH` | Ignored and treated as a value of 0 |
 
 #### Example
-In the example below the channel's coarse tune is being set to have a decrease of one octave (12 semitones). After the coarse tune is set RPN Null commands are sent to ensure the data won't receive unwanted changes.
+In the example below the channel's coarse tune is being set to have a decrease of one octave (12 semitones). After the coarse tune is set RPN Null commands are sent to ensure the data will not receive unwanted changes.
 
 | Measures:Beats:Ticks | Event Kind | Value 1 | Value 2 | Value 3 |
 | :-: | --- | --- | --- | --- |

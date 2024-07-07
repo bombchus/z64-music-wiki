@@ -53,7 +53,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
 
-        Audiobank `0x00` is the first of the two main SFX audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x00` is the first of the two main SFX audiobanks. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
 
@@ -348,7 +348,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
 
-        Audiobank `0x01` is the second of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x01` is the second of the two main sound effect audiobanks. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -485,7 +485,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         ```
 
         ## Drums (Program Number: 7F)
-        Below is a list of the "drums" inside of audiobank `0x00`. There's one single drum pointer, but it's just a null pointer value with no sample being pointed to.
+        Below is a list of the "drums" inside of audiobank `0x00`. There is one single drum pointer, but it is just a null pointer value with no sample being pointed to.
 
         **Drum List:**
         ``` linenums="0"
@@ -494,7 +494,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
 
-        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3199,7 +3199,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x25 (Unused Bank)"
 
-        Audiobank `0x25` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it's most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
+        Audiobank `0x25` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it is most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
 
         The number of instruments, drum, and sound effects, as well as the audiotable the audiobank uses, are listed below:
         
@@ -3230,7 +3230,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x00 (SFX Bank)"
 
-        Audiobank `0x00` is the first of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x00` is the first of the two main sound effect audiobanks. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3639,7 +3639,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
 
-        Audiobank `0x01` is the second of the two main sound effect audiobanks. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x01` is the second of the two main sound effect audiobanks. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -3897,7 +3897,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         ```
 
         ## Drums (Program Number: 7F)
-        Below is a list of the "drums" inside of audiobank `0x00`. There's one single drum pointer, but it's just a null pointer value with no sample being pointed to.
+        Below is a list of the "drums" inside of audiobank `0x00`. There is one single drum pointer, but it is just a null pointer value with no sample being pointed to.
 
         **Drum List:**
         ``` linenums="0"
@@ -3906,7 +3906,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x02 (Ambient Sounds)"
 
-        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It's mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
+        Audiobank `0x02` is used pretty much for basically every ambient sound effect in the game. It is mostly guesswork for what most of the sound effects are as mapping them out is done completely by listening to the samples themselves in N64 Soundlist Tool (for which many samples are pitched up or down in-game, so the pitches are "off" when being played back) and figuring out what sound is used where in the game.
 
         Sequences that use this audiobank are listed below:
         
@@ -7097,7 +7097,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
     ??? audiobank "Audiobank 0x28 (Unused Bank)"
 
-        Audiobank `0x28` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it's most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
+        Audiobank `0x28` only contains instruments with bad pointers and broken samples. This audiobank is not used anywhere in-game, it is most likely leftover data from the development cycle; however, since it is unused that means it can be used for *anything*. Do not import the instruments from this audiobank, they will only place garbage data.
 
         The number of instruments, drum, and sound effects, as well as the audiotable the audiobank uses, are listed below:
         

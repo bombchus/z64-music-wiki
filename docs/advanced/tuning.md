@@ -40,7 +40,7 @@ As an example if our sample has a root key of 72 (C6) with a sample rate of 3200
 !!! warning "Attention"
     **Only Drums and Sound Effects use Key-Based tuning**
 
-Key-Based tuning, also known to some as "absolute" tuning, means that the sample's root key is tuned as if it's always 60 (C5) at 32000 Hz. This means that the lower the tuning float value the lower the note speed will be, and by extension the lower the note's perceived pitch will be; the hight the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be.
+Key-Based tuning, also known to some as "absolute" tuning, means that the sample's root key is tuned as if it is always 60 (C5) at 32000 Hz. This means that the lower the tuning float value the lower the note speed will be, and by extension the lower the note's perceived pitch will be; the hight the tuning float value the higher the note speed will be, and by extension the higher the note's perceived pitch will be.
 
 So to get our sample's root key to the correct note speed we need to use the following calculation:
 

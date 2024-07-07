@@ -14,7 +14,7 @@ This page details building an audiobank completely from scratch in C, XML, and a
 
 ### Data Ordering
 
-For C and Binary, items don't need to be in any particular order except for the header data; so long as all the addresses match the order of data shouldn't matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however indexes must be correct.
+For C and Binary, items do not need to be in any particular order except for the header data; so long as all the addresses match the order of data should not matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however indexes must be correct.
 
 ??? info "Important XML Info"
     For XML audiobanks, all your structures must be contained within a bank that contains some metadata information tag:
@@ -232,7 +232,7 @@ For C and Binary, items don't need to be in any particular order except for the 
         The "Instrument List" is built directly into the audiobank header, so instrument address pointers begin immediately after the SFX List.
 
     !!! info "NULL Address Pointer"
-        Addresses that have no information pointed to will be zeroed out, in this case it's important to pay attention to `NUM_INST`, `NUM_DRUM`, and `NUM_SFX` as they define how many addresses there will be in each pointer list; this is important to know because padding is also represented by zero values.
+        Addresses that have no information pointed to will be zeroed out, in this case it is important to pay attention to `NUM_INST`, `NUM_DRUM`, and `NUM_SFX` as they define how many addresses there will be in each pointer list; this is important to know because padding is also represented by zero values.
 
 ## Audiobank Drum List
 
@@ -274,7 +274,7 @@ For C and Binary, items don't need to be in any particular order except for the 
     - `--` = Padding to byte 16 for alignment
 
     !!! info "NULL Address Pointer"
-        Addresses that have no information pointed to will be zeroed out, in this case it's important to pay attention to `NUM_INST`, `NUM_DRUM`, and `NUM_SFX` as they define how many addresses there will be in each pointer list; this is important to know because padding is also represented by zero values.
+        Addresses that have no information pointed to will be zeroed out, in this case it is important to pay attention to `NUM_INST`, `NUM_DRUM`, and `NUM_SFX` as they define how many addresses there will be in each pointer list; this is important to know because padding is also represented by zero values.
 
 ## Audiobank Instruments
 

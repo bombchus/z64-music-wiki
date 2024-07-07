@@ -33,7 +33,7 @@ For the sake of clarity and brevity instruments, drums, and sound effects that u
 The majority of the work for sampled instrument's, drum's, and sound effect's samples is making them compatible with *Ocarina of Time* and *Majora's Mask*, once the samples are compatible with the games the rest of the process is creating the audiobank data your sampled instrument, drum, or sound effect will use for import into your sequence's full audiobank. Making sampled instruments, drums, and sound effects can be very time consuming, and you will run into problems when working with sampled instruments, drums, and sound effects so do not get discouraged if you fail.
 
 ??? tip "Recomendation"
-    It is recommended that you read through the custom sample injection wiki pages fully once while following along with the process, then going over it again as many times as needed until you fully understand the process. Should you require any further help it's best to inquire within the [:fontawesome-brands-discord: MMR](https://discord.gg/8qbreUM) or [:fontawesome-brands-discord: Darunia's Joy](https://discord.gg/EVpd499gkS) discord servers.
+    It is recommended that you read through the custom sample injection wiki pages fully once while following along with the process, then going over it again as many times as needed until you fully understand the process. Should you require any further help it is best to inquire within the [:fontawesome-brands-discord: MMR](https://discord.gg/8qbreUM) or [:fontawesome-brands-discord: Darunia's Joy](https://discord.gg/EVpd499gkS) discord servers.
 
 ## Sample Injection Tools
 Before getting started, below is a list of tools that are used for custom sample injection, not every tool may be required, but it is recommended to download all the rools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
@@ -70,7 +70,7 @@ Before getting started, below is a list of tools that are used for custom sample
     The **Audiobank Templates** are *optional*, but are made specifically for the creation of sampled instruments, drums, and sound effects and can be edited in SEQ64 or a text editor capable of editing `.xml` files. The Audiobank Templates contain placeholder data to be edited specifically for either instruments, drums, or sound effects.
 
     ??? tip "Recommendation"
-        It is recommended to avoid using SEQ64 to edit audiobanks and instead use a text editor capable of editing `.xml` files. There's a learning curve, however it will bypass any bugs that SEQ64 introduces.
+        It is recommended to avoid using SEQ64 to edit audiobanks and instead use a text editor capable of editing `.xml` files. There is a learning curve, however it will bypass any bugs that SEQ64 introduces.
 
 -----
 
@@ -107,7 +107,7 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 4. If you are not using an audiobank template, then you will need to either create an audiobank from scratch or edit an existing audiobank from *Ocarina of Time* or *Majora's Mask using* SEQ64.
 5. This is only required if the Sample Creation Tools output a `.bin` file containing your sample's loopbook ADPCM predictor data.
 6. `metadata.yml` has not been presented to or adopted by the developers of any randomizer, however it is a simple but effective system that will hopefully be adopted and added in the future.
-7. Optionally, you could inject the sample onto a decompressed ROM, however it is much more tedious and doesn't ensure that the sample will not collide with other data added by the randomizer.
+7. Optionally, you could inject the sample onto a decompressed ROM, however it is much more tedious and does not ensure that the sample will not collide with other data added by the randomizer.
 
 -----
 
@@ -118,7 +118,7 @@ The easiest way of creating sampled instruments, drums, and sound effects is usi
 ## Summary of `.zsound` Files
 The binary (`.bin`) files the radnomzier recognizes as `.zsound` files are `.aiff` files that have been compressed into `.aifc` files and encoded using a switchable ADPCM algorithm created by Nintendo to allow audio files to play on the Nintendo 64 hardware.
 
-The reason for the name `.zsound` and not `.bin` is because the binary file extension doesn't allow for much differentiation between different RAW files. SEQ64 also refers to sequence files (`.seq`, `.aseq`, and `.zseq`) as RAW files. If packed into an `.ootrs` or `.mmrs` file the lack of differentiation could cause issues so they were coined `.zsound` files by Isghj5 for use with MMR; later when OOTR added custom sample injection they also adopted the `.zsound` file extension as the system was based on the system MMR used at the time they were adding custom sample injection. The files themselves are placed in the root directory of `.ootrs` and `.mmrs` files.
+The reason for the name `.zsound` and not `.bin` is because the binary file extension does not allow for much differentiation between different RAW files. SEQ64 also refers to sequence files (`.seq`, `.aseq`, and `.zseq`) as RAW files. If packed into an `.ootrs` or `.mmrs` file the lack of differentiation could cause issues so they were coined `.zsound` files by Isghj5 for use with MMR; later when OOTR added custom sample injection they also adopted the `.zsound` file extension as the system was based on the system MMR used at the time they were adding custom sample injection. The files themselves are placed in the root directory of `.ootrs` and `.mmrs` files.
 
 ## Summary of ADPCM Predictors
 What are known as "books" and "loops" are ADPCM codebook and loopbook prediction coefficient tables. Since the Nintendo 64 uses a switchable ADPCM compression based algorithm they are required by audiobanks which is somewhat redundant since they are embedded in the sample files themselves. The codebooks and loopbooks are used by `vadpcm_enc`, a Nintendo 64 audio encoding tool created by Nintendo and supplied with the Nintendo 64 SDK, when creating the compressed binary file `*.wav.vadpcm.bin` and are embedded directly into the file. Codebooks and loopbooks in the most basic sense tell the audio engine how the sample is supposed to play.
