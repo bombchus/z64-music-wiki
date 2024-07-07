@@ -33,6 +33,7 @@ Sequences in the tables below were recorded using BizHawk's built-in A/V recordi
     <iframe width="629" height="550" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ62-0hWDjPbk3tnEgfStxdpIxN-zjPzTwtiakQdc9PrnPk9MSm5QXCUhMlAwKHmOZu2c69nu97tEUn/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A2:D129&amp;chrome=false"></iframe>
     </p>
 
-<audio controls>
-  <source width="100%" src="../../assets/audio/zora-cape-waterfall.wav" type="audio/wav">
+The audio below is of the Zora Cape waterfall in *Majora's Mask* which has an integrated LUFS of -16.48
+<audio style="width: 100%; padding: .7em;" controls>
+  <source src="../../assets/audio/zora-cape-waterfall.wav" type="audio/wav">
 </audio>
