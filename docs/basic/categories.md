@@ -92,7 +92,7 @@ The fifth and subsequent lines of the META file are where you put `.zsound` file
 
 #### Music Groups
 Music groups determine where your sequence will play in-game, this information is specified in the META file. Your META file can include a set of named music groups with different specificity. These named music groups should be in a comma separated list. You can refer to the list below, or use [this online music groups tool](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
-") to find the correct areas of the game you want your sequence to be placed in.
+"){ target="__blank" }<small>:material-open-in-new: </small> to find the correct areas of the game you want your sequence to be placed in.
 
 === "Low Specificity"
     **Background Music:**

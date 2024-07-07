@@ -15,6 +15,7 @@ This page details the requirements for ROMs of *Ocarina of Time* and *Majora's M
 ## General ROM Requirements
 To be able to use SEQ64 your ROM will need to be decompressed as SEQ64 cannot decompress Yaz0 files despite having tools for compression and decompression of these files in SEQ64 `v1.0` and `v1.5`.
 
+### Byte Ordering
 While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to work with the randomizers for custom music creation your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1243`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it isn't already.
 
 ???+ info "ROM Byte Ordering"
@@ -63,34 +64,34 @@ To make sure you have an unmodified version of the ROM, there are MD5 checksums 
 
 ???+ success "ROM MD5 and CRC32 Checksums"
 
-    An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
+    A relatively easy way to check if you have the correct ROM is to go to [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher"){ target="_blank" }<small>:material-open-in-new: </small> and open your ROM (ROM File) to check your ROM's MD5 and CRC32 checksums.
 
     === "Compressed (NTSC-U)"
         `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
         ``` linenums="0"
-        CRC32: cd16c529
-          MD5: 5bd1fe107bf8106b2ab6650abecd54d6
+        CRC32: CD16C529
+          MD5: 5BD1FE107BF8106B2AB6650ABECD54D6
         ```
 
     === "Decompressed (NTSC-U)"
         `Legend of Zelda, The - Ocarina of Time (NTSC-U) [V1.0]`
         ``` linenums="0"
-        CRC32: b94d8af1
-          MD5: 6f7957f08d564ae255b25d54b9eb6774
+        CRC32: B94D8AF1
+          MD5: 6F7957F08D564AE255B25D54B9EB6774
         ```
 
     === "Compressed (NTSC-J)"
         `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
         ``` linenums="0"
-        CRC32: d423e8b0
-          MD5: 9f04c8e68534b870f707c247fa4b50fc
+        CRC32: D423E8B0
+          MD5: 9F04C8E68534B870F707C247FA4B50FC
         ```
 
     === "Decompressed (NTSC-J)"
         `Zelda no Densetsu - Toki no Ocarina (NTSC-J) [V1.0]`
         ``` linenums="0"
-        CRC32: 49a3439c
-          MD5: 361f0a3bfc21289928d0f671517a6897
+        CRC32: 49A3439C
+          MD5: 361F0A3BFC21289928D0F671517A6897
         ```
 
 ## Majora's Mask ROM Requirements
@@ -101,20 +102,20 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
 
 ???+ success "ROM MD5 Checksum"
 
-    An easy way to check if your ROM is the correct ROM is to open [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher") and check your ROM's MD5 checksum.
+    A relatively easy way to check if you have the correct ROM is to go to [this site](https://www.marcrobledo.com/RomPatcher.js/ "ROM Patcher"){ target="_blank" }<small>:material-open-in-new: </small> and open your ROM (ROM File) to check your ROM's MD5 and CRC32 checksums.
 
     === "Compressed (NTSC-U)"
         `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
         ``` linenums="0"
-        CRC32: b428d8a7
-          MD5: 2a0a8acb61538235bc1094d297fb6556
+        CRC32: B428D8A7
+          MD5: 2A0A8ACB61538235BC1094D297FB6556
         ```
 
     === "Decompressed (NTSC-U)"
         `Legend of Zelda, The - Majora's Mask (NTSC-U) [v1.0]`
         ``` linenums="0"
-        CRC32: 33751c40
-          MD5: 05fd2b38816173f92ab279c059fabbfb
+        CRC32: 33751C40
+          MD5: 05FD2B38816173F92AB279C059FABBFB
         ```
 
 ## placeholder
@@ -122,6 +123,6 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
 ![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
 ![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
 
-[^1]: For a full breakdown of every difference between versions in *The Legend of Zelda: Ocarina of Time*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences") on version differences.
+[^1]: For a full breakdown of every difference between versions in *The Legend of Zelda: Ocarina of Time*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences"){ target="_blank" }<small>:material-open-in-new: </small> on version differences.
 
-[^2]: For a full breakdown of every difference between versions in *The Legend of Zelda: Majora's Mask*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Majora%27s_Mask/Program_Revision_Differences "The Legend of Zelda: Majora's Mask Program Revision Differences") on program revisions.
+[^2]: For a full breakdown of every difference between versions in *The Legend of Zelda: Majora's Mask*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Majora%27s_Mask/Program_Revision_Differences "The Legend of Zelda: Majora's Mask Program Revision Differences"){ target="_blank" }<small>:material-open-in-new: </small> on program revisions.

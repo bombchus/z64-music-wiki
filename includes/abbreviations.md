@@ -65,7 +65,6 @@
 *[cc100]: MIDI Control Change #100: RPN LSB
 *[cc#101]: MIDI Control Change #101: RPN MSB
 *[cc101]: MIDI Control Change #101: RPN MSB
-*[MD5]: Message Digest Algorithm 5
 *[GM]: General MIDI
 *[gm]: General MIDI
 *[ADPCM]: Adaptive Differential Pulse-Code Modulation

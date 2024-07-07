@@ -183,4 +183,4 @@ Below is a list containing all of the samples in the *Ocarina of Time* and *Majo
         | --- | :-: | :-: | :-: |
         | a | `0` | `0x00` | `ATNUM 1` |
 
-[^1]: For more information on General MIDI specification, please visit the [Wikipedia](https://en.wikipedia.org/wiki/General_MIDI) article on it, or visit the [midi.org](https://midi.org/specs) specification page on it.
+[^1]: For more information on General MIDI specification, please visit the [Wikipedia](https://en.wikipedia.org/wiki/General_MIDI){ target="__blank" }<small>:material-open-in-new: </small> article on it, or visit the [midi.org](https://midi.org/specs){ target="__blank" }<small>:material-open-in-new: </small> specification page on it.

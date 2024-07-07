@@ -83,7 +83,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 -----
 
 ## Obtaining a ROM
-Along with the tools above, you will need to obtain a ROM of *Ocarina of Time* and/or *Majora's Mask* and decompress it using a decompression tool. Sharing ROM files is illegal as the files are copyrighted by Nintendo, so this wiki cannot share links to any websites containing the ROM files. MD5 and CRC32 values are useful for checking to make sure your ROM is the correct version and does not contain any errors. You can find them on the [ROM requirements](../requirements) page of the wiki.
+Along with the tools above, you will need to obtain a ROM of the game you wish to create custom music for. Sharing ROM files is illegal as the files are copyrighted by Nintendo, so this wiki cannot share links to any websites containing the ROM files. MD5 and CRC32 values are useful for checking to make sure your ROM is the correct version and does not contain any errors. You can find them on the [ROM requirements](../requirements){ target="_blank" }<small>:material-open-in-new: </small> page of the wiki.
 
 !!! info "Dumping ROMs"
     If you have the capability, it is best to dump the ROM yourself from hardware, however all Virtual Console and Nintendo Switch Online versions of *Ocarina of Time* are version 1.2 and not version 1.0; for *The Legend of Zelda: Collector's Edition* the ROM files for *Ocarina of Time* and *Majora's Mask* are ROMs that were compiled specifically for *The Legend of Zelda: Collector's Edition* and cannot be used at all.
