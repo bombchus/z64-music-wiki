@@ -115,6 +115,16 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 === "Tuning Float Calculator"
     The **Tuning Float Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
 
+    !!! warning "Windows Defender False Flagging"
+        Due to the Tuning Float Caclulator being an unsigned executable file Windows Defender will falsely flag the application as a threat. To remedy this, follow the steps below:
+
+        > 1. Open Windows Defender and navigate to "Virus & threat protection".
+        > 2. In "Virus & threat protection" navigate to "Virus & threat protection settings > Manage settings".
+        > 3. In "Virus & threat protection settings" navigate to "Exclusions > Add or remove exclusions".
+        > 4. In "Exclusions" click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
+
+        It is not recommended to exclude an entire folder unless you keep everything pertaining to Music Creation in the same folder; whenever possible always exclude single files for you and your computer's safety.
+
 === "ADSR Converter"
     The **ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
 

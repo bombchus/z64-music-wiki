@@ -12,11 +12,8 @@
 
 This page details the requirements for ROMs of *Ocarina of Time* and *Majora's Mask* so that you will be able to use them to assist in creating cusom music by testing your sequences, and audiobanks, in-game to check for any errors as well as help you make any adjustments you may want to your custom music.
 
-## General ROM Requirements
-To be able to use SEQ64 with your ROM it will need to be decompressed, if it is not already decompressed, as SEQ64 cannot decompress Yaz0 files despite claiming to have tools for compression and decompression of these files in SEQ64 versions 1.0 and 1.5.
-
-### Byte Ordering
-While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to work with the randomizers for custom music creation your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1234`), and not in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it is not already.
+## ROM Byte Ordering
+While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to decompress your ROM and use the randomizers for custom music creation your ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1234`). Your ROM cannot be in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x4312`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). You can see more information in the info box below about how to make sure your ROM is Big Endian, and what you can do to change your ROM's byte ordering to Big Endian if it is not already in the proper byte order.
 
 ???+ info "ROM Byte Ordering"
 
@@ -57,7 +54,6 @@ While SEQ64 and emulators can work with all types of ROM byte ordering, to be ab
         ```
 
 ## Ocarina of Time ROM Requirements
-
 To be able to work with the tools required for custom music creation your *Ocarina of Time* ROM will need to be any NTSC region version 1.0 ROM; NTSC region version 1.1 ROMs, NTSC region version 1.2 ROMs, and any version of PAL region ROMs will not work. The tools used to create music for *Ocarina of Time* only support or have information available for NTSC region version 1.0 ROMs because the tool's developers and subsequently the randomizer's developers decided on using NTSC region version 1.0 ROMs instead of any other version, however for *Ocarina of Time* it does not matter if your ROM is NTSC-J or NTSC-U as the only difference between the NTSC-J and NTSC-U region ROMs is a toggle determining whether or not the language should be in Japanese or English.[^1]
 
 To make sure you have an unmodified version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed *Ocarina of Time* NTSC version 1.0 ROMs:
@@ -95,7 +91,6 @@ To make sure you have an unmodified version of the ROM, there are MD5 checksums 
         ```
 
 ## Majora's Mask ROM Requirements
-
 To be able to work with the tools required for custom music creation your *Majora's Mask* ROM will need to be an NTSC-U version 1.0 ROM; NTSC-J version 1.0 ROMs, NTSC-J version 1.1 ROMs, and any version of PAL region ROMs will not work. The tools used to create music for *Majora's Mask* only support or have information available for NTSC-U version 1.0 because the tool's developers and subsequently the randomizer's developers decided on using NTSC-U version 1.0 instead of any other version, and unlike how NTSC versions work for *Ocarina of Time* there are multiple changes between the ROMs for NTSC versions of the game that make them vastly different (e.g. Owl Quicksaves being added in NTSC-U where they were absent from NTSC-J, or Zora Swimming physics being altered from NTSC-J to NTSC-U, etc).[^2]
 
 To make sure you have an unmodified and correct version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed *Majora's Mask* NTSC-U version 1.0 ROMs:
@@ -117,6 +112,31 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
         CRC32: 33751C40
           MD5: 05FD2B38816173F92AB279C059FABBFB
         ```
+
+## ROM Compression Requirements
+To be able to use and edit your ROM with SEQ64 versions 1.0 and 1.5 it needs to be decompressed; if your ROM is not decompressed then you will not be able to use SEQ64 to create sequences, test sequences on vanilla ROMs, or create custom audiobanks.
+
+!!! info
+    You can still create sequences without a compressed ROM using SEQ64 versions 2.0 and above, however you will need to use either the *Ocarina of Time* randomizer or *Majora's Mask* randomizer to test the sequences in-game. This method is not recommended as it is very tedious as you will need to create a new seed to test any new changes you have made to your sequence.
+
+SEQ64 cannot decompress ROMs. Any Yaz0 file compression or decompression SEQ64 versions 1.0 and 1.5 can do are only for single files, not entire ROMs.
+
+### Decompressing a ROM
+To decompress your ROM it is best to use the ROM decompression tool nDEC. There are other ROM decompression tools available, however nDEC is one of the only tools that can decompress *Majora's Mask* properly; other tools may decompress *Ocarina of Time*, however as stated previously they will most likely not properly decompress *Majora's Mask*.
+
+!!! info "nDEC"
+    nDEC is a tool for decompressing Nintendo 64 Zelda ROMs written in the C programming language that requires usage of the command line and must be compiled. An already compiled nDEC that includes an easy to use Windows batch file can be downloaded on the [tools and resources](../tools/#rom-decompression-tool){ target="_blank" }<small>:material-open-in-new: </small> page of this wiki.
+    
+To use nDEC and the batch file simply follow the steps below:
+
+> 1. Move your compressed ROM (input ROM) of *Ocarina of Time* or *Majora's Mask* into the same folder as the nDEC executable file (`ndec.exe`) and Windows batch script file (`Drop Your ROM Here.bat`).
+> 2. Click and drag your compressed ROM (input ROM) of *Ocarina of Time* or *Majora's Mask* onto the Windows batch script file (`Drop Your ROM Here.bat`).
+> 3. Wait for nDEC to decompress your compressed ROM (input ROM) and for the command line window to close.
+
+Once completed your decompressed ROM (output ROM) will have automatically been moved into a folder that shares the same name as your compressed ROM (input ROM) with your decompressed ROM (output ROM) having been renamed to "DECOMPRESSED_ROM".
+
+!!! warning
+    Your ROM must be in the Big Endian byte order to be able to be decompressed properly with nDEC.
 
 ## placeholder
 
