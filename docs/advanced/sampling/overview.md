@@ -43,8 +43,8 @@ Before getting started, below is a list of tools that are used for custom sample
 - **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
 - **[Polyphone](https://www.polyphone-soundfonts.com/download){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
 - **[Audacity](https://www.audacityteam.org/download/){ target="_blank" }** <small> :material-open-in-new: </small>
-- **[Z64 Tuning Calculator](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>v2024.07.07</small>
-- **[Z64 ADSR Converter](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>v2024.07.07</small>
+- **[Z64 Tuning Calculator](../../assets/tools/Tuning%20Float%20Calculator%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
+- **[Z64 ADSR Converter](../../assets/tools/ADSR%20Converter%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
 - **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
 
 #### Brief Summary of Tools
