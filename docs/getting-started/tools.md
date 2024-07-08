@@ -101,7 +101,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 #### Brief Summary of Tools
 === "Sample Creation Tools"
-    The **Sample Creation Tools** created by Isghj5, and edited by others, are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
+    The **Sample Creation Tools** are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
 
 === "N64 Soundlist Tool"
     **N64 Soundlist Tool** is required for ripping `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data (as well as other instrument, drum, and sound effect data) from Nintendo 64 games.
