@@ -51,7 +51,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[Ocarina of Time Soundfont](#)**<small> :material-open-in-new: </small><small>v2023.11.09</small>
     - **[Majora's Mask Soundfont](#)**<small> :material-open-in-new: </small><small>v2024.02.20</small>
 - ##### **Nintendo 64 Emulator**
-    - **[Simple64](https://github.com/simple64/simple64/releases){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended emulator</small>
+    - **[Simple64](https://github.com/simple64/simple64/releases){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended</small>
     - **[Rosalie's Mupen GUI](https://github.com/Rosalie241/RMG/releases){ target="_blank" }**<small> :material-open-in-new: </small>
     - **[ares](https://github.com/ares-emulator/ares/releases){ target="_blank" }**<small> :material-open-in-new: </small>
     - **[Project64](https://www.pj64-emu.com/public-releases){ target="_blank" }**<small> :material-open-in-new: </small>
@@ -85,8 +85,8 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 ### Links to Advanced Tools
 - #### **Sample Creation Tools**
     - **[z64audio](#){ target="_blank" }** <small> :material-open-in-new: </small>
-    - **[Codebook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>
-    - **[Loopbook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>
+    - **[Codebook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>`xml output`
+    - **[Loopbook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>`xml output`
 - #### **N64 Soundlist Tool**
     - **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
 - #### **Audio Editing Tools**
