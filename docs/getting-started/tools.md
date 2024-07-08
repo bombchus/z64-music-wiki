@@ -56,7 +56,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[ares](https://github.com/ares-emulator/ares/releases){ target="_blank" }**<small> :material-open-in-new: </small>
     - **[Project64](https://www.pj64-emu.com/public-releases){ target="_blank" }**<small> :material-open-in-new: </small>
 - ##### **ROM Decompression Tool**
-    - **[nDEC](#)**<small> :material-open-in-new: </small>
+    - **[nDEC](../assets/tools/nDEC.zip){ target="__blank" }**
 
 #### Brief Summary of Tools
 === "SEQ64"
@@ -93,9 +93,9 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[Polyphone](https://www.polyphone-soundfonts.com/download){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
     - **[Audacity](https://www.audacityteam.org/download/){ target="_blank" }** <small> :material-open-in-new: </small>
 - #### **Tuning Float Calculator**
-    - **[Tuning Float Calculator](../assets/tools/Tuning%20Float%20Calculator%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
+    - **[Tuning Float Calculator](../assets/tools/Tuning%20Float%20Calculator.zip){ target="_blank" }** <small>v2024.07.07</small>
 - #### **ADSR Converter**
-    - **[Z64 ADSR Converter](../assets/tools/ADSR%20Converter%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
+    - **[Z64 ADSR Converter](../assets/tools/ADSR%20Converter.zip){ target="_blank" }** <small>v2024.07.07</small>
 - #### **Audiobank Templates**
     - **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
 
