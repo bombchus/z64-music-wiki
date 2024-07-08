@@ -27,7 +27,7 @@ This page is where you will find links to the various tools and resources used i
 ## Custom Music Creation Tools
 Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
-### Link to Tools
+### Links to Basic Tools
 - ##### **SEQ64**
     - **[v1.0.0](https://github.com/sauraen/seq64/releases/tag/V1.0){ target="_blank" }**<small> :material-open-in-new: </small><small>required for audiobank editing</small>
     - **[v1.5.0](https://github.com/sauraen/seq64/releases/tag/V1.5){ target="_blank" }**<small> :material-open-in-new: </small><small>required for audiobank editing</small>
@@ -60,13 +60,13 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 #### Brief Summary of Tools
 === "SEQ64"
-    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nntendo EAD/SRD). It has the capability of converting `.mid`, `.com`, and `.mus` files into sequences and vice versa; for `v1.0` and `v1.5` it has the ability to edit audiobank files as well, though this feature was removed for `v2.X.X` and is now dead for it due to ongoing decompilation of various Nintendo 64 games.
+    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nntendo EAD/SRD). It has the capability of converting `.mid`, `.com`, and `.mus` files into sequences and vice versa; for versions 1.0 and 1.5 it has the ability to edit audiobank files as well, though this feature was removed for versions 2.0 and above due to ongoing decompilation of various Nintendo 64 games.
 
     !!! info "SEQ64 v1.0 versus v1.5"
-        For all intents and purposes there are no differences in the main functionality of SEQ64 `v1.0` and `v1.5`, they are functionally identical, however SEQ64 `v1.0` has a light theme, and SEQ64 `v1.5` has a dark theme.
+        For all intents and purposes there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5, they are functionally identical, however SEQ64 version 1.0 has a light theme, and SEQ64 version 1.5 has a dark theme.
 
 === "ROM Description"
-    The **ROM Description** is a data file containing music sequence format definition, audiobank binary format definition, addresses of key files and tables, and general program settings. This data file has been succeeded by the ABI data file for SEQ64 `v2.X.X` which only contains the music sequence format definition. The ROM descriptions provided with SEQ64 are very old, however the ROM descriptions linked to above have been edited with more information filled out.
+    The **ROM Description** is a data file containing music sequence format definition, audiobank binary format definition, addresses of key files and tables, and general program settings. This data file has been succeeded by the ABI data file for SEQ64 version 2.0 and above which only contains the music sequence format definition. The ROM descriptions provided with SEQ64 are very old, however the ROM descriptions linked to above have been updated to contain more information as well as more accurate information.
 
 === "Digital Audio Workstation"
     **Digital Audio Workstations**, or **DAW** for short, are where you create or edit conventional music files. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* you need a DAW that is capable of creating and editing `.mid` files. The DAWs linked above are the most common DAWs used within the randomizer communities.
@@ -79,6 +79,50 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 === "nDEC"
     **nDEC** is used to decompress your ROM so that you are able to edit it in SEQ64. nDEC is simple enough to use as there is a file bundled with the program in the link provided that does all the work for you. Should you need detailed instructions on how to decompress your ROM you can find them on the ROM requirements page of the wiki.
+
+-----
+
+### Links to Advanced Tools
+- #### **Sample Creation Tools**
+    - **[z64audio](#){ target="_blank" }** <small> :material-open-in-new: </small>
+    - **[Codebook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>
+    - **[Loopbook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>
+- #### **N64 Soundlist Tool**
+    - **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
+- #### **Audio Editing Tools**
+    - **[Polyphone](https://www.polyphone-soundfonts.com/download){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
+    - **[Audacity](https://www.audacityteam.org/download/){ target="_blank" }** <small> :material-open-in-new: </small>
+- #### **Tuning Float Calculator**
+    - **[Tuning Float Calculator](../assets/tools/Tuning%20Float%20Calculator%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
+- #### **ADSR Converter**
+    - **[Z64 ADSR Converter](../assets/tools/ADSR%20Converter%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
+- #### **Audiobank Templates**
+    - **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
+
+#### Brief Summary of Tools
+=== "Sample Creation Tools"
+    The **Sample Creation Tools** created by Isghj5, and edited by others, are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
+
+=== "N64 Soundlist Tool"
+    **N64 Soundlist Tool** is required for ripping `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data (as well as other instrument, drum, and sound effect data) from Nintendo 64 games.
+
+=== "Polyphone"
+    **Polyphone** is *optional*, but required for exporting `.wav` files from `.sf2` (soundfont) files; this is used in conjunction with the "Sample Creation Tools" to convert `.wav` files to `.bin` (or `.zsound`) sample files and to obtain codebook and loopbook ADPCM predictor data. You can also use Polyphone for other sample editing, before converting, as well.
+
+=== "Audacity"
+    **Audacity** is *optional*, but extremely useful for resampling `.wav` files as well as sample editing, before converting, as well.
+
+=== "Tuning Float Calculator"
+    The **Tuning Float Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
+
+=== "ADSR Converter"
+    The **ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
+
+=== "Audiobank Templates"
+    The **Audiobank Templates** are *optional*, but are made specifically for the creation of sampled instruments, drums, and sound effects and can be edited in SEQ64 or a text editor capable of editing `.xml` files. The Audiobank Templates contain placeholder data to be edited specifically for either instruments, drums, or sound effects.
+
+    ??? tip "Recommendation"
+        It is recommended to avoid using SEQ64 to edit audiobanks and instead use a text editor capable of editing `.xml` files. There is a learning curve, however it will bypass any bugs that SEQ64 introduces.
 
 -----
 

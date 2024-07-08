@@ -38,42 +38,6 @@ The majority of the work for sampled instrument's, drum's, and sound effect's sa
 ## Sample Injection Tools
 Before getting started, below is a list of tools that are used for custom sample injection, not every tool may be required, but it is recommended to download all the rools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
-### Link to Tools
-- **[Sample Creation Tools](#){ target="_blank" }** <small> :material-open-in-new: </small>
-- **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
-- **[Polyphone](https://www.polyphone-soundfonts.com/download){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
-- **[Audacity](https://www.audacityteam.org/download/){ target="_blank" }** <small> :material-open-in-new: </small>
-- **[Z64 Tuning Calculator](../../assets/tools/Tuning%20Float%20Calculator%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
-- **[Z64 ADSR Converter](../../assets/tools/ADSR%20Converter%20v2024.07.07.exe){ target="_blank" }** <small>v2024.07.07</small>
-- **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
-
-#### Brief Summary of Tools
-=== "Sample Creation Tools"
-    The **Sample Creation Tools** created by Isghj5, and edited by others, are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
-
-=== "N64 Soundlist Tool"
-    **N64 Soundlist Tool** is required for ripping `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data (as well as other instrument, drum, and sound effect data) from Nintendo 64 games.
-
-=== "Polyphone"
-    **Polyphone** is *optional*, but required for exporting `.wav` files from `.sf2` (soundfont) files; this is used in conjunction with the "Sample Creation Tools" to convert `.wav` files to `.bin` (or `.zsound`) sample files and to obtain codebook and loopbook ADPCM predictor data. You can also use Polyphone for other sample editing, before converting, as well.
-
-=== "Audacity"
-    **Audacity** is *optional*, but extremely useful for resampling `.wav` files as well as sample editing, before converting, as well.
-
-=== "Tuning Calculator"
-    The **Tuning Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
-
-=== "ADSR Converter"
-    The **ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
-
-=== "Audiobank Templates"
-    The **Audiobank Templates** are *optional*, but are made specifically for the creation of sampled instruments, drums, and sound effects and can be edited in SEQ64 or a text editor capable of editing `.xml` files. The Audiobank Templates contain placeholder data to be edited specifically for either instruments, drums, or sound effects.
-
-    ??? tip "Recommendation"
-        It is recommended to avoid using SEQ64 to edit audiobanks and instead use a text editor capable of editing `.xml` files. There is a learning curve, however it will bypass any bugs that SEQ64 introduces.
-
------
-
 ## Summary of Creating New Instruments, Drums, and Sound Effects
 Before beginning, it may be beneficial to understand the general workflow for custom sample injection, as well as garner basic information on what sample files actually are. Please understand that the workflow presented here is not set in stone, it is a guideline to help you create your own workflow that works for you; the wiki follows the presented workflow in how information and pages are structured and presented.
 

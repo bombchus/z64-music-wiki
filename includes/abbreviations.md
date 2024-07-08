@@ -3,11 +3,6 @@
 *[RPN]: Registered Parameter Number
 *[NRPN]: Non-Registered Parameter Number
 *[FLS]: Fruity Loops Studio
-*[DAW]: Digital Audio Workstation
-*[ADSR]: Attack, Decay, Sustain, and Release
-*[MM]: Majora's Mask
-*[OOT]: Ocarina of Time
-*[OoT]: Ocarina of Time
 *[MMR]: Majora's Mask Randomizer
 *[OOTR]: Ocarina of Time Randomizer
 *[OOTMM]: Ocarina of Time & Majora's Mask Combo Randomizer
