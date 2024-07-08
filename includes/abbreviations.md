@@ -62,5 +62,3 @@
 *[cc101]: MIDI Control Change #101: RPN MSB
 *[GM]: General MIDI
 *[gm]: General MIDI
-*[ADPCM]: Adaptive Differential Pulse-Code Modulation
-*[SDK]: Software Development Kit

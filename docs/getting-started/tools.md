@@ -85,8 +85,8 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 ### Links to Advanced Tools
 - #### **Sample Creation Tools**
     - **[z64audio](#){ target="_blank" }** <small> :material-open-in-new: </small>
-    - **[Codebook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>`xml output`
-    - **[Loopbook Conversion Script](#){ target="_blank" }** <small> :material-open-in-new: </small>`xml output`
+    - **[ADPCM Predictor Conversion Scripts](#){ target="_blank" }** <small> :material-open-in-new: </small>`xml output`
+    - **[ADPCM Predictor Conversion Scripts](#){ target="_blank" }** <small> :material-open-in-new: </small>`c output`
 - #### **N64 Soundlist Tool**
     - **[N64 Soundlist Tool](https://github.com/jombo23/N64-Tools){ target="_blank" }** <small> :material-open-in-new: </small>
 - #### **Audio Editing Tools**
