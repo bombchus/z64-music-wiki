@@ -162,7 +162,7 @@ Below is a list of the forms and states available to be assigned via Formmask.
 ## Testing a Formmask Sequence
 To test Formmask when testing your song you must be on the file select screen of the game using the randomizer. To cycle through non-cumulative states you can use D-Pad Up and D-Pad Down, and to cycle through cumulative states you can use D-Pad Left and D-Pad Right.
 
-!!! info "Info <small>Needs confirmation</small>"
+!!! info "Info <small>needs confirmation</small>"
     For non-cumulative forms and states the cycle is: Human, then Goron, then Zora, then Deku, then Swim, then Combat, then Epona, then SpikeRolling.
 
     For cumulative states the cycle is: None, then Swim, then Combat, then Epona, then SpikeRolling.
