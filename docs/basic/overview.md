@@ -83,7 +83,7 @@ Common SEQ64 Errors
 - `No [action] command defined in stype [stype] with all the needed parameters!`
 - `Want: [idMeaning] value [idValue]`
 
-### MIDI Note Division Tables
+## MIDI Note Division Tables
 Listed below are notes with their corresponding tick values at common MIDI resolutions.
 
 ===+ "48 PPQN"
