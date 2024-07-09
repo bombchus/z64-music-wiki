@@ -1,8 +1,3 @@
----
-hide:
-#icon: material/waveform
----
-
 # Sample Tuning
 
 <div class="grid cards" markdown>

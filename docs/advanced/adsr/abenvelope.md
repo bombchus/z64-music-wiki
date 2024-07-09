@@ -1,7 +1,4 @@
----
-hide:
-#icon: material/xml
----
+# Audiobank Envelopes
 
 <div class="grid cards" markdown>
 

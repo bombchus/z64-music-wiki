@@ -1,6 +1,4 @@
 ---
-hide:
-#icon: material/code-json
 tags:
   - Advanced
 ---

@@ -1,7 +1,4 @@
----
-hide:
-#icon: material/hexadecimal
----
+# Sequence Embedded Envelopes
 
 <div class="grid cards" markdown>
 

@@ -1,7 +1,4 @@
----
-hide:
-#icon: material/code-braces
----
+# Custom Envelopes
 
 <div class="grid cards" markdown>
 
