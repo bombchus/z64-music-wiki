@@ -29,7 +29,7 @@ This is the only SysEx message that SEQ64 can recognize and will add a command f
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values that need to edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to edited are the `llH` and `mmH` values, which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
@@ -52,7 +52,7 @@ This SysEx message is not recognized by SEQ64 and will not add a command when im
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values that need to be edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to be edited are the `llH` and `mmH` values, which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
@@ -75,7 +75,7 @@ This SysEx is not recognized by SEQ64 and will not add a command when importing 
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values that need to be edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to be edited are the `llH` and `mmH` values, which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
