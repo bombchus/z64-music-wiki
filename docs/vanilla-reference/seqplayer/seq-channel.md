@@ -2,7 +2,7 @@
 
 <div class="grid cards" markdown>
 
--   <img style="width:58.5px; height:auto; vertical-align: middle;" src="../../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b>
+-   <img style="width:58.5px; height:auto; vertical-align: middle;" src="../../../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b>
   
     ---
 
@@ -12,13 +12,13 @@
 
 placeholder
 
-### 0xF1: Reserve Notes
+## 0xF1: Reserve Notes
 placeholder
 
-### 0xF0: Unreserve Notes
+## 0xF0: Unreserve Notes
 placeholder
 
-### 0xEE: Pitch Bend (±2 Semitones)
+## 0xEE: Pitch Bend (±2 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchTwoSemitonesFrequencies[] = {
@@ -68,84 +68,84 @@ placeholder
     };
     ```
 
-### 0xED: Set HiLo Gain
+## 0xED: Set HiLo Gain
 placeholder
 
-### 0xEC: Reset Channel
+## 0xEC: Reset Channel
 placeholder
 
-### 0xEB: Set Soundfont & Instrument
+## 0xEB: Set Soundfont & Instrument
 placeholder
 
-### 0xEA: Stop Script
+## 0xEA: Stop Script
 placeholder
 
-### 0xE9: Set Note Priority
+## 0xE9: Set Note Priority
 placeholder
 
-### 0xE8: Set Channel Parameters
+## 0xE8: Set Channel Parameters
 placeholder
 
-### 0xE7: Load Channel Parameters
+## 0xE7: Load Channel Parameters
 placeholder
 
-### 0xE6: Set Codebook Offset
+## 0xE6: Set Codebook Offset
 placeholder
 
-### 0xE5: Set Reverb Index
+## 0xE5: Set Reverb Index
 placeholder
 
-### 0xE4: Dyncall
+## 0xE4: Dyncall
 placeholder
 
-### 0xE3: Set Vibrato Delay
+## 0xE3: Set Vibrato Delay
 placeholder
 
-### 0xE2: Set Vibrato Depth (Linear)
+## 0xE2: Set Vibrato Depth (Linear)
 placeholder
 
-### 0xE1: Set Vibrato Rate (Linear)
+## 0xE1: Set Vibrato Rate (Linear)
 placeholder
 
-### 0xE0: Set Volume Scale (Expression)
+## 0xE0: Set Volume Scale (Expression)
 placeholder
 
-### 0xDF: Set Volume
+## 0xDF: Set Volume
 placeholder
 
-### 0xDE: Set Freqscale
+## 0xDE: Set Freqscale
 placeholder
 
-### 0xDD: Set Pan
+## 0xDD: Set Pan
 placeholder
 
-### 0xDC: Set Pan Mix
+## 0xDC: Set Pan Mix
 Sets the proportion of panning that comes from the channel for key-based instruments.
 
 - A value of 0x00 (0) will use only the key-based instrument pan values.
 - A Value of 0x80 (128) will use only the channel pan value.
 
-### 0xDB: Set Transposition (Channel)
+## 0xDB: Set Transposition (Channel)
 placeholder
 
-### 0xDA: Set Envelope
+## 0xDA: Set Envelope
 placeholder
 
 address start value must be aligned to even numbers
 
-### 0xD9: Set Decay Index
+## 0xD9: Set Decay Index
 placeholder
 
-### 0xD8: Set Vibrato Depth
+## 0xD8: Set Vibrato Depth
 placeholder
 
-### 0xD7: Set Vibrato Rate
+## 0xD7: Set Vibrato Rate
 placeholder
 
-### 0xD4: Set Reverb
+## 0xD4: Set Reverb
 placeholder
 
-### 0xD3: Pitch Bend (±12 Semitones)
+## 0xD3: Pitch Bend (±12 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchOneOctaveFrequencies[] = {
@@ -195,167 +195,167 @@ placeholder
     };
     ```
 
-### 0xD2: Set Sustain
+## 0xD2: Set Sustain
 placeholder
 
-### 0xD1: Set Note Allocation Policy
+## 0xD1: Set Note Allocation Policy
 placeholder
 
-### 0xD0: Set Stereo Headset Effect
+## 0xD0: Set Stereo Headset Effect
 placeholder
 
-### 0xCF: Store Pointer
+## 0xCF: Store Pointer
 placeholder
 
-### 0xCE: Unk_22
+## 0xCE: Unk_22
 placeholder
 
-### 0xCD: Disable Channel
+## 0xCD: Disable Channel
 placeholder
 
-### 0xCC: [v] = Set Value
+## 0xCC: [v] = Set Value
 placeholder
 
-### 0xCB: 
+## 0xCB: 
 placeholder
 
-### 0xCA: Set Mute Behavior
+## 0xCA: Set Mute Behavior
 placeholder
 
-### 0xC9: [v] &= Set Value
+## 0xC9: [v] &= Set Value
 placeholder
 
-### 0xC8: [v] -= Set Value
+## 0xC8: [v] -= Set Value
 placeholder
 
-### 0xC7:
+## 0xC7:
 placeholder
 
-### 0xC6: Set Soundfont
+## 0xC6: Set Soundfont
 placeholde
 
-### 0xC5: Dyn Set Dyntable
+## 0xC5: Dyn Set Dyntable
 placholder
 
-### 0xC4: Large Notes On
+## 0xC4: Large Notes On
 placeholder
 
-### 0xC3: Large Notes Off
+## 0xC3: Large Notes Off
 placeholder
 
-### 0xC1: Set Instrument
+## 0xC1: Set Instrument
 placeholder
 
-### 0xBE:
+## 0xBE:
 placeholder
 
-### 0xBD: Set Sample Start
+## 0xBD: Set Sample Start
 placeholder
 loop start
 
-### 0xBC: [p] += cmdArg[0]
+## 0xBC: [p] += cmdArg[0]
 placeholder
 
-### 0xBB: Set Comb Filter
+## 0xBB: Set Comb Filter
 placeholder
 
-### 0xBA: Set Gatetime Humanization
+## 0xBA: Set Gatetime Humanization
 bugged
 
-### 0xB9: Set Velocity Humanization
+## 0xB9: Set Velocity Humanization
 placeholder
 
-### 0xB8: [v] = Random Value
+## 0xB8: [v] = Random Value
 placeholder
 
-### 0xB7:
+## 0xB7:
 placeholder
 
-### 0xB6: Read Dyntable
+## 0xB6: Read Dyntable
 placeholder
 
-### 0xB5: Read Dyntable Large
+## 0xB5: Read Dyntable Large
 placeholder
 
-### 0xB4: Set Dyntable Large
+## 0xB4: Set Dyntable Large
 placeholder
 
-### 0xB3: Load Filter
+## 0xB3: Load Filter
 placeholder
 
-### 0xB2: Dynread Sequence Large
+## 0xB2: Dynread Sequence Large
 placeholder
 
-### 0xB1: Clear Filter
+## 0xB1: Clear Filter
 placeholder
 
-### 0xB0: Set Filter
+## 0xB0: Set Filter
 placeholder
 
-### 0xA8: Random Range Large
+## 0xA8: Random Range Large
 placeholder
 
-### 0xA7:
+## 0xA7:
 placeholder
 
-### 0xA6:
+## 0xA6:
 placeholder
 
-### 0xA5: [v] += Channel Index
+## 0xA5: [v] += Channel Index
 placeholder
 
-### 0xA4: Set Surround Effect Index
+## 0xA4: Set Surround Effect Index
 placeholder
 
-### 0xA3: sfxState[p] = [v]
+## 0xA3: sfxState[p] = [v]
 placeholder
 
-### 0xA2: sfxState[cmdArg[0]] = [v]
+## 0xA2: sfxState[cmdArg[0]] = [v]
 placeholder
 
-### 0xA1: [v] = sfxState[p]
+## 0xA1: [v] = sfxState[p]
 placeholder
 
-### 0xA0: [v] = sfxState[cmdArg[0]]
+## 0xA0: [v] = sfxState[cmdArg[0]]
 placeholder
 
-### 0x98: Dynset Layer
+## 0x98: Dynset Layer
 placeholder
 
-### 0x90: Free Layer
+## 0x90: Free Layer
 placeholder
 
-### 0x88: Set Layer (Absolute)
+## 0x88: Set Layer (Absolute)
 placeholder
 
-### 0x80: Test Layer Finished
+## 0x80: Test Layer Finished
 placeholder
 
-### 0x78: Set Layer (Relative)
+## 0x78: Set Layer (Relative)
 placeholder
 
-### 0x70: IO[c] = [v]
+## 0x70: IO[c] = [v]
 placeholder
 
-### 0x60: [v] = IO[c]
+## 0x60: [v] = IO[c]
 placeholder
 
-### 0x50: [v] -= IO[c]
+## 0x50: [v] -= IO[c]
 placeholder
 
-### 0x40: IO Read Value 2
+## 0x40: IO Read Value 2
 placeholder
 
-### 0x30: IO Write Value 2
+## 0x30: IO Write Value 2
 placeholder
 
-### 0x20: Start Channel
+## 0x20: Start Channel
 placeholder
 
-### 0x10: Load Sample
+## 0x10: Load Sample
 placeholder
 
-### 0x00: Channel Delay
+## 0x00: Channel Delay
 placeholder
 
 -----

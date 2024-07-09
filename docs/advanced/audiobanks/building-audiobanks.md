@@ -12,7 +12,7 @@
 
 This page details building an audiobank completely from scratch in C, XML, and as a Binary file.
 
-### Data Ordering
+## Data Ordering
 
 For C and Binary, items do not need to be in any particular order except for the header data; so long as all the addresses match the order of data should not matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however indexes must be correct.
 
