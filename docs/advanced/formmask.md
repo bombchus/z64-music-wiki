@@ -136,7 +136,7 @@ The formatting for a JSON array is as follows:
 
 The first 16 array values are for the channels of your sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels; if a form or state is non-cumulative it will only play when Link is in that form or state.
 
-!!! info
+!!! info "Assigning Multiple Values"
     You can specify a channel and cumulative states to have multiple values. To do this simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`). These comma separated values do not need to have spaces between them.
 
 ### Allowed Form & State Values
