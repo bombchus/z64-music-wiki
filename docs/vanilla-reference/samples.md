@@ -1,9 +1,3 @@
----
-hide:
-  #- toc
-#icon: material/waveform
----
-
 <style>
   /* Change table width to full */
   .md-typeset__table {

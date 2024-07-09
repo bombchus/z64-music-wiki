@@ -1,8 +1,3 @@
----
-hide:
-#icon: material/hexadecimal
----
-
 # Sequence Command Manual
 
 <div class="grid cards" markdown>
@@ -16,6 +11,48 @@ hide:
 </div>
 
 ## Control Flow Commands
+Control flow commands do exactly what the name implies in controlling the flow of the sequence allowing for finer sequence script control.
+
+### 0xFF: End of Script
+placeholder
+
+### 0xFE: Delay [1] Frame
+placeholder
+
+### 0xFD: Delay [n] Frame(s)
+placeholder
+
+### 0xFC: Call Absolute
+placeholder
+
+### 0xFB: Jump Absolute
+placeholder
+
+### 0xFA: Jump Absolute if [v] = 0
+placeholder
+
+### 0xF9: Jump Absolute if [v] &lt; 0
+placeholder
+
+### 0xF8: Loop Start
+placeholder
+
+### 0xF7: Loop End
+placeholder
+
+### 0xF6: Loop Break
+placeholder
+
+### 0xF5: Jump Absolute if [v] &gt;= 0
+placeholder
+
+### 0xF4: Jump Relative
+placeholder
+
+### 0xF3: Jump Relative if [v] = 0
+placeholder
+
+### 0xF2: Jump Relative if [v] &lt; 0
 placeholder
 
 ## Sequence Header Commands
@@ -24,7 +61,7 @@ placeholder
 ## Channel Commands
 placeholder
 
-### Command 0xEE: Pitch Bend (±2 Semitones)
+### 0xEE: Pitch Bend (±2 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchTwoSemitonesFrequencies[] = {
@@ -74,7 +111,7 @@ placeholder
     };
     ```
 
-### Command 0xD3: Pitch Bend (±12 Semitones)
+### 0xD3: Pitch Bend (±12 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchOneOctaveFrequencies[] = {
