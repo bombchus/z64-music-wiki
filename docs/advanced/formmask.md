@@ -8,7 +8,7 @@ tags:
 !!! alert "This page is about a feature only available in the Majora's Mask Randomizer"
 
 # Using Formmask
-This page details how to use the **Formmask** feature added in `v1.15.0.21` of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
+This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
 
 A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora; with a state referring to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
 
@@ -45,7 +45,7 @@ A form refers to Link's different physical forms with the following being availa
 A `.formmask` file is just a `.json` (or `.txt`) file with its filename extension changed to `.formmask`. Inside the file is a single JSON array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
 
 !!! info "Filename"
-    The filename itself uses the same naming as a sequence or audiobank file (e.g. `0x03.seq` will be `0x03.formmask`).
+    The filename itself uses the same naming as a sequence or audiobank file (e.g. A sequence using audiobank 0x03 will be named `0x03.seq` with the corresponding formmask file being named `0x03.formmask`).
 
 ### JSON Array Formatting
 The formatting for a JSON array is as follows:
