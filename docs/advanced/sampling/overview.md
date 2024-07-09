@@ -11,7 +11,7 @@
 </div>
 
 ??? alert "A Word of Caution"
-    The ROMs of *Ocarina of Time* and *Majora's Mask* have a limited file space of 64 MiB decompressed, and it becomes 32 MiB when compressed. To retain compatibility with both Nintendo 64 hardware and Wii Virtual Console hardware your ROM should never go above 64 MiB *compressed*. The Nintendo 64 can theoretically handle 64 MiB ROMs, however Wii Virtual Console can only be expanded to allow 48 MiB due to the nature of the fact the Wii itself needs memory to run the operating system and emulator at the same time. Using custom samples can eat up this data very quickly if you sample file is large enough; it is recommended to keep samples themselves to around a max of 10 KiB when possible. Emulators on PC can go well above the 64 MiB and 48 MiB limit, however hardware compatibility is important.
+    The ROMs of *Ocarina of Time* and *Majora's Mask* have a limited file space of 64 MiB decompressed, and it becomes 32 MiB when compressed. To retain compatibility with both Nintendo 64 hardware and Wii Virtual Console hardware your ROM should never go above 64 MiB *compressed*. The Nintendo 64 can theoretically handle 64 MiB ROMs, however, Wii Virtual Console can only be expanded to allow 48 MiB due to the nature of the fact the Wii itself needs memory to run the operating system and emulator at the same time. Using custom samples can eat up this data very quickly if you sample file is large enough; it is recommended to keep samples themselves to around a max of 10 KiB when possible. Emulators on PC can go well above the 64 MiB and 48 MiB limit, however, hardware compatibility is important.
 
     Please be mindful that if you are releasing your creations publicly that you will not be the only person using them, so it is best to show some refrain. If you song file ends up anywhere near 500 KiB then it is likely too large, a good target to aim for would be no larger than 100 to 200 KiB.
 
@@ -70,8 +70,8 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 3. If your `.wav` file does not have any loop data specified then the Sample Creation Tools will not output a `.bin` file containing loopbook ADPCM predictor data.
 4. If you are not using an audiobank template, then you will need to either create an audiobank from scratch or edit an existing audiobank from *Ocarina of Time* or *Majora's Mask using* SEQ64.
 5. This is only required if the Sample Creation Tools output a `.bin` file containing your sample's loopbook ADPCM predictor data.
-6. `metadata.yml` has not been presented to or adopted by the developers of any randomizer, however it is a simple but effective system that will hopefully be adopted and added in the future.
-7. Optionally, you could inject the sample onto a decompressed ROM, however it is much more tedious and does not ensure that the sample will not collide with other data added by the randomizer.
+6. `metadata.yml` has not been presented to or adopted by the developers of any randomizer, however, it is a simple but effective system that will hopefully be adopted and added in the future.
+7. Optionally, you could inject the sample onto a decompressed ROM, however, it is much more tedious and does not ensure that the sample will not collide with other data added by the randomizer.
 
 -----
 

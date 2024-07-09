@@ -54,7 +54,7 @@ While SEQ64 and emulators can work with all types of ROM byte ordering, to be ab
         ```
 
 ## Ocarina of Time ROM Requirements
-To be able to work with the tools required for custom music creation your *Ocarina of Time* ROM will need to be any NTSC region version 1.0 ROM; NTSC region version 1.1 ROMs, NTSC region version 1.2 ROMs, and any version of PAL region ROMs will not work. The tools used to create music for *Ocarina of Time* only support or have information available for NTSC region version 1.0 ROMs because the tool's developers and subsequently the randomizer's developers decided on using NTSC region version 1.0 ROMs instead of any other version, however for *Ocarina of Time* it does not matter if your ROM is NTSC-J or NTSC-U as the only difference between the NTSC-J and NTSC-U region ROMs is a toggle determining whether or not the language should be in Japanese or English.[^1]
+To be able to work with the tools required for custom music creation your *Ocarina of Time* ROM will need to be any NTSC region version 1.0 ROM; NTSC region version 1.1 ROMs, NTSC region version 1.2 ROMs, and any version of PAL region ROMs will not work. The tools used to create music for *Ocarina of Time* only support or have information available for NTSC region version 1.0 ROMs because the tool's developers and subsequently the randomizer's developers decided on using NTSC region version 1.0 ROMs instead of any other version, however, for *Ocarina of Time* it does not matter if your ROM is NTSC-J or NTSC-U as the only difference between the NTSC-J and NTSC-U region ROMs is a toggle determining whether or not the language should be in Japanese or English.[^1]
 
 To make sure you have an unmodified version of the ROM, there are MD5 checksums available below to reference for both compressed and decompressed *Ocarina of Time* NTSC version 1.0 ROMs:
 
@@ -117,12 +117,12 @@ To make sure you have an unmodified and correct version of the ROM, there are MD
 To be able to use and edit your ROM with SEQ64 versions 1.0 and 1.5 it needs to be decompressed; if your ROM is not decompressed then you will not be able to use SEQ64 to create sequences, test sequences on vanilla ROMs, or create custom audiobanks.
 
 !!! info
-    You can still create sequences without a compressed ROM using SEQ64 versions 2.0 and above, however you will need to use either the *Ocarina of Time* randomizer or *Majora's Mask* randomizer to test the sequences in-game. This method is not recommended as it is very tedious as you will need to create a new seed to test any new changes you have made to your sequence.
+    You can still create sequences without a compressed ROM using SEQ64 versions 2.0 and above, however, you will need to use either the *Ocarina of Time* randomizer or *Majora's Mask* randomizer to test the sequences in-game. This method is not recommended as it is very tedious as you will need to create a new seed to test any new changes you have made to your sequence.
 
 SEQ64 cannot decompress ROMs. Any Yaz0 file compression or decompression SEQ64 versions 1.0 and 1.5 can do are only for single files, not entire ROMs.
 
 ### Decompressing a ROM
-To decompress your ROM it is best to use the ROM decompression tool nDEC. There are other ROM decompression tools available, however nDEC is one of the only tools that can decompress *Majora's Mask* properly; other tools may decompress *Ocarina of Time*, however as stated previously they will most likely not properly decompress *Majora's Mask*.
+To decompress your ROM it is best to use the ROM decompression tool nDEC. There are other ROM decompression tools available, however, nDEC is one of the only tools that can decompress *Majora's Mask* properly; other tools may decompress *Ocarina of Time*, however, as stated previously they will most likely not properly decompress *Majora's Mask*.
 
 !!! info "nDEC"
     nDEC is a tool for decompressing Nintendo 64 Zelda ROMs written in the C programming language that requires usage of the command line and must be compiled. An already compiled nDEC that includes an easy to use Windows batch file can be downloaded on the [tools and resources](../tools/#rom-decompression-tool){ target="_blank" }<small>:material-open-in-new: </small> page of this wiki.

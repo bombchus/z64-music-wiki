@@ -166,7 +166,7 @@ In the example below we will assume the sample's waveform is 2 s in total length
 
 -----
 
-*Ocarina of Time* and *Majora's Mask* use a multi-point envelope structure, however instruments and drums are limited to four data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
+*Ocarina of Time* and *Majora's Mask* use a multi-point envelope structure, however, instruments and drums are limited to four data points inside of an audiobank (sound effects cannot use envelopes from the audiobank), but the number of data points allowed with a sequence embedded envelope should be higher although it is unknown how much higher it can be but looking through the ADSR code from decomp it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer.
 
 <style>
 /*

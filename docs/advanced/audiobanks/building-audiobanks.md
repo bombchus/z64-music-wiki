@@ -14,7 +14,7 @@ This page details building an audiobank completely from scratch in C, XML, and a
 
 ## Data Ordering
 
-For C and Binary, items do not need to be in any particular order except for the header data; so long as all the addresses match the order of data should not matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however indexes must be correct.
+For C and Binary, items do not need to be in any particular order except for the header data; so long as all the addresses match the order of data should not matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however, indexes must be correct.
 
 ??? info "Important XML Info"
     For XML audiobanks, all your structures must be contained within a bank that contains some metadata information tag:
@@ -168,7 +168,7 @@ For C and Binary, items do not need to be in any particular order except for the
     - `zz` = Number of sound effects (`NUM_SFX`) in the audiobank
 
     !!! info "Unknown Value"
-        It is unknown what `yy` is however *Majora's Mask's* audiobank 0x00 has a value of 1 for `yy` with every other audiobank having a value of 0 for `yy`, and for *Ocarina of Time* has a value of `0` for `yy` for every audiobank.
+        It is unknown what `yy` is, however, *Majora's Mask's* audiobank 0x00 has a value of 1 for `yy` with every other audiobank having a value of 0 for `yy`, and for *Ocarina of Time* has a value of `0` for `yy` for every audiobank.
 
 ## Audiobank Header
 
@@ -456,7 +456,7 @@ For C and Binary, items do not need to be in any particular order except for the
     - `zz zz zz zz` = Envelope pointer address
 
     !!! info "Unknown Value"
-        One of these unknown values is the relocation offset, however the other value is completely unknown.
+        One of these unknown values is the relocation offset, however, the other value is completely unknown.
 
 ## Audiobank Envelopes
 

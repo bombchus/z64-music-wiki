@@ -32,7 +32,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 * MIDI note ranges for the different drum samples within the percussion kits
 
 !!! info "Index Number to Note Number"
-    For instruments the pointer index value is equivalent to the program number, however for drums & sound effects the pointer index value is equivalent to the MIDI note number minus `21`.
+    For instruments the pointer index value is equivalent to the program number, however, for drums & sound effects the pointer index value is equivalent to the MIDI note number minus `21`.
 
 !!! info "MIDI Notation"
     All notes (e.g. `C5 (60)`) are using MIDI notation, they are not using piano notation. Using piano notation, the equivalent to MIDI note `60` would be `C4` instead of `C5`.

@@ -84,7 +84,7 @@ The first line of the META file is the name of the sequence. This name must be u
 ??? tip "Recommendation"
     It is recommended that you do not use quotation marks in the sequence name as it will make it harder for people creating a cosmetic plandomizer file.
 
-The second line of the META file is the audiobank the sequence uses. For example if you want to use audiobank `0x03` then you would put `0x03` on your second line; however if you are using a custom audiobank then you will instead put a `-` instead.
+The second line of the META file is the audiobank the sequence uses. For example if you want to use audiobank `0x03` then you would put `0x03` on your second line; however, if you are using a custom audiobank then you will instead put a `-` instead.
 
 The fourth line of the META file is the locations you want your sequence to appear in, known as "music groups". This will be explained in greater detail below.
 
@@ -312,7 +312,7 @@ There are two different types of categories known as "group categories", and "in
     # Ocarina of Time and The Legend of Zelda: Majora's Mask
     #
     # This is a YAML file, YAML uses indentation instead of brackets; this makes it
-    # easier to read however YAML itself is not as easy to parse as something like
+    # easier to read, however, YAML itself is not as easy to parse as something like
     # JSON or TOML. For the purpose of the custom music communities for Zelda64
     # randomizers this file should be kept as simple and easy to understand as possible.
     #
@@ -329,7 +329,7 @@ There are two different types of categories known as "group categories", and "in
     #
     # Allowed Audiobank Values: "0x##", "custom"
     #     The audiobank key determines which audiobank the game you set in the game
-    #     key will use, however if you are using a custom audiobank then you should
+    #     key will use, however, if you are using a custom audiobank then you should
     #     change the value to "custom" as this indicates the bank needs to be inserted.
     #
     ---
