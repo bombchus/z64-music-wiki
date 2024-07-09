@@ -42,8 +42,8 @@ The META file's structure is presented below:
 
     </div>
 
-    1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
-    2. If you are using a custom audiobank you will use a hypen `-` instead of the number of the audiobank your sequence uses.
+    1. If you are using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples you are using, must be included, otherwise omit this line and subsequent lines.
+    2. If you are using a custom audiobank, you will use a hyphen `-` instead of the number of the audiobank your sequence uses.
 
 === "Example"
 
@@ -76,22 +76,22 @@ The META file's structure is presented below:
 
     </div>
 
-    1. If you are using a sampled instrument, drum, or sound effect this line, and subsequent lines for however many samples you are using, must be included otherwise omit this line and subsequent lines.
-    2. If you are using a custom audiobank you will use a hypen `-` instead of the number of the audiobank your sequence uses.
+    1. If you are using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples you are using, must be included, otherwise omit this line and subsequent lines.
+    2. If you are using a custom audiobank, you will use a hyphen `-` instead of the number of the audiobank your sequence uses.
 
-The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally `Game Name - Song Name` will work unless a sequence with that name already exists and the user uses both sequences.
+The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally, `Game Name - Song Name` will work unless a sequence with that name already exists and the user uses both sequences.
 
 ??? tip "Recommendation"
     It is recommended that you do not use quotation marks in the sequence name as it will make it harder for people creating a cosmetic plandomizer file.
 
-The second line of the META file is the audiobank the sequence uses. For example if you want to use audiobank `0x03` then you would put `0x03` on your second line; however, if you are using a custom audiobank then you will instead put a `-` instead.
+The second line of the META file is the audiobank the sequence uses. For example, if you want to use audiobank `0x03`, then you will put `0x03` on your second line; however, if you are using a custom audiobank, then you will instead put a `-` instead.
 
 The fourth line of the META file is the locations you want your sequence to appear in, known as "music groups". This will be explained in greater detail below.
 
-The fifth and subsequent lines of the META file are where you put `.zsound` file data. These lines are only used for when you have a sampled instrument, drum, or sound effect, if you are not using sampled instruments drums, or sound effects the META file ends at the fourth line.
+The fifth and subsequent lines of the META file are where you put `.zsound` file data. These lines are only used for when you have a sampled instrument, drum, or sound effect. If you are not using sampled instruments, drums, or sound effects, the META file ends at the fourth line.
 
 #### Music Groups
-Music groups determine where your sequence will play in-game, this information is specified in the META file. Your META file can include a set of named music groups with different specificity. These named music groups should be in a comma separated list. You can refer to the list below, or use [this online music groups tool](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
+Music groups determine where your sequence will play in-game. This information is specified in the META file. Your META file can include a set of named music groups with varying specificity. These named music groups should be in a comma-separated list. You can refer to the list below, or use [this online music groups tool](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
 "){ target="__blank" }<small>:material-open-in-new: </small> to find the correct areas of the game you want your sequence to be placed in.
 
 === "Low Specificity"
@@ -219,13 +219,13 @@ Music groups determine where your sequence will play in-game, this information i
     | GanondorfAppears | `Ganondorf Appears` | — | — |
 
 ### Making a Categories File for Majora's Mask
-To make a categories file for an `.mmrs` file all you need to do is create a text file with the name `categories.txt` and put whatever group and individual category values you want the area your sequence to play in inside the file separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
+To make a categories file for an `.mmrs` file, all you need to do is create a text file with the name `categories.txt`, then put whatever group and individual category values you want that correspond(s) to the area(s) you want your sequence to play in-game in inside the file, separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
 
 !!! alert "Warning"
-    You cannot use both hypens and commas to separate your categories, you must use one or the other.
+    You cannot use both hyphens and commas to separate your categories, you must use one or the other.
 
 #### Categories
-There are two different types of categories known as "group categories", and "individual categories". Group categories contain a number of sequences a sequence can be assigned to, and individual categories assign a sequence to a specific sequence.
+There are two different types of categories, known as "group categories" and "individual categories". Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
 
 ??? warning "Issues With Looping Fanfares"
     Group categories `8`, `9`, `10`, as well as individual categories `108`, `109`, `119`, `120`, `121`, `122`, `124`, `137`, `139`, `13D`, `13F`, `141`, `152`, `155`, `177`, `178`, `179`, `17C`, and `17E`, are fanfare categories, miscategorizing a looping sequence as any of these fanfare categories can cause various issues and possibly softlock a player in various areas (e.g. Doggy Racetrack).
@@ -253,7 +253,7 @@ There are two different types of categories known as "group categories", and "in
 === "Individual Categories"
 
     ??? info "Missing Sequences"
-        Sequences that are missing from this list are normally just pointers to other sequences that have no real sequence assigned to them. These sequences have been omitted from the list. There's also certain sequences that require extra sequence data to play properly in-game that the randomizer doesn't randomize which are also omitted.
+        Sequences that are missing from this list are normally just pointers to other sequences that have no real sequence assigned to them. These sequences have been omitted from the list. There are also certain sequences that require extra sequence data to play properly in-game that the randomizer doesn't randomize, which are also omitted.
 
     | Value | Sequence Name | Value | Sequence Name
     | :----: | :---- | :----: | :---- |
