@@ -92,7 +92,7 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | Whole Note | 192 | Dotted Whole | 288 | Whole Triplet | 128 |
     | Half Note | 96 | Dotted Half | 144 | Half Triplet | 64 |
     | Quarter Note | 48 | Dotted Quarter | 72 | Quarter Triplet | 32 | 
-    | Eighth Note | 24 | Dotted Eight | 36 | Eight Triplet | 16 |
+    | Eighth Note | 24 | Dotted Eighth | 36 | Eight Triplet | 16 |
     | 16th Note | 12 | Dotted 16th | 18 | 16th Triplet| 8 |
     | 32nd Note | 6 | Dotted 32nd | 9 | 32nd Triplet | 4 |
     | 64th Note | 3 | Dotted 64th | — | 64th Triplet | 2 |
@@ -106,7 +106,7 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | Whole Note | 384 | Dotted Whole | 576 | Whole Triplet | 256 |
     | Half Note | 192 | Dotted Half | 288 | Half Triplet | 128 |
     | Quarter Note | 96 | Dotted Quarter | 144 | Quarter Triplet | 64 | 
-    | Eighth Note | 48 | Dotted Eight | 72 | Eight Triplet | 32 |
+    | Eighth Note | 48 | Dotted Eighth | 72 | Eight Triplet | 32 |
     | 16th Note | 24 | Dotted 16th | 36 | 16th Triplet| 16 |
     | 32nd Note | 12 | Dotted 32nd | 18 | 32nd Triplet | 8 |
     | 64th Note | 6 | Dotted 64th | 9 | 64th Triplet | 4 |
@@ -120,7 +120,7 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | Whole Note | 480 | Dotted Whole | 720 | Whole Triplet | 320 |
     | Half Note | 240 | Dotted Half | 360 | Half Triplet | 160 |
     | Quarter Note | 120 | Dotted Quarter | 180 | Quarter Triplet | 80 | 
-    | Eighth Note | 60 | Dotted Eight | 90 | Eight Triplet | 40 |
+    | Eighth Note | 60 | Dotted Eighth | 90 | Eight Triplet | 40 |
     | 16th Note | 30 | Dotted 16th | 45 | 16th Triplet| 20 |
     | 32nd Note | 15 | Dotted 32nd | — | 32nd Triplet | 10 |
     | 64th Note | 8 | Dotted 64th | — | 64th Triplet | 5 |
