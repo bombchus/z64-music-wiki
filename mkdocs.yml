@@ -184,4 +184,8 @@ nav:
     - vanilla-reference/index.md
     - Audiobank Reference: vanilla-reference/audiobanks.md
     - Sample Reference: vanilla-reference/samples.md
-    - Sequence Command Manual: vanilla-reference/seq-manual.md
+    - Sequence Command Manual:
+      - Control Flow Commands: vanilla-reference/control-flow.md
+      - Sequence Player Commands: vanilla-reference/seq-player.md
+      - Sequence Channel Commands: vanilla-reference/seq-channel.md
+      - Sequence Layer Commands: vanilla-reference/seq-layer.md
