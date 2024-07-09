@@ -1,8 +1,3 @@
-*[LSB]: Least Significant Bit
-*[MSB]: Most Significant Bit
-*[RPN]: Registered Parameter Number
-*[NRPN]: Non-Registered Parameter Number
-*[FLS]: Fruity Loops Studio
 *[MMR]: Majora's Mask Randomizer
 *[OOTR]: Ocarina of Time Randomizer
 *[OOTMM]: Ocarina of Time & Majora's Mask Combo Randomizer
@@ -12,6 +7,7 @@
 *[OOTRS]: Ocarina of Time Randomizer Song File
 *[mmrs]: Majora's Mask Randomizer Song File
 *[ootrs]: Ocarina of Time Randomizer Song File
+*[FLS]: Fruity Loops Studio
 *[CC#0]: MIDI Control Change #0: Bank Select LSB
 *[CC0]: MIDI Control Change #0: Bank Select LSB
 *[CC#6]: MIDI Control Change #6: Data Entry MSB
@@ -62,3 +58,7 @@
 *[cc101]: MIDI Control Change #101: RPN MSB
 *[GM]: General MIDI
 *[gm]: General MIDI
+*[LSB]: Least Significant Bit
+*[MSB]: Most Significant Bit
+*[RPN]: Registered Parameter Number
+*[NRPN]: Non-Registered Parameter Number
