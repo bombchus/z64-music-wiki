@@ -26,19 +26,19 @@ placeholder
 - Max Delay value cannot go above a value of 32767 (0x7FFF)
 - A section marker cannot intersect a pair of *Note On* and *Note Off* messages.
 
-[^1]: While many DAWs allow for you to stack notes on top of other notes, or overlap your notes without immediate issues, the MIDI standard stresses it is invalid to send a second *Note On* message for a note with the same pitch in the same channel before a *Note Off* message is sent for the first *Note On* message. This is because of the way MIDI messages are interpreted, you can either use a pair of *Note On* and *Note Off* messages or a pair of *Note On* messages with the *Note On* message with a velocity of zero acts as a *Note Off* message. DAWs will attempt to connect the proper *Note On* and *Note Off* messages, however, it will inevitably fail as *Note On* messages can be seen as both *Note On* or *Note Off*.
+[^1]: While many DAWs allow you to stack notes on top of other notes, or overlap your notes without immediate issues, the MIDI standard stresses it is invalid to send a second *Note On* message for a note of the same pitch in the same channel before a *Note Off* message is sent for the first *Note On* message. This is because of the way MIDI messages are interpreted, you can either use a pair of *Note On* and *Note Off* messages or a pair of *Note On* messages with the *Note On* message with a velocity of zero acts as a *Note Off* message. Many DAWs will attempt to connect the proper *Note On* and *Note Off* messages; however, it will inevitably fail as *Note On* messages can be seen as both *Note On* or *Note Off*.
 
 ### Assigning Appropriate MIDI Program Numbers
-In MIDI instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). You can generally only have one single instrument per channel, however, you can swap the instrument at any point using a MIDI program change message.
+In MIDI, instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). You can generally only have one single instrument per channel. However, you can swap the instrument at any point using a MIDI program change message.
 
-MIDI instrument banks using the GM specification normally contain 127 possible instruments with MIDI channel 10 always being reserved for percussion kits, where instead of using a program change to individual drums you instead change the entire percussion kit itself with individual drum sounds being assigned to different keys on the virtual MIDI piano (the range of possible samples is from keys 35 to 81). Instrument banks in MIDI contain those 127 instruments and percussion kits within a single instrument bank, however, in *Ocarina of Time* and *Majora's Mask* there are multiple instrument banks commonly referred to as "audiobanks" or "soundfonts". Setting instruments depends entirely on the audiobank you are using, in vanilla audiobanks there will almost always only be 1 (0x00) to 16 (0x0F) instruments with instrument 126 (0x7E) assigning the sound effects to a channel and instrument 127 (0x7F) assigning the percussion kit to a channel. Audiobanks can contain up to 255 (0xFF) instruments that may be assigned, however, instruments 126 (0x7E) and 127 (0x7F) are always reserved for sound effects and percussion kits respectively.
+MIDI instrument banks using the GM specification normally contain 127 possible instruments with MIDI channel 10 always being reserved for percussion kits, where instead of using a program change to individual drums, you instead change the entire percussion kit itself with individual drum sounds being assigned to different keys on the virtual MIDI piano (the range of possible samples is from keys 35 to 81). Instrument banks in MIDI contain those 127 instruments and percussion kits within a single instrument bank. However, in *Ocarina of Time* and *Majora's Mask* there are multiple instrument banks commonly referred to as "audiobanks" or "soundfonts". Setting instruments depends entirely on the audiobank you are using; in vanilla audiobanks there will almost always only be 1 (0x00) to 16 (0x0F) instruments with instrument 126 (0x7E) assigning the sound effects to a channel and instrument 127 (0x7F) assigning the percussion kit to a channel. Audiobanks can contain up to 255 (0xFF) instruments that may be assigned to a channel. However, instruments 126 (0x7E) and 127 (0x7F) are always reserved for sound effects and percussion kits respectively.
 
-Some audiobanks may have less instruments, different sound effects, or different percussion kits; the reason for breaking audiobanks into smaller sub-banks is a way to reduce the amount of RAM needed by the audio system.
+Some audiobanks may have fewer instruments, different sound effects, or contain entirely different percussion kits; the reason for breaking audiobanks into smaller sub-banks is used as a way to reduce the amount of RAM required by the audio system in *Ocarina of Time* and *Majora's Mask*.
 
 ??? info "Drums and Sound Effects"
-    Drums and sound effects in *Ocarina of Time* and *Majora's Mask* work almost identically to how they do in MIDI with different values corresponding to different individual drum sounds. The only difference is hat there is a single percussion kit per audiobank and is assigned to program 127 (0x7F) instead of being assigned to a specific channel.
+    Drums and sound effects in *Ocarina of Time* and *Majora's Mask* work almost identically to how they do in MIDI with different values corresponding to different individual drum sounds. The only difference is that there is a single percussion kit per audiobank, and it is assigned to program 127 (0x7F) instead of being assigned to a specific MIDI channel.
 
-To properly assign the instruments you want you will need to find which instrument in the audiobank you are using corresponds to the equivalent MIDI program value. If you need to know which audiobank has which instruments, you can use the [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page.
+To properly assign the instruments you want, you will need to determine which instrument inside the audiobank you are using corresponds to the equivalent MIDI program value. If you need to know which audiobank has which instruments, you can use the [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page.
 
 ## Instrument Types
 In *Ocarina of Time* and *Majora's Mask* there are two different types of instruments:
@@ -50,7 +50,7 @@ In *Ocarina of Time* and *Majora's Mask* there are two different types of instru
 Channel-based instruments, commonly referred to as just simply "Instruments", are instruments that assign three different samples to three different note regions on the virtual MIDI piano. The low sample occupies the note region from note 0 (C0) to the note specified by the low-mid region split inside the audiobank, the mid or normal sample occupies the note region from the note specified by the low-mid region split to the note specified by the mid-high region split inside the audiobank, and the high sample occupies the note region from the note specified by the mid-high region split to note 127 (G10). Each sample is automatically pitch shifted with the starting pitch determined by the tuning float value.
 
 ### Key-Based Instruments
-Key-based instruments, commonly referred to as "Drums" and "Sound Effects", are instruments who have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are, however, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
+Key-based instruments, commonly referred to as "Drums" and "Sound Effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
 
 ### Synth Wave Instruments
 Also known as "chiptune" instruments, the synth wave instruments are a set of instruments available at all times no matter what audiobank is assigned to your sequence as they are special instruments with sample data assigned to very specific instrument slots (overwriting these slots with other instruments gives priorioty to audiobank instruments first, and synth waves second). There is a section about these instruments and how to access them available in the vanilla audiobank reference wiki page.
@@ -100,7 +100,7 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | 64th Note | 3 | Dotted 64th | — | 64th Triplet | 2 |
 
     !!! info "Omitted Values"
-        Any values that are omitted are values that are not cleanly divisible by their longer counterpart.
+        Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.
 
 === "96 PPQN"
     | Regular Note | MIDI Ticks | Dotted Note | MIDI Ticks | Triplet | MIDI Ticks |
@@ -114,7 +114,7 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | 64th Note | 6 | Dotted 64th | 9 | 64th Triplet | 4 |
 
     !!! info "Omitted Values"
-        Any values that are omitted are values that are not cleanly divisible by their longer counterpart.
+        Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.
 
 === "120 PPQN"
     | Regular Note | MIDI Ticks | Dotted Note | MIDI Ticks | Triplet | MIDI Ticks |
@@ -128,9 +128,9 @@ Listed below are notes with their corresponding tick values at common MIDI resol
     | 64th Note | 8 | Dotted 64th | — | 64th Triplet | 5 |
 
     !!! info "Omitted Values"
-        Any values that are omitted are values that are not cleanly divisible by their longer counterpart.
+        Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.
 
-To create a note division table for a PPQN or tick value not in the above tables take the regular quarter note tick value of the desired PPQN then:
+To create a note division table for a PPQN or tick value not in the above tables, take the regular quarter note tick value of the desired PPQN, then:
 
 1. Use the following formula to find the longer duration note's tick values:
     - $n * 2$
@@ -139,7 +139,7 @@ To create a note division table for a PPQN or tick value not in the above tables
 3. Use the following formula to find the dotted note values:
     - $(n / 2) + n$
 4. Use the following formula to find the triplet note values:
-    - $n - (n /3 )$
+    - $n - (n / 3)$
 
 Where *n* is the value of the regular note you wish to use. As an example, if *n* equals 48, then a half note would be 96, an eighth note would be 24, a dotted quarter note would be 72, and a quarter triplet would be 32.
 
@@ -147,4 +147,4 @@ Where *n* is the value of the regular note you wish to use. As an example, if *n
     Sequences in *Ocarina of Time* and *Majora's Mask* have a native resolution of 48 PPQN. The default PPQN of Fruity Loops Studio is 96 PPQN, and the default PPQN of Sekaiju is 120 PPQN. It is easier for a MIDI file to be converted into a sequence if it is already at the native PPQN of *Ocarina of Time* and *Majora's Mask* than to have SEQ64 convert it to 48 PPQN.
 
 !!! warning "Note Corruption"
-    It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in your sequence as notes that are too short can end up corrupting other notes in the sequence; this will cause issues with dropped channels
+    It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in your sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.
