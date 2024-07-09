@@ -17,10 +17,10 @@ Learn how to make custom envelopes for instruments, drums, or sound effects to m
 
 <div class="grid cards" markdown>
 
-- :material-brush-variant: __[placeholder]__ – placeholder
-- :material-format-font: __[placeholder]__ – placeholder
-- :material-google-downasaur: __[placeholder]__ – placeholder
-- :material-cards-variant: __[placeholder]__ – placeholder
+- :material-open-in-new: __[placeholder]__ – placeholder
+- :material-open-in-new: __[placeholder]__ – placeholder
+- :material-open-in-new: __[placeholder]__ – placeholder
+- :material-open-in-new: __[placeholder]__ – placeholder
 
 </div>
 
@@ -34,10 +34,10 @@ Learn to create and inject custom instrument, drum, or sound effect samples into
 
 <div class="grid cards" markdown>
 
-- :material-view-dashboard: __[Sample Injection Overview]__ – Obtain basic knowledge of the files and tools you will be working with
-- :material-waveform: __[WAV File Conversion]__ – Learn to convert WAV files into sample files compatible with *Ocarina of Time* and *Majora's Mask*
-- :material-google-downasaur: __[placeholder]__ – placeholder
-- :material-cards-variant: __[placeholder]__ – placeholder
+- :material-open-in-new: __[Sample Injection Overview]__ – Obtain basic knowledge of the files and tools you will be working with
+- :material-open-in-new: __[WAV File Conversion]__ – Learn to convert WAV files into sample files compatible with *Ocarina of Time* and *Majora's Mask*
+- :material-open-in-new: __[placeholder]__ – placeholder
+- :material-open-in-new: __[placeholder]__ – placeholder
 
 </div>
 
