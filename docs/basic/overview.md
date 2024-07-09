@@ -44,17 +44,16 @@ MIDI using the GM specification normally has 127 possible instruments with Chann
 To properly assign the instruments you want you will need to find which instrument in the audiobank you are using corresponds to the equivalent MIDI program value. If you need to know which audiobank has which instruments, you can use the [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page.
 
 ## Instrument Types
-In *Ocarina of Time* and *Majora's Mask* there are three different types of instrument types:
+In *Ocarina of Time* and *Majora's Mask* there are two different types of instruments:
 
-1. Instruments
-2. Drums
-3. Sound Effects
+1. Channel-Based Instruments
+2. Key-Based Instruments
 
-### Instruments
-Instruments assign three different samples to different MIDI keyboard regions, the low sample starts from note index 0 and moves all the way up until the first keymap split, the mid sample occupies the place between both keymap splits, and the high sample starts from the second keymap split and moves all the way up to the last note index 127. Each sample gets automatically pitch shifted inside its region.
+### Channel-Based Instruments
+Channel-based instruments, commonly referred to as just simply "Instruments", are instruments that assign three samples to three different note regions. The low sample occupies the note region from note 0 (C0) to the note specified by the low-mid region split inside the audiobank, the mid or normal sample occupies the note region from the note specified by the low-mid region split to the note specified by the mid-high region split inside the audiobank, and the high sample occupies the note region from the note specified by the mid-high region split to note 127 (G10). Each sample is automatically pitch shifted with the starting pitch determined by the tuning float value.
 
-### Drums and Sound Effects
-Drums and sound effects assaign a single sample to each individual key within the range of note 21 (A1) to note 84 (C7). Each sample plays at the exact pitch determined by the tuning float value.
+### Key-Based Instruments
+Key-based instruments, commonly referred to as "Drums" and "Sound Effects", are instruments that assign a single sample file to each individual key within the range of note 21 (A1) to note 84 (C7). Each sample plays at the exact pitch determined by the tuning float value.
 
 ### Synth Wave Instruments
 Also known as "chiptune" instruments, the synth wave instruments are a set of instruments available at all times no matter what audiobank is assigned to your sequence as they are special instruments with sample data assigned to very specific instrument slots (overwriting these slots with other instruments gives priorioty to audiobank instruments first, and synth waves second). There is a section about these instruments and how to access them available in the vanilla audiobank reference wiki page.

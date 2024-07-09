@@ -62,7 +62,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 === "SEQ64"
     **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nntendo EAD/SRD). It has the capability of converting `.mid`, `.com`, and `.mus` files into sequences and vice versa; for versions 1.0 and 1.5 it has the ability to edit audiobank files as well, though this feature was removed for versions 2.0 and above due to ongoing decompilation of various Nintendo 64 games.
 
-    !!! info "SEQ64 v1.0 versus v1.5"
+    !!! info "SEQ64 versions 1.0 and 1.5"
         For all intents and purposes there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5, they are functionally identical, however SEQ64 version 1.0 has a light theme, and SEQ64 version 1.5 has a dark theme.
 
 === "ROM Description"
