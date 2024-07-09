@@ -1,4 +1,4 @@
-# Sequencce Channel Commands
+# Sequence Channel Commands
 
 <div class="grid cards" markdown>
 
