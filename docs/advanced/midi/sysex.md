@@ -13,15 +13,15 @@
 This page details MIDI universal **SysEx** messages.
 
 ## About SysEx Messages
-MIDI comes with two different types of messages, channel messages and system messages. Channel messages handle everything that affect channels such as note on and offs, control changes, and so on. System messages include SysEx, clock, and so on. SysEx are system exclusive messages designed to provide information about specific functions inside MIDI hardware from different manufacturers; and SysEx messages are up to the product manufacturer to define themselves. Unlike regular MIDI messages, SysEx messages are sent in a string which makes them quite a bit more complicated to use than regular MIDI messages. However, if your MIDI hardware relies on it then it is very important to learn.
+MIDI comes with two different types of messages; channel messages and system messages. Channel messages handle everything that affects channels, such as note on and off messages, control change messages, etc. System messages include SysEx, clock, and so on. SysEx are system exclusive messages designed to provide information about specific functions inside MIDI hardware from different manufacturers; SysEx messages are up to the product manufacturer to define themselves. Unlike regular MIDI messages, SysEx messages are sent in a string, which makes them quite a bit more complicated to use than regular MIDI messages. However, if MIDI hardware relies on it, then it is very important to learn.
 
-This page cannot contain every single SysEx in existance, but it can provide information on universal SysEx messages that are the same between all different MIDI controllers. The only SysEx message that can be identified and used by SEQ64 is the SysEx for master volume, and it will ignore all other SysEx messages, however, it could be beneficial to learn about the others as well just in case.
+This page does not contain every single SysEx message, but it does provide information on universal SysEx messages that are the same for all different MIDI controllers. The only SysEx message that can be identified and used by SEQ64 is the SysEx message for master volume, and it will ignore all other SysEx messages. However, it is beneficial to learn about the other SysEx messages as well.
 
 ## Universal Realtime System Exclusive Messages
-Below are the universal realtime SysEx messages and information about them. Despite being "exclusive" they are in fact *not* exclusive messages, every piece of MIDI hardware will recognize and use them in the exact same way, thus them being named as "universal" SysEx messages.
+Below are the universal realtime SysEx messages and information about them. Despite being "exclusive", they are in fact *not* exclusive messages; every piece of MIDI hardware will recognize and use them in the same way, thus being named "universal" SysEx messages.
 
 ### Master Volume
-This is the only SysEx that SEQ64 can recognize and will add a command for when importing a `.mid` file and converting it into a sequence file. This message controls the overall volume of every MIDI channel allowing you to increase or decrease volume across the board instead of individually.
+This is the only SysEx message that SEQ64 can recognize and will add a command for when importing a `.mid` file and converting it into a sequence file. This message controls the overall volume of every MIDI channel, allowing for an increase or decrease in volume for the entire sequence.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
@@ -29,7 +29,7 @@ This is the only SysEx that SEQ64 can recognize and will add a command for when 
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values you want to edit are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
@@ -44,7 +44,7 @@ This is the only SysEx that SEQ64 can recognize and will add a command for when 
 | `F7H` | SysEx end |
 
 ### Master Fine Tuning
-This SysEx is not recognized by SEQ64 and will not have a command written into your sequence when importing a `.mid` file and converting it into a sequence file. This message controls the overall fine tuning of of every MIDI channel allowing you to achieve a master pitch bend.
+This SysEx message is not recognized by SEQ64 and will not add a command when importing a `.mid` file and converting it into a sequence file. This message controls the overall fine-tuning of every MIDI channel, allowing for a master fine-tuned transposition.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
@@ -52,7 +52,7 @@ This SysEx is not recognized by SEQ64 and will not have a command written into y
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values you want to edit are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to be edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
@@ -67,7 +67,7 @@ This SysEx is not recognized by SEQ64 and will not have a command written into y
 | `F7H` | SysEx end |
 
 ### Master Coarse Tuning
-This SysEx is not recognized by SEQ64 and will not have a command written into your sequence when importing a `.mid` file and converting it into a sequence file. This message controls the overall coarse tuning of of every MIDI channel allowing you to achieve a master pitch bend.
+This SysEx is not recognized by SEQ64 and will not add a command when importing a `.mid` file and converting it into a sequence file. This message controls the overall coarse tuning of every MIDI channel, allowing for a master coarse-tuned transposition.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
@@ -75,7 +75,7 @@ This SysEx is not recognized by SEQ64 and will not have a command written into y
 | `F0H` | `7FH 7FH 04H 01H llH mmH` | `F7H` |
 
 !!! info
-    The only values you want to edit are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
+    The only values that need to be edited are the `llH` and `mmH` values which correspond to the LSB and MSB of the command itself.
 
 #### String Value Information
 | Byte | Decription |
