@@ -3,7 +3,7 @@ hide:
 #icon: material/hexadecimal
 ---
 
-# Sequence Commands
+# Sequence Command Manual
 
 <div class="grid cards" markdown>
 
@@ -15,7 +15,16 @@ hide:
 
 </div>
 
-## Pitch Bend (±2 Semitones) `0xEE`
+## Control Flow Commands
+placeholder
+
+## Sequence Header Commands
+placeholder
+
+## Channel Commands
+placeholder
+
+### Command 0xEE: Pitch Bend (±2 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchTwoSemitonesFrequencies[] = {
@@ -65,7 +74,7 @@ hide:
     };
     ```
 
-## Pitch Bend (±12 Semitones) `0xD3`
+### Command 0xD3: Pitch Bend (±12 Semitones)
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchOneOctaveFrequencies[] = {
@@ -114,5 +123,8 @@ hide:
         1.96752f,  1.978287f, 1.989114f, 2.0f,
     };
     ```
+
+## Layer Commands
+placeholder
 
 -----
