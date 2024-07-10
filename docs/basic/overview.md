@@ -22,7 +22,7 @@ placeholder
     - Because the data that stores volume information is an 8 bit unsigned integer (u8) value, the volume commands have a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores volume information is a 7 bit unsigned integer value. Volume messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
 3. Instrument assignments cannot go above a value of 255 (0xFF).
     - Because the data that stores instrument assignment information is an 8 bit unsigned integer (u8) value, the instrument change command has a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores program assignment information is a 7 bit unsigned integer value. Program change messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
-3. Channels are polyphonic; however, only a maximum of four voices (played notes) of differing pitches can be played at any given time within a single channel.
+3. Channels are polyphonic; however, only a maximum of four voices (played notes) of differing pitches can play within a single channel at any given time.
 4. One pair of *Note On* and *Note Off* messages cannot intersect, or overlap, another pair of *Note On* and *Note Off* messages for a note of the same pitch.[^1]
 5. Delay values cannot go above a value of 32767 (0x7FFF)
     - Because the data that stores delay frames is a 16 bit unsigned integer (u16) value, the delay command has a limit of 32767 (0x7FFF) for sequences; it cannot go any higher.
