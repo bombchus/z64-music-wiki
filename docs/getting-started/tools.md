@@ -19,13 +19,13 @@
   }
 </style>
 
-This page is where you will find links to the various tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask*.
+This page is where download links to the various tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask* are available.
 
 !!! alert "Warning"
-    This page, as well as the wiki itself, can not and will not supply you with any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
+    This page, as well as the wiki itself, can not and will not supply any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
 
 ## Custom Music Creation Tools
-Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
+Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools needed right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ### Links to Basic Tools
 - ##### **SEQ64**
@@ -69,7 +69,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     The **ROM Description** is a data file containing music sequence format definitions, audiobank binary format definitions, addresses of key files and tables, and general program settings for SEQ64. The ABI data file (which only contains sequence format definitions) succeeded ROM description files for SEQ64 version 2.0 and above. The ROM descriptions provided with SEQ64 versions 1.0 and 1.5 are very old and contain less information as well as less accurate information. The ROM descriptions linked above are up-to-date and contain more information as well as more accurate information.
 
 === "Digital Audio Workstation"
-    **Digital Audio Workstations**, or **DAW(s)** for short, are where you create or edit conventional music files. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* you need a DAW that is capable of creating and editing `.mid` files. The DAWs linked above are the most common DAWs used within the randomizer communities.
+    **Digital Audio Workstations**, or **DAW(s)** for short, are where conventional music files are created or edited. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* a DAW that is capable of creating and editing `.mid` files is needed. The DAWs linked above are the most common DAWs used within the randomizer communities.
     
     Sekaiju is not a DAW, it is a MIDI sequencer; it lacks many of the standard audio features a regular DAW may have.
 
@@ -125,7 +125,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
         > 3. In "Virus & threat protection settings", navigate to "Exclusions > Add or remove exclusions".
         > 4. In "Exclusions", click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
 
-        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude single files you can trust. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
+        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude trusted single files. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
 
 === "ADSR Converter"
     The ADSR Converter is optional, but it can convert a soundfont's (`.sf2`) ADSR data into ADSR data compatible with Ocarina of Time and Majora's Mask.
@@ -138,7 +138,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
         > 3. In "Virus & threat protection settings", navigate to "Exclusions > Add or remove exclusions".
         > 4. In "Exclusions", click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
 
-        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude single files you can trust. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
+        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude trusted single files. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
 
 === "Audiobank Templates"
     The **Audiobank Templates** are *optional*, and made for the creation of sampled instruments, drums, and sound effects. SEQ64 or a text editor capable of opening and editing `.xml` files can edit the placeholder data in the template files. There are templates available for instruments, drums, or sound effects.
