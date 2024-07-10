@@ -6,12 +6,12 @@ tags:
 !!! alert "This page pertains to a feature only available in the Majora's Mask Randomizer"
 
 # Using Formmask
-This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows you to create more dynamic sequences than is normally possible in the vanilla game.
+This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows the creation of more dynamic sequences than is normally possible in the vanilla game.
 
 A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora; a state refers to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
 
 !!! warning "Non-Useable Categories"
-    At the time of writing this, Formmask does not currently work with fanfares or combat music. If you use formmask with them, then the randomizer will just play all available channels instead. Because of this, it is discouraged to use formmask with any of the following categories:
+    At the time of writing this, Formmask does not currently work with fanfares or combat music. If using formmask with them, then the randomizer will just play all available channels instead. Because of this, it is discouraged to use formmask with any of the following categories:
 
     === "Group Categories"
         | Category | Group Name |
@@ -132,10 +132,10 @@ The formatting for a JSON array is as follows:
     2. Channel 11 is enabled when Link is swimming and all other channels will be disabled.
     3. When Link is in the Epona, SpikeRolling, or Combat states, all currently enabled channels will stay enabled; if Link is in combat, then channel 13 will be enabled alongside any other enabled channels.
 
-The first 16 array values are for the channels of your sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels; if a form or state is non-cumulative, it will only play when Link is in that form or state.
+The first 16 array values are for the channels of the sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels; if a form or state is non-cumulative, it will only play when Link is in that form or state.
 
 !!! info "Assigning Multiple Values"
-    You can specify a channel and cumulative states to have multiple values. To do this, simply add the values you want to use separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`). These comma-separated values do not need to have spaces between them.
+    Channels and cumulative states can have multiple values. To do this, simply add wanted values separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`). These comma-separated values do not need to have spaces between them.
 
 ### Allowed Form & State Values
 Below is a list of the forms and states available to be assigned via Formmask.
@@ -158,7 +158,7 @@ Below is a list of the forms and states available to be assigned via Formmask.
     | `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
-To test Formmask when testing your song, you must be on the file select screen of the game and use a seed created by the randomizer. To cycle through non-cumulative states, you can use D-Pad Up and D-Pad Down, and to cycle through cumulative states you can use D-Pad Left and D-Pad Right.
+To test Formmask when testing a song, it must be played on the file select screen of the game with a randomized ROM created by the randomizer. To cycle through non-cumulative states, use D-Pad Up and D-Pad Down, and to cycle through cumulative states use D-Pad Left and D-Pad Right.
 
 !!! info "Info <small>needs confirmation</small>"
     For non-cumulative forms and states, the cycle is: Human, then Goron, then Zora, then Deku, then Swim, then Combat, then Epona, then SpikeRolling.

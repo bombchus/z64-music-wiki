@@ -354,7 +354,7 @@ There are two different types of categories, known as "group categories" and "in
 
     # Optional plain text metadata to also be contained within the metadata.yml file.
     # This could be used for accreditation or something else.
-    # To make multiline keys you need to use the character ">" after the key.
+    # To make multiline keys use the character ">" after the key.
     # e.g. "accreditation: >"
     accreditation: >
         Origin Game:        <placeholder>

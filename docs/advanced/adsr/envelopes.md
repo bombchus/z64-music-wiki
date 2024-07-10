@@ -48,7 +48,7 @@
     </item>
     ```
 
-Below is a graphical representation of the envelope of the "Piano" instrument. The ADSR values for *Ocarina of Time* and *Majora's Mask* are linear values with the time being in microseconds. A value of `1` for your envelope data is equal to ~4000 µs (0.004 s).
+Below is a graphical representation of the envelope of the "Piano" instrument. The ADSR values for *Ocarina of Time* and *Majora's Mask* are linear values with the time being in microseconds. A value of `1` for envelope data is equal to ~4000 µs (0.004 s).
 
 In the example below, we will assume the sample's waveform is 2 s in total length, so over 8000 µs (0.008 s) the sample goes from zero amplitude to ~99% amplitude, then once it reaches ~99% amplitude it returns to zero amplitude over the course of 960000 µs (0.96 s) and remains at zero amplitude for 4000 µs (0.004 s) and then it will remain at zero amplitude indefinitely due to the value of `-1` being the special command `ADSR_HANG`.
 
@@ -166,23 +166,23 @@ In the example below, we will assume the sample's waveform is 2 s in total lengt
 
 -----
 
-*Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four data points inside an audiobank (sound effects cannot use envelopes inside an audiobank), but the number of data points possible when using a sequence embedded envelope should be higher, although it is unknown how much higher it can be. Looking through the ADSR code from decomp, it can be assumed to be as long as you want, given you have enough data to make the sequence fit into the audio buffer
+*Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four data points inside an audiobank (sound effects cannot use envelopes inside an audiobank), but the number of data points possible when using a sequence embedded envelope should be higher, although it is unknown how much higher it can be. Looking through the ADSR code from decomp, it can be assumed to be as long wanted, given there is enough data to make the sequence fit into the audio buffer
 
 <style>
 /*
 ### Sample Manipulation Using Envelopes
 Using only envelopes it is possible to create new sounds without needing to use sample injection. After studying multiple soundfonts, such as the General MIDI soundfont, I <small>figure out way to remove first person speech</small> realized there were samples shared between different instruments, or drums but used to create new instruments and drums. One such example is hi-hats such as the closed hi-hat, pedaled hi-hat, and open hi-hat; *Majora's Mask* has a semi-open hi-hat sample that is perfect for this.
 
-A lot of people in the community use the ride cymbal for hi-hats because the semi-opened hi-hat in *Majora's Mask* just does not fit, but you can use the hi-hat to create the other two hi-hats instead of using the ride cymbal by using a custom envelope.
+A lot of people in the community use the ride cymbal for hi-hats because the semi-opened hi-hat in *Majora's Mask* just does not fit, but the hi-hat can be used to create the other two hi-hats instead of using the ride cymbal by using a custom envelope.
 
 !!! info
-    If you do not plan on using a custom audiobank, and you have channels to spare in your sequence, you can separate the hi-hat sample into its own channel and use a sequence embedded envelope to create the two missing hi-hat sounds.
+    If a custom audiobank is not being used, and there are channels to spare in the sequence, separate the hi-hat sample into its own channel and use a sequence embedded envelope to create the two missing hi-hat sounds.
 
 #### Closed Hi-Hat Envelope
 Below is the envelope to create a closed hi-hat out of the semi-open hi-hat in *Majora's Mask*. It cuts the sample almost immediately resulting in just a short hi-hat hit sound from the initial few seconds of the sample.
 
 ??? warning "Note Length Warning"
-    Due to the way samples are handled in *Ocarina of Time* and *Majora's Mask*, a short enough note will cut the sample even shorter. This is not usually a problem for the closed hi-hat, but if the sound is too short then you can try lengthening your closed hi-hat notes in your `.mid` file to give more time for the envelope to finish playing.
+    Due to the way samples are handled in *Ocarina of Time* and *Majora's Mask*, a short enough note will cut the sample even shorter. This is not usually a problem for the closed hi-hat, but if the sound is too short then try lengthening the closed hi-hat notes in the `.mid` file to give more time for the envelope to finish playing.
 
 === ":material-code-braces: &nbsp;C"
     ```c

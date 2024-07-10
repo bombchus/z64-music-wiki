@@ -10,7 +10,7 @@
 
 </div>
 
-In this section you will find detailed information on how to use Formmask, how to tune a sample, building audiobanks, creating custom envelopes, injecting non-vanilla samples into *Ocarina of Time* and *Majora's Mask*, and more technical MIDI information to help you create a better sequence.
+This section contains detailed information on how to use Formmask, how to tune a sample, building audiobanks, creating custom envelopes, injecting non-vanilla samples into *Ocarina of Time* and *Majora's Mask*, and more technical MIDI information to help create a better sequence.
 
 ## ADSR
 Learn how to make custom envelopes for instruments, drums, or sound effects to manipulate samples in *Ocarina of Time* and *Majora's Mask*.
@@ -34,7 +34,7 @@ Learn to create and inject custom instrument, drum, or sound effect samples into
 
 <div class="grid cards" markdown>
 
-- :material-open-in-new: __[Sample Injection Overview]__ – Obtain basic knowledge of the files and tools you will be working with
+- :material-open-in-new: __[Sample Injection Overview]__ – Obtain basic knowledge of the files and tools used for sample injection
 - :material-open-in-new: __[WAV File Conversion]__ – Learn to convert WAV files into sample files compatible with *Ocarina of Time* and *Majora's Mask*
 - :material-open-in-new: __[placeholder]__ – placeholder
 - :material-open-in-new: __[placeholder]__ – placeholder

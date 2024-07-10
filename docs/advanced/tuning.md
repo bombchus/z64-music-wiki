@@ -10,7 +10,7 @@
 
 </div>
 
-This page details how sample tuning works in great detail for instruments, drums, and sound effects in *Ocarina of Time* and *Majora's Mask* so that you can ensure your samples will be properly tuned.
+This page details how sample tuning works in great detail for instruments, drums, and sound effects in *Ocarina of Time* and *Majora's Mask* so that sample files will be properly tuned.
 
 ## Types of Tuning
 In *Ocarina of Time* and *Majora's Mask* there are two different types of tuning, **Channel-Based tuning** and **Key-Based tuning**. All instruments use Channel-Based tuning, with all drums and sound effects using Key-Based tuning. The differences between these two types of tuning are explained in greater detail below.
@@ -28,7 +28,7 @@ So to get our sample's root key to the correct note speed we need to use the fol
 As an example if our sample has a root key of 72 (C6) with a sample rate of 32000 Hz and we want it to play 60 (C5) then we need to achieve a note speed of 2 for our sample to be tuned to the correct pitch; to do this we divide 1 by 0.5, with 0.5 being the tuning float value for 72 (C6).
 
 !!! info
-    For Channel-Based tuning your note speeds are automatically calculated, as every instrument has a sample assigned to a range of specific notes, where the tuning float determines the sample root key's note speed in relation to 60 (C5).
+    For Channel-Based tuning, note speeds are automatically calculated, as every instrument has a sample assigned to a range of specific notes, where the tuning float determines the sample root key's note speed in relation to 60 (C5).
 
 
 ### Key-Based Tuning
@@ -44,7 +44,7 @@ So to get our sample's root key to the correct note speed we need to use the fol
 As an example if our sample has a root key of 72 (C6) with a sample rate of 32000 Hz and we want it to play 60 (C5) then we need to achieve a note speed of 0.5 for our sample to be tuned to the correct pitch; to do this we multiply 1 by 0.5, with 0.5 being the tuning float we would use as with — tuning the note speed is equal to the tuning float value.
 
 !!! info
-    For Key-Based tuning your note speeds are manually caculated per key, as every drum and sound effect has a single sample assigned to a single specific key on the MIDI keyboard, where the tuning float is equal to the note speed, as the note speed of your sample's root key is always assumed to be equal to 60 (C5)'s note speed.
+    For Key-Based tuning note speeds are manually caculated per key, as every drum and sound effect has a single sample assigned to a single specific key on the MIDI keyboard, where the tuning float is equal to the note speed, as the note speed of the sample's root key is always assumed to be equal to 60 (C5)'s note speed.
 
 ## Tuning Calculation
 
@@ -80,7 +80,7 @@ $f(x)=Float\div\frac{32000}{x}$
 
 *Ocarina of Time* and *Majora's Mask* have a master sample rate, also known as hardware rate, of 32000 Hz that affects how all samples in the game are played. The games will always play samples as is they were sampled at the master sample rate which will affect the tuning of samples.
 
-In the images below you can see a visual representation of how a sample's speed will be affected. All the samples are assumed to be the same sound sample recorded at the same pitch, but are resampled at varying sample rates.
+Shown in the images below is a visual representation of how a sample's speed will be affected. All the samples are assumed to be the same sound sample recorded at the same pitch, but are resampled at varying sample rates.
 
 === "Sample at 16000 Hz"
     ![](../assets/images/samples/waveform-16000hz-light.png#only-light)
@@ -100,6 +100,6 @@ In the images below you can see a visual representation of how a sample's speed 
 
     With a sample rate of 64000 Hz, twice the master sample rate, and tuned to the root key without any form of sample rate correction the sample will end up playing at half the note speed it should play therefore causing the pitch to be too low.
 
-The reason a sample with a sample rate of 64000 Hz will play at half the note speed when played back in-game is because it has twice the amount of samples per second, and vice versa for a sample with a sample rate of 16000 Hz as it has half the samples per second, so this means that the samples will take a longer or shorter amount of time to finish when played back at the master sample rate. With sample rate correction you increase or decrease the sample's note speed so that it matches the expected note speed of a sample at 32000 Hz.
+The reason a sample with a sample rate of 64000 Hz will play at half the note speed when played back in-game is because it has twice the amount of samples per second, and vice versa for a sample with a sample rate of 16000 Hz as it has half the samples per second, so this means that the samples will take a longer or shorter amount of time to finish when played back at the master sample rate. With sample rate correction the sample's note speed is increased or decreased so that it matches the expected note speed of a sample at 32000 Hz.
 
 -----

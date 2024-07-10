@@ -17,66 +17,66 @@ This page details building an audiobank completely from scratch in C, XML, and a
 For C and Binary, items do not need to be in any particular order except for the header data; so long as all the addresses match the order of data should not matter(?). For XML, the order is very strict due to SEQ6 hardcoding the data format; addresses can be left as zeroed values, SEQ64 will automatically assign addresses when overwriting an audiobank, however, indexes must be correct.
 
 ??? info "Important XML Info"
-    For XML audiobanks, all your structures must be contained within a bank that contains some metadata information tag:
+    For XML audiobanks, all structures must be contained within a bank that contains some metadata information tag:
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Above is the XML declaration, do not remove it -->
 
     <bank NUM_INST="0" NUM_DRUM="0" NUM_SFX="0" ATnum="0">
-      <!-- All your audiobank information is contained within the tags-->
+      <!-- All the audiobank information is contained within the tags-->
     </bank>
     ```
 
-    You audiobanks must also be structured in a very specific way, otherwise SEQ64 will not be able to read your audiobank and will throw errors:
+    Audiobanks must also be structured in a very specific way, otherwise SEQ64 will not be able to read the audiobank and will throw errors:
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
 
     <bank NUM_INST="0" NUM_DRUM="0" NUM_SFX="0" ATnum="0">
       <!-- Audiobank Index Entry -->
       <abindexentry>
-        <!-- Insert your structure here -->
+        <!-- Insert structure here -->
       </abindexentry>
       <!-- Audiobank Header -->
       <abheader>
-        <!-- Insert your structure here -->
+        <!-- Insert structure here -->
       </abheader>
       <!-- ABBank -->
       <abbank>
-        <!-- Insert your structure here -->
+        <!-- Insert structure here -->
       </abbank>
       <!-- Audiobank Drum List -->
       <abdrumlist>
-        <!-- Insert your drum list here -->
+        <!-- Insert drum list here -->
       </abdrumlist>
       <!-- Audiobank SFX List -->
       <absfxlist>
-        <!-- Insert your sfx list here -->
+        <!-- Insert sfx list here -->
       </absfxlist>
       <!-- Audiobank Instruments -->
       <instruments>
-        <!-- Insert your item(s) here -->
+        <!-- Insert item(s) here -->
       </instruments>
       <!-- Audiobank Drums -->
       <drums>
-        <!-- Insert your tem(s) here -->
+        <!-- Insert item(s) here -->
       </drums>
       <!-- For OOT and MM leave this as-is -->
       <sfx/>
       <!-- Audiobank Envelope -->
       <envelopes>
-        <!-- Insert your item(s) here -->
+        <!-- Insert item(s) here -->
       </envelopes>
       <!-- Audiobank Samples -->
       <samples>
-        <!-- Insert your item(s) here -->
+        <!-- Insert item(s) here -->
       </samples>
       <!-- Audiobank Codebooks -->
       <aladpcmbooks>
-        <!-- Insert your item(s) here -->
+        <!-- Insert item(s) here -->
       </aladpcmbooks>
       <!-- Audiobank Loopbooks -->
       <aladpcmloops>
-        <!-- Insert your item(s) here -->
+        <!-- Insert item(s) here -->
       </aladpcmloops>
     </bank>
     ```
@@ -645,7 +645,7 @@ For C and Binary, items do not need to be in any particular order except for the
               <struct name="ALADPCMPredictor">
                 <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
                       arraylenfixed="16">
-                  <!-- COPY & PASTE YOUR PREDICTOR FIRST ARRAY HERE!! -->
+                  <!-- COPY & PASTE FIRST PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
@@ -670,7 +670,7 @@ For C and Binary, items do not need to be in any particular order except for the
               <struct name="ALADPCMPredictor">
                 <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
                       arraylenfixed="16">
-                  <!-- COPY & PASTE YOUR PREDICTOR SECOND ARRAY HERE!! -->
+                  <!-- COPY & PASTE SECOND PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
@@ -695,7 +695,7 @@ For C and Binary, items do not need to be in any particular order except for the
               <struct name="ALADPCMPredictor">
                 <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
                       arraylenfixed="16">
-                  <!-- COPY & PASTE YOUR PREDICTOR THIRD ARRAY HERE!! -->
+                  <!-- COPY & PASTE THIRD PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
@@ -720,7 +720,7 @@ For C and Binary, items do not need to be in any particular order except for the
               <struct name="ALADPCMPredictor">
                 <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
                       arraylenfixed="16">
-                  <!-- COPY & PASTE YOUR PREDICTOR FOURTH ARRAY HERE!! -->
+                  <!-- COPY & PASTE FOURTH PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
@@ -814,7 +814,7 @@ For C and Binary, items do not need to be in any particular order except for the
               <struct name="ALADPCMTail">
                 <field name="some_adpcm_data" datatype="int16" ispointer="0" isarray="1"
                        meaning="None" arraylenfixed="16">
-                  <!-- COPY & PASTE YOUR LOOP PREDICTOR ARRAY HERE!! -->
+                  <!-- COPY & PASTE LOOP PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
                   <element datatype="int16" ispointer="0" value="0"/>
