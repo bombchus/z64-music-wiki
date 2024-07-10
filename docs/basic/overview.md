@@ -51,11 +51,11 @@ In *Ocarina of Time* and *Majora's Mask* there are two different types of instru
 ### Channel-Based Instruments
 Channel-based instruments, commonly referred to as just simply "Instruments", are instruments that assign three different samples to three different note regions on the virtual MIDI piano. The low sample occupies the note region from note 0 (C0) to the note specified by the low-mid region split inside the audiobank, the mid or normal sample occupies the note region from the note specified by the low-mid region split to the note specified by the mid-high region split inside the audiobank, and the high sample occupies the note region from the note specified by the mid-high region split to note 127 (G10). Each sample is automatically pitch shifted with the starting pitch determined by the tuning float value.
 
+#### Special Instruments
+In *Ocarina of Time* and *Majora's Mask*, there exists a special set of channel-based instruments commonly referred to as "synth wave", "waveform", or "chiptune" instruments. These instruments have their sample data stored outside any audiobanks; this makes them available to use at all times, regardless of the audiobank currently being used by a sequence. More detailed information on these instruments, and how to assign them to a channel can be found on the [vanilla audiobank reference](../vanilla-reference/audiobanks/#audiobank-reference-waveform-instruments){ target="__blank"}<small>:material-open-in-new: </small> wiki page.
+
 ### Key-Based Instruments
 Key-based instruments, commonly referred to as "Drums" and "Sound Effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
-
-### Special Instruments
-In *Ocarina of Time* and *Majora's Mask*, there exists a special set of instruments commonly referred to as "synth wave" or "chiptune" instruments. These instruments are channel-based instruments that have their sample data stored outside any audiobanks; this makes them available to use at all times, regardless of the audiobank currently being used by a sequence. More detailed information on these instruments, and how to assign them to a channel can be found on the [vanilla audiobank reference](../vanilla-reference/audiobanks/#audiobank-reference-waveform-instruments){ target="__blank"}<small>:material-open-in-new: </small> wiki page.
 
 ## Common SEQ64 Errors
 === "Overlapping Notes"
