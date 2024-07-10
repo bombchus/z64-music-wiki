@@ -7119,10 +7119,10 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
 === "Waveform Instruments"
 
-    The waveform instruments are a collection of synth waves available at all times for all audiobanks. These instruments cannot be assigned via a MIDI program name as they go over the 7-Bit data value limit of `127 (0x7F)` (they are accessed using `128 (0x80)` and above), so they must be assigned inside the sequence.
+    The waveform instruments are a collection of synth waves available at all times for all audiobanks. These instruments cannot be assigned using a MIDI program change message as their instrument change command assignment values go over the 7 bit data value limit of MIDI; their instrument change command assignment values go from 128 (0x80) to 135 (0x87), so they must be assigned inside a sequence. These instruments' instrument change command assignments can be overwritten as audiobank instruments have priority for the instrument change command.
 
-    !!! warning "Instrument 0x87 and Above"
-        "Waveforms" above `0x87` are not actual instruments with actual sample data like `0x80` to `0x87`, they instead use compiled assembly code and interpret it as if it were sample data. The starting address uses the audio thread and adds a random offset between `0x0000` and `0xFFF0`; this is volatile and may cause issues so it is recommended to avoid using them.
+    !!! warning "Instrument 0x88 and Above"
+        Waveform instrument change command assignment values 0x88 and above are not true instruments with true sample data like waveforms 0x80 to 0x87, they instead take compiled assembly code and interpret that as if it were real sample data. The starting address uses the audio thread and adds a random offset between `0x0000` and `0xFFF0` and interprets it as sample data; this is volatile and may cause issues, so it is recommended to avoid using 0x88 and above when no audiobank instrument is assigned to those values.
 
     **List of Waveforms:**
     ``` linenums="0"

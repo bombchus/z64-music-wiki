@@ -54,8 +54,8 @@ Channel-based instruments, commonly referred to as just simply "Instruments", ar
 ### Key-Based Instruments
 Key-based instruments, commonly referred to as "Drums" and "Sound Effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
 
-### Synth Wave Instruments
-Also known as "chiptune" instruments, the synth wave instruments are a set of instruments available at all times no matter what audiobank is assigned to your sequence, as they are special instruments with sample data assigned to very specific instrument slots (overwriting these slots with other instruments gives priority to instruments inside of an audiobank first, and synth waves second). There is a section about these instruments and how to access them available on the vanilla audiobank reference wiki page.
+### Special Instruments
+In *Ocarina of Time* and *Majora's Mask*, there exists a special set of instruments commonly referred to as "synth wave" or "chiptune" instruments. These instruments are channel-based instruments that have their sample data stored outside any audiobanks; this makes them available to use at all times, regardless of the audiobank currently being used by a sequence. More detailed information on these instruments, and how to assign them to a channel can be found on the [vanilla audiobank reference](../vanilla-reference/audiobanks/#audiobank-reference-waveform-instruments){ target="__blank"}<small>:material-open-in-new: </small> wiki page.
 
 ## Common SEQ64 Errors
 === "Overlapping Notes"
