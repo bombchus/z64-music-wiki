@@ -16,15 +16,17 @@ placeholder
 
 
 ## Sequence Limitations
-- Tempo cannot go above a value of 255 (0xFF).
-- Volume cannot go above a value of 255 (0xFF).
-    - MIDI cannot go above a value of 127 (0x7F).
-- Program changes cannot go above a value of 255 (0xFF).
-    - MIDI cannot go above a value of 127 (0x7F).
-- Channels are polyphonic, however, only a maximum of four voices, or notes, of differing pitches can be played at any given time in a single channel.
-- One pair of *Note On* and *Note Off* messages cannot intersect, or overlap, another pair of *Note On* and *Note Off* messages for a note of the same pitch.[^1]
-- Max Delay value cannot go above a value of 32767 (0x7FFF)
-- A section marker cannot intersect a pair of *Note On* and *Note Off* messages.
+1. Tempo cannot go above a value of 255 (0xFF).
+    - Because the data that stores tempo information is an 8 bit unsigned integer (u8) value, the tempo command has a limit of 255 (0xFF) for sequences; it cannot go any higher.
+2. Volume cannot go above a value of 255 (0xFF).
+    - Because the data that stores volume information is an 8 bit unsigned integer (u8) value, the volume commands have a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores volume information is a 7 bit unsigned integer value. Volume messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
+3. Instrument assignments cannot go above a value of 255 (0xFF).
+    - Because the data that stores instrument assignment information is an 8 bit unsigned integer (u8) value, the instrument change command has a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores program assignment information is a 7 bit unsigned integer value. Program change messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
+3. Channels are polyphonic; however, only a maximum of four voices (played notes) of differing pitches can be played at any given time within a single channel.
+4. One pair of *Note On* and *Note Off* messages cannot intersect, or overlap, another pair of *Note On* and *Note Off* messages for a note of the same pitch.[^1]
+5. Delay values cannot go above a value of 32767 (0x7FFF)
+    - Because the data that stores delay frames is a 16 bit unsigned integer (u16) value, the delay command has a limit of 32767 (0x7FFF) for sequences; it cannot go any higher.
+6. A MIDI marker message cannot intersect a pair of *Note On* and *Note Off* messages.
 
 [^1]: While many DAWs allow you to stack notes on top of other notes, or overlap your notes without immediate issues, the MIDI standard stresses it is invalid to send a second *Note On* message for a note of the same pitch in the same channel before a *Note Off* message is sent for the first *Note On* message. This is because of the way MIDI messages are interpreted, you can either use a pair of *Note On* and *Note Off* messages or a pair of *Note On* messages with the *Note On* message with a velocity of zero acts as a *Note Off* message. Many DAWs will attempt to connect the proper *Note On* and *Note Off* messages; however, it will inevitably fail as *Note On* messages can be seen as both *Note On* or *Note Off*.
 

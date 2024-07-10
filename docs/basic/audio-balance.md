@@ -15,7 +15,7 @@ placeholder
 [Youlean Loudness Meter](https://youlean.co/file-loudness-meter/){ target="__blank" }<small>:material-open-in-new: </small>
 
 
-Sequences in the tables below were recorded using BizHawk's built-in A/V recording functionality at 100% volume with the output method set to "DirectSound"; no outside audio balancing was used in any of the audio files used to measure LUFS, all the audio was captured by the in-game engine.
+Sequences in the tables below were recorded using BizHawk's built-in A/V recording functionality at 100% volume with the output method set to "DirectSound"; no outside audio balancing was used for any of the audio files used to measure LUFS, all the audio was captured by the in-game engine.
 
 === "Ocarina of Time Sequence Integrated LUFS"
     <p align="center" style="margin:0; line-height:0;">

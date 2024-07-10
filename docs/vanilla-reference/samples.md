@@ -49,7 +49,7 @@ Below is a list containing all of the samples in the *Ocarina of Time* and *Majo
         `Giants' Voice` to `CARTOON, YELL - FUNNY TARZAN YELL 01`  
         `Metal Bang` to `CARTOON, HIT - BIG, HEAVY METALLIC HIT`
 
-    Below is a list of instrument samples located in audiobanks `0x03` to `0x27`. Audiobank `0x28` does not contain any useful sample data so it has been omitted.
+    Below is a list of instrument samples located within audiobanks `0x03` to `0x27`. Audiobank `0x28` does not contain any useful sample data so it has been omitted.
 
     ??? waveform "Instrument Sample Table"
         | Sample Name | Sample Address (DEC) | Sample Address (HEX) | Audiotable |
