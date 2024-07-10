@@ -222,7 +222,7 @@ Music groups determine where a sequence will play in-game. This information is s
 To make a categories file for an `.mmrs` file, create a text file with the name `categories.txt`, then put whatever group and individual category values that correspond(s) to the area(s) the sequence should play in-game in inside the file, separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
 
 !!! alert "Warning"
-    Using both hyphens and commas to separate your categories is not possible, one or the other must be used.
+    Using both hyphens and commas to separate categories is not possible, one or the other must be used.
 
 #### Categories
 There are two different types of categories, known as "group categories" and "individual categories". Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
@@ -233,7 +233,7 @@ There are two different types of categories, known as "group categories" and "in
 === "Group Categories"
 
     ??? info ""Special" Group Category"
-        Category `16` contains two cutscene sequences which will cut your sequence short if it loops, so it is recommended to put non-looping sequences in this category or to just use the individual category for these <br>sequences instead.
+        Category `16` contains two cutscene sequences which will cut a sequence short if it loops, so it is recommended to put non-looping sequences in this category or to just use the individual category for these <br>sequences instead.
 
     | Value | Group Name | Sequence Name |
     | :-: | :-- | :-- |
@@ -328,8 +328,8 @@ There are two different types of categories, known as "group categories" and "in
     #
     # Allowed Audiobank Values: "0x##", "custom"
     #     The "audiobank" key determines which audiobank the game set in the game
-    #     key will use. However, if you are using a custom audiobank then the value
-    #     should be changed to "custom" as this indicates the bank needs to be inserted.
+    #     key will use. However, if using a custom audiobank then the value should
+    #     be changed to "custom" as this indicates the bank needs to be inserted.
     #
     ---
     game: "oot"
