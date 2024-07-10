@@ -60,25 +60,27 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 #### Brief Summary of Tools
 === "SEQ64"
-    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nntendo EAD/SRD). It has the capability of converting `.mid`, `.com`, and `.mus` files into sequences and vice versa; for versions 1.0 and 1.5 it has the ability to edit audiobank files as well, though this feature was removed for versions 2.0 and above due to ongoing decompilation of various Nintendo 64 games.
+    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting `.mid`, `.com`, and `.mus` files into the sequence files used in Ocarina of Time and Majora's Mask and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well.  The ability to edit audiobanks is not available in version 2.0 and above.
 
     !!! info "SEQ64 versions 1.0 and 1.5"
-        For all intents and purposes there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5, they are functionally identical, however, SEQ64 version 1.0 has a light theme, and SEQ64 version 1.5 has a dark theme.
+        For all intents and purposes, there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5. However, SEQ64 version 1.0 has a light theme, and SEQ64 version 1.5 has a dark theme.
 
 === "ROM Description"
-    The **ROM Description** is a data file containing music sequence format definition, audiobank binary format definition, addresses of key files and tables, and general program settings. This data file has been succeeded by the ABI data file for SEQ64 version 2.0 and above which only contains the music sequence format definition. The ROM descriptions provided with SEQ64 are very old, however, the ROM descriptions linked to above have been updated to contain more information as well as more accurate information.
+    The **ROM Description** is a data file containing music sequence format definitions, audiobank binary format definitions, addresses of key files and tables, and general program settings for SEQ64. The ABI data file (which only contains sequence format definitions) succeeded ROM description files for SEQ64 version 2.0 and above. The ROM descriptions provided with SEQ64 versions 1.0 and 1.5 are very old and contain less information as well as less accurate information. The ROM descriptions linked above are up-to-date and contain more information as well as more accurate information.
 
 === "Digital Audio Workstation"
-    **Digital Audio Workstations**, or **DAW** for short, are where you create or edit conventional music files. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* you need a DAW that is capable of creating and editing `.mid` files. The DAWs linked above are the most common DAWs used within the randomizer communities.
+    **Digital Audio Workstations**, or **DAW(s)** for short, are where you create or edit conventional music files. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* you need a DAW that is capable of creating and editing `.mid` files. The DAWs linked above are the most common DAWs used within the randomizer communities.
+    
+    Sekaiju is not a DAW, it is a MIDI sequencer; it lacks many of the standard audio features a regular DAW may have.
 
 === "Soundfont"
-    The **Soundfont** will allow you to preview your music similar to how it would sound in-game using a DAW capable of music playback with a soundfont allowing you to easily modify your music before you convert it. The soundfonts do not sound exactly like how in-game sounds will sound, however, it is close enough to give you a good idea of how it will sound.
+    **Soundfont(s)** will allow previewing of a song with the instruments the games use when using a DAW capable of music playback with a soundfont. This allows for quick changes to the music before conversion. The soundfonts do not sound exactly like in-game instruments sound. However, they are close enough to give a good idea of how a song will sound in-game.
 
 === "N64 Emulator"
-    An **N64 Emulator** is used to preview your music in-game, this will allow you to make sure there are no problems with the sequence or audiobank in-game. The emulators linked above are mostly standalone Nintendo 64 emulators, with only ares being a multi-system emulator. It is recommended to *avoid* RetroArch and other multi-system emulators and frontends.
+    An **N64 Emulator** is used to preview music in-game. This is to make sure there are no problems with the sequence or audiobank in-game. The emulators Simple64, Rosalie's Mupen GUI, and Project64 are all standalone. Ares is a multi-system emulator. It is recommended to *avoid* RetroArch and other multi-system emulators and frontends.
 
 === "nDEC"
-    **nDEC** is used to decompress your ROM so that you are able to edit it in SEQ64. nDEC is simple enough to use as there is a file bundled with the program in the link provided that does all the work for you. Should you need detailed instructions on how to decompress your ROM you can find them on the ROM requirements page of the wiki.
+    **nDEC** decompresses a ROM so that it can be edited with SEQ64. Included in the nDEC download is a batch script that makes using nDEC simple. For more detailed instructions on how to decompress a ROM with nDEC, there is a section on the [ROM requirements](../requirements/#decompressing-a-rom){ target="__blank" }<small>:material-open-in-new: </small> page of the wiki detailing the process.
 
 -----
 
@@ -104,45 +106,45 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     The **Sample Creation Tools** are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
 
 === "N64 Soundlist Tool"
-    **N64 Soundlist Tool** is required for ripping `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data (as well as other instrument, drum, and sound effect data) from Nintendo 64 games.
+    **N64 Soundlist Tool** is used to rip `.bin` (or `.zsound`) sample files and obtain their codebook and loopbook ADPCM predictor data—as well as other instrument, drum, and sound effect data—from Nintendo 64 games.
 
 === "Polyphone"
-    **Polyphone** is *optional*, but required for exporting `.wav` files from `.sf2` (soundfont) files; this is used in conjunction with the "Sample Creation Tools" to convert `.wav` files to `.bin` (or `.zsound`) sample files and to obtain codebook and loopbook ADPCM predictor data. You can also use Polyphone for other sample editing, before converting, as well.
+    **Polyphone** is *optional*, but can be used to obtain `.wav` files from `.sf2` (soundfont) files to convert into a `.bin` (`.zsound`) file with the "Sample Creation Tools". Polyphone can also edit `.wav` files in a few different ways, such as resampling, pitch-shifting, or setting loop points.
 
 === "Audacity"
-    **Audacity** is *optional*, but extremely useful for resampling `.wav` files as well as sample editing, before converting, as well.
+    **Audacity** is *optional*, but is a powerful audio editing tool. Audacity can edit audio files in many different ways, such as resampling, pitch-shifting, or trimming unneeded portions of audio.
 
 === "Tuning Float Calculator"
-    The **Tuning Float Calculator** is *optional*, but extremely useful for tuning your sampled instrument, drum, or sound effect.
+    The **Tuning Float Calculator** is *optional*, but it can find the tuning float value for a sampled instrument, drum, or sound effect. The tuning float value for samples goes inside of an audiobank and adjusts the tuning of a sample.
 
     !!! warning "Windows Defender False Flagging"
-        Due to the Tuning Float Caclulator being an unsigned executable file compiled with PyInstaller Windows Defender will falsely flag the application as `Trojan:Win32/Wacatac.B!ml`. To remedy this, follow the steps below:
+        Because the Tuning Float Calculator is an unsigned executable file, Windows Defender may false flag it as malware (`Trojan:Win32/Wacatac.B!ml`). To remedy this, follow the steps below:
 
         > 1. Open Windows Defender and navigate to "Virus & threat protection".
-        > 2. In "Virus & threat protection" navigate to "Virus & threat protection settings > Manage settings".
-        > 3. In "Virus & threat protection settings" navigate to "Exclusions > Add or remove exclusions".
-        > 4. In "Exclusions" click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
+        > 2. In "Virus & threat protection", navigate to "Virus & threat protection settings > Manage settings".
+        > 3. In "Virus & threat protection settings", navigate to "Exclusions > Add or remove exclusions".
+        > 4. In "Exclusions", click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
 
-        It is not recommended to exclude an entire folder unless you keep everything pertaining to Music Creation in the same folder; whenever possible always exclude single files for you and your computer's safety.
+        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude single files you can trust. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
 
 === "ADSR Converter"
-    The **ADSR Converter** is *optional*, but can be useful for helping convert `.sf2` envelopes into envelope data compatible with Ocarina of Time and Majora's Mask.
+    The ADSR Converter is optional, but it can convert a soundfont's (`.sf2`) ADSR data into ADSR data compatible with Ocarina of Time and Majora's Mask.
 
     !!! warning "Windows Defender False Flagging"
-        Due to the ADSR Converter being an unsigned executable file compiled with PyInstaller Windows Defender will falsely flag the application as `Trojan:Win32/Wacatac.B!ml`. To remedy this, follow the steps below:
+        Because the Tuning Float Calculator is an unsigned executable file, Windows Defender may false flag it as malware (`Trojan:Win32/Wacatac.B!ml`). To remedy this, follow the steps below:
 
         > 1. Open Windows Defender and navigate to "Virus & threat protection".
-        > 2. In "Virus & threat protection" navigate to "Virus & threat protection settings > Manage settings".
-        > 3. In "Virus & threat protection settings" navigate to "Exclusions > Add or remove exclusions".
-        > 4. In "Exclusions" click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
+        > 2. In "Virus & threat protection", navigate to "Virus & threat protection settings > Manage settings".
+        > 3. In "Virus & threat protection settings", navigate to "Exclusions > Add or remove exclusions".
+        > 4. In "Exclusions", click the "+ Add an exclusion" button and locate the file or the folder the file is in to exclude.
 
-        It is not recommended to exclude an entire folder unless you keep everything pertaining to Music Creation in the same folder; whenever possible always exclude single files for you and your computer's safety.
+        It is not recommended to exclude an entire folder unless everything related to Music Creation is being kept in a single folder. Whenever possible, always exclude single files you can trust. The application does not contain any malicious code. If that statement is untrustworthy, then do not download it. And if it is already downloaded, then do not add a Windows Defender exclusion for it.
 
 === "Audiobank Templates"
-    The **Audiobank Templates** are *optional*, but are made specifically for the creation of sampled instruments, drums, and sound effects and can be edited in SEQ64 or a text editor capable of editing `.xml` files. The Audiobank Templates contain placeholder data to be edited specifically for either instruments, drums, or sound effects.
+    The **Audiobank Templates** are *optional*, and made for the creation of sampled instruments, drums, and sound effects. SEQ64 or a text editor capable of opening and editing `.xml` files can edit the placeholder data in the template files. There are templates available for instruments, drums, or sound effects.
 
     ??? tip "Recommendation"
-        It is recommended to avoid using SEQ64 to edit audiobanks and instead use a text editor capable of editing `.xml` files. There is a learning curve, however, it will bypass any bugs that SEQ64 introduces.
+        SEQ64 is not recommended for audiobank editing, a text editor capable of editing `.xml` files is instead recommended. There is a learning curve to editing audiobank `.xml` files. However, editing audiobanks in a text editor will bypass any bugs that SEQ64 can introduce during editing.
 
 -----
 
