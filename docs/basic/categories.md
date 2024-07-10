@@ -309,28 +309,27 @@ There are two different types of categories, known as "group categories" and "in
     ``` yaml
     %YAML 1.2
     # The following file is a metadata file for custom music in The Legend of Zelda:
-    # Ocarina of Time and The Legend of Zelda: Majora's Mask
+    # Ocarina of Time and The Legend of Zelda: Majora's Mask.
     #
     # This is a YAML file, YAML uses indentation instead of brackets; this makes it
-    # easier to read, however, YAML itself is not as easy to parse as something like
+    # easier to read. However, YAML itself is not as easy to parse as something like
     # JSON or TOML. For the purpose of the custom music communities for Zelda64
-    # randomizers this file should be kept as simple and easy to understand as possible.
+    # randomizers, this file should be kept as simple and easy to understand as possible.
     #
     # Allowed Game Values: "oot", "mm", "ootmm"
-    #     This key determines which game to pull adpcm data and audiobank information
+    #     The "game" key determines which game to pull adpcm data and audiobank information
     #     from. A value of "oot" determines the base game to be OOT, a value of "mm"
     #     determines the base game to be MM, and a value of "ootmm" determines the game
-    #     is interchangeable idk how this would work...
     #
     # Allowed Song Type Values: "bgm", "fanfare"
-    #     The song type key determines whether or not the song is classfied as a bgm
+    #     The "song type" key determines whether or not the song is classfied as a bgm
     #     or fanfare. Do not miscategorize bgms as fanfares it will cause issues in
     #     both OOT and MM!!!
     #
     # Allowed Audiobank Values: "0x##", "custom"
-    #     The audiobank key determines which audiobank the game you set in the game
-    #     key will use, however, if you are using a custom audiobank then you should
-    #     change the value to "custom" as this indicates the bank needs to be inserted.
+    #     The "audiobank" key determines which audiobank the game set in the game
+    #     key will use. However, if you are using a custom audiobank then the value
+    #     should be changed to "custom" as this indicates the bank needs to be inserted.
     #
     ---
     game: "oot"
@@ -348,15 +347,15 @@ There are two different types of categories, known as "group categories" and "in
             # OOTR categories: https://thesounddefense.github.io/musicgroups/
             ootr: ["Fields", "Dungeon"]
 
-        # Place your custom samples here e.g. - "my_sound.zsound": "0x12345678"
-        # If you have no custom samples then leave the key and value empty
+        # Place custom samples here e.g. - "my_sound.zsound": "0x12345678"
+        # If no custom samples are used, then leave the key and value empty
         samples:
             - "": ""
 
-    # Optional plain text metadata to also be contained within the metadata.yml file
-    # This could be used for accreditation or something else, doesn't need to use
-    # the same format To make multiline keys you need to use the character ">" after
-    # the key e.g. "accreditation: >"
+    # Optional plain text metadata to also be contained within the metadata.yml file.
+    # This could be used for accreditation or something else.
+    # To make multiline keys you need to use the character ">" after the key.
+    # e.g. "accreditation: >"
     accreditation: >
         Origin Game:        <placeholder>
         Song Name:          <placeholder>
