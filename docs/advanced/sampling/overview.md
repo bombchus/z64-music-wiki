@@ -34,7 +34,7 @@ The majority of the work for the sampled instruments, drums, and sound effects s
     It is recommended to read through the custom sample injection wiki pages fully once while following along with the process, then going over it again as many times as needed until fully understanding the process. Should any further help be required, it is best to inquire within the [:fontawesome-brands-discord: Majora's Mask Randomizer](https://discord.gg/8qbreUM){ target="__blank" }<small>:material-open-in-new: </small> or [:fontawesome-brands-discord: Darunia's Joy](https://discord.gg/EVpd499gkS){ target="__blank" }<small>:material-open-in-new: </small> discord servers.
 
 ## Sample Injection Tools
-Before getting started, below is a list of tools that are used for custom sample injection. Not every tool may be required, but it is recommended to download all the tools you need right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
+Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools needed right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
 
 ## Summary of Creating New Instruments, Drums, and Sound Effects
 Before beginning, it may be beneficial to understand the general workflow for custom sample injection, as well as garner basic information on what sample files actually are. Please understand that the workflow presented here is not set in stone, it is a guideline to help creators create their own workflow that works for them; the wiki follows the presented workflow in how information and pages are structured and presented.
@@ -67,7 +67,7 @@ Before beginning, it may be beneficial to understand the general workflow for cu
 2. Finding the root key of a sample is only required if unsure of or to reconfirm the root key for the sample.
 3. If the `.wav` file does not have any loop data specified, then the Sample Creation Tools will not output a `.bin` file containing loopbook ADPCM predictor data.
 4. If not using an audiobank template, then either create an audiobank from scratch or edit an existing audiobank from *Ocarina of Time* or *Majora's Mask using* SEQ64.
-5. This is only required if the Sample Creation Tools output a `.bin` file containing your sample's loopbook ADPCM predictor data.
+5. This is only required if the Sample Creation Tools output a `.bin` file containing the sample's loopbook ADPCM predictor data.
 6. `metadata.yml` has not been presented to or adopted by the developers of any randomizer; however, it is a simple but effective system that will hopefully be adopted and added in the future.
 7. Optionally, the sample could be injected into a decompressed ROM; however, it is much more tedious and does not ensure that the sample will not collide with other data added by the randomizer.
 

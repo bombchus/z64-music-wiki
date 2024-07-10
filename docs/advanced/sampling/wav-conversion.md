@@ -20,7 +20,7 @@ This page details the process of converting `.wav` files into sample files compa
 ## placeholder
 One way of creating custom samples is by converting `.wav` files into `.bin` (or `.zsound`) files using the *vadpcm_enc* and *tabledesign* programs from the Nintendo 64 SDK. However, those tools must be recompiled to work on x86 architecture as they were originally built for IRIX computers using the MIPS processor. Currently, there is no active development of those tools. However, there is a tool that can be used with modern computers and processors called *z64audio*.
 
-Unlike with N64 Soundlist Tool, to obtain all the data for the audiobank you will put the sample(s) in require(s) different tools. The process of converting a `.wav` file is much more involved and can be quite tedious compared to N64 Soundlist Tool; however, it is possible to use samples from anywhere, not just other Nintendo 64 games.
+Unlike with N64 Soundlist Tool, to obtain all the data for the audiobank the sample(s) will be put in require(s) different tools. The process of converting a `.wav` file is much more involved and can be quite tedious compared to N64 Soundlist Tool; however, it is possible to use samples from anywhere, not just other Nintendo 64 games.
 
 ### Workflow
 placeholder
