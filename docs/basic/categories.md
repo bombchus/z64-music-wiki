@@ -10,10 +10,10 @@
 
 </div>
 
-This page details how to categorize your custom music for the *Ocarina of Time* and *Majora's Mask* randomizers, as well as the *Ocarina of Time & Majora's Mask* combo randomizer, so that your sequence will play in the appropriate spots in-game.
+This page details how to categorize custom music for the *Ocarina of Time* and *Majora's Mask* randomizers, as well as the *Ocarina of Time & Majora's Mask* combo randomizer, so that sequences will play in appropriate areas in-game.
 
 ### Making a META File for Ocarina of Time
-To make a META file for an `.ootrs` file you will need to create a text file with the extension `.meta` that has the same filename as your sequence (e.g. `mkwii-moonview.seq` will have a META file with the name `mkwii-moonview.meta`).
+To make a META file for an `.ootrs` file, create a text file with the extension `.meta` that has the same filename as the sequence this data is for (e.g. `mkwii-moonview.seq` will have a META file with the name `mkwii-moonview.meta`).
 
 The META file's structure is presented below:
 
@@ -42,8 +42,8 @@ The META file's structure is presented below:
 
     </div>
 
-    1. If you are using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples you are using, must be included, otherwise omit this line and subsequent lines.
-    2. If you are using a custom audiobank, you will use a hyphen `-` instead of the number of the audiobank your sequence uses.
+    1. If using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples are used, must be included, otherwise omit this line and subsequent lines.
+    2. If using a custom audiobank, use a hyphen `-` instead of the number of the audiobank the sequence uses.
 
 === "Example"
 
@@ -76,23 +76,23 @@ The META file's structure is presented below:
 
     </div>
 
-    1. If you are using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples you are using, must be included, otherwise omit this line and subsequent lines.
-    2. If you are using a custom audiobank, you will use a hyphen `-` instead of the number of the audiobank your sequence uses.
+    1. If using a sampled instrument, drum, or sound effect, this line, and subsequent lines for however many samples are used, must be included, otherwise omit this line and subsequent lines.
+    2. If using a custom audiobank, use a hyphen `-` instead of the number of the audiobank the sequence uses.
 
 The first line of the META file is the name of the sequence. This name must be unique as no two sequences can share the exact same name. Generally, `Game Name - Song Name` will work unless a sequence with that name already exists and the user uses both sequences.
 
 ??? tip "Recommendation"
-    It is recommended that you do not use quotation marks in the sequence name as it will make it harder for people creating a cosmetic plandomizer file.
+    It is recommended not to use quotation marks in a sequence name as it will make it harder for people creating a cosmetic plandomizer file.
 
-The second line of the META file is the audiobank the sequence uses. For example, if you want to use audiobank `0x03`, then you will put `0x03` on your second line; however, if you are using a custom audiobank, then you will instead put a `-` instead.
+The second line of the META file is the audiobank the sequence uses. For example, if using audiobank `0x03`, then the second line will be `0x03`. However, if using a custom audiobank, then a `-` must be used instead.
 
-The fourth line of the META file is the locations you want your sequence to appear in, known as "music groups". This will be explained in greater detail below.
+The fourth line of the META file is the locations the sequence will appear in, known as "music groups". This will be explained in greater detail below.
 
-The fifth and subsequent lines of the META file are where you put `.zsound` file data. These lines are only used for when you have a sampled instrument, drum, or sound effect. If you are not using sampled instruments, drums, or sound effects, the META file ends at the fourth line.
+The fifth and subsequent lines of the META file is for extra data, such as `.zsound` files. These lines are for when a sampled instrument, drum, or sound effect is being used. If a sampled instruments, drums, or sound effects is not being used, the META file ends at the fourth line.
 
 #### Music Groups
-Music groups determine where your sequence will play in-game. This information is specified in the META file. Your META file can include a set of named music groups with varying specificity. These named music groups should be in a comma-separated list. You can refer to the list below, or use [this online music groups tool](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
-"){ target="__blank" }<small>:material-open-in-new: </small> to find the correct areas of the game you want your sequence to be placed in.
+Music groups determine where a sequence will play in-game. This information is specified in the META file. A META file can include a set of named music groups with varying specificity. These named music groups should be in a comma-separated list. They are listed below, with an online music groups tool available [here](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
+"){ target="__blank" }<small>:material-open-in-new: </small>, to help determine the correct areas of the game the sequence to be placed.
 
 === "Low Specificity"
     **Background Music:**
@@ -219,10 +219,10 @@ Music groups determine where your sequence will play in-game. This information i
     | GanondorfAppears | `Ganondorf Appears` | — | — |
 
 ### Making a Categories File for Majora's Mask
-To make a categories file for an `.mmrs` file, all you need to do is create a text file with the name `categories.txt`, then put whatever group and individual category values you want that correspond(s) to the area(s) you want your sequence to play in-game in inside the file, separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
+To make a categories file for an `.mmrs` file, create a text file with the name `categories.txt`, then put whatever group and individual category values that correspond(s) to the area(s) the sequence should play in-game in inside the file, separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
 
 !!! alert "Warning"
-    You cannot use both hyphens and commas to separate your categories, you must use one or the other.
+    Using both hyphens and commas to separate your categories is not possible, one or the other must be used.
 
 #### Categories
 There are two different types of categories, known as "group categories" and "individual categories". Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
@@ -302,8 +302,8 @@ There are two different types of categories, known as "group categories" and "in
     | `131` | Mayor Dotour's Office | — | — |
 
 ## Making a Metadata File
-!!! alert "Warning"
-    Metadata files have not currently been presented to or adopted by any of the randomizers, this is just a concept and is not implemented; **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
+!!! alert "UNSUPPORTED"
+    **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
 
 === ":material-code-braces: &nbsp;metadata.yml"
     ``` yaml
