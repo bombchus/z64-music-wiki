@@ -3,10 +3,10 @@ tags:
   - Advanced
 ---
 
-!!! alert "This page pertains to a feature only available in the Majora's Mask Randomizer"
+!!! alert "This page pertains to a feature only available in the *Majora's Mask Randomizer*"
 
 # Using Formmask
-This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows the creation of more dynamic sequences than is normally possible in the vanilla game.
+This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask Randomizer*. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows the creation of more dynamic sequences than is normally possible in the vanilla game.
 
 A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora. A state refers to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
 
@@ -167,7 +167,7 @@ Below is a list of the forms and states available to be assigned via Formmask:
     | `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
-To test Formmask when testing a song, it must be playing on the file select screen of the game with a randomized ROM created by the randomizer. To cycle through non-cumulative states, use D-Pad Up and D-Pad Down, and to cycle through cumulative states use D-Pad Left and D-Pad Right.
+To test Formmask when testing a song, it must be playing on the file select screen of the game with a ROM randomized by the *Majora's Mask Randomizer*. To cycle through non-cumulative states, use D-Pad Up and D-Pad Down, and to cycle through cumulative states use D-Pad Left and D-Pad Right.
 
 !!! info "Info <small>needs confirmation</small>"
     For non-cumulative forms and states, the cycle is: Human, then Goron, then Zora, then Deku, then Swim, then Combat, then Epona, then SpikeRolling.
