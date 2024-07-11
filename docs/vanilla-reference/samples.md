@@ -25,7 +25,7 @@
 
 </div>
 
-Below is a list containing all of the samples in the *Ocarina of Time* and *Majora's Mask* ROMs in decimal and hexadecimal. Instrument samples are organized using GM[^1] instrument program number specification going from the lowest instrument sample to the highest instrument sample for each instrument. Some instruments, however, do not fit into GM, so they are placed in the table where they would most likely fit instead.
+Below is a list containing all the samples in the *Ocarina of Time* and *Majora's Mask* ROMs in decimal and hexadecimal. Instrument samples are organized using General MIDI 1.0[^1] instrument program number specification going from the lowest instrument sample to the highest instrument sample for each instrument. Some instruments, however, do not fit into the General MIDI specification, so they are placed in the table where they would most likely fit instead.
 
 === "Ocarina of Time Samples"
 
@@ -177,4 +177,4 @@ Below is a list containing all of the samples in the *Ocarina of Time* and *Majo
         | --- | :-: | :-: | :-: |
         | a | `0` | `0x00` | `ATNUM 1` |
 
-[^1]: For more information on General MIDI specification, please visit the [Wikipedia](https://en.wikipedia.org/wiki/General_MIDI){ target="__blank" }<small>:material-open-in-new: </small> article on it, or visit the [midi.org](https://midi.org/specs){ target="__blank" }<small>:material-open-in-new: </small> specification page on it.
+[^1]: For more information on General MIDI 1.0 specification, please visit the [Wikipedia](https://en.wikipedia.org/wiki/General_MIDI){ target="__blank" }<small>:material-open-in-new: </small> article on it, or visit the [midi.org](https://midi.org/specs){ target="__blank" }<small>:material-open-in-new: </small> specification page on it.
