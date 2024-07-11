@@ -11,26 +11,33 @@
 </div>
 
 ## Summary of Music Creation
+To create custom music in *Ocarina of Time* and *Majora's Mask*, you must use a sequence file the audio engine can play back in real-time. Sequences are a form of compressed MIDI created by Nintendo for the Nintendo 64. Sequences are a set of commands, or instructions, that tell the audio engine what sample files to play, at what pitch, at what time, and how fast to play through the sequence. Due to the similarities between MIDI sequences and Nintendo 64 sequences, the most common way to create a sequence for *Ocarina of Time* and *Majora's Mask* is to convert a MIDI song into a sequence using SEQ64.
 
-placeholder
+There are other ways to create a sequence aside from MIDI; however, using a MIDI sequence is the easiest due to their numerous similarities, and the ability to preview a song.
 
+!!! info "Is it possible to use MP3 files?"
+    It is not possible to take an MP3 file and play it back in real-time in *Ocarina of Time* and *Majora's Mask*. While both *Ocarina of Time* and *Majora's Mask* are capable of "streaming" audio, the only games on the Nintendo 64 known to be capable of MP3 decoding are *Conker's Bad Fur Day* and *Perfect Dark*.
 
 ## Sequence Limitations
-1. Tempo cannot go above a value of 255 (0xFF).
+Below is a list of technical limitations for sequences to be aware of when creating music for *Ocarina of Time* and *Majora's Mask*:
+
+1. Like MIDI, a sequence can only have up to 16 (0x0F) channels.
+    - Multiple tracks may be assigned to a single channel in MIDI; however, they are subject to the channel limitations sequences have.
+2. A sequence's tempo cannot go above a value of 255 (0xFF).
     - Because the data that stores tempo information is an 8 bit unsigned integer (u8) value, the tempo command has a limit of 255 (0xFF) for sequences; it cannot go any higher.
-2. Volume cannot go above a value of 255 (0xFF).
+3. A sequence's master, channel, and expression volume cannot go above a value of 255 (0xFF).
     - Because the data that stores volume information is an 8 bit unsigned integer (u8) value, the volume commands have a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores volume information is a 7 bit unsigned integer value. Volume messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
-3. Instrument assignments cannot go above a value of 255 (0xFF).
+4. A sequence's instrument assignment values cannot go above a value of 255 (0xFF).
     - Because the data that stores instrument assignment information is an 8 bit unsigned integer (u8) value, the instrument change command has a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores program assignment information is a 7 bit unsigned integer value. Program change messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.
-3. Channels are polyphonic; however, only a maximum of four voices (played notes) of differing pitches can play within a single channel at any given time.
-4. One pair of *Note On* and *Note Off* messages cannot intersect, or overlap, another pair of *Note On* and *Note Off* messages for a note of the same pitch.[^1]
-5. Delay values cannot go above a value of 32767 (0x7FFF)
+5. Like MIDI, channels in a sequence are polyphonic; however, only a maximum of four voices of differing pitches can play within a single channel at any given time.
+6. Like MIDI, one pair of *Note On* and *Note Off* messages cannot intersect, or overlap, another pair of *Note On* and *Note Off* messages for a note of the same pitch in a sequence.
+    - While a DAW may allow stacked notes or overlapped notes without immediate issue, it is invalid to send a second *Note On* message for a note of the same pitch in the same channel before a *Note Off* message is sent for the first *Note On* message. In MIDI, a *Note On* message with a velocity of zero is interpreted as a *Note Off* message, and while many DAWs will attempt to properly pair note messages, they will fail.
+7. A sequence's delay values cannot go above a value of 32767 (0x7FFF)
     - Because the data that stores delay frames is a 16 bit unsigned integer (u16) value, the delay command has a limit of 32767 (0x7FFF) for sequences; it cannot go any higher.
-6. A MIDI marker message cannot intersect a pair of *Note On* and *Note Off* messages.
+8. A MIDI marker message cannot intersect a pair of *Note On* and *Note Off* messages.
+    - placeholder
 
-[^1]: While many DAWs allow stacking notes on top of other notes, or overlapping notes without immediate issues, the MIDI standard stresses it is invalid to send a second *Note On* message for a note of the same pitch in the same channel before a *Note Off* message is sent for the first *Note On* message. This is because of the way MIDI messages are interpreted, either a pair of *Note On* and *Note Off* messages can be used or a pair of *Note On* messages with the *Note On* message with a velocity of zero acts as a *Note Off* message. Many DAWs will attempt to connect the proper *Note On* and *Note Off* messages; however, it will inevitably fail as *Note On* messages can be seen as both *Note On* or *Note Off*.
-
-### Assigning Appropriate MIDI Instruments
+## Assigning Instruments
 In MIDI, instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). Generally only a single instrument can be assigned per channel. However, instruments can be swapped at any point using a MIDI program change message.
 
 MIDI instrument banks using the GM specification normally contain 127 possible instruments with MIDI channel 10 always being reserved for percussion kits, where instead of using a program change to individual drums, it instead changes the entire percussion kit itself with individual drum sounds being assigned to different keys on the virtual MIDI piano (the range of possible samples is from keys 35 to 81). Instrument banks in MIDI contain those 127 instruments and percussion kits within a single instrument bank. However, in *Ocarina of Time* and *Majora's Mask* there are multiple instrument banks commonly referred to as "audiobanks" or "soundfonts". Setting instruments depends entirely on the audiobank used; in vanilla audiobanks there will almost always only be 1 (0x00) to 16 (0x0F) instruments with instrument 126 (0x7E) assigning the sound effects to a channel and instrument 127 (0x7F) assigning the percussion kit to a channel. Audiobanks can contain up to 255 (0xFF) instruments that may be assigned to a channel. However, instruments 126 (0x7E) and 127 (0x7F) are always reserved for sound effects and percussion kits respectively.
@@ -42,15 +49,18 @@ Some audiobanks may have fewer instruments, different sound effects, or contain 
 
 To properly assign the instruments a sequence will use, it is necessary to determine which instrument inside the audiobank used corresponds to the equivalent MIDI program value. The [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page contains a list of all audiobanks and their corresponding instruments and instrument assignment values.
 
-#### Assigning Instruments in MIDI
+### Assigning Instruments in MIDI
 In MIDI, instruments and percussion kits are assigned to a channel by sending a MIDI program change message to that channel. There may only be a single instrument or percussion kit assigned to a channel at any time. However, the channel's assigned instrument or percussion kit can be changed at any point by sending another MIDI program change message to the channel. MIDI program change messages have two bytes. The first byte of a MIDI program change message is the status byte with values ranging from 0xC0 to 0xCF. The first half-byte determines the message type; the second half-byte points to the MIDI channel the message is sent to. The status byte determines the channel the message is sent to. The second byte of a MIDI program change message is the data byte with values ranging from 0x00 (0) to 0x7F (127). The data byte determines what instrument or percussion kit the channel will use. Instruments may be set in any MIDI channel, while percussion kits may only be set in MIDI channel 10 as MIDI channel 10 is reserved solely for percussion kits.
 
 In MIDI, instruments and percussion kits are stored inside of banks. In the General MIDI 1.0 specification (which does not support MIDI bank select messages), bank 0 (0x00) contains only instruments with bank 128 (0x80) containing only percussion kits. Bank 0 is the default bank for all MIDI channels with bank 128 as the default bank in MIDI channel 10.
 
-#### Assigning Instruments in Sequences
+### Assigning Instruments in Sequences
 In *Ocarina of Time* and *Majora's Mask*, instruments, sound effects, and percussion kits are assigned to a channel with the sequence command 0xC1 (Set Instrument). There may only be a single instrument, sound effects, or percussion kit assigned to a channel at any given time. However, the channel's assigned instrument, sound effects, or percussion kit can be changed at any point by sending another sequence command of 0xC1 (Set Instrument). The sequence command 0xC1 (Set Instrument) only has a data byte with values ranging from 0x00 (0) to 0xFF (255). This data byte determines what instrument, sound effects, or percussion kit the channel will use. Instruments, sound effects, and percussion kits may be set in any sequence channel. However, unlike MIDI, sequence command 0xC1's instrument assignments for values 126 (0x7E) and 127 (0x7F) are reserved for sound effects and percussion kits respectively.
 
-In Ocarina of Time and Majora's Mask, instruments, sound effects, and percussion kits are stored inside of banks (commonly referred to as "audiobanks" or "soundfonts"). Unlike MIDI, *Ocarina of Time* and *Majora's Mask* store instruments, sound effects, and percussion kits inside of a single bank. And while a sequence command for changing banks does exist, it can only load banks that are currently stored in RAM.
+In Ocarina of Time and Majora's Mask, instruments, sound effects, and percussion kits are stored inside of banks (commonly referred to as "audiobanks" or "soundfonts"). Unlike MIDI, *Ocarina of Time* and *Majora's Mask* store instruments, sound effects, and percussion kits inside of a single bank. And while a sequence command for changing banks does exist, it can only load banks that are currently loaded into RAM.
+
+### Assigning Appropriate MIDI Instruments
+Instruments in MIDI and in *Ocarina of Time* and *Majora's Mask* are not one-to-one. In MIDI, the "Strings" instrument has a MIDI program change value of 48 (0x30). In *Ocarina of Time* and *Majora's Mask*, the "Strings" instrument has an instrument assignment value dependent on the bank used by a sequence. Unlike in MIDI, in *Ocarina of Time* and *Majora's Mask*, it is also possible that the "Strings" instrument may not be present in a bank at all. As an example, in *Ocarina of Time* and *Majora's Mask*, bank 0x03 assigns the "Strings" instrument to a value of 10 (0x0A) or 11 (0x0B), while bank 0x02 does not contain the "Strings" instrument at all in either game and only contains ambient nature sounds. So, to make sure instruments, sound effects, and percussion kits are assigned to the proper channel in a sequence, it is required to adjust MIDI program change message values to match the assignment value of the counterpart chosen in the *Ocarina of Time* and *Majora's Mask* bank being used.
 
 ## Instrument Types
 In *Ocarina of Time* and *Majora's Mask* there are two different types of instruments:
