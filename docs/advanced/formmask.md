@@ -46,7 +46,7 @@ A `.formmask` file is just a `.json` (or `.txt`) file with its filename extensio
 ```linenums="0" hl_lines="4"
 📂 ./
 ├─ 📂 song.mmrs/
-│  ├─ 🎼 filename.seq
+│  ├─ 🎵 filename.seq
 │  ├─ 📄 filename.formmask (1)
 │  └─ 📄 categories.txt
 ```
