@@ -60,7 +60,7 @@ In *Ocarina of Time* and *Majora's Mask*, instruments, sound effects, and percus
 In Ocarina of Time and Majora's Mask, instruments, sound effects, and percussion kits are stored inside of banks (commonly referred to as "audiobanks" or "soundfonts"). Unlike MIDI, *Ocarina of Time* and *Majora's Mask* store instruments, sound effects, and percussion kits inside of a single bank. And while a sequence command for changing banks does exist, it can only load banks that are currently loaded into RAM.
 
 ### Assigning Appropriate MIDI Instruments
-Instruments in MIDI and in *Ocarina of Time* and *Majora's Mask* are not one-to-one. In MIDI, the "Strings" instrument has a MIDI program change value of 48 (0x30). In *Ocarina of Time* and *Majora's Mask*, the "Strings" instrument has an instrument assignment value dependent on the bank used by a sequence. Unlike in MIDI, in *Ocarina of Time* and *Majora's Mask*, it is also possible that the "Strings" instrument may not be present in a bank at all. As an example, in *Ocarina of Time* and *Majora's Mask*, bank 0x03 assigns the "Strings" instrument to a value of 10 (0x0A) or 11 (0x0B), while bank 0x02 does not contain the "Strings" instrument at all in either game and only contains ambient nature sounds. So, to make sure instruments, sound effects, and percussion kits are assigned to the proper channel in a sequence, it is required to adjust MIDI program change message values to match the assignment value of the counterpart chosen in the *Ocarina of Time* and *Majora's Mask* bank being used.
+Instruments in MIDI are not one-to-one with instruments in *Ocarina of Time* and *Majora's Mask*. In MIDI, the "Strings" instrument has a MIDI program change value of 48 (0x30). In *Ocarina of Time* and *Majora's Mask*, the "Strings" instrument has an instrument assignment value dependent on the bank used by a sequence. Unlike in MIDI, in *Ocarina of Time* and *Majora's Mask*, it is also possible that the "Strings" instrument may not be present in a bank at all. As an example, in *Ocarina of Time* and *Majora's Mask*, bank 0x03 assigns the "Strings" instrument to a value of 10 (0x0A) or 11 (0x0B), while bank 0x02 does not contain the "Strings" instrument at all in either game and only contains ambient nature sounds. So, to make sure instruments, sound effects, and percussion kits are assigned to the proper channel in a sequence, it is required to adjust MIDI program change message values to match the assignment value of the counterpart chosen in the *Ocarina of Time* and *Majora's Mask* bank being used.
 
 ## Instrument Types
 In *Ocarina of Time* and *Majora's Mask* there are two different types of instruments:
@@ -170,3 +170,66 @@ Where *n* is the value of the regular note to use. As an example, if *n* equals 
 
 !!! warning "Note Corruption"
     It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in a sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.
+
+
+## placeholder
+
+=== "Section 1"
+    ``` linenums="0" hl_lines="2-11"
+    @0010: D7 8E DB     Initialize Channels
+    @0013: 90 00 7D     Set Channel
+    @0016: 91 00 F4     Set Channel
+    @0019: 93 01 02     Set Channel
+    @001C: 94 01 10     Set Channel
+    @001F: 96 02 7F     Set Channel
+    @0022: 97 02 8D     Set Channel
+    @0025: 99 02 9B     Set Channel
+    @0028: 9A 02 AB     Set Channel
+    @002B: 9B 03 2C     Set Channel
+    @002E: 9F 03 53     Set Channel
+    @0031: DB 50        Set Volume (SysEx Master Volume)
+    @0033: DD 64        Set Tempo
+    @0035: FD 84 80     Delay [n] Frame(s)
+    @0038: DD 50        Set Tempo
+    @003A: FD 80 C0     Delay [n] Frame(s)
+    @003D: 90 03 61     Set Channel
+    @0040: 91 03 6D     Set Channel
+    @0043: 93 03 80     Set Channel
+    @0046: 94 04 07     Set Channel
+    @0049: 96 05 E6     Set Channel
+    @004C: 97 06 F1     Set Channel
+    @004F: 99 07 01     Set Channel
+    @0052: 9A 07 77     Set Channel
+    @0055: 9B 09 48     Set Channel
+    @0058: 9F 0A 04     Set Channel
+    ```
+
+=== "Section 2"
+    ``` linenums="0" hl_lines="17-26"
+    @0010: D7 8E DB     Initialize Channels
+    @0013: 90 00 7D     Set Channel
+    @0016: 91 00 F4     Set Channel
+    @0019: 93 01 02     Set Channel
+    @001C: 94 01 10     Set Channel
+    @001F: 96 02 7F     Set Channel
+    @0022: 97 02 8D     Set Channel
+    @0025: 99 02 9B     Set Channel
+    @0028: 9A 02 AB     Set Channel
+    @002B: 9B 03 2C     Set Channel
+    @002E: 9F 03 53     Set Channel
+    @0031: DB 50        Set Volume (SysEx Master Volume)
+    @0033: DD 64        Set Tempo
+    @0035: FD 84 80     Delay [n] Frame(s)
+    @0038: DD 50        Set Tempo
+    @003A: FD 80 C0     Delay [n] Frame(s)
+    @003D: 90 03 61     Set Channel
+    @0040: 91 03 6D     Set Channel
+    @0043: 93 03 80     Set Channel
+    @0046: 94 04 07     Set Channel
+    @0049: 96 05 E6     Set Channel
+    @004C: 97 06 F1     Set Channel
+    @004F: 99 07 01     Set Channel
+    @0052: 9A 07 77     Set Channel
+    @0055: 9B 09 48     Set Channel
+    @0058: 9F 0A 04     Set Channel
+    ```
