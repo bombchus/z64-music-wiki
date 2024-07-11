@@ -141,13 +141,13 @@ The formatting for a JSON array is as follows:
     2. Channel 11 is enabled when Link is swimming and all other channels will be disabled.
     3. When Link is in the Epona, SpikeRolling, or Combat states, all currently enabled channels will stay enabled; if Link is in combat, then channel 13 will be enabled alongside any other enabled channels.
 
-The first 16 array values are for the channels of the sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels; if a form or state is non-cumulative, it will only play when Link is in that form or state.
+The first 16 array values are for the channels of the sequence, and the 17th array value is for *cumulative* states. Cumulative states applied to a sequence will cause the channels with cumulative states to continue playing with already playing channels. If a form or state is non-cumulative, it will only play when Link is in that form or state.
 
 !!! info "Assigning Multiple Values"
-    Channels and cumulative states can have multiple values. To do this, simply add wanted values separated by a comma while still being contained within quotation marks (e.g. `"state1, state2, state3"`). These comma-separated values do not need to have spaces between them.
+    Channels and cumulative states can have multiple values. To use multiple values, add the desired values to the current value separated by a comma while still contained within quotation marks (e.g. `"state1, state2, state3"`). These comma-separated values do not need to have spaces between them.
 
 ### Allowed Form & State Values
-Below is a list of the forms and states available to be assigned via Formmask.
+Below is a list of the forms and states available to be assigned via Formmask:
 
 === "Forms"
     | Form | Description |
@@ -167,7 +167,7 @@ Below is a list of the forms and states available to be assigned via Formmask.
     | `SpikeRolling` | The assigned channel will be enabled while Goron Link is rolling with spikes |
 
 ## Testing a Formmask Sequence
-To test Formmask when testing a song, it must be played on the file select screen of the game with a randomized ROM created by the randomizer. To cycle through non-cumulative states, use D-Pad Up and D-Pad Down, and to cycle through cumulative states use D-Pad Left and D-Pad Right.
+To test Formmask when testing a song, it must be playing on the file select screen of the game with a randomized ROM created by the randomizer. To cycle through non-cumulative states, use D-Pad Up and D-Pad Down, and to cycle through cumulative states use D-Pad Left and D-Pad Right.
 
 !!! info "Info <small>needs confirmation</small>"
     For non-cumulative forms and states, the cycle is: Human, then Goron, then Zora, then Deku, then Swim, then Combat, then Epona, then SpikeRolling.
