@@ -350,13 +350,12 @@ There are two different types of categories, known as "group categories" and "in
         # Place custom samples here e.g. - "my_sound.zsound": "0x12345678"
         # If no custom samples are used, then leave the key and value empty
         samples:
-            - "": ""
+            - filename: "ocarina.zsound"
+              marker: 0x19981121
 
     # Optional plain text metadata to also be contained within the metadata.yml file.
     # This could be used for accreditation or something else.
-    # To make multiline keys use the character ">" after the key.
-    # e.g. "accreditation: >"
-    accreditation: >
+    accreditation: |
         Origin Game:        <placeholder>
         Song Name:          <placeholder>
         Categories:         <placeholder>
