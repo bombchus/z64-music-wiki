@@ -49,6 +49,16 @@ Some audiobanks may have fewer instruments, different sound effects, or contain 
 
 To properly assign the instruments a sequence will use, it is necessary to determine which instrument inside the audiobank used corresponds to the equivalent MIDI program value. The [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page contains a list of all audiobanks and their corresponding instruments and instrument assignment values.
 
+<style>
+/*
+THE GREAT REWRITE WILL BE FINISHED EVENTUALLY!!!
+
+To use instruments in a MIDI channel a MIDI program change message must be sent to the MIDI channel. Each MIDI channel may only have a single instrument assigned to it at a time. However, the instrument used by a MIDI channel can be changed at any time. To change the instrument a MIDI channel uses, another MIDI program change message must be sent to the MIDI channel. Percussion kits may only be used in MIDI channel 10.
+
+To use instruments in a sequence channel the sequence command "0xC1" must be sent to the sequence channel. Each sequence channel may only have a single instrument assigned to it at a time. However, the instrument used by a sequence channel can be changed at any time. To change the instrument a sequence channel uses, another sequence command "0xC1" must be sent to the sequence channel. Percussion kits have an instrument assignment value of 0x7F (127) in Ocarina of Time and Majora's Mask.
+*/
+</style>
+
 ### Assigning Instruments in MIDI
 In MIDI, instruments and percussion kits are assigned to a channel by sending a MIDI program change message to that channel. There may only be a single instrument or percussion kit assigned to a channel at any time. However, the channel's assigned instrument or percussion kit can be changed at any point by sending another MIDI program change message to the channel. MIDI program change messages have two bytes. The first byte of a MIDI program change message is the status byte with values ranging from 0xC0 to 0xCF. The first half-byte determines the message type; the second half-byte points to the MIDI channel the message is sent to. The status byte determines the channel the message is sent to. The second byte of a MIDI program change message is the data byte with values ranging from 0x00 (0) to 0x7F (127). The data byte determines what instrument or percussion kit the channel will use. Instruments may be set in any MIDI channel, while percussion kits may only be set in MIDI channel 10 as MIDI channel 10 is reserved solely for percussion kits.
 
