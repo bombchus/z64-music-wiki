@@ -62,6 +62,9 @@ To use instruments in a sequence channel the sequence command "0xC1" must be sen
 ### Assigning Instruments in MIDI
 In MIDI, instruments and percussion kits are assigned to a channel by sending a MIDI program change message to that channel. There may only be a single instrument or percussion kit assigned to a channel at any time. However, the channel's assigned instrument or percussion kit can be changed at any point by sending another MIDI program change message to the channel. MIDI program change messages have two bytes. The first byte of a MIDI program change message is the status byte with values ranging from 0xC0 to 0xCF. The first half-byte determines the message type; the second half-byte points to the MIDI channel the message is sent to. The status byte determines the channel the message is sent to. The second byte of a MIDI program change message is the data byte with values ranging from 0x00 (0) to 0x7F (127). The data byte determines what instrument or percussion kit the channel will use. Instruments may be set in any MIDI channel, while percussion kits may only be set in MIDI channel 10 as MIDI channel 10 is reserved solely for percussion kits.
 
+#### Using Percussion Kits
+In MIDI, percussion kits are only available in MIDI channel 10.
+
 In MIDI, instruments and percussion kits are stored inside of banks. In the General MIDI 1.0 specification (which does not support MIDI bank select messages), bank 0 (0x00) contains only instruments with bank 128 (0x80) containing only percussion kits. Bank 0 is the default bank for all MIDI channels with bank 128 as the default bank in MIDI channel 10.
 
 ### Assigning Instruments in Sequences

@@ -85,21 +85,21 @@ Shown in the images below is a visual representation of how a sample's speed wil
     ![](../assets/images/samples/waveform-16000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-16000hz-dark.png#only-dark)
 
-    !!! info
+    !!! outline
         A sample with a sample rate of 16000 Hz, half the hardware playback rate, tuned to its root key without any sample rate correction will end up playing twice the speed it should in-game. This will cause the perceived pitch of the sample to be too high when played back in-game.
 
 === "Sample at 32000 Hz"
     ![](../assets/images/samples/waveform-32000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-32000hz-dark.png#only-dark)
 
-    !!! info
+    !!! outline
         A sample with a sample rate of 32000 Hz, matching the hardware playback rate, tuned to its root key without any sample rate correction will end up playing exactly how fast it should. This will cause the perceived pitch of the sample to be unaltered when played back in-game.
 
 === "Sample at 64000 Hz"
     ![](../assets/images/samples/waveform-64000hz-light.png#only-light)
     ![](../assets/images/samples/waveform-64000hz-dark.png#only-dark)
 
-    !!! info
+    !!! outline
         A sample with a sample rate of 64000 Hz, twice the hardware playback rate, tuned to its root key without any sample rate correction will end up playing half the speed it should in-game. This will cause the perceived pitch of the sample to be too low when played back in-game.
 
 The reason for a sample with a sample rate of 64000 Hz playing half the speed it should in-game is because it has twice the number of samples as the hardware playback rate. For a sample with a sample rate of 16000 Hz, it has the opposite effect, because the sample has half the number of samples as the hardware playback rate. With sample rate correction, the sample's note speed will increase or decrease based on its sample rate. This will allow the sample to match the hardware playback rate without the need to resample it.
