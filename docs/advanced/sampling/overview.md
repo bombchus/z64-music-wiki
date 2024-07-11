@@ -87,7 +87,8 @@ What are known as "books" and "loops" are ADPCM codebook and loopbook prediction
 
 As for ADPCM, it is a lossy audio compression format, so when being compressed some audio data is overwritten or lost completely. ADPCM compression works by separating a sample's data into different blocks, and predicting the variation of that sample's data within each block. The size of the blocks are measured in "samples"; the smallest block size is `32` samples, and the highest is `512` samples. Larger blocks allow for better compression, but at the expense of sound quality and resolution for aligning audio loop points.
 
-Because ADPCM uses sample blocks that are aligned one after another, a `.wav` file compressed using ADPCM compression may have an unfinished, or partial, block at its end. In this case, the ADPCM decoder generates silence (1) for the remainder of this partial block.{ .annotate }
+Because ADPCM uses sample blocks that are aligned one after another, a `.wav` file compressed using ADPCM compression may have an unfinished, or partial, block at its end. In this case, the ADPCM decoder generates silence for the remainder of this partial block. (1)
+{ .annotate }
 
 1. The silence will appear in codebooks and loopbooks as a zeroed out value, this is normal and is not a cause to be alarmed or worried that a sample has an issue.
 

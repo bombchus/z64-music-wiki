@@ -134,37 +134,40 @@ In the example below, we will assume the sample's waveform is 2 s in total lengt
     ![](../../assets/images/adsr/adsr-attack-light.png#only-light)
     ![](../../assets/images/adsr/adsr-attack-dark.png#only-dark)
 
-    **Attack** refers to the time it takes from when a key is first pressed for the sound of a sample to go from zero amplitude to the max attack amplitude. The longer the attack is, the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
+    !!! info
+        **Attack** refers to the time it takes from when a key is first pressed for the sound of a sample to go from zero amplitude to the max attack amplitude. The longer the attack is, the longer it will take for the sound to fade in to the max attack amplitude from zero amplitude.
 
 === "Decay"
 
     ![](../../assets/images/adsr/adsr-decay-light.png#only-light)
     ![](../../assets/images/adsr/adsr-decay-dark.png#only-dark)
 
-    **Decay** refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer the decay is, the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
+    !!! info
+        **Decay** refers to the time it takes the sound of a sample to go from the max attack amplitude to the sustain amplitude. The longer the decay is, the longer it will take for the sound to decrease in amplitude from the max attack amplitude to the sustain amplitude.
 
 === "Sustain"
 
     ![](../../assets/images/adsr/adsr-sustain-light.png#only-light)
     ![](../../assets/images/adsr/adsr-sustain-dark.png#only-dark)
 
-    **Sustain** refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher the sustain is, the less decrease in amplitude a sample will have from the max attack amplitude.
+    !!! info
+        **Sustain** refers to the amplitude level the sound of a sample will remain at so long as the note is being held. The higher the sustain is, the less decrease in amplitude a sample will have from the max attack amplitude.
 
 === "Release"
 
     ![](../../assets/images/adsr/adsr-release-light.png#only-light)
     ![](../../assets/images/adsr/adsr-release-dark.png#only-dark)
 
-    **Release** refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer the release is the longer it will take for the sound to fade out from the sustained amplitude to zero amplitude.
+    !!! info
+        **Release** refers to the time it takes from when a key is released to the sound of a sample going from sustain amplitude to return to zero amplitude. The longer the release is the longer it will take for the sound to fade out from the sustained amplitude to zero amplitude.
 
 === "Hold"
 
     ![](../../assets/images/adsr/adsr-hold-light.png#only-light)
     ![](../../assets/images/adsr/adsr-hold-dark.png#only-dark)
 
-    **Hold** refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer the hold is, the longer the sound will remain at max attack amplitude before beginning to decay to the sustained amplitude.
-
------
+    !!! info
+        **Hold** refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer the hold is, the longer the sound will remain at max attack amplitude before beginning to decay to the sustained amplitude.
 
 *Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four data points inside an audiobank (sound effects cannot use envelopes inside an audiobank), but the number of data points possible when using a sequence embedded envelope should be higher, although it is unknown how much higher it can be. Looking through the ADSR code from decomp, it can be assumed to be as long wanted, given there is enough data to make the sequence fit into the audio buffer
 
