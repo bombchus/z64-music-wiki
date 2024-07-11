@@ -8,7 +8,7 @@ tags:
 # Using Formmask
 This page details how to use the **Formmask** feature added in version 1.15.0.21 of the *Majora's Mask* randomizer. Formmask is the ability to enable and disable specific sequence channels depending on Link's current form or state; this allows the creation of more dynamic sequences than is normally possible in the vanilla game.
 
-A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora; a state refers to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
+A form refers to Link's different physical forms with the following being available with Formmask: Hylian, Deku, Goron, and Zora. A state refers to the different game states with the following being available with Formmask: swimming, combat, Goron spike rolling, and riding Epona.
 
 !!! warning "Non-Useable Categories"
     At the time of writing this, Formmask does not currently work with fanfares or combat music. If using formmask with them, then the randomizer will just play all available channels instead. Because of this, it is discouraged to use formmask with any of the following categories:
@@ -40,17 +40,26 @@ A form refers to Link's different physical forms with the following being availa
         | `13D` | Fanfare: The Truth Revealed! | — | — |
 
 ## Creating a Formmask File
-A `.formmask` file is just a `.json` (or `.txt`) file with its filename extension changed to `.formmask`. Inside the file is a single JSON array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file.
+A `.formmask` file is just a `.json` (or `.txt`) file with its filename extension changed to `.formmask`. Inside the file is a single JSON array that contains all the necessary data for which channels to enable and disable when the conditions to do so are met. This file is packed into the root of an `.mmrs` file:
 
-!!! info "Filename"
-    The filename itself uses the same naming as a sequence or audiobank file (e.g. A sequence using audiobank 0x03 will be named `0x03.seq` with the corresponding formmask file being named `0x03.formmask`).
+<div class="annotate" markdown>
+```linenums="0" hl_lines="4"
+📂 ./
+├─ 📂 song.mmrs/
+│  ├─ 🎼 filename.seq
+│  ├─ 📄 filename.formmask (1)
+│  └─ 📄 categories.txt
+```
+</div>
+
+1. The filename itself uses the same naming as a sequence or audiobank file (e.g. A sequence using audiobank 0x03 will be named `0x03.seq` with the corresponding formmask file being named `0x03.formmask`).
 
 ### JSON Array Formatting
 The formatting for a JSON array is as follows:
 
 === ":material-code-json: &nbsp;Template"
     <div class="annotate" markdown>
-    ``` json
+    ``` json linenums="0"
     [
         "Channel 0",
         "Channel 1",
@@ -75,7 +84,7 @@ The formatting for a JSON array is as follows:
 
 === ":material-code-json: &nbsp;Example 1"
     <div class="annotate" markdown>
-    ``` yaml
+    ``` yaml linenums="0"
     [
         "All",#(1)!
         "All",
@@ -105,7 +114,7 @@ The formatting for a JSON array is as follows:
 
 === ":material-code-json: &nbsp;Example 2"
     <div class="annotate" markdown>
-    ``` yaml
+    ``` yaml linenums="0"
     [
         "All",#(1)!
         "All",
