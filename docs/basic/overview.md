@@ -172,10 +172,12 @@ Where *n* is the value of the regular note to use. As an example, if *n* equals 
     It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in a sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.
 
 
-## placeholder
+## seq loop
 
 === "Section 1"
-    ``` linenums="0" hl_lines="2-11"
+    ``` linenums="0" hl_lines="4-13"
+    @Addr: Data         Command
+    ————————————————————————————————————————————————————
     @0010: D7 8E DB     Initialize Channels
     @0013: 90 00 7D     Set Channel
     @0016: 91 00 F4     Set Channel
@@ -205,7 +207,41 @@ Where *n* is the value of the regular note to use. As an example, if *n* equals 
     ```
 
 === "Section 2"
-    ``` linenums="0" hl_lines="17-26"
+    ``` linenums="0" hl_lines="19-28"
+    @Addr: Data         Command
+    ————————————————————————————————————————————————————
+    @0010: D7 8E DB     Initialize Channels
+    @0013: 90 00 7D     Set Channel
+    @0016: 91 00 F4     Set Channel
+    @0019: 93 01 02     Set Channel
+    @001C: 94 01 10     Set Channel
+    @001F: 96 02 7F     Set Channel
+    @0022: 97 02 8D     Set Channel
+    @0025: 99 02 9B     Set Channel
+    @0028: 9A 02 AB     Set Channel
+    @002B: 9B 03 2C     Set Channel
+    @002E: 9F 03 53     Set Channel
+    @0031: DB 50        Set Volume (SysEx Master Volume)
+    @0033: DD 64        Set Tempo
+    @0035: FD 84 80     Delay [n] Frame(s)
+    @0038: DD 50        Set Tempo
+    @003A: FD 80 C0     Delay [n] Frame(s)
+    @003D: 90 03 61     Set Channel
+    @0040: 91 03 6D     Set Channel
+    @0043: 93 03 80     Set Channel
+    @0046: 94 04 07     Set Channel
+    @0049: 96 05 E6     Set Channel
+    @004C: 97 06 F1     Set Channel
+    @004F: 99 07 01     Set Channel
+    @0052: 9A 07 77     Set Channel
+    @0055: 9B 09 48     Set Channel
+    @0058: 9F 0A 04     Set Channel
+    ```
+
+=== "Loop Address"
+    ``` linenums="0" hl_lines="19"
+    @Addr: Data         Command
+    ————————————————————————————————————————————————————
     @0010: D7 8E DB     Initialize Channels
     @0013: 90 00 7D     Set Channel
     @0016: 91 00 F4     Set Channel
