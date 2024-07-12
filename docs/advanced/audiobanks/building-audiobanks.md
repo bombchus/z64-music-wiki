@@ -18,7 +18,7 @@ For C and Binary, items do not need to be in any particular order except for the
 
 ??? info "Important XML Info"
     For XML audiobanks, all structures must be contained within a bank that contains some metadata information tag:
-    ```xml
+    ```xml linenums="0"
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Above is the XML declaration, do not remove it -->
 
@@ -92,7 +92,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Metadata
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     AudiobankIndexEntry Metadata = {
       addr = 0,
       len = 0,
@@ -107,7 +107,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Index Entry -->
     <abindexentry>
       <!-- ABIndexEntry Struct -->
@@ -144,7 +144,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     00 00 00 00 | tt uu vv ww xx yy zz zz
@@ -161,7 +161,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Header
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     #include "custom_audiobank.h" // include extern
 
     /* Address: 0x00 */
@@ -176,7 +176,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- ABHeader -->
     <abheader>
       <!-- ABHeader Struct -->
@@ -205,7 +205,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     00 00 00 00 | xx xx xx xx yy yy yy yy zz zz zz zz -- -- -- --
@@ -225,7 +225,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Drum List
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address: 0x00 */
     Drum* DrumList[64] __attribute__((aligned(16))) = {
       &DrumName, // Pointer to Drum
@@ -234,7 +234,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!--Audiobank Drum List -->
     <abdrumlist address="80">
       <!--ABDrumList Struct -->
@@ -252,7 +252,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | xx xx xx xx -- -- -- -- -- -- -- -- -- -- -- --
@@ -267,7 +267,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Instruments
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address: 0x10 */
     Instrument InstName = {
       reloc_offset = 0,        // Offset to pointers
@@ -290,7 +290,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Instruments -->
     <instruments>
       <!-- Instrument Item -->
@@ -353,7 +353,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | pp qq rr ss tt tt tt tt uu uu uu uu vv vv vv vv
@@ -375,7 +375,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Drums
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address: 0x00 */
     Drum DrumName = {
       rel_rate = 0,             // Determines amount of decay when note is released
@@ -390,7 +390,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Drums -->
     <drums>
     <!-- Drum Item -->
@@ -426,7 +426,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
@@ -442,7 +442,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Envelopes
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address: 0x00 */
     // can delay and arg be left out and just have values like gDefaultEnvelope?
     EnvelopePoint EnvelopeName[4] = {
@@ -457,7 +457,7 @@ For C and Binary, items do not need to be in any particular order except for the
         Envelopes inside of an audiobank can only be four values long!
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Envelopes -->
     <envelopes>
       <!-- Envelope Item -->
@@ -498,7 +498,7 @@ For C and Binary, items do not need to be in any particular order except for the
         Envelopes inside of an audiobank can only be four values long!
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | ss ss tt tt uu uu vv vv ww ww xx xx yy yy zz zz
@@ -519,7 +519,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Samples
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address: */
     Sample SoundSample = {
       codec = 0,                  // Does not exist in the binary
@@ -534,7 +534,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Samples -->
     <samples>
       <!-- Sample Item -->
@@ -564,7 +564,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
@@ -580,7 +580,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Codebooks
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     /* Address :*/
     AdpcmBook SampleCodebook = {
       order = 0,                // I forget what this does...
@@ -595,7 +595,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Codebooks -->
     <aladpcmbooks>
       <!-- Codebook Item -->
@@ -719,7 +719,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | ww ww ww ww xx xx xx xx y0 y0 y1 y1 y2 y2 y3 y3
@@ -742,7 +742,7 @@ For C and Binary, items do not need to be in any particular order except for the
 ## Audiobank Loopbooks
 
 === ":material-code-braces: &nbsp;C"
-    ```c
+    ```c linenums="0"
     AdpcmLoop SampleLoopbook = {
       loop_start = 0,            // Loop start marker of the sample; if loop count = 0 then leave as 0
       loop_end = 0,              // Loop end marker of the sample; if loop count = 0 then this becomes num_samples
@@ -757,7 +757,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-xml: &nbsp;XML"
-    ```xml
+    ```xml linenums="0"
     <!-- Audiobank Loopbooks -->
     <aladpcmloops>
     <!-- Loopbook Item -->
@@ -813,7 +813,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ```
 
 === ":material-hexadecimal: &nbsp;Binary"
-    ```bin
+    ```bin linenums="0"
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
     ## ## ## ## | vv vv vv vv ww ww ww ww xx xx xx xx yy yy yy yy
