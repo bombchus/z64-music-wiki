@@ -225,7 +225,7 @@ To make a categories file for an `.mmrs` file, create a text file with the name 
     Using both hyphens and commas to separate categories is not possible, one or the other must be used.
 
 #### Categories
-There are two different types of categories, known as "group categories" and "individual categories". Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
+There are two different types of categories: group categories and individual categories. Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
 
 ??? warning "Issues With Looping Fanfares"
     Group categories `8`, `9`, `10`, as well as individual categories `108`, `109`, `119`, `120`, `121`, `122`, `124`, `137`, `139`, `13D`, `13F`, `141`, `152`, `155`, `177`, `178`, `179`, `17C`, and `17E`, are fanfare categories, miscategorizing a looping sequence as any of these fanfare categories can cause various issues and possibly softlock a player in various areas (e.g. Doggy Racetrack).
