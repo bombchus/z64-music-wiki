@@ -301,6 +301,8 @@ There are two different types of categories, known as "group categories" and "in
     | `130` | Goron Village | `17E` | Fanfare: The Moon Destroyed! |
     | `131` | Mayor Dotour's Office | — | — |
 
+<style>
+/*
 ## Making a Metadata File
 !!! alert "UNSUPPORTED"
     **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
@@ -368,5 +370,7 @@ There are two different types of categories, known as "group categories" and "in
 
         Original Song: <link>
     ```
+*/
+</style>
 
 -----
