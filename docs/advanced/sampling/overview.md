@@ -88,7 +88,7 @@ The reason for the name `.zsound` and not `.bin` is because the binary file exte
 
 The sample files the *Ocarina of Time Randomizer* and *Majora's Mask Randomizer* recognizes as `.zsound` files are AIFF or AIFC files that have been encoded with ADPCM compression. This compression into a binary file allows the sample files to play on Nintendo 64 hardware.
 
-*** MOVE CODEBLOCK TO SECTION ABOUT PACKING??? ***  
+***MOVE CODEBLOCK TO SECTION ABOUT PACKING???***  
 The `.zsound` files are packed inside the root of an `.ootrs` or `.mmrs` file:
 
 === "Ocarina of Time Randomizer"
