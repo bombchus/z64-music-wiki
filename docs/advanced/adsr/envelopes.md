@@ -14,7 +14,7 @@
 
 === ":material-code-braces: &nbsp;C"
 
-    ```c
+    ```c linenums="0"
     EnvelopePoint gDefaultEnvelope[] = {
         { 1, 32000 },
         { 1000, 32000 },
@@ -25,7 +25,7 @@
 
 === ":material-xml: &nbsp;XML"
 
-    ```xml
+    ```xml linenums="0"
     <item name="gDefaultEnvelope">
       <struct name="ABEnvelope">
         <field name="Delay" datatype="int16" ispointer="0"
