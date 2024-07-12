@@ -78,9 +78,50 @@ There are a few ways to obtain samples to inject. The first way is ripping and i
 The easiest way of creating sampled instruments, drums, and sound effects is using other Nintendo 64 games' sample files, codebook & loopbook ADPCM predictor data, and other relevant data using N64 Soundlist Tool; in compairson converting a `.wav` file is much more involved and tedious.
 
 ## Summary of `.zsound` Files
+<style>
+  /* REWRITTEN
 The binary (`.bin`) files the randomizer recognizes as `.zsound` files are `.aiff` files that have been compressed into `.aifc` files and encoded using a switchable ADPCM algorithm created by Nintendo to allow audio files to play on the Nintendo 64 hardware.
 
 The reason for the name `.zsound` and not `.bin` is because the binary file extension does not allow for much differentiation between different RAW files. SEQ64 also refers to sequence files (`.seq`, `.aseq`, and `.zseq`) as RAW files. If packed into an `.ootrs` or `.mmrs` file, the lack of differentiation could cause issues, so they were coined `.zsound` files by Isghj5 for use with MMR; later, when OOTR added custom sample injection, it also adopted the `.zsound` file extension as the system is based on the system MMR used at the time custom sample injection was being added. The `.zsound` files themselves are placed in the root directory of `.ootrs` and `.mmrs` files.
+*/
+</style>
+
+The sample files the *Ocarina of Time Randomizer* and *Majora's Mask Randomizer* recognizes as `.zsound` files are AIFF or AIFC files that have been encoded with ADPCM compression. This compression into a binary file allows the sample files to play on Nintendo 64 hardware.
+
+*** MOVE CODEBLOCK TO SECTION ABOUT PACKING??? ***  
+The `.zsound` files are packed inside the root of an `.ootrs` or `.mmrs` file:
+
+=== "Ocarina of Time Randomizer"
+    <div class="annotate" markdown>
+    ```linenums="0" hl_lines="6"
+    📂 ./
+    ├─ 📂 song.ootrs/
+    │  ├─ 🎵 filename.seq
+    │  ├─ 📄 filename.zbank
+    │  ├─ 📄 filename.bankmeta
+    │  ├─ 📄 filename.zsound (1)
+    │  └─ 📄 filename.meta
+    ```
+    </div>
+
+    1. For the *Ocarina of Time Randomizer*, filenames can be anything, as sample markers are stored in a metadata file.
+
+=== "Majora's Mask Randomizer"
+    <div class="annotate" markdown>
+    ```linenums="0" hl_lines="6"
+    📂 ./
+    ├─ 📂 song.mmrs/
+    │  ├─ 🎵 filename.seq
+    │  ├─ 📄 filename.zbank
+    │  ├─ 📄 filename.bankmeta
+    │  ├─ 📄 filename_20000427.zsound (1)
+    │  └─ 📄 categories.txt
+    ```
+    </div>
+
+    1. For the *Majora's Mask Randomizer*, filenames must contain the sample's unique marker preceded by an underscore (e.g. `filename_########.zsound`), as sample markers are stored in the filename.
+
+Beacause binary is a raw file type, it is difficult to differentiate between different binary files during the injection process. Other binary file types must be injected as well such as sequences (`.seq`, `.aseq` and `.zseq`), and audiobank files (`.zbank` and `.bankmeta`). If they were packed into an `.ootrs` or `.mmrs` file, the lack of differentiation could cause issues. Because of that, they were coined `.zsound` files by Isghj5 when adding sample injection to the *Majora's Mask Randomizer*. The *Ocarina of Time Randomizer* adopted this file type extension as well when sample injection was added.
 
 ## Summary of ADPCM Predictors
 <style>
@@ -100,9 +141,9 @@ Codebooks and loopbooks—commonly referred to as "books", "loops", or "predicto
 
 The Nintendo 64 audio tool `tabledesign.exe` reads AIFC or AIFF files to produce a codebook and loopbook. The Nintendo 64 audio encoding tool `vadpcm_enc.exe` uses the codebook and loopbook file to encode AIFC or AIFF files to produce a compressed binary file. During encoding, prediction coefficients are adaptively selected from the table to provide the best sound quality possible. The codebook and loopbook definitions are embedded in the final output file.
 
-ADPCM is a type of lossy compression algorithm for audio files. Due to being a lossy compression format, some data loss or alteration will occur during the compression process. This type of compression works by separating sample data into different blocks and predicting the variation of that sample's data within each block. This takes previous sample points in the sample's data to predict future sample points. The size of blocks is measured in "samples", with the size of a single block, or "frame", being 16 samples. The default block size for `tabledesign.exe` is 256 samples, or 16 blocks. Larger blocks allow for better compression, resulting in smaller file sizes, but at the cost of resolution and loop point alignment. Because ADPCM blocks are aligned one after another, a file compressed with ADPCM may have an unfinished, partial block at its end. In this case, the decoder generates silence for the remainder of this partial block. This keeps the file from looping seamlessly. (1)
-{ .annotate }
+ADPCM is a type of lossy compression algorithm for audio files. Due to being a lossy compression format, some data loss or alteration will occur during the compression process. This type of compression works by separating sample data into different blocks and predicting the variation of that sample's data within each block. This takes previous sample points in the sample's data to predict future sample points. The size of blocks is measured in "samples", with the size of a single block, or "frame", being 16 samples. The default block size for `tabledesign.exe` is 256 samples, or 16 blocks. Larger blocks allow for better compression, resulting in smaller file sizes, but at the cost of resolution and loop point alignment.
 
-1. Silence will appear in a codebook as zeroed out values. This is normal, it does not indicate that there is any issue with the file.
+!!! info "Partial Blocks"
+    Because ADPCM blocks are aligned one after another, a file compressed with ADPCM may have an unfinished, partial block at its end. In this case, the decoder generates silence for the remainder of this partial block. This keeps the file from looping seamlessly. Silence will appear in a codebook as zeroed out values. This is normal, it does not indicate that there is any issue with the file.
 
 -----
