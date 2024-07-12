@@ -94,15 +94,15 @@ For C and Binary, items do not need to be in any particular order except for the
 === ":material-code-braces: &nbsp;C"
     ```c
     AudiobankIndexEntry Metadata = {
-      addr = 0,         // not used for bank creation?
-      len = 0,          // not used for bank creation?
-      sampleMedium = 0, // not used for bank creation?
-      seqPlayer = 2,    // not used for bank creation?
-      tablenum = 0,     // not used for bank creation?
-      fontID = 255,     // not used for bank creation?
-      numInst = 0,      // not used for bank creation?
-      numDrum = 0,      // not used for bank creation?
-      numSfx = 0,       // not used for bank creation?
+      addr = 0,
+      len = 0,
+      sample_medium = 0,
+      seq_player = 2,
+      table_num = 0,
+      soundfont_id = 255,
+      num_inst = 0,
+      num_drum = 0,
+      num_sfx = 0,
     };
     ```
 
@@ -119,16 +119,16 @@ For C and Binary, items do not need to be in any particular order except for the
         <field name="len" datatype="uint32" ispointer="0" isarray="0" meaning="Bank Length"
                value="0"/>
         <!-- Sample Mediums: 0 = RAM, 1 = UNK, 2 = ROM, 3 = Disk Drive, 5 = RAM (Unloaded) -->
-        <field name="sampleMedium" datatype="uint8" ispointer="0" isarray="0" meaning="none"
+        <field name="sample_medium" datatype="uint8" ispointer="0" isarray="0" meaning="none"
                defaultval="2" value="2"/>
         <!-- Sequence Players: 0 = SFX, 1 = Fanfares, 2 = BGM, 3 = Cutscene SFX -->
-        <field name="seqPlayer" datatype="uint8" ispointer="0" isarray="0" meaning="none"
+        <field name="seq_player" datatype="uint8" ispointer="0" isarray="0" meaning="none"
                defaultval="2" value="2"/>
         <!-- Audio Tables: 0 = @000000, 1 = @000000, 2 = @538CC0 -->
-        <field name="tablenum" datatype="uint8" ispointer="0" isarray="0" meaning="Sample Table number"
+        <field name="table_num" datatype="uint8" ispointer="0" isarray="0" meaning="Sample Table number"
                value="1"/>
         <!-- All vanilla audiobanks have 0xFF as their fontId -->
-        <field name="fontId" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+        <field name="soundfont_id" datatype="uint8" ispointer="0" isarray="0" meaning="None"
                defaultval="255" value="255"/>
         <!-- Defines amount of instruments inside the Audiobank -->
         <field name="NUM_INST" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_INST"
@@ -136,16 +136,8 @@ For C and Binary, items do not need to be in any particular order except for the
         <!-- Defines amount of drums inside the Audiobank -->
         <field name="NUM_DRUM" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_DRUM"
                value="0"/>
-        <!--
-            0x00 has a value of 1 for this, and is the only audiobank containing a value other than
-            zero for it; Sauraen's audiobank.h file does not include this value in the index structure.
-            Decomp does not include this value in the index structure.
-            OoT 0x00 has a value of 0 for this... ???
-        -->
-        <field name="unknownG" datatype="uint8" ispointer="0" isarray="0" meaning="None"
-               defaultval="0" value="0"/>
         <!-- Defines amount of sound effects inside the Audiobank -->
-        <field name="NUM_SFX" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_SFX"
+        <field name="NUM_SFX" datatype="uint16" ispointer="0" isarray="0" meaning="NUM_SFX"
                value="0"/>
       </struct>
     </abindexentry>
@@ -155,20 +147,16 @@ For C and Binary, items do not need to be in any particular order except for the
     ```bin
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
-    00 00 00 00 | ss tt uu vv ww xx yy zz
+    00 00 00 00 | tt uu vv ww xx yy zz zz
     ```
 
-    - `ss` = Sample medium (`sampleMedium`) for the samples the audiobank uses
-    - `tt` = Sequence player (`seqPlayer`) the audiobank uses
-    - `uu` = Audiotable (`tablenum`) the audiobank is in
-    - `vv` = "Soundfont ID" (`fontID`) of the audiobank
-    - `ww` = Number of instrument (`NUM_INST`) in the audiobank
-    - `xx` = Number of drums (`NUM_DRUM`) in the audiobank
-    - `yy` = Unknown value
-    - `zz` = Number of sound effects (`NUM_SFX`) in the audiobank
-
-    !!! info "Unknown Value"
-        It is unknown what `yy` is, however, *Majora's Mask's* audiobank 0x00 has a value of 1 for `yy` with every other audiobank having a value of 0 for `yy`, and for *Ocarina of Time* has a value of `0` for `yy` for every audiobank.
+    - `tt` = Sample medium (`sample_medium`) for the samples the audiobank uses
+    - `uu` = Sequence player (`seq_player`) the audiobank uses
+    - `vv` = Audiotable (`table_num`) the audiobank is in
+    - `ww` = "Soundfont ID" (`soundfont_id`) of the audiobank
+    - `xx` = Number of instrument (`NUM_INST`) in the audiobank
+    - `yy` = Number of drums (`NUM_DRUM`) in the audiobank
+    - `zz zz` = Number of sound effects (`NUM_SFX`) in the audiobank
 
 ## Audiobank Header
 
@@ -199,13 +187,13 @@ For C and Binary, items do not need to be in any particular order except for the
       <!--ABBank Struct -->
       <struct name="ABBank">
         <!-- Pointer to ABDrumlist-->
-        <field name="drumptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Drum List"
+        <field name="drum_ptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Drum List"
                ptrto="ABDrumList" value="0"/>
         <!-- Pointer to ABSFXList -->
-        <field name="sfxptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr SFX List"
+        <field name="sfx_ptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr SFX List"
                ptrto="ABSFXList" value="0"/>
         <!-- Audiobank Instrument List -->
-        <field name="instlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Insts"
+        <field name="inst_list" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Insts"
                ptrto="ABInstrument" arraylenvar="NUM_INST">
           <!-- Instrument Pointer -->
           <element datatype="uint32" ispointer="1" ptrto="ABInstrument" value="0"
@@ -251,7 +239,7 @@ For C and Binary, items do not need to be in any particular order except for the
     <abdrumlist address="80">
       <!--ABDrumList Struct -->
       <struct name="ABDrumList">
-        <field name="drumlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Drums"
+        <field name="drum_list" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Drums"
                ptrto="ABDrum" arraylenvar="NUM_DRUM">
           <!-- INDEX 00 (MIDI Drum Note 21:A1) -->
           <element datatype="uint32" ispointer="1" ptrto="ABDrum" value="00" index="0"/>
@@ -282,10 +270,10 @@ For C and Binary, items do not need to be in any particular order except for the
     ```c
     /* Address: 0x10 */
     Instrument InstName = {
-      relocOffset = 0,         // I forget what this does...
-      low_mid_split = 0,       // Max key for low sample and min key for mid sample
-      mid_high_split = 127,    // Max key for mid sample and min key for high sample
-      decayIndex = 0,          // Also known as release rate
+      reloc_offset = 0,        // Offset to pointers
+      key_min = 0,             // Max key for low sample and min key for mid sample
+      key_max = 127,           // Max key for mid sample and min key for high sample
+      rel_rate = 0,            // Determines amount of decay when note is released
       lowNotesSound = {
         sample = &SoundSample, // Pointer to sample
         tuning = 2.0f,         // Tuning float value
@@ -310,13 +298,13 @@ For C and Binary, items do not need to be in any particular order except for the
         <!-- ABInstrument Struct -->
         <struct name="ABInstrument">
           <!-- Relocation Offset -->
-          <field name="relocOffset" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+          <field name="reloc_offset" datatype="uint8" ispointer="0" isarray="0" meaning="None"
                 value="0"/>
           <!-- Low Sample max key, Mid Sample min key -->
-          <field name="Low/Mid Split" datatype="uint8" ispointer="0" isarray="0"
+          <field name="Low-Mid Split" datatype="uint8" ispointer="0" isarray="0"
                 meaning="Split Point 1" value="0"/>
           <!-- Mid Sample max key, High Sample min key -->
-          <field name="Mid/High Split" datatype="uint8" ispointer="0" isarray="0"
+          <field name="Mid-High Split" datatype="uint8" ispointer="0" isarray="0"
                 meaning="Split Point 2" value="127"/>
           <!-- Decay Index (Release Rate) -->
           <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
@@ -375,7 +363,7 @@ For C and Binary, items do not need to be in any particular order except for the
     - `pp` = Relocation offset
     - `qq` = Low sample max key and mid sample min key
     - `rr` = Mid sample max key and high sample min key
-    - `ss` = Decay index
+    - `ss` = Release rate
     - `tt tt tt tt` = Envelope pointer address
     - `uu uu uu uu` = Low sample pointer address
     - `vv vv vv vv` = Low sample tuning float value
@@ -390,9 +378,9 @@ For C and Binary, items do not need to be in any particular order except for the
     ```c
     /* Address: 0x00 */
     Drum DrumName = {
-      decayIndex = 0,           // Also known as Release Rate
+      rel_rate = 0,             // Determines amount of decay when note is released
       pan = 0,                  // Used when 0xDC is 0
-      relocOffset = 0,          // I forget what this does...
+      reloc_offset = 0,         // Offset to pointers
       envelope = EnvelopeName,  // Pointer to Envelope
       sound = {
         sample = &SoundSample,  // Pointer to sample
@@ -415,10 +403,7 @@ For C and Binary, items do not need to be in any particular order except for the
           <!-- Drum Pan (used when 0xDC is 0)-->
           <field name="Pan" datatype="uint8" ispointer="0" isarray="0" meaning="Pan"
                  value="0"/>
-          <!-- Unknown (one of the two values is relocOffset) -->
-          <field name="unknown3" datatype="uint8" ispointer="0" isarray="0" meaning="None"
-                 defaultval="0" value="0"/>
-          <field name="unknown4" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+          <field name="reloc_offset" datatype="uint16" ispointer="0" isarray="0" meaning="None"
                  defaultval="0" value="0"/>
           <field name="Drum Sound" datatype="ABSound" ispointer="0" isarray="0"
                  meaning="Drum Sound" value="0">
@@ -444,19 +429,15 @@ For C and Binary, items do not need to be in any particular order except for the
     ```bin
     Offset (h)  | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
     —————————————————————————————————————————————————————————————
-    ## ## ## ## | tt uu vv ww xx xx xx xx yy yy yy yy zz zz zz zz
+    ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `tt` = Decay index
-    - `uu` = Drum pan
-    - `vv` = Unknown value
-    - `ww` = Unknown value
+    - `uu` = Decay index
+    - `vv` = Drum pan
+    - `ww ww` = Relocation Offset
     - `xx xx xx xx` = Sample pointer address
     - `yy yy yy yy` = Sample tuning float value
     - `zz zz zz zz` = Envelope pointer address
-
-    !!! info "Unknown Value"
-        One of these unknown values is the relocation offset, however, the other value is completely unknown.
 
 ## Audiobank Envelopes
 
@@ -541,10 +522,10 @@ For C and Binary, items do not need to be in any particular order except for the
     ```c
     /* Address: */
     Sample SoundSample = {
-      codec = 0,                  // I forget what this does...
-      medium = 0,                 // Location of the sample data
-      unk_bit26 = 0,              // Unknown
-      relocOffset = 0,            // I forget what this does...
+      codec = 0,                  // Does not exist in the binary
+      medium = 0,                 // Does not exist in the binary
+      unk_bit26 = 0,              // if (sample->unk_bit26 && (sample->medium != MEDIUM_RAM))
+      relocOffset = 0,            // Offset to pointers
       size = 0,                   // Size of the sample in bytes
       sampleAddr = (u8*)0,        // Address of the sample
       loopbook = &SampleLoopbook, // Pointer to loopbook
@@ -560,16 +541,9 @@ For C and Binary, items do not need to be in any particular order except for the
       <item address="128" name="SAMPLE NAME">
         <!--ABSample Struct -->
         <struct name="ABSample">
-          <!--
-              One unknown value should contain data for a sample medium, and another for the codec;
-              there should also be a value for a relocation offset and unk_bit26 (defines used samples?).
-              Not every field needs to be present?
-              Sauraen's audiobank.h structure includes the codec, medium, relocation offset, and unk_bit26.
-              Decomp's structure includes the codec, medium, relocation offset, and unk_bit26.
-          -->
-          <field name="unknown1" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+          <field name="unk_bit26" datatype="uint8" ispointer="0" isarray="0" meaning="None"
                  value="0"/>
-          <field name="unknown2" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+          <field name="reloc_offset" datatype="uint8" ispointer="0" isarray="0" meaning="None"
                  value="0"/>
           <!-- Sample Size in Bytes -->
           <field name="Sample Size (ROM Insert Size)" datatype="uint16" ispointer="0" isarray="0"
@@ -596,15 +570,12 @@ For C and Binary, items do not need to be in any particular order except for the
     ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `uu` = Unknown value
-    - `vv` = Unknown value
+    - `uu` = unk_bit26
+    - `vv` = reloc_offset
     - `ww ww` = Sample size in bytes
     - `xx xx xx xx` = Sample address pointer
     - `yy yy yy yy` = Loopbook address pointer
     - `zz zz zz zz` = Cdebook address pointer
-
-    !!! info "Unknown Value"
-        It is currently unknown what these values are, they could be `codec`, `medium`, `unk_bit26`, or `relocOffset`.
 
 ## Audiobank Codebooks
 
@@ -613,7 +584,7 @@ For C and Binary, items do not need to be in any particular order except for the
     /* Address :*/
     AdpcmBook SampleCodebook = {
       order = 0,                // I forget what this does...
-      numPredictors = 0,        // Number of predictor arrays
+      num_predictors = 0,       // Number of predictor arrays
       codebook = {
         0, 0, 0, 0, 0, 0, 0, 0, // First predictor array (16 values)
         0, 0, 0, 0, 0, 0, 0, 0,
@@ -635,7 +606,7 @@ For C and Binary, items do not need to be in any particular order except for the
           <field name="order" datatype="int32" ispointer="0" isarray="0" meaning="None"
                 value="4"/>
           <!-- Number of Predictors -->
-          <field name="npredictors" datatype="int32" ispointer="0" isarray="0"
+          <field name="num_predictors" datatype="int32" ispointer="0" isarray="0"
                 meaning="NUM_PRED" value="4"/>
           <!-- Codebook Predictor Arrays -->
           <field name="book" datatype="ALADPCMPredictor" ispointer="0" isarray="1"
@@ -773,12 +744,12 @@ For C and Binary, items do not need to be in any particular order except for the
 === ":material-code-braces: &nbsp;C"
     ```c
     AdpcmLoop SampleLoopbook = {
-      loopStart = 0,            // Loop start marker of the sample; if loop count = 0 then leave as 0
-      loopEnd = 0,              // Loop end marker of the sample; if loop count = 0 then this becomes numSamples
-      loopCount = 0,            // Total number of times to loop the sample; -1 is indefinite
-      numSamples = 0,           // Total number of samples; if loop count = 0 then leave as 0
-      /* predictorState only exists if loopCount != 0 */
-      predictorState = {
+      loop_start = 0,            // Loop start marker of the sample; if loop count = 0 then leave as 0
+      loop_end = 0,              // Loop end marker of the sample; if loop count = 0 then this becomes num_samples
+      loop_count = 0,            // Total number of times to loop the sample; -1 is indefinite
+      num_samples = 0,           // Total number of samples; if loop count = 0 then leave as 0
+      /* loopbook only exists if loopCount != 0 */
+      loopbook = {
         0, 0, 0, 0, 0, 0, 0, 0, // Predictor array
         0, 0, 0, 0, 0, 0, 0, 0,
       },
@@ -806,13 +777,13 @@ For C and Binary, items do not need to be in any particular order except for the
           <field name="Number of Samples" datatype="uint32" ispointer="0" isarray="0"
                  meaning="None" defaultval="0" value="0"/>
           <!-- Predictor State -->
-          <field name="Tail Data" datatype="ALADPCMTail" ispointer="0" isarray="1"
+          <field name="Loopbook" datatype="ALADPCMTail" ispointer="0" isarray="1"
                  meaning="Tail Data (if Loop Start != 0)" arraylenvar="HAS_TAIL">
             <!-- If Loop Count != 0 insert the array, otherwise remove the array -->
             <!-- Loopbook Predictor Array -->
             <element datatype="ALADPCMTail" ispointer="0" value="0">
               <struct name="ALADPCMTail">
-                <field name="some_adpcm_data" datatype="int16" ispointer="0" isarray="1"
+                <field name="data" datatype="int16" ispointer="0" isarray="1"
                        meaning="None" arraylenfixed="16">
                   <!-- COPY & PASTE LOOP PREDICTOR ARRAY HERE!! -->
                   <element datatype="int16" ispointer="0" value="0"/>
