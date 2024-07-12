@@ -35,9 +35,11 @@ placeholder
 
 ## 0xF8: Loop Start
 placeholder
+cc102 with cc104 being loop count
 
 ## 0xF7: Loop End
 placeholder
+cc103
 
 ## 0xF6: Loop Break
 placeholder
