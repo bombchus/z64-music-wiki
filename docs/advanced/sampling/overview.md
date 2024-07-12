@@ -83,6 +83,8 @@ The binary (`.bin`) files the randomizer recognizes as `.zsound` files are `.aif
 The reason for the name `.zsound` and not `.bin` is because the binary file extension does not allow for much differentiation between different RAW files. SEQ64 also refers to sequence files (`.seq`, `.aseq`, and `.zseq`) as RAW files. If packed into an `.ootrs` or `.mmrs` file, the lack of differentiation could cause issues, so they were coined `.zsound` files by Isghj5 for use with MMR; later, when OOTR added custom sample injection, it also adopted the `.zsound` file extension as the system is based on the system MMR used at the time custom sample injection was being added. The `.zsound` files themselves are placed in the root directory of `.ootrs` and `.mmrs` files.
 
 ## Summary of ADPCM Predictors
+<style>
+/* REWRITTEN
 What are known as "books" and "loops" are ADPCM codebook and loopbook prediction coefficient tables. Because the Nintendo 64 uses a switchable ADPCM compression based algorithm, it is required for the predictors to be placed inside audiobanks. The reason for ADPCM data being stored in audiobanks is that the raw audio data does not need to be loaded into RAM; only information ponting to the samples, and the values for playback parameters. The codebooks and loopbooks are used by `vadpcm_enc`, a Nintendo 64 audio encoding tool created by Nintendo and supplied with the Nintendo 64 SDK, when creating the compressed binary file `*.wav.vadpcm.bin` and are embedded directly into the file. Codebooks and loopbooks tell the audio engine how a sample is supposed to play.
 
 As for ADPCM, it is a lossy audio compression format, so when being compressed some audio data is overwritten or lost completely. ADPCM compression works by separating a sample's data into different blocks, and predicting the variation of that sample's data within each block. The size of the blocks are measured in "samples"; the smallest block size is `32` samples, and the highest is `512` samples. Larger blocks allow for better compression, but at the expense of sound quality and resolution for aligning audio loop points.
@@ -91,5 +93,16 @@ Because ADPCM uses sample blocks that are aligned one after another, a `.wav` fi
 { .annotate }
 
 1. The silence will appear in codebooks and loopbooks as a zeroed out value, this is normal and is not a cause to be alarmed or worried that a sample has an issue.
+*/
+</style>
+
+Codebooks and loopbooks—commonly referred to as "books", "loops", or "predictors"—are a table of ADPCM prediction coefficients. Codebooks and loopbooks inform the audio engine how to play the sample. Codebooks and loopbook data is stored inside audiobank files so that the RAW audio data does not need to be loaded into RAM. Instead, only information pointing to the samples and the playback parameter values need to be loaded into RAM.
+
+The Nintendo 64 audio tool `tabledesign.exe` reads AIFC or AIFF files to produce a codebook and loopbook. The Nintendo 64 audio encoding tool `vadpcm_enc.exe` uses the codebook and loopbook file to encode AIFC or AIFF files to produce a compressed binary file. During encoding, prediction coefficients are adaptively selected from the table to provide the best sound quality possible. The codebook and loopbook definitions are embedded in the final output file.
+
+ADPCM is a type of lossy compression algorithm for audio files. Due to being a lossy compression format, some data loss or alteration will occur during the compression process. This type of compression works by separating sample data into different blocks and predicting the variation of that sample's data within each block. This takes previous sample points in the sample's data to predict future sample points. The size of blocks is measured in "samples", with the size of a single block, or "frame", being 16 samples. The default block size for `tabledesign.exe` is 256 samples, or 16 blocks. Larger blocks allow for better compression, resulting in smaller file sizes, but at the cost of resolution and loop point alignment. Because ADPCM blocks are aligned one after another, a file compressed with ADPCM may have an unfinished, partial block at its end. In this case, the decoder generates silence for the remainder of this partial block. This keeps the file from looping seamlessly. (1)
+{ .annotate }
+
+1. Silence will appear in a codebook as zeroed out values. This is normal, it does not indicate that there is any issue with the file.
 
 -----
