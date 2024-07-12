@@ -21,7 +21,7 @@ The META file's structure is presented below:
 
     **Vanilla Audiobank:**
 
-    ```
+    ``` title="filename.meta"
     songname
     0x00
     bgm/fanfare
@@ -32,7 +32,7 @@ The META file's structure is presented below:
 
     <div class="annotate" markdown>
     
-    ```
+    ``` title="filename.meta"
     songname
     - (2)
     bgm/fanfare
@@ -49,7 +49,7 @@ The META file's structure is presented below:
 
     **Vanilla Audiobank:**
 
-    ```
+    ``` title="Moonview Highway.meta"
     Mario Kart Wii - Moonview Highway
     0x03
     bgm
@@ -60,7 +60,7 @@ The META file's structure is presented below:
 
     <div class="annotate" markdown>
 
-    ```
+    ``` title="Moonview Highway.meta"
     Mario Kart Wii - Moonview Highway
     - (2)
     bgm
@@ -219,10 +219,22 @@ Music groups determine where a sequence will play in-game. This information is s
     | GanondorfAppears | `Ganondorf Appears` | — | — |
 
 ### Making a Categories File for Majora's Mask
-To make a categories file for an `.mmrs` file, create a text file with the name `categories.txt`, then put whatever group and individual category values that correspond(s) to the area(s) the sequence should play in-game in inside the file, separated by a hyphen or comma (e.g. `1-2-3` or `1,2,3`).
+To make a categories file for an `.mmrs` file, create a text file with the name `categories.txt`, then put whatever group and individual category values that correspond(s) to the area(s) the sequence should play in-game inside the file, separated with a hyphenated list or comma-separated list:
+
+=== "Hypenated List"
+    ``` title="categories.txt" linenums="0"
+    1-2-3
+    ```
+
+=== "Comma-Separated List"
+    ``` title="categories.txt" linenums="0"
+    1,2,3
+    ```
 
 !!! alert "Warning"
-    Using both hyphens and commas to separate categories is not possible, one or the other must be used.
+    Using a mix of hyphens and commas to separate category values is invalid. During the music writing of seed generation an error will occur.
+    
+    Individual categories are hexadecimal values. However, they must not have a hexadecimal markerpreceding or succeeding them (e.g. `0x##`, `##H`).
 
 #### Categories
 There are two different types of categories: group categories and individual categories. Group categories contain a number of areas in-game a sequence can be assigned to, and individual categories assign a sequence to a specific area in-game.
@@ -301,45 +313,38 @@ There are two different types of categories: group categories and individual cat
     | `130` | Goron Village | `17E` | Fanfare: The Moon Destroyed! |
     | `131` | Mayor Dotour's Office | — | — |
 
-<style>
-/*
 ## Making a Metadata File
 !!! alert "UNSUPPORTED"
     **DO NOT USE IT AS A REPLACEMENT FOR A META OR CATEGORIES FILE!**
 
-=== ":material-code-braces: &nbsp;metadata.yml"
-    ``` yaml
+=== ":material-code-braces: &nbsp;Template"
+    ``` yaml title="metadata.yml" linenums="0"
     %YAML 1.2
     # The following file is a metadata file for custom music in The Legend of Zelda:
     # Ocarina of Time and The Legend of Zelda: Majora's Mask.
     #
-    # This is a YAML file, YAML uses indentation instead of brackets; this makes it
-    # easier to read. However, YAML itself is not as easy to parse as something like
-    # JSON or TOML. For the purpose of the custom music communities for Zelda64
-    # randomizers, this file should be kept as simple and easy to understand as possible.
-    #
-    # Allowed Game Values: "oot", "mm", "ootmm"
+    # Allowed Game Values: oot, mm, ootmm
     #     The "game" key determines which game to pull adpcm data and audiobank information
     #     from. A value of "oot" determines the base game to be OOT, a value of "mm"
     #     determines the base game to be MM, and a value of "ootmm" determines the game
     #
-    # Allowed Song Type Values: "bgm", "fanfare"
+    # Allowed Song Type Values: bgm, fanfare
     #     The "song type" key determines whether or not the song is classfied as a bgm
     #     or fanfare. Do not miscategorize bgms as fanfares it will cause issues in
-    #     both OOT and MM!!!
+    #     both OOT and MM.
     #
-    # Allowed Audiobank Values: "0x##", "custom"
+    # Allowed Audiobank Values: 0x##, custom
     #     The "audiobank" key determines which audiobank the game set in the game
     #     key will use. However, if using a custom audiobank then the value should
     #     be changed to "custom" as this indicates the bank needs to be inserted.
     #
     ---
-    game: "oot"
+    game: oot
 
     metadata:
         song name: "placeholder"
-        song type: "bgm"
-        audiobank: "0x03"
+        song type: bgm
+        audiobank: 0x03
         categories:
             # To change the categories, please use an array with comma separated values
             # e.g. ["value", "value"]
@@ -349,15 +354,24 @@ There are two different types of categories: group categories and individual cat
             # OOTR categories: https://thesounddefense.github.io/musicgroups/
             ootr: ["Fields", "Dungeon"]
 
-        # Place custom samples here e.g. - "my_sound.zsound": "0x12345678"
-        # If no custom samples are used, then leave the key and value empty
+        # If there are no custom samples, remove or comment out the sample section.
+        # Place custom samples here with the following data:
+        #
+        # samples:
+        #   - filename: "filename.zsound"
+        #     marker: 0x########
+        #
         samples:
             - filename: "ocarina.zsound"
               marker: 0x19981121
+            - filename: "majora.zsound"
+              marker: 0x20000427
 
     # Optional plain text metadata to also be contained within the metadata.yml file.
     # This could be used for accreditation or something else.
-    accreditation: |
+    # The data contained here is a multiline string. For more information, and a demo,
+    # on multiline strings please visit: https://yaml-multiline.info/
+    accreditation: |-
         Origin Game:        <placeholder>
         Song Name:          <placeholder>
         Categories:         <placeholder>
@@ -370,7 +384,5 @@ There are two different types of categories: group categories and individual cat
 
         Original Song: <link>
     ```
-*/
-</style>
 
 -----
