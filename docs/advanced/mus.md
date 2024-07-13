@@ -174,7 +174,7 @@ start:
   startchan    0, start_chn0
   tempo        120
   svol         127
-  delayw       672
+  delay        672
   jump         start
   disablechan  $0001
   end
@@ -193,7 +193,7 @@ start_chn0:
   cexp          127
   reverb        40
   notepriority  3
-  delayw        672
+  delay         672
 
 ;*********
 ;* LAYER *
@@ -210,9 +210,9 @@ start_chn0_ly0
 ;   notevg note, velocity, gate
 ;   notedv note, delay, velocity
 ;
-  notedvg 39, 240, 100, 51
-  notevg 39, 100, 511
-  notedv 39, 192, 100
+  notedvg  39, 240, 100, 51
+  notevg   39, 100, 511
+  notedv   39, 192, 100
 ;
 ; NINTENDO (CANON) DIALECT: NOTE = MIDI Note -1 Octave
 ;   NOTE:ACCIDENTAL:OCTAVE:B:?:W  , delay, velocity, gate
@@ -224,9 +224,9 @@ start_chn0_ly0
 ; CN4B1W   , 192, 100
   end
 
-;************
-;* PATTERNS *
-;************
+;*********
+;* CALLS *
+;*********
 
 _chn0_ly0_call0:
   break
