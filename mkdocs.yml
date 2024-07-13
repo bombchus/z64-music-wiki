@@ -184,6 +184,8 @@ nav:
       - Advanced MIDI Overview: advanced/midi/overview.md
       - SysEx Messages: advanced/midi/sysex.md
       - Registered Parameter Numbers: advanced/midi/rpns.md
+    - Music Assembly Language:
+      - Overview: advanced/mus.md
   - Vanilla References:
     - vanilla-reference/index.md
     - Audiobank Reference: vanilla-reference/audiobanks.md
