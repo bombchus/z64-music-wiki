@@ -11,7 +11,7 @@
 </div>
 
 !!! warning
-    Despite SEQ64 calling `.mus` files Music Macro Language (MML)[^1], they are *not* Music Macro Language. MML is well-defined and is a sub-language of BASIC. However, modern MML notation is quite different from the original MML's BASIC notation. Music Assembly Language (`.mus`) files are a sub-language of Assembly (ASM). As such, they should avoid being called "Music Macro Language". Instead, `.mus` files should be called "Music Assembly Language (MAL)".
+    Despite SEQ64 calling `.mus` files "Music Macro Language", they are *not* Music Macro Language (MML)[^1]. MML is well-defined and is a sub-language of BASIC. However, modern MML notation is quite different from the original MML's BASIC notation. Music Assembly Language (`.mus`) files are a sub-language of Assembly (ASM). As such, they should avoid being called "Music Macro Language". Instead, `.mus` files should be called "Music Assembly Language (MAL)".
 
 ## placeholder
 placeholder
