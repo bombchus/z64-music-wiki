@@ -11,7 +11,7 @@
 </div>
 
 !!! warning
-    Despite SEQ64 calling `.mus` files Music Macro Language (MML)[^1], they are *not* Music Macro Language. MML is well defined and is a sub-language of BASIC, however modern MML notation is quite different than the original MML's BASIC notation; `.mus` files are a sub-language of Assembly (ASM) and should avoid being named "Music Macro Language" and instead be named "Music Assembly Language".
+    Despite SEQ64 calling `.mus` files Music Macro Language (MML)[^1], they are *not* Music Macro Language. MML is well defined and is a sub-language of BASIC, however modern MML notation is quite different than the original MML's BASIC notation; `.mus` files are a sub-language of Assembly (ASM) and should avoid being named "Music Macro Language" and instead be named "Music Assembly Language (MAL)".
 
 ## placeholder
 placeholder
@@ -160,3 +160,75 @@ placeholder
 `end`
 
 [^1]: For more information on Music Macro Language, please visit the [Wikipedia](https://en.wikipedia.org/wiki/Music_Macro_Language) article on it.
+
+```asm linenums="0" title="sequence.mus"
+;**********
+;* HEADER *
+;**********
+
+_start
+  mutebhv      32
+  mutescale    50
+  initchan     $0001
+start:
+  startchan    0, start_chn0
+  tempo        120
+  svol         127
+  delayw       672
+  jump         start
+  disablechan  $0001
+  end
+
+;***********
+;* CHANNEL *
+;***********
+
+start_chn0:
+  shortoff
+  startlayer    0, start_chn0_ly0
+  bank          0
+  instr         79
+  cvol          127
+  cpan          64
+  cexp          127
+  reverb        40
+  notepriority  3
+  delayw        672
+
+;*********
+;* LAYER *
+:*********
+
+start_chn0_ly0
+  ltp      0
+  loop     1
+  call     _chn0_ly0_call0
+  loopend
+;
+; COMMUNITY DIALECT: Zelda Note = MIDI Note -21
+;   notedvg note, delay, valocity, gate
+;   notevg note, velocity, gate
+;   notedv note, delay, velocity
+;
+  notedvg 39, 240, 100, 51
+  notevg 39, 100, 511
+  notedv 39, 192, 100
+;
+; NINTENDO (CANON) DIALECT: NOTE = MIDI Note -1 Octave
+;   NOTE:ACCIDENTAL:OCTAVE:B:?:W  , delay, velocity, gate
+;   NOTE:ACCIDENTAL:OCTAVE:B:?    , velocity, gate
+;   NOTE:ACCIDENTAL:OCTAVE:B:?:W  , delay , velocity
+;
+; CN4B0W   , 240, 127, 51
+; CN4B1    , 100, 51
+; CN4B1W   , 192, 100
+  end
+
+;************
+;* PATTERNS *
+;************
+
+_chn0_ly0_call0:
+  break
+  end
+```

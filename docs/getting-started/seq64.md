@@ -24,12 +24,18 @@ When SEQ64 first opens everything will be blank and none of the program's fields
 === "Loading a  ROM"
     ![](../assets/images/seq64/seq64-load-rom.png){ .on-glb }
 
-    To load a ROM into SEQ64 simply click the "ROM" button, then click the "Load..." option from the context menu that appears.
+    !!! outline
+        > 1. At the top of the window click "ROM > Load...".
+        > 2. In the file explorer window, navigate to the folder your decompressed ROM is in.
+        > 3. Select your ROM and click "Open" in file explorer.
 
 === "Loading a ROM Description"
     ![](../assets/images/seq64/seq64-load-romdesc.png){ .on-glb }
 
-    To load a ROM description into SEQ64 simply click the "RomDesc" button, then click the "Load..." option from the context menu that appears.
+    !!! outline
+        > 1. At the top of the window click "RomDesc > Load...".
+        > 2. In the file explorer window, navigate to the folder your ROM description is in.
+        > 3. Select your ROM description and click "Open" in file explorer.
 
 !!! info
     If the ROM has byte ordering other than Big Endian then the ROM's internal title shown in the title bar of SEQ64 will be switched around. The byte ordering SEQ64 uses can be changed. However, the ROM should be Big Endian byte ordering otherwise data may end up misaligned.
