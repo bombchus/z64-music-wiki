@@ -256,7 +256,7 @@ loop start
 ## 0xBC: [p] += cmdArg[0]
 placeholder
 
-## 0xBB: Set Comb Filter
+## 0xBB: Set Chorus
 placeholder
 
 ## 0xBA: Set Gatetime Humanization
@@ -322,7 +322,7 @@ placeholder
 ## 0x98: Dynset Layer
 placeholder
 
-## 0x90: Free Layer
+## 0x90: Stop Layer
 placeholder
 
 ## 0x88: Set Layer (Absolute)

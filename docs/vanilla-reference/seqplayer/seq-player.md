@@ -120,7 +120,7 @@ placeholder
 ## 0x50: [v] -= IO[c]
 placeholder
 
-## 0x40: Free Channel
+## 0x40: Stop Channel
 placeholder
 
 ## 0x00: [v] = chan[c]
