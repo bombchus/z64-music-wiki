@@ -1,3 +1,11 @@
+<style>
+  /* Hide Table of Contents without reducing width */
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    display: none;
+  }
+
+</style>
+
 # Basic Information
 
 <div class="grid cards" markdown>
