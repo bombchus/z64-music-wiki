@@ -7,7 +7,6 @@
 *[OOTRS]: Ocarina of Time Randomizer Song File
 *[mmrs]: Majora's Mask Randomizer Song File
 *[ootrs]: Ocarina of Time Randomizer Song File
-*[FLS]: Fruity Loops Studio
 *[CC#0]: MIDI Control Change #0: Bank Select LSB
 *[CC0]: MIDI Control Change #0: Bank Select LSB
 *[CC#6]: MIDI Control Change #6: Data Entry MSB

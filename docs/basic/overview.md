@@ -179,13 +179,16 @@ To create a note division table for a PPQN or tick value not in the above tables
 Where *n* is the value of the regular note to use. As an example, if *n* equals 48, then a half note would be 96, an eighth note would be 24, a dotted quarter note would be 72, and a quarter triplet would be 32.
 
 !!! info "Nintendo 64 Native PPQN"
-    Sequences in *Ocarina of Time* and *Majora's Mask* have a native resolution of 48 PPQN. The default PPQN of Fruity Loops Studio is 96 PPQN, and the default PPQN of Sekaiju is 120 PPQN. It is easier for a MIDI file to be converted into a sequence if it is already at the native PPQN of *Ocarina of Time* and *Majora's Mask* than to have SEQ64 convert it to 48 PPQN.
+    Sequences in *Ocarina of Time* and *Majora's Mask* have a native resolution of 48 PPQN. The default PPQN of FL Studio is 96 PPQN, and the default PPQN of Sekaiju is 120 PPQN. It is easier for a MIDI file to be converted into a sequence if it is already at the native PPQN of *Ocarina of Time* and *Majora's Mask* than to have SEQ64 convert it to 48 PPQN.
 
 !!! warning "Note Corruption"
     It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in a sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.
 
 
 ## seq loop
+Section markers, commonly referred to as "loop points", placeholder.
+
+When SEQ64 is creating sections in a sequence it looks specifically for MIDI meta message markers with a name of "section" and "loop".
 
 === "Section 1"
     ``` linenums="0" hl_lines="4-13"
@@ -282,3 +285,13 @@ Where *n* is the value of the regular note to use. As an example, if *n* equals 
     @0055: 9B 09 48     Set Channel
     @0058: 9F 0A 04     Set Channel
     ```
+
+### Adding Loop Points in FL Studio
+When working with FL Studio extra steps have to be taken as FL Studio Does not support SysEx MIDI messages or MIDI marker meta messages. The markers mentioned by FL Studio during export are FL Studio specific markers, they are not MIDI marker meta messages. There are two ways to get around this:
+
+1. Open the MIDI file in Sekaiju, or other MIDI sequencing software that supports MIDI marker meta messages. Then add a MIDI marker meta message with the name "section" or "loop".
+2. Insert MIDI CC#115 in MIDI channel 1. Then conver the MIDI file into a sequence using SEQ64 version 2.0 and above while "FL Studio compatibility mode" is enabled.
+
+When FL Studio compatibility mode is enabled in SEQ64 version 2.0 and above, SEQ64 will recognize MIDI CC#114 as master volume and MIDI CC#115 as a section marker. These MIDI control change messages must be placed in MIDI channel 1. For MIDI CC#115, its value must not be zero, and each section marker must have a value different than the last section marker.
+
+-----

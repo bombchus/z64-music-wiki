@@ -27,7 +27,7 @@
 
 Below is a list containing all the samples in the *Ocarina of Time* and *Majora's Mask* ROMs in decimal and hexadecimal. Instrument samples are organized using General MIDI 1.0[^1] instrument program number specification going from the lowest instrument sample to the highest instrument sample for each instrument. Some instruments, however, do not fit into the General MIDI specification, so they are placed in the table where they would most likely fit instead.
 
-Percussion kit samples are organized in ascending order of the audiobank they are contained within.
+Percussion kit and sound effect samples are organized in ascending order of the audiobank they are contained within.
 
 === "Ocarina of Time Samples"
 
@@ -163,7 +163,7 @@ Percussion kit samples are organized in ascending order of the audiobank they ar
 
     ## Drum Samples
 
-    Below is a list of drum samples located within audiobanks `0x01` to `0x27`. Audiobank `0x28` does not contain any useful sample data so it has been omitted.
+    Below is a list of drum samples located within audiobanks `0x00` to `0x27`. Audiobank `0x28` does not contain any useful sample data so it has been omitted.
 
     ??? waveform "Drum Sample Table"
         | Sample Name | Sample Address (DEC) | Sample Address (HEX) | Audiotable |
@@ -201,7 +201,7 @@ Percussion kit samples are organized in ascending order of the audiobank they ar
 
     ## Sound Effect Samples
 
-    placeholder
+    Below is a list of sound effect samples located within audiobanks `0x00` to `0x02`. Audiobank `0x03` to `0x28` do not contain any sound effects.
 
     ??? waveform "Sound Effect Sample Table"
         | Sample Name | Sample Address (DEC) | Sample Address (HEX) | Audiotable |
