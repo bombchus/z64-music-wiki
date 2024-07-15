@@ -325,4 +325,4 @@ When FL Studio compatibility mode is enabled in SEQ64 version 2.0 and above, SEQ
 
 -----
 
-[^1]: Infomation found in [Chapter 17.4.5: Allocating and Controlling Voices](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html) of the Nintendo 64 Programming Manual. The reason for the discrepancy is unknown.
+[^1]: Infomation found in [Chapter 17.4.5: Allocating and Controlling Voices](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html){ target="__blank" }<small>:material-open-in-new:</small> of the Nintendo 64 Programming Manual. The reason for the discrepancy is unknown.
