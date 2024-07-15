@@ -138,11 +138,6 @@ Once completed, a decompressed ROM (output ROM) will have automatically been mov
 !!! warning
     For a ROM to be decompressed with nDEC it must be in the Big Endian byte order.
 
-## placeholder
-
-![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
-![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
-
 [^1]: For a full breakdown of every difference between versions in *The Legend of Zelda: Ocarina of Time*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Version_Differences "The Legend of Zelda: Ocarina of Time Version Differences"){ target="_blank" }<small>:material-open-in-new: </small> on version differences.
 
 [^2]: For a full breakdown of every difference between versions in *The Legend of Zelda: Majora's Mask*, please visit The Cutting Room Floor's [page](https://tcrf.net/The_Legend_of_Zelda:_Majora%27s_Mask/Program_Revision_Differences "The Legend of Zelda: Majora's Mask Program Revision Differences"){ target="_blank" }<small>:material-open-in-new: </small> on program revisions.

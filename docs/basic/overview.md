@@ -90,6 +90,35 @@ In *Ocarina of Time* and *Majora's Mask*, there exists a special set of channel-
 ### Key-Based Instruments
 Key-based instruments, commonly referred to as "drums" and "sound effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
 
+## Instrument Ranges
+Instruments in *Ocarina of Time* and *Majora's Mask* are limited in their range. The synthesis driver—which is responsible for pitch shifting sample data—used in *Ocarina of Time* and *Majora's Mask* can only shift notes up two octaves and down any number of octaves to the desired pitch. The Nintendo 64 Programming Manual states, "The pitch shifter resamples the resulting data (up one octave, down any number of octaves) to the desired pitch."[^1] However, in practice it is two octaves instead of one octave.
+
+=== ":material-code-braces:&nbsp; C"
+    ```c title="playback.c" linenums="0"
+    void AudioPlayback_NoteSetResamplingRate(NoteSampleState* sampleState, f32 resamplingRateInput) {
+        f32 resamplingRate = 0.0f;
+
+
+        if (resamplingRateInput < 2.0f) {
+              sampleState->bitField1.hasTwoParts = false;
+              resamplingRate = CLAMP_MAX(resamplingRateInput, 1.99998f);
+
+
+        } else {
+            sampleState->bitField1.hasTwoParts = true;
+            if (resamplingRateInput > 3.99996f) {
+                resamplingRate = 1.99998f;
+            } else {
+                resamplingRate = resamplingRateInput * 0.5f;
+            }
+        }
+        sampleState->frequencyFixedPoint = (s32)(resamplingRate * 32768.0f);
+    }
+    ```
+
+![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
+![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
+
 ## Common SEQ64 Errors
 === "Overlapping Notes"
     For a channel containing overlapping or stacked notes, SEQ64 will give the following error in the console window or debug output when importing a MIDI file: 
@@ -295,3 +324,5 @@ When working with FL Studio extra steps have to be taken as FL Studio Does not s
 When FL Studio compatibility mode is enabled in SEQ64 version 2.0 and above, SEQ64 will recognize MIDI CC#114 as master volume and MIDI CC#115 as a section marker. These MIDI control change messages must be placed in MIDI channel 1. For MIDI CC#115, its value must not be zero, and each section marker must have a value different than the last section marker.
 
 -----
+
+[^1]: Infomation found in [Chapter 17.4.5: Allocating and Controlling Voices](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html) of the Nintendo 64 Programming Manual. The reason for the discrepancy is unknown.

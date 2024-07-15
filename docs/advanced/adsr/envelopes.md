@@ -169,7 +169,9 @@ In the example below, we will assume the sample's waveform is 2 s in total lengt
     !!! outline
         <span style="color:#3cc0f1;"><b>Hold</b></span> refers to the time a note will be held at max attack amplitude before beginning to decay to the sustain amplitude. The longer the hold is, the longer the sound will remain at max attack amplitude before beginning to decay to the sustained amplitude.
 
-*Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four data points inside an audiobank (sound effects cannot use envelopes inside an audiobank), but the number of data points possible when using a sequence embedded envelope should be higher, although it is unknown how much higher it can be. Looking through the ADSR code from decomp, it can be assumed to be as long wanted, given there is enough data to make the sequence fit into the audio buffer
+*Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four pairs of two data points inside an audiobank (sound effects cannot use envelopes inside an audiobank). Each pair of data points has a time value (or "delay") and an amplitude value (or "arg"). The first pair of data points is always attack. The second pair of data points can represent hold time or decay time and sustain amplitude. The third pair of data points can represent decay time and sustain amplitude. The fourth pair of data points determines if the envelope will restart, loop, or end.
+
+The number of data points possible when using a sequence embedded envelope can theoretically be higher. Looking through the ADSR code from the decompilation projects of *Ocarina of Time* and *Majora's Mask* suggests that sequence embedded envelopes can have as many data points as wanted—as long as the sequence can fit in either game's audio buffer.
 
 <style>
 /*
