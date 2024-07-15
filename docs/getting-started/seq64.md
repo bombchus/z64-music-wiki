@@ -58,17 +58,17 @@ placeholder
 
     The **"Create command to loop whole sequence"** checkbox determines whether or not SEQ64 will create the control flow sequence command 0xFB or "Jump Absolute" in the sequence and point to the correct address; if a MIDI has no marker meta message containing the text "loop" or "section" then it will point to the start of the sequence, and if a MIDI does contain marker meta messages containing the text "loop" or "section" then it will point to the first section created by SEQ64 during the MIDI to sequence conversion process.
 
-    Fields highlighted in <span class="pastelRedOrange-outline"><span class="pastelRedOrange-dot"></span> orange</span> are fields that are optional fields that can change how a sequence looks when imported.
+    Fields highlighted in <span style="color:#f9ad81">orange</span> are fields that are optional fields that can change how a sequence looks when imported.
     
-    Fields highlighted in <span class="pastelYelGreen-outline"><span class="pastelYelGreen-dot"></span> green</span> are fields that should not be changed, and instead be left as is.
+    Fields highlighted in <span style="color:#a3d39c">green</span> are fields that should not be changed, and instead be left as is.
 
 === "SEQ64 v2.X.X"
     ![](../assets/images/seq64/seq64-midi-2.png){ .on-glb }
 
     Press the "Import MIDI" button to import a `.mid` file to convert into a sequence. Before importing the highlighted values can be changed
 
-    Fields highlighted in <span class="pastelRedOrange-outline"><span class="pastelRedOrange-dot"></span> orange</span> are fields that are optional fields that can change how a sequence looks when imported.
+    Fields highlighted in <span style="color:#f9ad81;">orange</span> are fields that are optional fields that can change how a sequence looks when imported.
     
-    Fields highlighted in <span class="pastelYelGreen-outline"><span class="pastelYelGreen-dot"></span> green</span> are fields that should not be changed, and instead be left as is.
+    Fields highlighted in <span style="color:#a3d39c;">green</span> are fields that should not be changed, and instead be left as is.
 
 -----

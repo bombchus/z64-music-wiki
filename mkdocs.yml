@@ -19,7 +19,7 @@ theme:
     #text: Carlito #Carlito #Asul #REM
   name: material
   custom_dir: overrides
-  logo: assets/logo.png
+  logo: assets/logo-2.png
   favicon: assets/favicon.png
   icon:
     tag:
