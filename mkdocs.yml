@@ -156,7 +156,9 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
-    - Tools & Resources: getting-started/tools.md
+    - Tools & Resources:
+      - Basic Tools: getting-started/basic-tools.md
+      - Advanced Tools: getting-started/adv-tools.md
     - ROM Requirements: getting-started/requirements.md
     - Using SEQ64: getting-started/seq64.md
   - Basic Info:

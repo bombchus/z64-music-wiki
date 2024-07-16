@@ -250,4 +250,4 @@ placeholder
       end
     ```
 
-[^1]: For more information on Music Macro Language, please visit the [Wikipedia](https://en.wikipedia.org/wiki/Music_Macro_Language) article on it.
+[^1]: For more information on Music Macro Language, please visit the [Wikipedia](https://en.wikipedia.org/wiki/Music_Macro_Language) article on it, or [this guide](https://mml-guide.readthedocs.io/) to Music Macro Language by pedipanol.
