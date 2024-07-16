@@ -1,4 +1,4 @@
-# Advanced Custom Music Creation Tools and Resources
+# Advanced Tools and Resources
 
 <div class="grid cards" markdown>
 
