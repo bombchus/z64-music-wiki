@@ -137,7 +137,7 @@ Because ADPCM uses sample blocks that are aligned one after another, a `.wav` fi
 */
 </style>
 
-Codebooks and loopbooks—commonly referred to as "books", "loops", or "predictors"—are a table of ADPCM prediction coefficients. Codebooks and loopbooks inform the audio engine how to play the sample. Codebooks and loopbook data is stored inside audiobank files so that the RAW audio data does not need to be loaded into RAM. Instead, only information pointing to the samples and the playback parameter values need to be loaded into RAM.
+Codebooks and loopbooks — commonly referred to as "books", "loops", or "predictors" — are a table of ADPCM prediction coefficients. Codebooks and loopbooks inform the audio engine how to play the sample. Codebooks and loopbook data is stored inside audiobank files so that the RAW audio data does not need to be loaded into RAM. Instead, only information pointing to the samples and the playback parameter values need to be loaded into RAM.
 
 The Nintendo 64 audio tool `tabledesign.exe` reads AIFC or AIFF files to produce a codebook and loopbook. The Nintendo 64 audio encoding tool `vadpcm_enc.exe` uses the codebook and loopbook file to encode AIFC or AIFF files to produce a compressed binary file. During encoding, prediction coefficients are adaptively selected from the table to provide the best sound quality possible. The codebook and loopbook definitions are embedded in the final output file.
 

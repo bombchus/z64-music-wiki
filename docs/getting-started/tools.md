@@ -106,7 +106,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     The **Sample Creation Tools** are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
 
 === "N64 Soundlist Tool"
-    **N64 Soundlist Tool** is used to rip `.bin` (or `.zsound`) sample files and obtain their codebook and loopbook ADPCM predictor data—as well as other instrument, drum, and sound effect data—from Nintendo 64 games.
+    **N64 Soundlist Tool** is used to rip `.bin` (or `.zsound`) sample files and obtain their codebook and loopbook ADPCM predictor data — as well as other instrument, drum, and sound effect data — from Nintendo 64 games.
 
 === "Polyphone"
     **Polyphone** is *optional*, but can be used to obtain `.wav` files from `.sf2` (soundfont) files to convert into a `.bin` (`.zsound`) file with the "Sample Creation Tools". Polyphone can also edit `.wav` files in a few different ways, such as resampling, pitch-shifting, or setting loop points.

@@ -171,7 +171,7 @@ In the example below, we will assume the sample's waveform is 2 s in total lengt
 
 *Ocarina of Time* and *Majora's Mask* use a multipoint envelope structure. However, instruments and drums are limited to four pairs of two data points inside an audiobank (sound effects cannot use envelopes inside an audiobank). Each pair of data points has a time value (or "delay") and an amplitude value (or "arg"). The first pair of data points is always attack. The second pair of data points can represent hold time or decay time and sustain amplitude. The third pair of data points can represent decay time and sustain amplitude. The fourth pair of data points determines if the envelope will restart, loop, or end.
 
-The number of data points possible when using a sequence embedded envelope can theoretically be higher. Looking through the ADSR code from the decompilation projects of *Ocarina of Time* and *Majora's Mask* suggests that sequence embedded envelopes can have as many data points as wanted—as long as the sequence can fit in either game's audio buffer.
+The number of data points possible when using a sequence embedded envelope can theoretically be higher. Looking through the ADSR code from the decompilation projects of *Ocarina of Time* and *Majora's Mask* suggests that sequence embedded envelopes can have as many data points as wanted — as long as the sequence can fit in either game's audio buffer.
 
 <style>
 /*
