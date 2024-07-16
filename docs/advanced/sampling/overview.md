@@ -146,4 +146,24 @@ ADPCM is a type of lossy compression algorithm for audio files. Due to being a l
 !!! info "Partial Blocks"
     Because ADPCM blocks are aligned one after another, a file compressed with ADPCM may have an unfinished, partial block at its end. In this case, the decoder generates silence for the remainder of this partial block. This keeps the file from looping seamlessly. Silence will appear in a codebook as zeroed out values. This is normal, it does not indicate that there is any issue with the file.
 
+```c title="synthesis.c" linenums="0"
+if (sampleState->bitField1.isSyntheticWave) {
+    cmd = AudioSynth_LoadWaveSamples(cmd, sampleState, synthState, numSamplesToLoad);
+    sampleDmemBeforeResampling = DMEM_UNCOMPRESSED_NOTE + (synthState->samplePosInt * 2);
+    synthState->samplePosInt += numSamplesToLoad;
+} else {
+    sample = sampleState->tunedSample->sample;
+    loopInfo = sample->loop;
+
+    if (note->playbackState.status != PLAYBACK_STATUS_0) {
+        synthState->stopLoop = true;
+    }
+
+    if ((loopInfo->count == 2) && synthState->stopLoop) {
+        sampleEndPos = loopInfo->sampleEnd;
+    } else {
+        sampleEndPos = loopInfo->loopEnd;
+    }
+```
+
 -----

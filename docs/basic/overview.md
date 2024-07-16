@@ -91,23 +91,29 @@ In *Ocarina of Time* and *Majora's Mask*, there exists a special set of channel-
 Key-based instruments, commonly referred to as "drums" and "sound effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in *Ocarina of Time* and *Majora's Mask* is different as well.
 
 ## Instrument Ranges
-Instruments in *Ocarina of Time* and *Majora's Mask* are limited in their range. The synthesis driver—which is responsible for pitch shifting sample data—used in *Ocarina of Time* and *Majora's Mask* can only shift notes up two octaves and down any number of octaves to the desired pitch. The Nintendo 64 Programming Manual states, "The pitch shifter resamples the resulting data (up one octave, down any number of octaves) to the desired pitch."[^1] However, in practice it is two octaves instead of one octave.
+Instruments in *Ocarina of Time* and *Majora's Mask* are limited in their range. The Nintendo 64 Programming Manual states the following: "The pitch shifter resamples the resulting data (up one octave, down any number of octaves) to the desired pitch."[^1] However, the playback code given to the synthesis driver—which is responsible for pitch shifting sample data—in *Ocarina of Time* and *Majora's Mask* allows for an increase of two octaves instead of just a single octave:
 
 === ":material-code-braces:&nbsp; C"
     ```c title="playback.c" linenums="0"
-    void AudioPlayback_NoteSetResamplingRate(NoteSampleState* sampleState, f32 resamplingRateInput) {
+    void AudioPlayback_NoteSetResamplingRate(NoteSampleState* sampleState,
+                                             f32 resamplingRateInput) {
+        // Set the initial resampling rate to 0.0f
         f32 resamplingRate = 0.0f;
 
 
+        // Determines if the given resampling rate is lower than 2.0f
         if (resamplingRateInput < 2.0f) {
               sampleState->bitField1.hasTwoParts = false;
               resamplingRate = CLAMP_MAX(resamplingRateInput, 1.99998f);
 
-
+        // If the given resampling rate is higher than 2.0f the following happens
         } else {
             sampleState->bitField1.hasTwoParts = true;
+            // If the given resampling rate is above 4.0f, cap the resampling rate to 2.0f
             if (resamplingRateInput > 3.99996f) {
                 resamplingRate = 1.99998f;
+            // If the resampling rate is not above 4.0f then set the resampling rate equal
+            // to half the given resampling rate.
             } else {
                 resamplingRate = resamplingRateInput * 0.5f;
             }
@@ -115,6 +121,8 @@ Instruments in *Ocarina of Time* and *Majora's Mask* are limited in their range.
         sampleState->frequencyFixedPoint = (s32)(resamplingRate * 32768.0f);
     }
     ```
+
+If a note is above a sample's pitch cap, then it 
 
 ![](../assets/images/samples/piano-range-light.png#only-light){ .on-glb }
 ![](../assets/images/samples/piano-range-dark.png#only-dark){ .on-glb }
@@ -325,4 +333,4 @@ When FL Studio compatibility mode is enabled in SEQ64 version 2.0 and above, SEQ
 
 -----
 
-[^1]: Infomation found in [Chapter 17.4.5: Allocating and Controlling Voices](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html){ target="__blank" }<small>:material-open-in-new:</small> of the Nintendo 64 Programming Manual. The reason for the discrepancy is unknown.
+[^1]: Infomation found in [Chapter 17.4.5: Allocating and Controlling Voices](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html){ target="__blank" }<small>:material-open-in-new:</small> of the Nintendo 64 Programming Manual.
