@@ -58,7 +58,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 - ##### **ROM Decompression Tool**
     - **[nDEC](../assets/tools/nDEC.zip){ target="__blank" }**
 
-#### Brief Summary of Tools
+### Brief Summary of Tools
 === "SEQ64"
     **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting `.mid`, `.com`, and `.mus` files into the sequence files used in Ocarina of Time and Majora's Mask and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well.  The ability to edit audiobanks is not available in version 2.0 and above.
 

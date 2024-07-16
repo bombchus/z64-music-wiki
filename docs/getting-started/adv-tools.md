@@ -44,7 +44,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 - #### **Audiobank Templates**
     - **[Audiobank Templates](#){ target="_blank" }** <small> :material-open-in-new: </small> <small>recommended</small>
 
-#### Brief Summary of Tools
+### Brief Summary of Tools
 === "Sample Creation Tools"
     The **Sample Creation Tools** are required for converting `.wav` files to `.bin` (or `.zsound`) sample files and obtaining codebook and loopbook ADPCM predictor data.
 
