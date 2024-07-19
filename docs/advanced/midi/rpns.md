@@ -13,7 +13,7 @@
 This page details a specific type of MIDI control change messages.
 
 ## About RPNs
-MIDI control changes include an **RPN**, which stands for Registered Parameter Numbers, which are extended. RPNs can be used in tandem with *Data Entry* messages to change various parameters within a `.mid` file. When using RPNs, the first RPN (MIDI control change numbers 100 and 101; these can be sent in any order) should be sent to select the parameter to edit, then Data Entry (MIDI control change numbers 6 and 38) messages should be sent to set the value of the parameter. When an RPN message is received, any Data Entry messages that are sent and received afterward in the same MIDI channel will change the parameters of an RPN message, for RPNs not to be changed by unwanted Data Entry messages. RPN Null messages should be sent so that the parameters will not be changed.
+MIDI control changes include an **RPN**, which stands for Registered Parameter Numbers, which are extended. RPNs can be used in tandem with *Data Entry* messages to change various parameters within a MIDI file. When using RPNs, the first RPN (MIDI control change numbers 100 and 101; these can be sent in any order) should be sent to select the parameter to edit, then Data Entry (MIDI control change numbers 6 and 38) messages should be sent to set the value of the parameter. When an RPN message is received, any Data Entry messages that are sent and received afterward in the same MIDI channel will change the parameters of an RPN message, for RPNs not to be changed by unwanted Data Entry messages. RPN Null messages should be sent so that the parameters will not be changed.
 
 ### Pitch Bend Sensitivity
 This parameter allows the pitch bend semitone range used in the channel the RPN and Data Entry messages have been sent in to be changed; it requires both Data Entry messages. The MIDI specification does not give information on the full range, meaning that it depends on the MIDI hardware or software being used.
@@ -21,7 +21,7 @@ This parameter allows the pitch bend semitone range used in the channel the RPN 
 !!! info
     The default MIDI pitch bend sensitivity is ±2 semitones, *Ocarina of Time* and *Majora's Mask* have three different pitch bend ranges available and assigned using three different sequence commands: Command "0xDE" uses a custom range, command "0xD3" has a range of ±12 semitones, and command "0xEE" has a range of ±2 semitones; by default, SEQ64 assigns pitch bends to 0xD3, however, in SEQ64 versions 2.0 and above the sequence commands may be assigned to whatever MIDI control change is set in the ABI file.
 
-    By using RPNs, the range within a `.mid` file can be set to match the default pitch bend range used by SEQ64.
+    By using RPNs, the range within a MIDI file can be set to match the default pitch bend range used by SEQ64.
 
 #### Message Values
 | RPN MSB | RPN LSB | Data Entry MSB | Data Entry LSB |

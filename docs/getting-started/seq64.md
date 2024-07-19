@@ -10,13 +10,13 @@
 
 </div>
 
-This page goes over how to get started with SEQ64 for creating custom music in *Ocarina of Time* and *Majora's Mask*. It will give a basic rundown on the program as well as importing and converting a `.mid` file into a sequence file.
+This page goes over how to get started with SEQ64 for creating custom music in *Ocarina of Time* and *Majora's Mask*. It will give a basic rundown on the program as well as importing and converting a MIDI file into a sequence file.
 
 !!! warning "Bugs and Errors"
     Please be aware that SEQ64 is an old program with many bugs, some known and others unknown. Errors and issues may be encountered when using the program when editing a ROM, ROM description, sequence file, or audiobank file.
 
 !!! info
-    This page will be using SEQ64 `v1.5.0` and SEQ64 `v2.3.3` for images, SEQ64 `v1.0.0` should have no dfference from `v1.5.0` other than the UI style and theme of the program. Everything should be located in the same place and have all the same options for SEQ64 versions 1.0 and 1.5.
+    This page will be using SEQ64 version 1.5 and SEQ64 version 2.0 and above for images, SEQ64 version 1.0 has no dfferences from version 1.5 other than the UI style and theme of the program. Everything should be located in the same place and have all the same options for SEQ64 versions 1.0 and 1.5.
 
 ## Loading a ROM and ROM Description <small>v1.0.0 and v1.5.0 only</small> { #loading-a-rom-and-rom-description data-toc-label="Loading a ROM and ROM Description" }
 When SEQ64 first opens everything will be blank and none of the program's fields will be populated with information. To begin working a ROM and ROM description will need to be loaded into SEQ64. The images below highlight how to load a ROM and ROM Description. It should not matter what order the ROM or ROM description are loaded in. However, it may be safest to load the ROM description first.
@@ -48,7 +48,7 @@ placeholder
 === "SEQ64 v1.0.0 and v1.5.0"
     ![](../assets/images/seq64/seq64-midi-1.png){ .on-glb }
 
-    Press the "Import MIDI" button to import a `.mid` file to convert into a sequence. Before importing the highlighted values can be changed
+    Press the "Import MIDI" button to import a MIDI file to convert into a sequence. Before importing the highlighted values can be changed
 
     The **"Chn volume to"** dropdown determines the MIDI control change message to be converted to the channel sequence command 0xDF or "Set Volume".
 
@@ -65,7 +65,7 @@ placeholder
 === "SEQ64 v2.X.X"
     ![](../assets/images/seq64/seq64-midi-2.png){ .on-glb }
 
-    Press the "Import MIDI" button to import a `.mid` file to convert into a sequence. Before importing the highlighted values can be changed
+    Press the "Import MIDI" button to import a MIDI file to convert into a sequence. Before importing the highlighted values can be changed
 
     Fields highlighted in <span style="color:#f9ad81;">orange</span> are fields that are optional fields that can change how a sequence looks when imported.
     

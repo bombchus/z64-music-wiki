@@ -86,7 +86,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 === "Audiobank Templates"
     The **Audiobank Templates** are *optional*, and made for the creation of sampled instruments, drums, and sound effects. SEQ64 or a text editor capable of opening and editing `.xml` files can edit the placeholder data in the template files. There are templates available for instruments, drums, or sound effects.
 
-    ??? tip "Recommendation"
+    !!! tip "Recommendation"
         SEQ64 is not recommended for audiobank editing, a text editor capable of editing `.xml` files is instead recommended. There is a learning curve to editing audiobank `.xml` files. However, editing audiobanks in a text editor will bypass any bugs that SEQ64 can introduce during editing.
 
 -----

@@ -187,7 +187,7 @@ A lot of people in the community use the ride cymbal for hi-hats because the sem
 Below is the envelope to create a closed hi-hat out of the semi-open hi-hat in *Majora's Mask*. It cuts the sample almost immediately resulting in just a short hi-hat hit sound from the initial few seconds of the sample.
 
 ??? warning "Note Length Warning"
-    Due to the way samples are handled in *Ocarina of Time* and *Majora's Mask*, a short enough note will cut the sample even shorter. This is not usually a problem for the closed hi-hat, but if the sound is too short then try lengthening the closed hi-hat notes in the `.mid` file to give more time for the envelope to finish playing.
+    Due to the way samples are handled in *Ocarina of Time* and *Majora's Mask*, a short enough note will cut the sample even shorter. This is not usually a problem for the closed hi-hat, but if the sound is too short then try lengthening the closed hi-hat notes in the MIDI file to give more time for the envelope to finish playing.
 
 === ":material-code-braces: &nbsp;C"
     ```c

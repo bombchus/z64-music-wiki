@@ -21,7 +21,7 @@ This page does not contain every single SysEx message, but it does provide infor
 Below are the universal realtime SysEx messages and information about them. Despite being "exclusive", they are in fact *not* exclusive messages; every piece of MIDI hardware will recognize and use them in the same way, thus being named "universal" SysEx messages.
 
 ### Master Volume
-This is the only SysEx message that SEQ64 can recognize and will add a command for when importing a `.mid` file and converting it into a sequence file. This message controls the overall volume of every MIDI channel, allowing for an increase or decrease in volume for the entire sequence.
+This is the only SysEx message that SEQ64 can recognize and will add a command for when importing a MIDI file and converting it into a sequence file. This message controls the overall volume of every MIDI channel, allowing for an increase or decrease in volume for the entire sequence.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
@@ -44,7 +44,7 @@ This is the only SysEx message that SEQ64 can recognize and will add a command f
 | `F7H` | SysEx end |
 
 ### Master Fine Tuning
-This SysEx message is not recognized by SEQ64 and will not add a command when importing a `.mid` file and converting it into a sequence file. This message controls the overall fine-tuning of every MIDI channel, allowing for a master fine-tuned transposition.
+This SysEx message is not recognized by SEQ64 and will not add a command when importing a MIDI file and converting it into a sequence file. This message controls the overall fine-tuning of every MIDI channel, allowing for a master fine-tuned transposition.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
@@ -67,7 +67,7 @@ This SysEx message is not recognized by SEQ64 and will not add a command when im
 | `F7H` | SysEx end |
 
 ### Master Coarse Tuning
-This SysEx is not recognized by SEQ64 and will not add a command when importing a `.mid` file and converting it into a sequence file. This message controls the overall coarse tuning of every MIDI channel, allowing for a master coarse-tuned transposition.
+This SysEx is not recognized by SEQ64 and will not add a command when importing a MIDI file and converting it into a sequence file. This message controls the overall coarse tuning of every MIDI channel, allowing for a master coarse-tuned transposition.
 
 #### Message String
 | Status | 2nd Byte | 3rd Byte |
