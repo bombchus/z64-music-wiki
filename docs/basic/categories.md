@@ -84,11 +84,14 @@ The first line of the META file is the name of the sequence. This name must be u
 ??? tip "Recommendation"
     It is recommended not to use quotation marks in a sequence name as it will make it harder for people creating a cosmetic plandomizer file.
 
-The second line of the META file is the audiobank the sequence uses. For example, if using audiobank `0x03`, then the second line will be `0x03`. However, if using a custom audiobank, then a `-` must be used instead.
+The second line of the META file is the audiobank the sequence uses. For example, if using audiobank `0x03`, then the second line will be `0x03`. However, if using a custom audiobank, then a hyphen (`-`) must be used instead.
 
 The fourth line of the META file is the locations the sequence will appear in, known as "music groups". This will be explained in greater detail below.
 
-The fifth and subsequent lines of the META file is for extra data, such as `.zsound` files. These lines are for when a sampled instrument, drum, or sound effect is being used. If a sampled instruments, drums, or sound effects is not being used, the META file ends at the fourth line.
+The fifth and subsequent lines of the META file is for extra data, such as `.zsound` files. These lines are for when a sampled instrument, drum, or sound effect is being used. If a sampled instruments, drums, or sound effects is not being used, the META file ends at the fourth line. The data groups on the fifth line are separated using colons (`:`) (e.g., `ZSOUND:filename.zsound:########`).
+
+!!! warning
+    Do not end files with a new line character (`\n`). This can cause potential parsing issues for the *Ocarina of Time Randomizer*. It can also cause end-users to encounter errors during seed generation.
 
 #### Music Groups
 Music groups determine where a sequence will play in-game. This information is specified in the META file. A META file can include a set of named music groups with varying specificity. These named music groups should be in a comma-separated list. They are listed below, with an online music groups tool available [here](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
@@ -324,65 +327,65 @@ There are two different types of categories: group categories and individual cat
     # Ocarina of Time and The Legend of Zelda: Majora's Mask.
     #
     # Allowed Game Values: oot, mm, ootmm
-    #     The "game" key determines which game to pull adpcm data and audiobank information
-    #     from. A value of "oot" determines the base game to be OOT, a value of "mm"
-    #     determines the base game to be MM, and a value of "ootmm" determines the game
+    #   The "game" key determines which game to pull adpcm data and audiobank information
+    #   from. A value of "oot" determines the base game to be OOT, a value of "mm"
+    #   determines the base game to be MM, and a value of "ootmm" determines the game
     #
     # Allowed Song Type Values: bgm, fanfare
-    #     The "song type" key determines whether or not the song is classfied as a bgm
-    #     or fanfare. Do not miscategorize bgms as fanfares it will cause issues in
-    #     both OOT and MM.
+    #   The "song type" key determines whether or not the song is classfied as a bgm
+    #   or fanfare. Do not miscategorize bgms as fanfares it will cause issues in
+    #   both OOT and MM.
     #
     # Allowed Audiobank Values: 0x##, custom
-    #     The "audiobank" key determines which audiobank the game set in the game
-    #     key will use. However, if using a custom audiobank then the value should
-    #     be changed to "custom" as this indicates the bank needs to be inserted.
+    #   The "audiobank" key determines which audiobank the game set in the game
+    #   key will use. However, if using a custom audiobank then the value should
+    #   be changed to "custom" as this indicates the bank needs to be inserted.
     #
     ---
     game: oot
 
     metadata:
-        song name: "placeholder"
-        song type: bgm
-        audiobank: 0x03
-        categories:
-            # To change the categories, please use an array with comma separated values
-            # e.g. ["value", "value"]
-            #
-            # MMR categories: <link>
-            mmr: ["0", "2"]
-            # OOTR categories: https://thesounddefense.github.io/musicgroups/
-            ootr: ["Fields", "Dungeon"]
+      song name: "placeholder"
+      song type: bgm
+      audiobank: 0x03
+      categories:
+        # To change the categories, please use an array with comma separated values
+        # e.g. ["value", "value"]
+        #
+        # MMR categories: <link>
+        mmr: ["0", "2"]
+        # OOTR categories: https://thesounddefense.github.io/musicgroups/
+        ootr: ["Fields", "Dungeon"]
 
-        # If there are no custom samples, remove or comment out the sample section.
-        # Place custom samples here with the following data:
-        #
-        # samples:
-        #   - filename: "filename.zsound"
-        #     marker: 0x########
-        #
-        samples:
-            - filename: "ocarina.zsound"
-              marker: 0x19981121
-            - filename: "majora.zsound"
-              marker: 0x20000427
+      # If there are no custom samples, remove or comment out the sample section.
+      # Place custom samples here with the following data:
+      #
+      # samples:
+      #   - filename: "filename.zsound"
+      #     marker: 0x########
+      #
+      samples:
+        - filename: "ocarina.zsound"
+          marker: 0x19981121
+        - filename: "majora.zsound"
+          marker: 0x20000427
 
     # Optional plain text metadata to also be contained within the metadata.yml file.
     # This could be used for accreditation or something else.
     # The data contained here is a multiline string. For more information, and a demo,
     # on multiline strings please visit: https://yaml-multiline.info/
     accreditation: |-
-        Origin Game:        <placeholder>
-        Song Name:          <placeholder>
-        Categories:         <placeholder>
-        Original Composers: <placeholder>
-        Sequence Converter: <placeholder>
-        Sampling:           No Sampling/Light Sampling/Heavy Sampling
-        Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
+      Origin Game:        <placeholder>
+      Song Name:          <placeholder>
+      Categories:         <placeholder>
+      Original Composers: <placeholder>
+      Sequence Converter: <placeholder>
+      Sampling:           No Sampling/Light Sampling/Heavy Sampling
+      Song Type:          BGM (Background Music)/ME (Musical Effect or Fanfare)
 
-        Notes: <extra notes or comments about the song go here>
+      Notes: <extra notes or comments about the song go here>
 
-        Original Song: <link>
+      Original Song: <link>
     ```
 
 -----
