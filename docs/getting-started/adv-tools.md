@@ -19,10 +19,10 @@
   }
 </style>
 
-This page is where download links to the advanced tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask* are available.
-
 !!! alert "Procuring a ROM"
     This page, as well as the wiki itself, can not and will not supply any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
+
+This page is where download links to the advanced tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask* are available.
 
 ## Advanced Custom Music Creation Tools
 Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools needed right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.

@@ -19,10 +19,10 @@
   }
 </style>
 
-This page is where download links to the basic tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask* are available.
-
 !!! alert "Procuring a ROM"
     This page, as well as the wiki itself, can not and will not supply any ROM files or links to any ROM files for *Ocarina of Time* and *Majora's Mask* as it is illegal to do so. This wiki is not meant for piracy of copyrighted materials, it is meant to help those interested in creating custom music for *Ocarina of Time* and *Majora's Mask* learn the process and other details related to music creation for the games.
+
+This page is where download links to the basic tools and resources used in custom music creation for *Ocarina of Time* and *Majora's Mask* are available.
 
 ## Basic Custom Music Creation Tools
 Below is a list of tools that are used for creating music for *Ocarina of Time* and *Majora's Mask*. It is recommended to download all the tools needed right now to save on needing to go back and forth between downloading and visiting the relevant wiki pages.
@@ -60,26 +60,26 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 ### Brief Summary of Tools
 === "SEQ64"
-    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting `.mid`, `.com`, and `.mus` files into the sequence files used in Ocarina of Time and Majora's Mask and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well.  The ability to edit audiobanks is not available in version 2.0 and above.
+    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting `.mid`, `.com`, and `.mus` files into the sequence files used in *Ocarina of Time* and *Majora's Mask* and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well. The ability to edit audiobanks is not available in version 2.0 and above.
 
-    !!! info "SEQ64 versions 1.0 and 1.5"
-        For all intents and purposes, there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5. However, SEQ64 version 1.0 has a light theme, and SEQ64 version 1.5 has a dark theme.
+    !!! info "SEQ64 version differences"
+        For all intents and purposes, there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5. However, SEQ64 version 1.0 has a light theme and SEQ64 version 1.5 has a dark theme.
 
 === "ROM Description"
     The **ROM Description** is a data file containing music sequence format definitions, audiobank binary format definitions, addresses of key files and tables, and general program settings for SEQ64. The ABI data file (which only contains sequence format definitions) succeeded ROM description files for SEQ64 version 2.0 and above. The ROM descriptions provided with SEQ64 versions 1.0 and 1.5 are very old and contain less information as well as less accurate information. The ROM descriptions linked above are up-to-date and contain more information as well as more accurate information.
 
 === "Digital Audio Workstation"
-    **Digital Audio Workstations**, or **DAW(s)** for short, are where conventional music files are created or edited. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* a DAW that is capable of creating and editing `.mid` files is needed. The DAWs linked above are the most common DAWs used within the randomizer communities.
+    **Digital Audio Workstations**, or **DAW(s)** for short, are where conventional music files are created or edited. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* a DAW that is capable of creating and editing MIDI files is needed. The DAWs linked above are the most common DAWs used within the randomizer and romhacking communities.
     
-    Sekaiju is not a DAW, it is a MIDI sequencer; it lacks many of the standard audio features a regular DAW may have.
+    Sekaiju is not a DAW, it is a MIDI sequencer. It lacks many of the standard audio features a regular DAW may have as it is only intended to create and edit MIDI files.
 
 === "Soundfont"
     **Soundfont(s)** will allow previewing of a song with the instruments the games use when using a DAW capable of music playback with a soundfont. This allows for quick changes to the music before conversion. The soundfonts do not sound exactly like in-game instruments sound. However, they are close enough to give a good idea of how a song will sound in-game.
 
 === "N64 Emulator"
-    An **N64 Emulator** is used to preview music in-game. This is to make sure there are no problems with the sequence or audiobank in-game. The emulators Simple64, Rosalie's Mupen GUI, and Project64 are all standalone. Ares is a multi-system emulator. It is recommended to *avoid* RetroArch and other multi-system emulators and frontends.
+    An **N64 Emulator** is used to preview music in-game. This is to make sure there are no problems with the sequence or audiobank in-game. The emulators Simple64, Rosalie's Mupen GUI, and Project64 are all standalone, while Ares is a multi-system emulator. It is recommended to *avoid* RetroArch, BizHawk, and other multi-system emulators and frontends whenever possible.
 
 === "nDEC"
-    **nDEC** decompresses a ROM so that it can be edited with SEQ64. Included in the nDEC download is a batch script that makes using nDEC simple. For more detailed instructions on how to decompress a ROM with nDEC, there is a section on the [ROM requirements](../requirements/#decompressing-a-rom){ target="__blank" }<small>:material-open-in-new: </small> page of the wiki detailing the process.
+    **nDEC** is a ROM decompression tool that decompresses ROMs so that SEQ64 can modify them. Included in the nDEC download is a batch script that makes using nDEC simple. For more detailed instructions on how to decompress a ROM with nDEC, there is a section on the [ROM requirements](../requirements/#decompressing-a-rom){ target="__blank" }<small>:material-open-in-new: </small> page of the wiki detailing the process.
 
 -----
