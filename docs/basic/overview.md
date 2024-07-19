@@ -161,7 +161,7 @@ Common SEQ64 Errors
 - `No [action] command defined in stype [stype] with all the needed parameters!`
 - `Want: [idMeaning] value [idValue]`
 
-## MIDI Note Division Tables
+## MIDI Note Division Tables <small>move to separate page</small> { #midi-note-division-tables data-toc-label="MIDI Note Division Tables" }
 Listed below are notes with their corresponding tick values at common MIDI resolutions.
 
 ===+ "48 PPQN"
@@ -226,7 +226,7 @@ Where *n* is the value of the regular note to use. As an example, if *n* equals 
     It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in a sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.
 
 
-## seq loop
+## seq loop <small>move to separate page</small> { #seq-loop data-toc-label="seq loop" }
 Section markers, commonly referred to as "loop points", placeholder.
 
 When SEQ64 is creating sections in a sequence it looks specifically for MIDI meta message markers with a name of "section" and "loop".
