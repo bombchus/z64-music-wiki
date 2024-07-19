@@ -164,6 +164,7 @@ nav:
   - Basic Info:
     - basic/index.md
     - Music Creation Overview: basic/overview.md
+    - Assigning Instruments: basic/assign-instruments.md
     - Categorizing Sequences: basic/categories.md
     - Using Custom Audiobanks: basic/custom-audiobanks.md
     - In-Game Audio Balancing: basic/audio-balance.md

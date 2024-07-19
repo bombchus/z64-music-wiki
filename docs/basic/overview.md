@@ -1,4 +1,4 @@
-# Overview
+# Music Creation Overview
 
 <div class="grid cards" markdown>
 
@@ -59,6 +59,8 @@ To use instruments in a sequence channel the sequence command "0xC1" must be sen
 */
 </style>
 
+<style>
+/* MOVED TO NEW PAGE?
 ### Assigning Instruments in MIDI
 In MIDI, instruments and percussion kits are assigned to a channel by sending a MIDI program change message to that channel. There may only be a single instrument or percussion kit assigned to a channel at any time. However, the channel's assigned instrument or percussion kit can be changed at any point by sending another MIDI program change message to the channel. MIDI program change messages have two bytes. The first byte of a MIDI program change message is the status byte with values ranging from 0xC0 to 0xCF. The first half-byte determines the message type; the second half-byte points to the MIDI channel the message is sent to. The status byte determines the channel the message is sent to. The second byte of a MIDI program change message is the data byte with values ranging from 0x00 (0) to 0x7F (127). The data byte determines what instrument or percussion kit the channel will use. Instruments may be set in any MIDI channel, while percussion kits may only be set in MIDI channel 10 as MIDI channel 10 is reserved solely for percussion kits.
 
@@ -74,6 +76,8 @@ In Ocarina of Time and Majora's Mask, instruments, sound effects, and percussion
 
 ### Assigning Appropriate MIDI Instruments
 Instruments in MIDI are not one-to-one with instruments in *Ocarina of Time* and *Majora's Mask*. In MIDI, the "Strings" instrument has a MIDI program change value of 48 (0x30). In *Ocarina of Time* and *Majora's Mask*, the "Strings" instrument has an instrument assignment value dependent on the bank used by a sequence. Unlike in MIDI, in *Ocarina of Time* and *Majora's Mask*, it is also possible that the "Strings" instrument may not be present in a bank at all. As an example, in *Ocarina of Time* and *Majora's Mask*, bank 0x03 assigns the "Strings" instrument to a value of 10 (0x0A) or 11 (0x0B), while bank 0x02 does not contain the "Strings" instrument at all in either game and only contains ambient nature sounds. So, to make sure instruments, sound effects, and percussion kits are assigned to the proper channel in a sequence, it is required to adjust MIDI program change message values to match the assignment value of the counterpart chosen in the *Ocarina of Time* and *Majora's Mask* bank being used.
+*/
+</style>
 
 ## Instrument Types
 In *Ocarina of Time* and *Majora's Mask* there are two different types of instruments:
