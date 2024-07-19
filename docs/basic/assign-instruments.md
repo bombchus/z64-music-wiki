@@ -22,7 +22,7 @@ Some audiobanks may have fewer instruments, different sound effects, or contain 
 ??? info "Drums and Sound Effects"
     Drums and sound effects in *Ocarina of Time* and *Majora's Mask* work almost identically to how they do in MIDI with different values corresponding to different individual drum sounds. The only difference is that there is a single percussion kit per audiobank, and it is assigned to program 127 (0x7F) instead of being assigned to a specific MIDI channel.
 
-To properly assign the instruments a sequence will use, it is necessary to determine which instrument inside the audiobank used corresponds to the equivalent MIDI program value. The [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page contains a list of all audiobanks and their corresponding instruments and instrument assignment values.
+To properly assign the instruments a sequence will use, it is necessary to determine which instrument inside the audiobank used corresponds to the equivalent MIDI program value. The [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page contains a list of all vanilla audiobanks in *Ocarina of Time* and *Majora's Mask* and their corresponding instruments and instrument assignment values.
 
 <style>
 /*

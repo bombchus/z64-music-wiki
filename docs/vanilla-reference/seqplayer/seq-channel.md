@@ -19,6 +19,10 @@ placeholder
 placeholder
 
 ## 0xEE: Pitch Bend (±2 Semitones)
+placeholoder
+
+sets the pitch bend amount using a scaling of 2. equal to pitch bend with rpn pitch bend data entry of 2 coarse 0 fine.
+
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchTwoSemitonesFrequencies[] = {
@@ -77,11 +81,19 @@ placeholder
 ## 0xEB: Set Soundfont & Instrument
 placeholder
 
+sets the soundfont and instrument from said soundfont the channel will use, soundfont must be loaded into ram (0x00 is always loaded into ram. most audiobanks have a soundfont value of 255 however).
+
 ## 0xEA: Stop Script
 placeholder
 
 ## 0xE9: Set Note Priority
 placeholder
+
+dewtermines the note priority to be assigned to the channel. default note priority is 0x03, default "other" prio is 0x01. channel priority is shifted to determine actual priority used for priority calculation. sfx priority is calculated using distance from the camera as well as the default sfx priority (at some point sfx priority goes up by 300).
+
+priority 0x0A is equal to 625 (if `priority & 0x0F != 0` then `priority = priority` and `priority = priority >> 4` (priority/2^4). if `priority != 0` then `otherprio = priority`)
+
+no matter what sfx will cut voices out because only so many voices can be playing at once, and due to the way sfx are assigned to channels.
 
 ## 0xE8: Set Channel Parameters
 placeholder
@@ -110,14 +122,20 @@ placeholder
 ## 0xE0: Set Volume Scale (Expression)
 placeholder
 
+equal to midi cc11 channel expression.
+
 ## 0xDF: Set Volume
 placeholder
+
+sets the total volume for the channel.
 
 ## 0xDE: Set Freqscale
 placeholder
 
 ## 0xDD: Set Pan
 placeholder
+
+amount of panning to be used in the channel. 0x00 is full left, 0x40 is center, 0x7F is full right. 
 
 ## 0xDC: Set Pan Mix
 Sets the proportion of panning that comes from the channel for key-based instruments.
@@ -128,6 +146,8 @@ Sets the proportion of panning that comes from the channel for key-based instrum
 ## 0xDB: Set Transposition (Channel)
 placeholder
 
+number of semitones to increase or decrease all notes in the channel by
+
 ## 0xDA: Set Envelope
 placeholder
 
@@ -135,6 +155,8 @@ address start value must be aligned to even numbers
 
 ## 0xD9: Set Decay Index
 placeholder
+
+sets the release rate to be used by the channel. 0x00 is longest decay, 0xFF is shortest decay.
 
 ## 0xD8: Set Vibrato Depth
 placeholder
@@ -145,7 +167,13 @@ placeholder
 ## 0xD4: Set Reverb
 placeholder
 
+sets the amount of echo instruments in the channel will have. the effect is not 1:1 with midi reverb.
+
 ## 0xD3: Pitch Bend (±12 Semitones)
+placeholder
+
+sets the pitch bend amount using a scaling of 12. equal to pitch bend with rpn pitch bend data entry of 12 coarse 0 fine.
+
 === ":material-code-braces: &nbsp;C"
     ``` c
     f32 gBendPitchOneOctaveFrequencies[] = {
@@ -234,17 +262,25 @@ placeholder
 ## 0xC6: Set Soundfont
 placeholde
 
+sets the audiobank for the channel to pull instruments from. see 0xEB.
+
 ## 0xC5: Dyn Set Dyntable
 placholder
 
-## 0xC4: Large Notes On
+## 0xC4: Large Notes On (Short Notes Off)
 placeholder
 
-## 0xC3: Large Notes Off
+sets legato on. stacatto off.
+
+## 0xC3: Large Notes Off (Short Notes On)
 placeholder
+
+sets legato off. stacatto on.
 
 ## 0xC1: Set Instrument
 placeholder
+
+sets the instrument from the currently loaded audiobank for the channel to use.
 
 ## 0xBE:
 placeholder
@@ -259,11 +295,17 @@ placeholder
 ## 0xBB: Set Chorus
 placeholder
 
+also called comb filter, the devs called it chorus. equivalent to MIDI chorus to create a second delayed sample play in the channel. arg 1 defines the amount of delay to add, and arg 2 determines the chorus amount/volume. the effect is not 1:1 with midi chorus.
+
 ## 0xBA: Set Gatetime Humanization
 bugged
 
+this command uses a parameter from velocity humanization to affect the amount of gatetime humanization.
+
 ## 0xB9: Set Velocity Humanization
 placeholder
+
+this command sets a random amount of variation in the velocity of notes, or humanization.
 
 ## 0xB8: [v] = Random Value
 placeholder

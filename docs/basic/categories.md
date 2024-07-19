@@ -97,7 +97,7 @@ The fifth and subsequent lines of the META file is for extra data, such as `.zso
 Music groups determine where a sequence will play in-game. This information is specified in the META file. A META file can include a set of named music groups with varying specificity. These named music groups should be in a comma-separated list. They are listed below, with an online music groups tool available [here](https://thesounddefense.github.io/musicgroups/ "Darunia's Joy Music Groups Tool
 "){ target="__blank" }<small>:material-open-in-new: </small>, to help determine the correct areas of the game the sequence to be placed.
 
-=== "Low Specificity"
+=== "Low Specificity Groups"
     **Background Music:**
 
     | Music Group | Sequence Name |
@@ -114,7 +114,7 @@ Music groups determine where a sequence will play in-game. This information is s
     | EventFanfare | `Item Get` `Heart Container Get` `Spirit Stone Get` `Heart Piece Get` `Medallion Get` `Learn Song` `Boss Defeated` `Epona Race Goal` `Escape from Ranch` `Zelda Turns Around` `Treasure Chest` `Master Sword` `Door of Time` `Ganondorf Appears` `Game Over` |
     | SongFanfare | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
-=== "Mid Specificity"
+=== "Mid Specificity Groups"
     **Background Music:**
 
     | Music Group | Sequence name |
@@ -139,7 +139,7 @@ Music groups determine where a sequence will play in-game. This information is s
     | WarpSong | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
     | UtilitySong | `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
-=== "High Specificity"
+=== "High Specificity Groups"
     **Background Music:**
 
     | Music Group | Sequence Name |
@@ -172,7 +172,7 @@ Music groups determine where a sequence will play in-game. This information is s
     | WarpSong | `Prelude of Light` `Bolero of Fire` `Minuet of Forest` `Serenade of Water` `Requiem of Spirit` `Nocturne of Shadow` |
     | UtilitySong | `Saria's Song` `Epona's Song` `Zelda's Lullaby` `Sun's Song` `Song of Time` `Song of Storms` |
 
-=== "Exact Specificity"
+=== "Exact Specificity Groups"
     **Background Music:**
 
     | Music Group | Sequence Name | Music Group | Sequence Name |
