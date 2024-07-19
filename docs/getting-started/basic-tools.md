@@ -60,13 +60,15 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
 
 ### Brief Summary of Tools
 === "SEQ64"
-    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting `.mid`, `.com`, and `.mus` files into the sequence files used in *Ocarina of Time* and *Majora's Mask* and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well. The ability to edit audiobanks is not available in version 2.0 and above.
+    **SEQ64** is a tool created for making music sequences for first-party Nintendo 64 games (games made by Nintendo EAD/SRD). It is capable of converting MIDI (`.mid`), `.com`, and `.mus` files into the sequence files used in *Ocarina of Time* and *Majora's Mask* and vice versa. SEQ64 versions 1.0 and 1.5 have the ability to edit audiobank files as well. The ability to edit audiobanks is not available in version 2.0 and above.
 
     !!! info "SEQ64 version differences"
         For all intents and purposes, there are no differences in the main functionality of SEQ64 version 1.0 and version 1.5. However, SEQ64 version 1.0 has a light theme and SEQ64 version 1.5 has a dark theme.
 
-=== "ROM Description"
-    The **ROM Description** is a data file containing music sequence format definitions, audiobank binary format definitions, addresses of key files and tables, and general program settings for SEQ64. The ABI data file (which only contains sequence format definitions) succeeded ROM description files for SEQ64 version 2.0 and above. The ROM descriptions provided with SEQ64 versions 1.0 and 1.5 are very old and contain less information as well as less accurate information. The ROM descriptions linked above are up-to-date and contain more information as well as more accurate information.
+=== "ROM Description & ABI Files"
+    The **ROM Description** is a data file containing music sequence format definitions, audiobank binary format definitions, addresses of key files and tables, and general program settings for SEQ64 versions 1.0 and 1.5. The ROM descriptions provided with SEQ64 versions 1.0 and 1.5 are very old and contain less information as well as less accurate information. The ROM descriptions linked above are up-to-date and contain more information as well as more accurate information.
+    
+    The **ABI** is a data file which only contains sequence format definitions for SEQ64 version 2.0 and above.
 
 === "Digital Audio Workstation"
     **Digital Audio Workstations**, or **DAW(s)** for short, are where conventional music files are created or edited. For the purposes of creating music for *Ocarina of Time* and *Majora's Mask* a DAW that is capable of creating and editing MIDI files is needed. The DAWs linked above are the most common DAWs used within the randomizer and romhacking communities.
