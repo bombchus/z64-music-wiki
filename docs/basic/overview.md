@@ -13,7 +13,7 @@
 ## Summary of Music Creation
 To create custom music in *Ocarina of Time* and *Majora's Mask*, a sequence file the audio engine can play back in real-time mut be used. Sequences are a form of compressed MIDI created by Nintendo for the Nintendo 64. Sequences are a set of commands, or instructions, that tell the audio engine what sample files to play, at what pitch, at what time, and how fast to play through the sequence. Due to the similarities between MIDI sequences and Nintendo 64 sequences, the most common way to create a sequence for *Ocarina of Time* and *Majora's Mask* is to convert a MIDI song into a sequence using SEQ64.
 
-There are other ways to create a sequence aside from MIDI; however, using a MIDI sequence is the easiest due to their numerous similarities, and the ability to preview a song.
+There are other ways to create a sequence aside from MIDI. However, using a MIDI sequence is the easiest due to their numerous similarities, and the ability to preview a song as you work on it.
 
 !!! info "Is it possible to use MP3 files?"
     It is not possible to take an MP3 file and play it back in real-time in *Ocarina of Time* and *Majora's Mask*. While both *Ocarina of Time* and *Majora's Mask* are capable of "streaming" audio, the only games on the Nintendo 64 known to be capable of MP3 decoding are *Conker's Bad Fur Day* and *Perfect Dark*.
