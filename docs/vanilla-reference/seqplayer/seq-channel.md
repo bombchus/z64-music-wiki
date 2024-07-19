@@ -295,7 +295,7 @@ placeholder
 ## 0xBB: Set Chorus
 placeholder
 
-also called comb filter, the devs called it chorus. equivalent to MIDI chorus to create a second delayed sample play in the channel. arg 1 defines the amount of delay to add, and arg 2 determines the chorus amount/volume. the effect is not 1:1 with midi chorus.
+also called comb filter, the devs called it chorus; they are essentially the same thing with different names. equivalent to MIDI chorus to create a second delayed sample play in the channel. arg 1 defines the amount of delay to add, and arg 2 determines the chorus amount/volume. the effect is not 1:1 with midi chorus.
 
 ## 0xBA: Set Gatetime Humanization
 bugged
