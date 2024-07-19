@@ -98,10 +98,11 @@ Once completed, a decompressed ROM (output ROM) will have automatically been mov
 !!! alert
     For a ROM to be decompressed with nDEC it must be in the Big Endian byte order.
 
-## ROM Byte Ordering
-While SEQ64 and emulators can work with all types of ROM byte ordering, to be able to decompress a ROM and use it with the randomizers for custom music creation, the ROM will need to be in the "Big Endian" byte order, MSB first and LSB last (e.g. `0x1234` is `0x1234`). The ROM cannot be in the "Little Endian" byte order, LSB first and MSB last (e.g. `0x1243` becomes `0x3412`), or in the "Byteswapped" byte order, every byte value is reversed (e.g. `0x1234` becomes `0x2143`). More information is available in the info box below about how to make sure a ROM is Big Endian, and what can be done to change the ROM's byte ordering to Big Endian if it is not already in the proper byte order.
-
+## ROM Byte Order Requirements
 While SEQ64 versions 1.0 and 1.5, as well as emulators, can work with ROMs using any byte order, for a ROM to work with nDEC it must be in the "Big Endian" byte order. If a ROM is in the "Little Endian" or "Byteswapped" byte order, it cannot be decompressed with nDEC. Big endian orders the bytes from MSB to LSB (e.g., `0x1234` will be `0x1234`). Little endian orders the bytes from LSB to MSB (e.g., `0x1234` will be `0x3412`). Byteswapped byte order reverses every byte (e.g., `0x1234` will be `0x2143`).
+
+!!! info
+    For a ROM to work with the *Ocarina of Time* or *Majora's Mask* randomizers the ROM will need to be in the big endian byte order.
 
 ### Checking a ROM's Byte Ordering
 There are two ways to check a ROM's byte order:
