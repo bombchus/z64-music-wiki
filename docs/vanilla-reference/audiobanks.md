@@ -3612,7 +3612,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Drum List:**
         ``` linenums="0"
-        0x00. Tambourine
+        0x00. Tambourine Slap
         0x01. Sand Footstep SFX
         0x02. Garbage Data
         0x03. Garbage Data
