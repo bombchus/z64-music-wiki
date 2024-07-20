@@ -3403,84 +3403,84 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Sound Effect List:**
         ``` linenums="0"
-        0x00. Link Voice (Attack 1)
-        0x01. Link Voice (Attack 2)
-        0x02. Link Voice (Attack 3)
-        0x03. Link Voice (Attack 4)
-        0x04. Link Voice (Attack 5)
-        0x05. Link Voice (Attack 6)
-        0x06. Goron Link Voice (Damage 1)
-        0x07. Goron Link Voice (Damage 2?)
-        0x08. Goron Link Voice (Damage 3)
-        0x09. Link Voice (Damage 1)
-        0x0A. Link Voice (Damage 2)
-        0x0B. Link Voice (Damage 3)
-        0x0C. Link Voice (Damage 4)
-        0x0D. Zora Link Voice (Damage 1)
-        0x0E. Link Voice (Damage 5)
-        0x0F. Link Voice (Scream 1)
-        0x10. Link Voice (Scream 2)
-        0x11. Link Voice (Scream 2) [Same sample as 10]
-        0x12. Goron Link Voice (Critical Health?)
-        0x13. Zora Link Voice (Critical Health?)
-        0x14. Link Voice (Grunt 1)
+        0x00. Young Link (Attack 1)
+        0x01. Young Link (Attack 2)
+        0x02. Young Link (Attack 3)
+        0x03. Young Link (Attack 4)
+        0x04. Young Link (Attack 5)
+        0x05. Young Link (Attack 6)
+        0x06. Goron Link (Damage 1)
+        0x07. Goron Link (Damage 2?)
+        0x08. Goron Link (Damage 3)
+        0x09. Young Link (Damage 1)
+        0x0A. Young Link (Damage 2)
+        0x0B. Young Link (Damage 3)
+        0x0C. Young Link (Damage 4)
+        0x0D. Zora Link (Damage 1)
+        0x0E. Young Link (Damage 5)
+        0x0F. Young Link (Scream 1)
+        0x10. Young Link (Scream 2)
+        0x11. Young Link (Scream 2) [Same sample as 10]
+        0x12. Goron Link (Critical Health?)
+        0x13. Zora Link (Critical Health?)
+        0x14. Young Link (Grunt 1)
         0x15. Igos Du Ikana (Elegy)
         0x16. Igos Du Ikana (Elegy)
-        0x17. Link Voice (Critical Health 1)
-        0x18. Goron Link Voice (Fall Damage)
-        0x19. Goron Link Voice (Push & Grab)
-        0x1A. Link Voice (Grunt 2)
-        0x1B. Link Voice (Grunt 3)
-        0x1C. Link Voice ("Hup" 1)
-        0x1D. Link Voice ("Ha!" 1)
-        0x1E. Link Voice ("Hup" 2)
-        0x1F. Link Voice ("Hup" 3)
-        0x20. Link Voice ("Hyah!")
-        0x21. Link Voice (Attack 7)
-        0x22. Link Voice (Ledge Related?)
-        0x23. Link Voice (Grab & Push 1?)
-        0x24. Link Voice (Grab & Push 2?)
-        0x25. Deku Link Voice (Damage 1)
-        0x26. Deku Link Voice (Damage 2)
-        0x27. Link Voice (Grunt 2) [Same sample as 1A]
-        0x28. Link Voice (Damage 6)
-        0x29. Zora Link Voice (Damage 2)
-        0x2A. Link Voice (Fall Damage 1)
-        0x2B. Link Voice (Fall Scream 1)
-        0x2C. Link Voice (Fall Scream 2)
-        0x2D. Link Voice (Fall Start 1)
-        0x2E. Link Voice (Fall Start 2)
-        0x2F. Link Voice (Critical Health 2)
-        0x30. Link Voice (Critical Health 3)
-        0x31. Link Voice (Fall Damage 2)
-        0x32. Link Voice (Sliding)
-        0x33. Link Voice (Drink 1)
-        0x34. Link Voice (Drink 2)
-        0x35. Link Voice ("Hup" 4)
-        0x36. Link Voice ("Hup" 5)
-        0x37. Goron Link Voice (Fall Damage) [Same sample as 18]
-        0x38. Goron Link Voice (Fall Damage) [Same sample as 18]
+        0x17. Young Link (Critical Health 1)
+        0x18. Goron Link (Fall Damage)
+        0x19. Goron Link (Push & Grab)
+        0x1A. Young Link (Grunt 2)
+        0x1B. Young Link (Grunt 3)
+        0x1C. Young Link ("Hup" 1)
+        0x1D. Young Link ("Ha!" 1)
+        0x1E. Young Link ("Hup" 2)
+        0x1F. Young Link ("Hup" 3)
+        0x20. Young Link ("Hyah!")
+        0x21. Young Link (Attack 7)
+        0x22. Young Link (Ledge Related?)
+        0x23. Young Link (Grab & Push 1?)
+        0x24. Young Link (Grab & Push 2?)
+        0x25. Deku Link (Damage 1)
+        0x26. Deku Link (Damage 2)
+        0x27. Young Link (Grunt 2) [Same sample as 1A]
+        0x28. Young Link (Damage 6)
+        0x29. Zora Link (Damage 2)
+        0x2A. Young Link (Fall Damage 1)
+        0x2B. Young Link (Fall Scream 1)
+        0x2C. Young Link (Fall Scream 2)
+        0x2D. Young Link (Fall Start 1)
+        0x2E. Young Link (Fall Start 2)
+        0x2F. Young Link (Critical Health 2)
+        0x30. Young Link (Critical Health 3)
+        0x31. Young Link (Fall Damage 2)
+        0x32. Young Link (Sliding)
+        0x33. Young Link (Drink 1)
+        0x34. Young Link (Drink 2)
+        0x35. Young Link ("Hup" 4)
+        0x36. Young Link ("Hup" 5)
+        0x37. Goron Link (Fall Damage) [Same sample as 18]
+        0x38. Goron Link (Fall Damage) [Same sample as 18]
         0x39. ⛔ (nullptr)
         0x3A. ⛔ (nullptr)
         0x3B. ⛔ (nullptr)
-        0x3C. Goron Link Voice (Fall Damage) [Same sample as 18]
-        0x3D. Goron Link Voice (Fall Damage) [Same sample as 18]
-        0x3E. Link Voice (Ledge Climb?)
-        0x3F. Link Voice (Attack 8)
-        0x40. Link Voice (Grunt 1) [Same sample as 14]
+        0x3C. Goron Link (Fall Damage) [Same sample as 18]
+        0x3D. Goron Link (Fall Damage) [Same sample as 18]
+        0x3E. Young Link (Ledge Climb?)
+        0x3F. Young Link (Attack 8)
+        0x40. Young Link (Grunt 1) [Same sample as 14]
         0x41. Unknown Sound [1]
-        0x42. Link Voice (Damage 6?)
-        0x43. Link Voice (Shiver)
+        0x42. Young Link (Damage 6?)
+        0x43. Young Link (Shiver)
         0x44. ⛔ (nullptr)
-        0x45. Link Voice (Sneeze)
-        0x46. Link Voice? (Sneeze 2?)
-        0x47. Link Voice? (Stretch 1?)
-        0x48. Link Voice (Stretch 2)
-        0x49. Link Voice (Stretch 3)
-        0x4A. Link Voice (Stretch 4)
-        0x4B. Link Voice (Stretch 5)
-        0x4C. Link Voice (Stretch 6)
-        0x4D. Link Voice (Damage 7?)
+        0x45. Young Link (Sneeze)
+        0x46. Young Link? (Sneeze 2?)
+        0x47. Young Link? (Stretch 1?)
+        0x48. Young Link (Stretch 2)
+        0x49. Young Link (Stretch 3)
+        0x4A. Young Link (Stretch 4)
+        0x4B. Young Link (Stretch 5)
+        0x4C. Young Link (Stretch 6)
+        0x4D. Young Link (Damage 7?)
         0x4E. Unknown Sound [2]
         0x4F. Unknown Sound [3]
         0x50. Unknown Sound [3]
@@ -3497,7 +3497,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x5B. ⛔ (nullptr)
         0x5C. ⛔ (nullptr)
         0x5D. Gorman Bros. ("Uwahh!")
-        0x5E. Sword School Instructor ("Kaaah!")
+        0x5E. Mutoh ("Kaaah!")
         0x5F. Gorman Bros.? (???)
         0x60. Gorman Bros. ("Ha!")
         0x61. Great Fairy (Laugh 1)
@@ -3541,9 +3541,9 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x87. Unknown Laugh [Same sample as 85]
         0x88. Unknown Laugh [Same sample as 85]
         0x89. Goron Voice? ("Awww...")
-        0x8A. Deku Link Voice (Gasp)
-        0x8B. Link Voice? ("Ha!" 2)
-        0x8C. Link Voice? ("Ha!" 3)
+        0x8A. Deku Link (Gasp)
+        0x8B. Young Link? ("Ha!" 2)
+        0x8C. Young Link? ("Ha!" 3)
         0x8D. Traveling Goron Voice? (Exhale 1)
         0x8E. Traveling Goron Voice? (Exhale 2)
         0x8F. Traveling Goron Voice? (Exhale 3)
@@ -3596,11 +3596,11 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0xBE. ⛔ (nullptr)
         0xBF. ⛔ (nullptr)
         0xC0. ⛔ (nullptr)
-        0xC1. Link Voice ("Hup" 1) [Same sample as 1C]
-        0xC2. Link Voice ("Ha!" 1) [Same sample as 1D]
-        0xC3. Link Voice ("Hup" 2) [Same sample as 1E]
-        0xC4. Link Voice ("Hup" 3) [Same sample as 1F]
-        0xC5. Link Voice ("Hyah!") [Same sample as 20]
+        0xC1. Young Link ("Hup" 1) [Same sample as 1C]
+        0xC2. Young Link ("Ha!" 1) [Same sample as 1D]
+        0xC3. Young Link ("Hup" 2) [Same sample as 1E]
+        0xC4. Young Link ("Hup" 3) [Same sample as 1F]
+        0xC5. Young Link ("Hyah!") [Same sample as 20]
         ```
 
         ## Drums (Program Number: 7F)
@@ -3616,10 +3616,10 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x01. Sand Footstep SFX
         0x02. Garbage Data
         0x03. Garbage Data
-        0x04. Link Voice? (Ledge Related)
-        0x05. Link Voice (Fall Start)
-        0x06. Link Voice (Fall Scream)
-        0x07. Goron Link Voice (Damage?)
+        0x04. Young Link? (Ledge Related)
+        0x05. Young Link (Fall Start)
+        0x06. Young Link (Fall Scream)
+        0x07. Goron Link (Damage?)
         0x08. Garbage Data
         0x09. Kaching SFX (Clock Town Mailbox)
         0x0A. Clap SFX [1]
@@ -3799,11 +3799,11 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Sound Effect List:**
         ``` linenums="0"
-        0x00. Link Voice? (Damage Voice?)
-        0x01. Link Voice? (Damage Scream?)
-        0x02. Link Voice? (Attack Voice 1?)
-        0x03. Link Voice? (Attack Voice 2?)
-        0x04. Link Voice? (Attack Voice 3?)
+        0x00. Young Link? (Damage Voice?)
+        0x01. Young Link? (Damage Scream?)
+        0x02. Young Link? (Attack Voice 1?)
+        0x03. Young Link? (Attack Voice 2?)
+        0x04. Young Link? (Attack Voice 3?)
         0x05. Redead Shriek?
         0x06. Deku Baba Damage
         0x07. Unknown Gasp
@@ -3811,8 +3811,8 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x09. Unknown "Ha" Sound
         0x0A. Unknown "Yah!" Sound
         0x0B. Witch Shriek?
-        0x0C. Link Voice? (Breath Sound 1)
-        0x0D. Link Voice? (Breath Sound 2)
+        0x0C. Young Link? (Breath Sound 1)
+        0x0D. Young Link? (Breath Sound 2)
         0x0E. Goron Voice ("Aww...")
         0x0F. Unknown Synth Sound
         0x10. Unknown Monster Sound?

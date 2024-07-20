@@ -285,6 +285,8 @@ sets the instrument from the currently loaded audiobank for the channel to use.
 ## 0xBE:
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xBD: Set Sample Start
 placeholder
 loop start
@@ -337,29 +339,47 @@ placeholder
 ## 0xA8: Random Range Large
 placeholder
 
+!! COMMAND IS 0xBD IN OOT !!
+
 ## 0xA7:
 placeholder
+
+!! NOT AVAILABLE IN OOT !!
 
 ## 0xA6:
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xA5: [v] += Channel Index
 placeholder
+
+!! NOT AVAILABLE IN OOT !!
 
 ## 0xA4: Set Surround Effect Index
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xA3: sfxState[p] = [v]
 placeholder
+
+!! NOT AVAILABLE IN OOT !!
 
 ## 0xA2: sfxState[cmdArg[0]] = [v]
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xA1: [v] = sfxState[p]
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xA0: [v] = sfxState[cmdArg[0]]
 placeholder
+
+!! NOT AVAILABLE IN OOT !!
 
 ## 0x98: Dynset Layer
 placeholder

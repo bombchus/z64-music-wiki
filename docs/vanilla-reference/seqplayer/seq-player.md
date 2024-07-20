@@ -96,8 +96,12 @@ placeholder
 ## 0xC3:
 placeholder
 
+!! NOT AVAILABLE IN OOT !!
+
 ## 0xC2:
 placeholder
+
+!! NOT AVAILABLE IN OOT !!
 
 ## 0xB0: Load Sequence
 placeholder

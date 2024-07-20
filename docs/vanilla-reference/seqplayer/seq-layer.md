@@ -15,8 +15,12 @@ placeholder
 ## 0xF1: Set Surroud Effect Index
 placeholder
 
+!!NOT AVAILABLE IN OOT!!
+
 ## 0xF0:
 placeholder
+
+!!NOT AVAILABLE IN OOT!!
 
 ## 0xE0: Set Short Note Gatetime From Table
 placeholder
