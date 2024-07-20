@@ -382,7 +382,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x0B. Volvagia Pained Roar SFX
         0x0C. Scratch/Electric SFX (Skulltula Related?)
         0x0D. "Ah" SFX (Frog Croak?)
-        0x0E. SM64 Boo Laugh SFX (Lizalfos Laugh?)
+        0x0E. Lizalfos Laugh? SFX
         0x0F. Mid: Lizalfos SFX, High: Lizalfos Footstep SFX
         0x10. Deku Scrub Voice SFX
         0x11. Glass Break SFX (Ice?)
@@ -411,7 +411,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x28. Mid: Boulder Explosion SFX, High: Lava Bubbling SFX
         0x29. Unknown Monster Roar SFX (King Dodongo/Volvagia?)
         0x2A. Mid: Redead/Gibdo SFX (Pamela's Father in MM), High: Goron Falling Asleep SFX
-        0x2B. Poe Laugh SFX (SM64 Boo)
+        0x2B. Poe Laugh SFX
         0x2C. Water Bubbling SFX (Morpha Cutscene?)
         0x2D. Mid: Unknown Growl SFX, High: Poe Defeat Shriek SFX
         0x2E. Mid: Goron "Hmm?" SFX, High: Goron "Ooooh..." SFX
@@ -3678,7 +3678,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x11. Volvagia Pained Roar SFX
         0x12. Scratch/Electric SFX (Skulltula Related?)
         0x13. "Ah" SFX (Frog Croak?)
-        0x14. Dinolfos Laughing SFX (SM64 Boo)
+        0x14. Dinolfos Laughing SFX
         0x15. Low: Dinolfos SFX, High: Dinolfos Footstep SFX
         0x16. Deku Scrub Voice SFX
         0x17. Glass Break SFX (Ice?)
@@ -3698,7 +3698,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x25. Splish SFX (Footsteps on Watery Surfaces)
         0x26. Boulder Explosion SFX
         0x27. Mid: Pamela's Father SFX, High: Goron Falling Asleep SFX
-        0x28. Poe/Garo Laugh SFX (SM64 Boo Sample)
+        0x28. Poe/Garo Laugh SFX
         0x29. Bubbling SFX (Gyorg Cutscene)
         0x2A. Poe Defeat Shriek SFX
         0x2B. Mid: Goron "Hmm?" SFX, High: Goron "Ooooh..." SFX
@@ -3714,17 +3714,17 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x35. Explosion SFX
         0x36. Moon Speaking/Moving SFX
         0x37. Twinmold Damage SFX
-        0x38. Laughing SFX 1 (SM64 Boo Sample)
+        0x38. Laughing SFX 1
         0x39. Real Bombchu SFX
         0x3A. Bomb Fuse SFX
         0x3B. Odolwa Calling Bugs SFX
         0x3C. Odolwa Passive Taunt SFX
         0x3D. Odolwa Calling Moths SFX
-        0x3E. Laughing SFX 2 (SM64 Boo Sample)
+        0x3E. Laughing SFX 2
         0x3F. Majora's Incarnation Head SFX
         0x40. Gomess Shout SFX
         0x41. SM64 Bowser Defeat SFX
-        0x42. Laughing SFX 3 (SM64 Boo Sample)
+        0x42. Laughing SFX 3
         0x43. Hiploop Charge Footstep SFX
         0x44. Wizzrobe Initiating Attack SFX
         0x45. Wizzrobe Afterimage SFX
