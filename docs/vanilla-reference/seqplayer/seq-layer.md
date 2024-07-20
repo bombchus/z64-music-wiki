@@ -24,7 +24,7 @@ placeholder
 ## 0xD0: Set Short Note Velocity From Table
 placeholder
 
-## 0xCF: Set Decay Index
+## 0xCF: Set Release
 placeholder
 
 ## 0xCE: Set Pitch Bend (±2 Semitones)

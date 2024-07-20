@@ -40,7 +40,7 @@ placeholder
     | `drumpanoff` | Ignore Drum Pan |
     | `reverbphase` | Set Stereo Effects |
     | `lbend2` | Set Pitch Bend (±2 Semitones, Layer) |
-    | `lrelease` | Set Decay Index (Layer) |
+    | `lrelease` | Set Release (Layer) |
     | `shorttablevel` | Set Short Note Velocity from Table |
     | `shorttablegate` | Set Short Note Gatetime from Table |
 
@@ -95,7 +95,7 @@ placeholder
     | `reverb` | Set Reverb |
     | `vibfreq` | Set Vibrato Rate |
     | `vibdepth` | Set Vibrato Depth |
-    | `release` | Set Decay Index |
+    | `release` | Set Release |
     | `cenvelope` | Set Envelope |
     | `ctp` | Set Transposition (Channel) |
     | `panmix` | Set Pan Mix |

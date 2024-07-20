@@ -153,7 +153,7 @@ placeholder
 
 address start value must be aligned to even numbers
 
-## 0xD9: Set Decay Index
+## 0xD9: Set Release
 placeholder
 
 sets the release rate to be used by the channel. 0x00 is longest decay, 0xFF is shortest decay.

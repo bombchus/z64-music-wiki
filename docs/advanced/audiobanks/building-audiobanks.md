@@ -306,7 +306,7 @@ For C and Binary, items do not need to be in any particular order except for the
           <!-- Mid Sample max key, High Sample min key -->
           <field name="Mid-High Split" datatype="uint8" ispointer="0" isarray="0"
                 meaning="Split Point 2" value="127"/>
-          <!-- Decay Index (Release Rate) -->
+          <!-- Release Rate -->
           <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
                 meaning="Release Rate" value="255"/>
           <!-- Envelope Pointer -->
@@ -397,7 +397,7 @@ For C and Binary, items do not need to be in any particular order except for the
       <item address="0" name="Drum Name">
         <!-- ABDrum Struct -->
         <struct name="ABDrum">
-          <!-- Decay Index (Release Rate) -->
+          <!-- Release Rate -->
           <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
                  meaning="Release Rate" value="255"/>
           <!-- Drum Pan (used when 0xDC is 0)-->
@@ -432,7 +432,7 @@ For C and Binary, items do not need to be in any particular order except for the
     ## ## ## ## | uu vv ww ww xx xx xx xx yy yy yy yy zz zz zz zz
     ```
 
-    - `uu` = Decay index
+    - `uu` = Release Rate
     - `vv` = Drum pan
     - `ww ww` = Relocation Offset
     - `xx xx xx xx` = Sample pointer address
