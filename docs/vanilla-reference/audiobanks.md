@@ -1168,7 +1168,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x01. Harp
         0x02. Harp
         0x03. Harp ALT (Mid Only)
-        0x04. Strings ALT (Attack Time: 32)
+        0x04. Slow Strings
         0x05. Ocarina
         0x06. Male Choir
         0x07. Male Choir
@@ -1762,7 +1762,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x01. Harp
         0x02. ⛔ (nullptr)
         0x03. ⛔ (nullptr)
-        0x04. Strings ALT (Attack Time: 32)
+        0x04. Slow Strings
         0x05. Ocarina
         0x06. ⛔ (nullptr)
         0x07. ⛔ (nullptr)
@@ -4366,7 +4366,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x01. Harp
         0x02. Harp
         0x03. Harp ALT (Mid Only)
-        0x04. Strings ALT (Attack Time: 32)
+        0x04. Slow Strings
         0x05. Ocarina
         0x06. Male Choir
         0x07. Male Choir
@@ -4576,7 +4576,7 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
         0x01. Harp
         0x02. ⛔ (nullptr)
         0x03. ⛔ (nullptr)
-        0x04. Strings ALT (Attack Time: 32)
+        0x04. Slow Strings
         0x05. Ocarina
         0x06. ⛔ (nullptr)
         0x07. ⛔ (nullptr)
