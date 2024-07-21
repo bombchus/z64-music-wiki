@@ -34,7 +34,7 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[v2.3.2](https://github.com/sauraen/seq64/releases/tag/2.3.2){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended for sequence converting</small>
 - ##### **ROM Description**
     - *Ocarina of Time* `ntsc-u` `ntsc-j` `v1.0`
-        - **[ROM Description](../assets/tools/OOTv1.0 RomDesc v2024.07.20 (Stable).zip){ target="_blank" }**<small> :material-open-in-new: </small><small>v2024.07.20</small>
+        - **[ROM Description](../assets/tools/OOTv1.0 RomDesc v2024.07.20 (Stable).zip){ target="_blank" }**<small> :material-open-in-new: </small>`stable` <small>v2024.07.20</small>
         - **[ROM Description](../assets/tools/!~ OOTv1.0 RomDesc v2024.07.20 (Experimental, All Sequence Commands).zip){ target="_blank" }**<small> :material-open-in-new: </small>`experimental` <small>v2024.07.20</small>
     - *Majora's Mask* `ntsc-u` `v1.0`
         - **[ROM Description](MM RomDesc v2024.07.20 (Stable).zip){ target="_blank" }**<small> :material-open-in-new: </small>`stable` <small>v2024.07.20</small>
