@@ -186,142 +186,142 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Sound Effect List:**
         ``` linenums="0"
-        0x00. [absfxlist:0]
-        0x01. [absfxlist:1]
-        0x02. [absfxlist:2]
-        0x03. [absfxlist:3]
-        0x04. [absfxlist:4]
-        0x05. [absfxlist:5]
-        0x06. [absfxlist:6]
-        0x07. [absfxlist:7]
-        0x08. [absfxlist:8]
-        0x09. [absfxlist:9]
-        0x0A. [absfxlist:10]
-        0x0B. [absfxlist:11]
-        0x0C. [absfxlist:12]
-        0x0D. [absfxlist:13]
-        0x0E. [absfxlist:14]
-        0x0F. [absfxlist:15]
-        0x10. [absfxlist:16]
-        0x11. [absfxlist:17]
-        0x12. [absfxlist:18]
-        0x13. [absfxlist:19]
-        0x14. [absfxlist:20, absfxlist:64]
-        0x15. [absfxlist:21]
-        0x16. [absfxlist:22]
-        0x17. [absfxlist:23]
-        0x18. [absfxlist:24]
-        0x19. [absfxlist:25]
-        0x1A. [absfxlist:26]
-        0x1B. [absfxlist:27]
-        0x1C. [absfxlist:28]
-        0x1D. [absfxlist:29]
-        0x1E. [absfxlist:30]
-        0x1F. [absfxlist:31]
-        0x20. [absfxlist:32]
-        0x21. [absfxlist:33]
-        0x22. [absfxlist:34]
-        0x23. [absfxlist:35]
-        0x24. [absfxlist:36]
-        0x25. [absfxlist:37]
-        0x26. [absfxlist:38]
-        0x27. [absfxlist:39]
-        0x28. [absfxlist:40]
-        0x29. [absfxlist:41]
-        0x2A. [absfxlist:42]
-        0x2B. [absfxlist:43]
-        0x2C. [absfxlist:44]
-        0x2D. [absfxlist:45]
-        0x2E. [absfxlist:46]
-        0x2F. [absfxlist:47]
-        0x30. [absfxlist:48]
-        0x31. [absfxlist:49]
-        0x32. [absfxlist:50]
-        0x33. [absfxlist:51]
-        0x34. [absfxlist:52]
-        0x35. [absfxlist:53]
-        0x36. [absfxlist:54]
-        0x37. [absfxlist:55]
-        0x38. [absfxlist:56]
-        0x39. [absfxlist:57, absfxlist:102]
-        0x3A. [absfxlist:58, absfxlist:103]
-        0x3B. [absfxlist:59, absfxlist:104]
-        0x3C. [absfxlist:60]
-        0x3D. [absfxlist:61]
-        0x3E. [absfxlist:62]
-        0x3F. [absfxlist:63]
-        0x40. [absfxlist:20, absfxlist:64]
-        0x41. [absfxlist:65]
-        0x42. [absfxlist:66]
-        0x43. [absfxlist:67]
+        0x00. Adult Link (Attack 1)
+        0x01. Adult Link (Attack 2)
+        0x02. Adult Link (Attack 3)
+        0x03. Adult Link (Attack 4)
+        0x04. Adult Link (Attack 5)
+        0x05. Adult Link (Attack 6)
+        0x06. Adult Link (Ledge 1)
+        0x07. Adult Link (Ledge 2)
+        0x08. Adult Link (Ledge 3)
+        0x09. Adult Link (Damage 1)
+        0x0A. Adult Link (Damage 2)
+        0x0B. Adult Link (Damage 3)
+        0x0C. Adult Link (Damage 4)
+        0x0D. Adult Link (Damage 5)
+        0x0E. Adult Link (Damage 6)
+        0x0F. Adult Link (Scream 1)
+        0x10. Adult Link (Scream 2)
+        0x11. Adult Link (Gasp 1)
+        0x12. Adult Link (Gasp 2)
+        0x13. Adult Link (Critical 1)
+        0x14. Young Link (Death 1)
+        0x15. Adult Link ("Hyah!")
+        0x16. Adult Link ("Hey!")
+        0x17. Adult Link (Critical 2)
+        0x18. Adult Link (Fall Damage)
+        0x19. Adult Link (Ledge 4)
+        0x1A. Adult Link (Jump 1)
+        0x1B. Adult Link (Jump 2)
+        0x1C. Young Link (Attack 1)
+        0x1D. Young Link (Attack 2)
+        0x1E. Young Link (Attack 3)
+        0x1F. Young Link (Attack 4)
+        0x20. Young Link (Attack 5)
+        0x21. Young Link (Attack 6)
+        0x22. Young Link (Ledge 1)
+        0x23. Young Link (Ledge 2)
+        0x24. Young Link (Ledge 3)
+        0x25. Young Link (Damage 1)
+        0x26. Young Link (Damage 2)
+        0x27. Young Link (Damage 3)
+        0x28. Young Link (Damage 4)
+        0x29. Young Link (Damage 5)
+        0x2A. Young Link (Damage 6)
+        0x2B. Young Link (Scream 1)
+        0x2C. Young Link (Scream 2)
+        0x2D. Young Link (Gasp 1)
+        0x2E. Young Link (Gasp 2)
+        0x2F. Young Link (Critical 1)
+        0x30. Young Link (Critical 2)
+        0x31. Young Link (Fall Damage)
+        0x32. Young Link (Ledge 4)
+        0x33. Young Link (Drink 1)
+        0x34. Young Link (Drink 2)
+        0x35. Young Link (Jump 1)
+        0x36. Young Link (Jump 2)
+        0x37. Adult Link (Drink 1)
+        0x38. Adult Link (Drink 2)
+        0x39. Navi ("Watch Out!")
+        0x3A. Navi ("Look!")
+        0x3B. Navi ("Hey!")
+        0x3C. Adult Link (Din's Fire 1)
+        0x3D. Adult Link (Din's Fire 2)
+        0x3E. Young Link (Din's Fire 1)
+        0x3F. Young Link (Din's Fire 2)
+        0x40. Young Link (Death 1)
+        0x41. Young Link (Death 2)
+        0x42. Young Link (Death 3)
+        0x43. Young Link (Shiver)
         0x44. ⛔ (nullptr)
-        0x45. [absfxlist:69]
-        0x46. [absfxlist:70]
-        0x47. [absfxlist:71]
-        0x48. [absfxlist:72]
-        0x49. [absfxlist:73]
-        0x4A. [absfxlist:74]
-        0x4B. [absfxlist:75]
-        0x4C. [absfxlist:76]
-        0x4D. [absfxlist:77]
-        0x4E. [absfxlist:78]
-        0x4F. [absfxlist:79]
-        0x50. [absfxlist:80]
-        0x51. [absfxlist:81]
-        0x52. [absfxlist:82]
-        0x53. [absfxlist:83]
-        0x54. [absfxlist:84]
-        0x55. [absfxlist:85]
-        0x56. [absfxlist:86]
-        0x57. [absfxlist:87]
-        0x58. [absfxlist:88]
-        0x59. [absfxlist:89]
-        0x5A. [absfxlist:90]
-        0x5B. [absfxlist:91]
-        0x5C. [absfxlist:92]
-        0x5D. [absfxlist:93]
-        0x5E. [absfxlist:94]
-        0x5F. [absfxlist:95]
-        0x60. [absfxlist:96]
-        0x61. [absfxlist:97]
-        0x62. [absfxlist:98]
-        0x63. [absfxlist:99]
-        0x64. [absfxlist:100]
-        0x65. [absfxlist:101]
-        0x66. [absfxlist:57, absfxlist:102]
-        0x67. [absfxlist:58, absfxlist:103]
-        0x68. [absfxlist:59, absfxlist:104]
-        0x69. [absfxlist:105]
-        0x6A. [absfxlist:106]
-        0x6B. [absfxlist:107]
-        0x6C. [absfxlist:108]
-        0x6D. [absfxlist:109]
-        0x6E. [absfxlist:110]
-        0x6F. [absfxlist:111]
-        0x70. [absfxlist:112]
-        0x71. [absfxlist:113]
-        0x72. [absfxlist:114]
-        0x73. [absfxlist:115]
-        0x74. [absfxlist:116]
-        0x75. [absfxlist:117]
-        0x76. [absfxlist:118]
-        0x77. [absfxlist:119]
-        0x78. [absfxlist:120]
-        0x79. [absfxlist:121]
-        0x7A. [absfxlist:122]
-        0x7B. [absfxlist:123]
-        0x7C. [absfxlist:124]
-        0x7D. [absfxlist:125]
-        0x7E. [absfxlist:126]
-        0x7F. [absfxlist:127]
-        0x80. [absfxlist:128]
-        0x81. [absfxlist:129]
-        0x82. [absfxlist:130]
-        0x83. [absfxlist:131]
-        0x84. [absfxlist:132]
+        0x45. Young Link (Sneeze)
+        0x46. Young Link (Sleep 1)
+        0x47. Young Link (Sleep 2)
+        0x48. Young Link (Sleep 3)
+        0x49. Young Link (Sleep 4)
+        0x4A. Young Link (Stretch 1)
+        0x4B. Young Link (Stretch 2)
+        0x4C. Young Link (Stretch 3)
+        0x4D. Adult Link (Death 1)
+        0x4E. Adult Link (Death 2)
+        0x4F. Adult Link (Death 3)
+        0x50. Adult Link (Shiver 1)
+        0x51. Adult Link (Shiver 2)
+        0x52. Adult Link (Sneeze)
+        0x53. Adult Link (Sigh 1)
+        0x54. Adult Link (Sigh 2)
+        0x55. Adult Link (Sigh 3)
+        0x56. Adult Link (Stretch 1)
+        0x57. Adult Link (Stretch 2)
+        0x58. Adult Link (Stretch 3)
+        0x59. Talon (Snore)
+        0x5A. Talon (Awaken)
+        0x5B. Talon (Confused)
+        0x5C. Talon (Yell)
+        0x5D. Ingo ("Wah!")
+        0x5E. Mutoh ("Kaaah!")
+        0x5F. Ingo ("Hyah!")
+        0x60. Ingo ("Ha!")
+        0x61. Great Fairy (Laugh 1)
+        0x62. Great Fairy (Laugh 2)
+        0x63. Nabooru (Gasp)
+        0x64. Nabooru (Scream)
+        0x65. Nabooru ("Hmm?")
+        0x66. Navi ("Watch Out!")
+        0x67. Navi ("Look!")
+        0x68. Navi ("Hey!")
+        0x69. Princess Ruto ("Gueh!")
+        0x6A. Princess Ruto ("Ah!")
+        0x6B. Princess Ruto (Scream)
+        0x6C. Young Malon (Laugh)
+        0x6D. Princess Ruto (Pickup 1)
+        0x6E. Princess Ruto (Pickup 2)
+        0x6F. Princess Ruto (Wiggle)
+        0x70. Cursed Man (Scream)
+        0x71. Cursed Man (Attack)
+        0x72. Female (Gasp 1)
+        0x73. Female ("Eh?")
+        0x74. Female ("Huh?")
+        0x75. Female ("Hmph")
+        0x76. Female (Laugh 1)
+        0x77. Female (Gasp 2)
+        0x78. Female (Damage)
+        0x79. Gerudo Guard (Damage 1)
+        0x7A. Gerudo Guard (Damage 2)
+        0x7B. Gerudo Guard (Damage 3)
+        0x7C. Navi ("Listen!")
+        0x7D. Sheik ("Hup!")
+        0x7E. Adult Zelda (Scream 1)
+        0x7F. Adult Zelda (Scream 2)
+        0x80. Adult Zelda (Magic)
+        0x81. Adult Zelda (Gasp 1)
+        0x82. Adult Zelda (Gasp 2)
+        0x83. King Zora ("Mweep")
+        0x84. Navi ("Hello!")
         0x85. ⛔ (nullptr)
-        0x86. [absfxlist:134]
-        0x87. [absfxlist:135]
+        0x86. Adult Link (Gasp 3)
+        0x87. Young Link (Gasp 3)
         ```
 
         ## Drums (Program Number: 7F)
@@ -333,10 +333,10 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Drum List:**
         ``` linenums="0"
-        0x00. [abdrumlist:0]
-        0x01. [abdrumlist:1]
-        0x02. [abdrumlist:2]
-        0x03. [abdrumlist:3]
+        0x00. Tambourine Slap
+        0x01. Reverb Stick Hit SFX
+        0x02. Rain SFX [1]
+        0x03. Rain SFX [2]
         ```
 
     ??? audiobank "Audiobank 0x01 (Actor Sounds)"
@@ -434,47 +434,47 @@ Below is a list of every audiobank in the vanilla ROMs of *Ocarina of Time* and 
 
         **Sound Effect List:**
         ``` linenums="0"
-        0x00. [absfxlist:0]
-        0x01. [absfxlist:1]
-        0x02. [absfxlist:2]
-        0x03. [absfxlist:3]
-        0x04. [absfxlist:4]
-        0x05. [absfxlist:5]
-        0x06. [absfxlist:6]
-        0x07. [absfxlist:7]
-        0x08. [absfxlist:8]
-        0x09. [absfxlist:9]
-        0x0A. [absfxlist:10]
-        0x0B. [absfxlist:11]
-        0x0C. [absfxlist:12]
-        0x0D. [absfxlist:13]
-        0x0E. [absfxlist:14]
-        0x0F. [absfxlist:15]
-        0x10. [absfxlist:16]
-        0x11. [absfxlist:17]
-        0x12. [absfxlist:18]
-        0x13. [absfxlist:19]
-        0x14. [absfxlist:20]
-        0x15. [absfxlist:21]
-        0x16. [absfxlist:22]
-        0x17. [absfxlist:23]
-        0x18. [absfxlist:24]
-        0x19. [absfxlist:25]
-        0x1A. [absfxlist:26]
-        0x1B. [absfxlist:27]
-        0x1C. [absfxlist:28]
-        0x1D. [absfxlist:29]
-        0x1E. [absfxlist:30]
-        0x1F. [absfxlist:31]
-        0x20. [absfxlist:32]
-        0x21. [absfxlist:33]
-        0x22. [absfxlist:34]
-        0x23. [absfxlist:35]
-        0x24. [absfxlist:36]
-        0x25. [absfxlist:37]
-        0x26. [absfxlist:38]
-        0x27. [absfxlist:39]
-        0x28. [absfxlist:40]
+        0x00. Koume & Kotake (Laugh 1)
+        0x01. Koume & Kotake (Laugh 2)
+        0x02. Koume & Kotake ("Hah!")
+        0x03. Koume & Kotake (Attack)
+        0x04. Koume & Kotake ("Eh?")
+        0x05. Koume & Kotake (Scream)
+        0x06. Twinrova (Damage 1)
+        0x07. Twinrova (Damage 2)
+        0x08. Twinrova (Attack)
+        0x09. Twinrova (Laugh)
+        0x0A. Twinrova (Scream)
+        0x0B. Twinrova (Winking)
+        0x0C. Phantom Ganon (Finger Snap)
+        0x0D. Phantom Ganon ("Tsk!")
+        0x0E. Phantom Ganon (Gasp)
+        0x0F. Phantom Ganon (Attack 1)
+        0x10. Phantom Ganon (Damage)
+        0x11. Phantom Ganon (Attack 2)
+        0x12. Phantom Ganon (???)
+        0x13. Gerudo Thief (Attack)
+        0x14. Gerudo Thief (Damage)
+        0x15. Gerudo Thief (Scream)
+        0x16. Gerudo Thief (Breath)
+        0x17. Ganondorf (Laugh 1)
+        0x18. Ganondorf ("Hah!" 1)
+        0x19. Ganondorf (Attack 1)
+        0x1A. Ganondorf ("Tsk!")
+        0x1B. Ganondorf (Attack 2)
+        0x1C. Ganondorf (Damage 1)
+        0x1D. Ganondorf (Damage 2)
+        0x1E. Ganondorf (Gasp)
+        0x1F. Ganondorf ("Hah!" 2)
+        0x20. Ganondorf (Death 1)
+        0x21. Ganondorf (Breath)
+        0x22. Ganondorf (Death 2)
+        0x23. Ganondorf (Yell 1)
+        0x24. Ganondorf (Yell 2)
+        0x25. Ganondorf (Yell 3)
+        0x26. Ganondorf (Laugh 2)
+        0x27. Deku Baba (Damage)
+        0x28. Redead (Shriek)
         ```
 
         ## Drums (Program Number: 7F)
