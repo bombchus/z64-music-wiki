@@ -33,13 +33,12 @@ Below is a list of tools that are used for creating music for *Ocarina of Time* 
     - **[v1.5.0](https://github.com/sauraen/seq64/releases/tag/V1.5){ target="_blank" }**<small> :material-open-in-new: </small><small>required for audiobank editing</small>
     - **[v2.3.2](https://github.com/sauraen/seq64/releases/tag/2.3.2){ target="_blank" }**<small> :material-open-in-new: </small><small>recommended for sequence converting</small>
 - ##### **ROM Description**
-    - *Ocarina of Time* `ntsc-u` `v1.0`
-        - **[ROM Description](#)**<small> :material-open-in-new: </small><small>v2024.02.25</small>
-        - **[ROM Description](#)**<small> :material-open-in-new: </small>`gm sample naming` <small>v20YY.MM.DD</small>
+    - *Ocarina of Time* `ntsc-u` `ntsc-j` `v1.0`
+        - **[ROM Description](#)**<small> :material-open-in-new: </small><small>v2024.07.20</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` <small>v2024.07.20</small>
     - *Majora's Mask* `ntsc-u` `v1.0`
-        - **[ROM Description](#)**<small> :material-open-in-new: </small>`stable` <small>v2024.02.25</small>
-        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` <small>v2024.04.10</small>
-        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` `gm sample naming` <small>v20YY.MM.DD</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`stable` <small>v2024.07.20</small>
+        - **[ROM Description](#)**<small> :material-open-in-new: </small>`experimental` <small>v2024.07.20</small>
 - ##### **SEQ64 ABI File**
     - **[Zelda ABI](#)**<small> :material-open-in-new: </small><small>±2 semitone pitch bend scale</small>
     - **[Zelda ABI](#)**<small> :material-open-in-new: </small><small>±12 semitone pitch bend scale</small>
