@@ -272,4 +272,6 @@ placeholder
 */
 </style>
 
+sequence embedded envelopes are 2 byte aligned (each envelope index is only 2 bytes long s16, and the envelope effect does not check for a max length, it goes until it reaches the end state), which means the envelope can be at any address divisible by 2 (0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0E, and so on can all be start addresses for the envelope). if the envelope is not aligned then the game will do one of two things: 1) crash, or 2) the envelope will be ignored(need to reconfirm?)
+
 -----

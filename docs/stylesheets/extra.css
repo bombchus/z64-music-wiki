@@ -249,3 +249,7 @@
   border-radius: .4rem;
   display: inline-block;
 }
+
+/*.md-tabs__item:nth-child(1) {
+  display: none;
+}*/
