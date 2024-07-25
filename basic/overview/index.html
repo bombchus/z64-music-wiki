@@ -1,0 +1,2737 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and resources for creating custom music for Ocarina of Time and Majora's Mask to be used in conjunction with the OOT, MM, and OOTMM Randomizers">
+      
+      
+      
+        <link rel="canonical" href="https://bombchus.github.io/z64-music-wiki/basic/overview/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../assign-instruments/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Music Creation Overview - Zelda 64 Custom Music Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+    
+  
+  
+  <style>.md-tag{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.5 7A1.5 1.5 0 0 1 4 5.5 1.5 1.5 0 0 1 5.5 4 1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 5.5 7m15.91 4.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.11 0-2 .89-2 2v7c0 .55.22 1.05.59 1.41l8.99 9c.37.36.87.59 1.42.59.55 0 1.05-.23 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.56-.23-1.06-.59-1.42Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .glightbox-clean .gslide-media {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#music-creation-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine classes -->
+
+
+  
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Logo Link to home -->
+    <!-- title="Zelda 64 Custom Music Wiki" -->
+    <a
+      href="../.."
+      class="md-header__button md-logo"
+      aria-label="Zelda 64 Custom Music Wiki"
+      data-md-component="logo"
+    >
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+
+    <!-- Remove Logo Link to Home -->
+    <!--
+    <a
+      title=""
+      class="md-header__button md-logo"
+      aria-label=""
+      data-md-component="logo"
+    >
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    -->
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    
+
+    <!-- Navigation tabs (sticky) -->
+    
+      
+        
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/basic-tools/" class="md-tabs__link">
+          
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Basic Info
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../advanced/" class="md-tabs__link">
+          
+  
+    
+  
+  Advanced Info
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vanilla-reference/" class="md-tabs__link">
+          
+  
+    
+  
+  Vanilla References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+    
+
+    <!-- Color palette toggle -->
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+
+    <!-- User preference: color palette -->
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zelda 64 Custom Music Wiki" class="md-nav__button md-logo" aria-label="Zelda 64 Custom Music Wiki" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Zelda 64 Custom Music Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools & Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/basic-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/adv-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROM Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/seq64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using SEQ64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Basic Info
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Music Creation Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Music Creation Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-music-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Music Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrument Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instrument Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channel-based-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel-Based Instruments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Channel-Based Instruments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Instruments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-based-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Based Instruments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrument Ranges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-seq64-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SEQ64 Errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-note-division-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIDI Note Division Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seq-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      seq loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="seq loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-loop-points-in-fl-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Loop Points in FL Studio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assign-instruments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assigning Instruments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Categorizing Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Custom Audiobanks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio-balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In-Game Audio Balancing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced Info
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/formmask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formmask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audiobanks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audiobanks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/audiobanks/building-audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building an Audiobank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADSR
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            ADSR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/adsr/envelopes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/adsr/abenvelope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audiobank Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/adsr/seqenvelope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Custom Sample Injection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Custom Sample Injection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/sampling/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Injection Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/sampling/wav-conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WAV File Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/sampling/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MIDI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            MIDI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/midi/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced MIDI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/midi/sysex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SysEx Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/midi/rpns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registered Parameter Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music Assembly Language
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Music Assembly Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/mus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../vanilla-reference/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Vanilla References
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vanilla References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audiobank Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/samples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sequence Command Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sequence Command Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/seqplayer/seq-flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Flow Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/seqplayer/seq-player/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Player Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/seqplayer/seq-channel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Channel Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanilla-reference/seqplayer/seq-layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Layer Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-music-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Music Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrument Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instrument Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channel-based-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel-Based Instruments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Channel-Based Instruments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Instruments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-based-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Based Instruments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrument Ranges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-seq64-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SEQ64 Errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-note-division-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIDI Note Division Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seq-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      seq loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="seq loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-loop-points-in-fl-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Loop Points in FL Studio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="music-creation-overview">Music Creation Overview<a class="headerlink" href="#music-creation-overview" title="Permanent link">&para;</a></h1>
+<div class="grid cards">
+<ul>
+<li>
+<p><img style="width:58.5px; height:auto; vertical-align: middle;" src="../../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b></p>
+<hr />
+<p>This page is a work in progress and requires further editing.</p>
+</li>
+</ul>
+</div>
+<h2 id="summary-of-music-creation">Summary of Music Creation<a class="headerlink" href="#summary-of-music-creation" title="Permanent link">&para;</a></h2>
+<p>To create custom music in <em>Ocarina of Time</em> and <em>Majora's Mask</em>, a sequence file the audio engine can play back in real-time mut be used. Sequences are a form of compressed MIDI created by Nintendo for the Nintendo 64. Sequences are a set of commands, or instructions, that tell the audio engine what sample files to play, at what pitch, at what time, and how fast to play through the sequence. Due to the similarities between MIDI sequences and Nintendo 64 sequences, the most common way to create a sequence for <em>Ocarina of Time</em> and <em>Majora's Mask</em> is to convert a MIDI song into a sequence using SEQ64.</p>
+<p>There are other ways to create a sequence aside from MIDI. However, using a MIDI sequence is the easiest due to their numerous similarities, and the ability to preview a song as you work on it.</p>
+<div class="admonition info">
+<p class="admonition-title">Is it possible to use MP3 files?</p>
+<p>It is not possible to take an MP3 file and play it back in real-time in <em>Ocarina of Time</em> and <em>Majora's Mask</em>. While both <em>Ocarina of Time</em> and <em>Majora's Mask</em> are capable of "streaming" audio, the only games on the Nintendo 64 known to be capable of MP3 decoding are <em>Conker's Bad Fur Day</em> and <em>Perfect Dark</em>.</p>
+</div>
+<h2 id="sequence-limitations">Sequence Limitations<a class="headerlink" href="#sequence-limitations" title="Permanent link">&para;</a></h2>
+<p>Below is a list of technical limitations for sequences to be aware of when creating music for <em>Ocarina of Time</em> and <em>Majora's Mask</em>:</p>
+<ol>
+<li>Like MIDI, a sequence can only have up to 16 (0x0F) channels.<ul>
+<li>Multiple tracks may be assigned to a single channel in MIDI; however, they are subject to the channel limitations sequences have.</li>
+</ul>
+</li>
+<li>A sequence's tempo cannot go above a value of 255 (0xFF).<ul>
+<li>Because the data that stores tempo information is an 8 bit unsigned integer (u8) value, the tempo command has a limit of 255 (0xFF) for sequences; it cannot go any higher.</li>
+</ul>
+</li>
+<li>A sequence's master, channel, and expression volume cannot go above a value of 255 (0xFF).<ul>
+<li>Because the data that stores volume information is an 8 bit unsigned integer (u8) value, the volume commands have a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores volume information is a 7 bit unsigned integer value. Volume messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.</li>
+</ul>
+</li>
+<li>A sequence's instrument assignment values cannot go above a value of 255 (0xFF).<ul>
+<li>Because the data that stores instrument assignment information is an 8 bit unsigned integer (u8) value, the instrument change command has a limit of 255 (0xFF) for sequences; it cannot go any higher. In MIDI, the data that stores program assignment information is a 7 bit unsigned integer value. Program change messages have a limit of 127 (0x7F) for MIDI; it cannot go any higher.</li>
+</ul>
+</li>
+<li>Like MIDI, channels in a sequence are polyphonic; however, only a maximum of four voices of differing pitches can play within a single channel at any given time.</li>
+<li>Like MIDI, one pair of <em>Note On</em> and <em>Note Off</em> messages cannot intersect, or overlap, another pair of <em>Note On</em> and <em>Note Off</em> messages for a note of the same pitch in a sequence.<ul>
+<li>While a DAW may allow stacked notes or overlapped notes without immediate issue, it is invalid to send a second <em>Note On</em> message for a note of the same pitch in the same channel before a <em>Note Off</em> message is sent for the first <em>Note On</em> message. In MIDI, a <em>Note On</em> message with a velocity of zero is interpreted as a <em>Note Off</em> message, and while many DAWs will attempt to properly pair note messages, they will fail.</li>
+</ul>
+</li>
+<li>A sequence's delay values cannot go above a value of 32767 (0x7FFF)<ul>
+<li>Because the data that stores delay frames is a 16 bit unsigned integer (u16) value, the delay command has a limit of 32767 (0x7FFF) for sequences; it cannot go any higher.</li>
+</ul>
+</li>
+<li>A MIDI marker message cannot intersect a pair of <em>Note On</em> and <em>Note Off</em> messages.<ul>
+<li>placeholder</li>
+</ul>
+</li>
+</ol>
+<style>
+/* MOVED TO A NEW PAGE?
+## Assigning Instruments
+In MIDI, instruments are assigned by a control change command using the values 192 (0xC0) to 207 (0xCF). Generally only a single instrument can be assigned per channel. However, instruments can be swapped at any point using a MIDI program change message.
+
+MIDI instrument banks using the GM specification normally contain 127 possible instruments with MIDI channel 10 always being reserved for percussion kits, where instead of using a program change to individual drums, it instead changes the entire percussion kit itself with individual drum sounds being assigned to different keys on the virtual MIDI piano (the range of possible samples is from keys 35 to 81). Instrument banks in MIDI contain those 127 instruments and percussion kits within a single instrument bank. However, in *Ocarina of Time* and *Majora's Mask* there are multiple instrument banks commonly referred to as "audiobanks" or "soundfonts". Setting instruments depends entirely on the audiobank used; in vanilla audiobanks there will almost always only be 1 (0x00) to 16 (0x0F) instruments with instrument 126 (0x7E) assigning the sound effects to a channel and instrument 127 (0x7F) assigning the percussion kit to a channel. Audiobanks can contain up to 255 (0xFF) instruments that may be assigned to a channel. However, instruments 126 (0x7E) and 127 (0x7F) are always reserved for sound effects and percussion kits respectively.
+
+Some audiobanks may have fewer instruments, different sound effects, or contain entirely different percussion kits; the reason for breaking audiobanks into smaller sub-banks is used as a way to reduce the amount of RAM required by the audio system in *Ocarina of Time* and *Majora's Mask*.
+
+??? info "Drums and Sound Effects"
+    Drums and sound effects in *Ocarina of Time* and *Majora's Mask* work almost identically to how they do in MIDI with different values corresponding to different individual drum sounds. The only difference is that there is a single percussion kit per audiobank, and it is assigned to program 127 (0x7F) instead of being assigned to a specific MIDI channel.
+
+To properly assign the instruments a sequence will use, it is necessary to determine which instrument inside the audiobank used corresponds to the equivalent MIDI program value. The [vanilla audiobank references](../../vanilla-reference/audiobanks){ target="__blank" }<small>:material-open-in-new: </small> wiki page contains a list of all audiobanks and their corresponding instruments and instrument assignment values.
+*/
+
+/*
+THE GREAT REWRITE WILL BE FINISHED EVENTUALLY!!!
+
+To use instruments in a MIDI channel a MIDI program change message must be sent to the MIDI channel. Each MIDI channel may only have a single instrument assigned to it at a time. However, the instrument used by a MIDI channel can be changed at any time. To change the instrument a MIDI channel uses, another MIDI program change message must be sent to the MIDI channel. Percussion kits may only be used in MIDI channel 10.
+
+To use instruments in a sequence channel the sequence command "0xC1" must be sent to the sequence channel. Each sequence channel may only have a single instrument assigned to it at a time. However, the instrument used by a sequence channel can be changed at any time. To change the instrument a sequence channel uses, another sequence command "0xC1" must be sent to the sequence channel. Percussion kits have an instrument assignment value of 0x7F (127) in Ocarina of Time and Majora's Mask.
+*/
+
+/* MOVED TO NEW PAGE?
+### Assigning Instruments in MIDI
+In MIDI, instruments and percussion kits are assigned to a channel by sending a MIDI program change message to that channel. There may only be a single instrument or percussion kit assigned to a channel at any time. However, the channel's assigned instrument or percussion kit can be changed at any point by sending another MIDI program change message to the channel. MIDI program change messages have two bytes. The first byte of a MIDI program change message is the status byte with values ranging from 0xC0 to 0xCF. The first half-byte determines the message type; the second half-byte points to the MIDI channel the message is sent to. The status byte determines the channel the message is sent to. The second byte of a MIDI program change message is the data byte with values ranging from 0x00 (0) to 0x7F (127). The data byte determines what instrument or percussion kit the channel will use. Instruments may be set in any MIDI channel, while percussion kits may only be set in MIDI channel 10 as MIDI channel 10 is reserved solely for percussion kits.
+
+#### Using Percussion Kits
+In MIDI, percussion kits are only available in MIDI channel 10.
+
+In MIDI, instruments and percussion kits are stored inside of banks. In the General MIDI 1.0 specification (which does not support MIDI bank select messages), bank 0 (0x00) contains only instruments with bank 128 (0x80) containing only percussion kits. Bank 0 is the default bank for all MIDI channels with bank 128 as the default bank in MIDI channel 10.
+
+### Assigning Instruments in Sequences
+In *Ocarina of Time* and *Majora's Mask*, instruments, sound effects, and percussion kits are assigned to a channel with the sequence command 0xC1 (Set Instrument). There may only be a single instrument, sound effects, or percussion kit assigned to a channel at any given time. However, the channel's assigned instrument, sound effects, or percussion kit can be changed at any point by sending another sequence command of 0xC1 (Set Instrument). The sequence command 0xC1 (Set Instrument) only has a data byte with values ranging from 0x00 (0) to 0xFF (255). This data byte determines what instrument, sound effects, or percussion kit the channel will use. Instruments, sound effects, and percussion kits may be set in any sequence channel. However, unlike MIDI, sequence command 0xC1's instrument assignments for values 126 (0x7E) and 127 (0x7F) are reserved for sound effects and percussion kits respectively.
+
+In Ocarina of Time and Majora's Mask, instruments, sound effects, and percussion kits are stored inside of banks (commonly referred to as "audiobanks" or "soundfonts"). Unlike MIDI, *Ocarina of Time* and *Majora's Mask* store instruments, sound effects, and percussion kits inside of a single bank. And while a sequence command for changing banks does exist, it can only load banks that are currently loaded into RAM.
+
+### Assigning Appropriate MIDI Instruments
+Instruments in MIDI are not one-to-one with instruments in *Ocarina of Time* and *Majora's Mask*. In MIDI, the "Strings" instrument has a MIDI program change value of 48 (0x30). In *Ocarina of Time* and *Majora's Mask*, the "Strings" instrument has an instrument assignment value dependent on the bank used by a sequence. Unlike in MIDI, in *Ocarina of Time* and *Majora's Mask*, it is also possible that the "Strings" instrument may not be present in a bank at all. As an example, in *Ocarina of Time* and *Majora's Mask*, bank 0x03 assigns the "Strings" instrument to a value of 10 (0x0A) or 11 (0x0B), while bank 0x02 does not contain the "Strings" instrument at all in either game and only contains ambient nature sounds. So, to make sure instruments, sound effects, and percussion kits are assigned to the proper channel in a sequence, it is required to adjust MIDI program change message values to match the assignment value of the counterpart chosen in the *Ocarina of Time* and *Majora's Mask* bank being used.
+*/
+</style>
+
+<h2 id="instrument-types">Instrument Types<a class="headerlink" href="#instrument-types" title="Permanent link">&para;</a></h2>
+<p>In <em>Ocarina of Time</em> and <em>Majora's Mask</em> there are two different types of instruments:</p>
+<ol>
+<li>Channel-Based Instruments</li>
+<li>Key-Based Instruments</li>
+</ol>
+<h3 id="channel-based-instruments">Channel-Based Instruments<a class="headerlink" href="#channel-based-instruments" title="Permanent link">&para;</a></h3>
+<p>Channel-based instruments, commonly referred to as just simply "instruments", are instruments that assign three different samples to three different note regions on the virtual MIDI piano. The low sample occupies the note region from note 0 (C0) to the note specified by the low-mid region split inside the audiobank, the mid or normal sample occupies the note region from the note specified by the low-mid region split to the note specified by the mid-high region split inside the audiobank, and the high sample occupies the note region from the note specified by the mid-high region split to note 127 (G10). Each sample is automatically pitch shifted with the starting pitch determined by the tuning float value.</p>
+<h4 id="special-instruments">Special Instruments<a class="headerlink" href="#special-instruments" title="Permanent link">&para;</a></h4>
+<p>In <em>Ocarina of Time</em> and <em>Majora's Mask</em>, there exists a special set of channel-based instruments commonly referred to as "synth wave", "waveform", or "chiptune" instruments. These instruments have their sample data stored outside any audiobanks; this makes them available to use at all times, regardless of the audiobank currently being used by a sequence. More detailed information on these instruments, and how to assign them to a channel can be found on the <a href="../vanilla-reference/audiobanks/#audiobank-reference-waveform-instruments" target="__blank">vanilla audiobank reference</a><small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span> </small> wiki page.</p>
+<h3 id="key-based-instruments">Key-Based Instruments<a class="headerlink" href="#key-based-instruments" title="Permanent link">&para;</a></h3>
+<p>Key-based instruments, commonly referred to as "drums" and "sound effects", are instruments which have a single sample assigned to a single key on the virtual MIDI piano. Key-based instruments, despite what the name "key-based" may imply, are used in channels just like channel-based instruments are. However, the way their data is handled is the basis for their name. Key-based instruments as previously stated assign a single sample, ADSR envelope, and pan value to a single piano key in the virtual MIDI piano from the note range 21 (A1) to 85 (C7); the way key-based instruments are tuned in <em>Ocarina of Time</em> and <em>Majora's Mask</em> is different as well.</p>
+<h2 id="instrument-ranges">Instrument Ranges<a class="headerlink" href="#instrument-ranges" title="Permanent link">&para;</a></h2>
+<p>Instruments in <em>Ocarina of Time</em> and <em>Majora's Mask</em> are limited in their range. The Nintendo 64 Programming Manual states the following: "The pitch shifter resamples the resulting data (up one octave, down any number of octaves) to the desired pitch."<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> However, the playback code given to the synthesis driver — which is responsible for pitch shifting sample data — in <em>Ocarina of Time</em> and <em>Majora's Mask</em> allows for an increase of two octaves instead of just a single octave:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="instrument-ranges-c" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="instrument-ranges-c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3h2Z"/></svg></span>&nbsp; C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><span class="filename">playback.c</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">AudioPlayback_NoteSetResamplingRate</span><span class="p">(</span><span class="n">NoteSampleState</span><span class="o">*</span><span class="w"> </span><span class="n">sampleState</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                                         </span><span class="n">f32</span><span class="w"> </span><span class="n">resamplingRateInput</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// Set the initial resampling rate to 0.0f</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">f32</span><span class="w"> </span><span class="n">resamplingRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// Determines if the given resampling rate is lower than 2.0f</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resamplingRateInput</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">          </span><span class="n">sampleState</span><span class="o">-&gt;</span><span class="n">bitField1</span><span class="p">.</span><span class="n">hasTwoParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">          </span><span class="n">resamplingRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CLAMP_MAX</span><span class="p">(</span><span class="n">resamplingRateInput</span><span class="p">,</span><span class="w"> </span><span class="mf">1.99998f</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="c1">// If the given resampling rate is higher than 2.0f the following happens</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">sampleState</span><span class="o">-&gt;</span><span class="n">bitField1</span><span class="p">.</span><span class="n">hasTwoParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="c1">// If the given resampling rate is above 4.0f, cap the resampling rate to 2.0f</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resamplingRateInput</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3.99996f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="n">resamplingRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.99998f</span><span class="p">;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="c1">// If the resampling rate is not above 4.0f then set the resampling rate equal</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="c1">// to half the given resampling rate.</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="n">resamplingRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resamplingRateInput</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">sampleState</span><span class="o">-&gt;</span><span class="n">frequencyFixedPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">s32</span><span class="p">)(</span><span class="n">resamplingRate</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">32768.0f</span><span class="p">);</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>If a note is above a sample's pitch cap, then it </p>
+<p><a class="glightbox" href="../../assets/images/samples/piano-range-light.png#only-light" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="" class="on-glb" src="../../assets/images/samples/piano-range-light.png#only-light" /></a>
+<a class="glightbox" href="../../assets/images/samples/piano-range-dark.png#only-dark" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="" class="on-glb" src="../../assets/images/samples/piano-range-dark.png#only-dark" /></a></p>
+<h2 id="common-seq64-errors">Common SEQ64 Errors<a class="headerlink" href="#common-seq64-errors" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="common-seq64-errors-overlapping-notes" name="__tabbed_2" type="radio" /><input id="common-seq64-errors-voice-limit" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="common-seq64-errors-overlapping-notes">Overlapping Notes</label><label for="common-seq64-errors-voice-limit">Voice Limit</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For a channel containing overlapping or stacked notes, SEQ64 will give the following error in the console window or debug output when importing a MIDI file: </p>
+<ul>
+<li><code>Note off (ch=# note=# time=#) received for note that is not on!</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>For a channel containing more than four voices sounding at once, SEQ64 will give the following error in the console window or debug output when importing a MIDI file: </p>
+<ul>
+<li><code>Channel # has more than 4 notes on at a time (at t=#)!</code></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Common SEQ64 Errors</p>
+<ul>
+<li><code>Warning, extremely short note (pitch #, chn #, quarter note~), may be dropped or corrupt nearby note on/offs!</code></li>
+<li><code>Section boundary (e.g. loop point) in the middle of a note, note # channel #! Cutting off the note!</code></li>
+<li><code>Trying to fix section boundary in middle of note failed, broken sequence!</code></li>
+<li><code>Duplicate note on in chan # t=#, ignoring</code></li>
+<li><code>Channel # has more than # notes on at a time (at t=#)!</code></li>
+<li><code>Note off (ch=# note=# time=#) received for note that is not on!</code></li>
+<li><code>Chan # lyr # track has # (odd number of) events!</code></li>
+<li><code>No Master Volume sysex command in the MIDI, adding default 0x##</code></li>
+<li><code>Multiple cc command # (channel # timestamp # first cc #) missing required secondary CC #, setting to zero!</code></li>
+<li><code>Ran off end of track looking for note off!</code></li>
+<li><code>Note Off out of order! Cancelling track import!</code></li>
+<li><code>Note On out of order! Cancelling track import!</code></li>
+<li><code>Zero-length note with no delay afterwards in chn # ly # at t=#, discarding!</code></li>
+<li><code>Zero-length note in chn # ly # at t=#! Making small length instead...</code></li>
+<li><code>No [action] command defined in stype [stype] with all the needed parameters!</code></li>
+<li><code>Want: [idMeaning] value [idValue]</code></li>
+</ul>
+<h2 id="midi-note-division-tables">MIDI Note Division Tables <small>move to separate page</small><a class="headerlink" href="#midi-note-division-tables" title="Permanent link">&para;</a></h2>
+<p>Listed below are notes with their corresponding tick values at common MIDI resolutions.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="midi-note-division-tables-48-ppqn" name="__tabbed_3" type="radio" /><input id="midi-note-division-tables-96-ppqn" name="__tabbed_3" type="radio" /><input id="midi-note-division-tables-120-ppqn" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="midi-note-division-tables-48-ppqn">48 PPQN</label><label for="midi-note-division-tables-96-ppqn">96 PPQN</label><label for="midi-note-division-tables-120-ppqn">120 PPQN</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regular Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Dotted Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Triplet</th>
+<th style="text-align: center;">MIDI Ticks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Whole Note</td>
+<td style="text-align: center;">192</td>
+<td style="text-align: center;">Dotted Whole</td>
+<td style="text-align: center;">288</td>
+<td style="text-align: center;">Whole Triplet</td>
+<td style="text-align: center;">128</td>
+</tr>
+<tr>
+<td style="text-align: center;">Half Note</td>
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">Dotted Half</td>
+<td style="text-align: center;">144</td>
+<td style="text-align: center;">Half Triplet</td>
+<td style="text-align: center;">64</td>
+</tr>
+<tr>
+<td style="text-align: center;">Quarter Note</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">Dotted Quarter</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">Quarter Triplet</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: center;">Eighth Note</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">Dotted Eighth</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">Eighth Triplet</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">16th Note</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Dotted 16th</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">16th Triplet</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">32nd Note</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Dotted 32nd</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">32nd Triplet</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">64th Note</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Dotted 64th</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">64th Triplet</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Omitted Values</p>
+<p>Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regular Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Dotted Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Triplet</th>
+<th style="text-align: center;">MIDI Ticks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Whole Note</td>
+<td style="text-align: center;">384</td>
+<td style="text-align: center;">Dotted Whole</td>
+<td style="text-align: center;">576</td>
+<td style="text-align: center;">Whole Triplet</td>
+<td style="text-align: center;">256</td>
+</tr>
+<tr>
+<td style="text-align: center;">Half Note</td>
+<td style="text-align: center;">192</td>
+<td style="text-align: center;">Dotted Half</td>
+<td style="text-align: center;">288</td>
+<td style="text-align: center;">Half Triplet</td>
+<td style="text-align: center;">128</td>
+</tr>
+<tr>
+<td style="text-align: center;">Quarter Note</td>
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">Dotted Quarter</td>
+<td style="text-align: center;">144</td>
+<td style="text-align: center;">Quarter Triplet</td>
+<td style="text-align: center;">64</td>
+</tr>
+<tr>
+<td style="text-align: center;">Eighth Note</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">Dotted Eighth</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">Eighth Triplet</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr>
+<td style="text-align: center;">16th Note</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">Dotted 16th</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">16th Triplet</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">32nd Note</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Dotted 32nd</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">32nd Triplet</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">64th Note</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Dotted 64th</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">64th Triplet</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Omitted Values</p>
+<p>Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regular Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Dotted Note</th>
+<th style="text-align: center;">MIDI Ticks</th>
+<th style="text-align: center;">Triplet</th>
+<th style="text-align: center;">MIDI Ticks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Whole Note</td>
+<td style="text-align: center;">480</td>
+<td style="text-align: center;">Dotted Whole</td>
+<td style="text-align: center;">720</td>
+<td style="text-align: center;">Whole Triplet</td>
+<td style="text-align: center;">320</td>
+</tr>
+<tr>
+<td style="text-align: center;">Half Note</td>
+<td style="text-align: center;">240</td>
+<td style="text-align: center;">Dotted Half</td>
+<td style="text-align: center;">360</td>
+<td style="text-align: center;">Half Triplet</td>
+<td style="text-align: center;">160</td>
+</tr>
+<tr>
+<td style="text-align: center;">Quarter Note</td>
+<td style="text-align: center;">120</td>
+<td style="text-align: center;">Dotted Quarter</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">Quarter Triplet</td>
+<td style="text-align: center;">80</td>
+</tr>
+<tr>
+<td style="text-align: center;">Eighth Note</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">Dotted Eighth</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">Eighth Triplet</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td style="text-align: center;">16th Note</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">Dotted 16th</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">16th Triplet</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;">32nd Note</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">Dotted 32nd</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">32nd Triplet</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">64th Note</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Dotted 64th</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">64th Triplet</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Omitted Values</p>
+<p>Any omitted values are values which are not cleanly divisible by their longer-duration counterparts.</p>
+</div>
+</div>
+</div>
+</div>
+<p>To create a note division table for a PPQN or tick value not in the above tables, take the regular quarter note tick value of the desired PPQN, then:</p>
+<ol>
+<li>Use the following formula to find the longer duration note's tick values:<ul>
+<li><span class="arithmatex">\(n * 2\)</span></li>
+</ul>
+</li>
+<li>Use the following formula to find the shorter duration note's tick values:<ul>
+<li><span class="arithmatex">\(n / 2\)</span></li>
+</ul>
+</li>
+<li>Use the following formula to find the dotted note values:<ul>
+<li><span class="arithmatex">\((n / 2) + n\)</span></li>
+</ul>
+</li>
+<li>Use the following formula to find the triplet note values:<ul>
+<li><span class="arithmatex">\(n - (n / 3)\)</span></li>
+</ul>
+</li>
+</ol>
+<p>Where <em>n</em> is the value of the regular note to use. As an example, if <em>n</em> equals 48, then a half note would be 96, an eighth note would be 24, a dotted quarter note would be 72, and a quarter triplet would be 32.</p>
+<div class="admonition info">
+<p class="admonition-title">Nintendo 64 Native PPQN</p>
+<p>Sequences in <em>Ocarina of Time</em> and <em>Majora's Mask</em> have a native resolution of 48 PPQN. The default PPQN of FL Studio is 96 PPQN, and the default PPQN of Sekaiju is 120 PPQN. It is easier for a MIDI file to be converted into a sequence if it is already at the native PPQN of <em>Ocarina of Time</em> and <em>Majora's Mask</em> than to have SEQ64 convert it to 48 PPQN.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Note Corruption</p>
+<p>It is recommended not to have notes shorter than a duration of 4 ticks at 48 PPQN in a sequence as notes that are too short can end up corrupting other notes in the sequence; this may cause issues with notes being dropped by a channel during playback.</p>
+</div>
+<h2 id="seq-loop">seq loop <small>move to separate page</small><a class="headerlink" href="#seq-loop" title="Permanent link">&para;</a></h2>
+<p>Section markers, commonly referred to as "loop points", placeholder.</p>
+<p>When SEQ64 is creating sections in a sequence it looks specifically for MIDI meta message markers with a name of "section" and "loop".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="seq-loop-section-1" name="__tabbed_4" type="radio" /><input id="seq-loop-section-2" name="__tabbed_4" type="radio" /><input id="seq-loop-loop-address" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="seq-loop-section-1">Section 1</label><label for="seq-loop-section-2">Section 2</label><label for="seq-loop-loop-address">Loop Address</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@Addr: Data         Command
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>————————————————————————————————————————————————————
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>@0010: D7 8E DB     Initialize Channels
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="hll">@0013: 90 00 7D     Set Channel
+</span><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">@0016: 91 00 F4     Set Channel
+</span><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="hll">@0019: 93 01 02     Set Channel
+</span><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="hll">@001C: 94 01 10     Set Channel
+</span><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="hll">@001F: 96 02 7F     Set Channel
+</span><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="hll">@0022: 97 02 8D     Set Channel
+</span><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="hll">@0025: 99 02 9B     Set Channel
+</span><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="hll">@0028: 9A 02 AB     Set Channel
+</span><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="hll">@002B: 9B 03 2C     Set Channel
+</span><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="hll">@002E: 9F 03 53     Set Channel
+</span><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>@0031: DB 50        Set Volume (SysEx Master Volume)
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>@0033: DD 64        Set Tempo
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>@0035: FD 84 80     Delay [n] Frame(s)
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>@0038: DD 50        Set Tempo
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>@003A: FD 80 C0     Delay [n] Frame(s)
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>@003D: 90 03 61     Set Channel
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>@0040: 91 03 6D     Set Channel
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>@0043: 93 03 80     Set Channel
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>@0046: 94 04 07     Set Channel
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>@0049: 96 05 E6     Set Channel
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>@004C: 97 06 F1     Set Channel
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>@004F: 99 07 01     Set Channel
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>@0052: 9A 07 77     Set Channel
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>@0055: 9B 09 48     Set Channel
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>@0058: 9F 0A 04     Set Channel
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@Addr: Data         Command
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>————————————————————————————————————————————————————
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>@0010: D7 8E DB     Initialize Channels
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>@0013: 90 00 7D     Set Channel
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>@0016: 91 00 F4     Set Channel
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>@0019: 93 01 02     Set Channel
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>@001C: 94 01 10     Set Channel
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>@001F: 96 02 7F     Set Channel
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>@0022: 97 02 8D     Set Channel
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>@0025: 99 02 9B     Set Channel
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>@0028: 9A 02 AB     Set Channel
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>@002B: 9B 03 2C     Set Channel
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>@002E: 9F 03 53     Set Channel
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>@0031: DB 50        Set Volume (SysEx Master Volume)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>@0033: DD 64        Set Tempo
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>@0035: FD 84 80     Delay [n] Frame(s)
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>@0038: DD 50        Set Tempo
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>@003A: FD 80 C0     Delay [n] Frame(s)
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="hll">@003D: 90 03 61     Set Channel
+</span><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="hll">@0040: 91 03 6D     Set Channel
+</span><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="hll">@0043: 93 03 80     Set Channel
+</span><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="hll">@0046: 94 04 07     Set Channel
+</span><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="hll">@0049: 96 05 E6     Set Channel
+</span><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="hll">@004C: 97 06 F1     Set Channel
+</span><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="hll">@004F: 99 07 01     Set Channel
+</span><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="hll">@0052: 9A 07 77     Set Channel
+</span><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="hll">@0055: 9B 09 48     Set Channel
+</span><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="hll">@0058: 9F 0A 04     Set Channel
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@Addr: Data         Command
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>————————————————————————————————————————————————————
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>@0010: D7 8E DB     Initialize Channels
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>@0013: 90 00 7D     Set Channel
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>@0016: 91 00 F4     Set Channel
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>@0019: 93 01 02     Set Channel
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>@001C: 94 01 10     Set Channel
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>@001F: 96 02 7F     Set Channel
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>@0022: 97 02 8D     Set Channel
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>@0025: 99 02 9B     Set Channel
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>@0028: 9A 02 AB     Set Channel
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>@002B: 9B 03 2C     Set Channel
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>@002E: 9F 03 53     Set Channel
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>@0031: DB 50        Set Volume (SysEx Master Volume)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>@0033: DD 64        Set Tempo
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>@0035: FD 84 80     Delay [n] Frame(s)
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>@0038: DD 50        Set Tempo
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>@003A: FD 80 C0     Delay [n] Frame(s)
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="hll">@003D: 90 03 61     Set Channel
+</span><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>@0040: 91 03 6D     Set Channel
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>@0043: 93 03 80     Set Channel
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>@0046: 94 04 07     Set Channel
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>@0049: 96 05 E6     Set Channel
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>@004C: 97 06 F1     Set Channel
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>@004F: 99 07 01     Set Channel
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>@0052: 9A 07 77     Set Channel
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>@0055: 9B 09 48     Set Channel
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>@0058: 9F 0A 04     Set Channel
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="adding-loop-points-in-fl-studio">Adding Loop Points in FL Studio<a class="headerlink" href="#adding-loop-points-in-fl-studio" title="Permanent link">&para;</a></h3>
+<p>When working with FL Studio extra steps have to be taken as FL Studio Does not support SysEx MIDI messages or MIDI marker meta messages. The markers mentioned by FL Studio during export are FL Studio specific markers, they are not MIDI marker meta messages. There are two ways to get around this:</p>
+<ol>
+<li>Open the MIDI file in Sekaiju, or other MIDI sequencing software that supports MIDI marker meta messages. Then add a MIDI marker meta message with the name "section" or "loop".</li>
+<li>Insert MIDI CC#115 in MIDI channel 1. Then conver the MIDI file into a sequence using SEQ64 version 2.0 and above while "FL Studio compatibility mode" is enabled.</li>
+</ol>
+<p>When FL Studio compatibility mode is enabled in SEQ64 version 2.0 and above, SEQ64 will recognize MIDI CC#114 as master volume and MIDI CC#115 as a section marker. These MIDI control change messages must be placed in MIDI channel 1. For MIDI CC#115, its value must not be zero, and each section marker must have a value different than the last section marker.</p>
+<hr />
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Infomation found in <a href="https://ultra64.ca/files/documentation/online-manuals/man/pro-man/pro17/index17.4.html" target="__blank">Chapter 17.4.5: Allocating and Controlling Voices</a><small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></small> of the Nintendo 64 Programming Manual.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-25T19:20:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-25</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-25T19:20:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-25</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/bombchus" class="md-author" title="@bombchus">
+          
+          <img src="https://avatars.githubusercontent.com/u/172332477?v=4&size=72" alt="bombchus">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Index
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../assign-instruments/" class="md-footer__link md-footer__link--next" aria-label="Next: Assigning Instruments">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Assigning Instruments
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": false, "loop": false, "zoomable": false, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

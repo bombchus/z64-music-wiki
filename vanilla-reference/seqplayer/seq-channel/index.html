@@ -1,0 +1,3828 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and resources for creating custom music for Ocarina of Time and Majora's Mask to be used in conjunction with the OOT, MM, and OOTMM Randomizers">
+      
+      
+      
+        <link rel="canonical" href="https://bombchus.github.io/z64-music-wiki/vanilla-reference/seqplayer/seq-channel/">
+      
+      
+        <link rel="prev" href="../seq-player/">
+      
+      
+        <link rel="next" href="../seq-layer/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Sequence Channel Commands - Zelda 64 Custom Music Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+    
+  
+  
+  <style>.md-tag{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.5 7A1.5 1.5 0 0 1 4 5.5 1.5 1.5 0 0 1 5.5 4 1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 5.5 7m15.91 4.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.11 0-2 .89-2 2v7c0 .55.22 1.05.59 1.41l8.99 9c.37.36.87.59 1.42.59.55 0 1.05-.23 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.56-.23-1.06-.59-1.42Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .glightbox-clean .gslide-media {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sequence-channel-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine classes -->
+
+
+  
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Logo Link to home -->
+    <!-- title="Zelda 64 Custom Music Wiki" -->
+    <a
+      href="../../.."
+      class="md-header__button md-logo"
+      aria-label="Zelda 64 Custom Music Wiki"
+      data-md-component="logo"
+    >
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+
+    <!-- Remove Logo Link to Home -->
+    <!--
+    <a
+      title=""
+      class="md-header__button md-logo"
+      aria-label=""
+      data-md-component="logo"
+    >
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    -->
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    
+
+    <!-- Navigation tabs (sticky) -->
+    
+      
+        
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/basic-tools/" class="md-tabs__link">
+          
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../basic/" class="md-tabs__link">
+          
+  
+    
+  
+  Basic Info
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../advanced/" class="md-tabs__link">
+          
+  
+    
+  
+  Advanced Info
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Vanilla References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+    
+
+    <!-- Color palette toggle -->
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+
+    <!-- User preference: color palette -->
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zelda 64 Custom Music Wiki" class="md-nav__button md-logo" aria-label="Zelda 64 Custom Music Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Zelda 64 Custom Music Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools & Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/basic-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/adv-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROM Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/seq64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using SEQ64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../basic/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Basic Info
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Music Creation Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/assign-instruments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assigning Instruments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Categorizing Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/custom-audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Custom Audiobanks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/audio-balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In-Game Audio Balancing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../advanced/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced Info
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/formmask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formmask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audiobanks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audiobanks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/audiobanks/building-audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building an Audiobank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADSR
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            ADSR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/adsr/envelopes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/adsr/abenvelope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audiobank Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/adsr/seqenvelope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Envelopes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Custom Sample Injection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Custom Sample Injection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/sampling/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Injection Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/sampling/wav-conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WAV File Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/sampling/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MIDI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            MIDI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/midi/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced MIDI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/midi/sysex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SysEx Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/midi/rpns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registered Parameter Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music Assembly Language
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Music Assembly Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/mus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Vanilla References
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vanilla References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audiobanks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audiobank Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../samples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sequence Command Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sequence Command Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seq-flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Flow Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seq-player/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Player Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sequence Channel Commands
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Channel Commands
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0xf1-reserve-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xF1: Reserve Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xf0-unreserve-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xF0: Unreserve Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xee-pitch-bend-2-semitones" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEE: Pitch Bend (±2 Semitones)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xed-set-hilo-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xED: Set HiLo Gain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xec-reset-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEC: Reset Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xeb-set-soundfont-instrument" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEB: Set Soundfont &amp; Instrument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xea-stop-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEA: Stop Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe9-set-note-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE9: Set Note Priority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe8-set-channel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE8: Set Channel Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe7-load-channel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE7: Load Channel Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe6-set-codebook-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE6: Set Codebook Offset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe5-set-reverb-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE5: Set Reverb Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe4-dyncall" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE4: Dyncall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe3-set-vibrato-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE3: Set Vibrato Delay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe2-set-vibrato-depth-linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE2: Set Vibrato Depth (Linear)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe1-set-vibrato-rate-linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE1: Set Vibrato Rate (Linear)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe0-set-volume-scale-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE0: Set Volume Scale (Expression)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdf-set-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDF: Set Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xde-set-freqscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDE: Set Freqscale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdd-set-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDD: Set Pan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdc-set-pan-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDC: Set Pan Mix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdb-set-transposition-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDB: Set Transposition (Channel)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xda-set-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDA: Set Envelope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd9-set-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD9: Set Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd8-set-vibrato-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD8: Set Vibrato Depth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd7-set-vibrato-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD7: Set Vibrato Rate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd4-set-reverb" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD4: Set Reverb
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd3-pitch-bend-12-semitones" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD3: Pitch Bend (±12 Semitones)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd2-set-sustain" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD2: Set Sustain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd1-set-note-allocation-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD1: Set Note Allocation Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd0-set-stereo-headset-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD0: Set Stereo Headset Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcf-store-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCF: Store Pointer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xce-unk_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCE: Unk_22
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcd-disable-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCD: Disable Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcc-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCC: [v] = Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCB:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xca-set-mute-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCA: Set Mute Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc9-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC9: [v] &amp;= Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc8-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC8: [v] -= Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc6-set-soundfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC6: Set Soundfont
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc5-dyn-set-dyntable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC5: Dyn Set Dyntable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc4-large-notes-on-short-notes-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC4: Large Notes On (Short Notes Off)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc3-large-notes-off-short-notes-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC3: Large Notes Off (Short Notes On)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc1-set-instrument" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC1: Set Instrument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBE:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbd-set-sample-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBD: Set Sample Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbc-p-cmdarg0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBC: [p] += cmdArg[0]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbb-set-chorus" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBB: Set Chorus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xba-set-gatetime-humanization" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBA: Set Gatetime Humanization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb9-set-velocity-humanization" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB9: Set Velocity Humanization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb8-v-random-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB8: [v] = Random Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb6-read-dyntable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB6: Read Dyntable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb5-read-dyntable-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB5: Read Dyntable Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb4-set-dyntable-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB4: Set Dyntable Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb3-load-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB3: Load Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb2-dynread-sequence-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB2: Dynread Sequence Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb1-clear-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB1: Clear Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb0-set-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB0: Set Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa8-random-range-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA8: Random Range Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa6" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA6:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa5-v-channel-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA5: [v] += Channel Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa4-set-surround-effect-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA4: Set Surround Effect Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa3-sfxstatep-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA3: sfxState[p] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa2-sfxstatecmdarg0-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA2: sfxState[cmdArg[0]] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa1-v-sfxstatep" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA1: [v] = sfxState[p]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa0-v-sfxstatecmdarg0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA0: [v] = sfxState[cmdArg[0]]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x98-dynset-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x98: Dynset Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x90-stop-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x90: Stop Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x88-set-layer-absolute" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x88: Set Layer (Absolute)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x80-test-layer-finished" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x80: Test Layer Finished
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x78-set-layer-relative" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x78: Set Layer (Relative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x70-ioc-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x70: IO[c] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x60-v-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x60: [v] = IO[c]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x50-v-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x50: [v] -= IO[c]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x40-io-read-value-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x40: IO Read Value 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x30-io-write-value-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x30: IO Write Value 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x20-start-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x20: Start Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x10-load-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x10: Load Sample
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x00-channel-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x00: Channel Delay
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seq-layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence Layer Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0xf1-reserve-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xF1: Reserve Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xf0-unreserve-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xF0: Unreserve Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xee-pitch-bend-2-semitones" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEE: Pitch Bend (±2 Semitones)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xed-set-hilo-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xED: Set HiLo Gain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xec-reset-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEC: Reset Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xeb-set-soundfont-instrument" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEB: Set Soundfont &amp; Instrument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xea-stop-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xEA: Stop Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe9-set-note-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE9: Set Note Priority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe8-set-channel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE8: Set Channel Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe7-load-channel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE7: Load Channel Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe6-set-codebook-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE6: Set Codebook Offset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe5-set-reverb-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE5: Set Reverb Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe4-dyncall" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE4: Dyncall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe3-set-vibrato-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE3: Set Vibrato Delay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe2-set-vibrato-depth-linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE2: Set Vibrato Depth (Linear)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe1-set-vibrato-rate-linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE1: Set Vibrato Rate (Linear)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xe0-set-volume-scale-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xE0: Set Volume Scale (Expression)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdf-set-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDF: Set Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xde-set-freqscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDE: Set Freqscale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdd-set-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDD: Set Pan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdc-set-pan-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDC: Set Pan Mix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xdb-set-transposition-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDB: Set Transposition (Channel)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xda-set-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xDA: Set Envelope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd9-set-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD9: Set Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd8-set-vibrato-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD8: Set Vibrato Depth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd7-set-vibrato-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD7: Set Vibrato Rate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd4-set-reverb" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD4: Set Reverb
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd3-pitch-bend-12-semitones" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD3: Pitch Bend (±12 Semitones)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd2-set-sustain" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD2: Set Sustain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd1-set-note-allocation-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD1: Set Note Allocation Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xd0-set-stereo-headset-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xD0: Set Stereo Headset Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcf-store-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCF: Store Pointer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xce-unk_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCE: Unk_22
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcd-disable-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCD: Disable Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcc-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCC: [v] = Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCB:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xca-set-mute-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xCA: Set Mute Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc9-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC9: [v] &amp;= Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc8-v-set-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC8: [v] -= Set Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc6-set-soundfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC6: Set Soundfont
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc5-dyn-set-dyntable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC5: Dyn Set Dyntable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc4-large-notes-on-short-notes-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC4: Large Notes On (Short Notes Off)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc3-large-notes-off-short-notes-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC3: Large Notes Off (Short Notes On)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xc1-set-instrument" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xC1: Set Instrument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBE:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbd-set-sample-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBD: Set Sample Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbc-p-cmdarg0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBC: [p] += cmdArg[0]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xbb-set-chorus" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBB: Set Chorus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xba-set-gatetime-humanization" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xBA: Set Gatetime Humanization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb9-set-velocity-humanization" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB9: Set Velocity Humanization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb8-v-random-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB8: [v] = Random Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb6-read-dyntable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB6: Read Dyntable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb5-read-dyntable-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB5: Read Dyntable Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb4-set-dyntable-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB4: Set Dyntable Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb3-load-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB3: Load Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb2-dynread-sequence-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB2: Dynread Sequence Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb1-clear-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB1: Clear Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xb0-set-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xB0: Set Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa8-random-range-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA8: Random Range Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa7" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA7:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa6" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA6:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa5-v-channel-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA5: [v] += Channel Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa4-set-surround-effect-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA4: Set Surround Effect Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa3-sfxstatep-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA3: sfxState[p] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa2-sfxstatecmdarg0-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA2: sfxState[cmdArg[0]] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa1-v-sfxstatep" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA1: [v] = sfxState[p]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xa0-v-sfxstatecmdarg0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0xA0: [v] = sfxState[cmdArg[0]]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x98-dynset-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x98: Dynset Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x90-stop-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x90: Stop Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x88-set-layer-absolute" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x88: Set Layer (Absolute)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x80-test-layer-finished" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x80: Test Layer Finished
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x78-set-layer-relative" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x78: Set Layer (Relative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x70-ioc-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x70: IO[c] = [v]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x60-v-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x60: [v] = IO[c]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x50-v-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x50: [v] -= IO[c]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x40-io-read-value-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x40: IO Read Value 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x30-io-write-value-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x30: IO Write Value 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x20-start-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x20: Start Channel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x10-load-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x10: Load Sample
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x00-channel-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x00: Channel Delay
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sequence-channel-commands">Sequence Channel Commands<a class="headerlink" href="#sequence-channel-commands" title="Permanent link">&para;</a></h1>
+<div class="grid cards">
+<ul>
+<li>
+<p><img style="width:58.5px; height:auto; vertical-align: middle;" src="../../../assets/images/carpenters.png"> <b>&nbsp;&nbsp;THIS PAGE IS A WIP</b></p>
+<hr />
+<p>This page is a work in progress and requires further editing.</p>
+</li>
+</ul>
+</div>
+<p>placeholder</p>
+<h2 id="0xf1-reserve-notes">0xF1: Reserve Notes<a class="headerlink" href="#0xf1-reserve-notes" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xf0-unreserve-notes">0xF0: Unreserve Notes<a class="headerlink" href="#0xf0-unreserve-notes" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xee-pitch-bend-2-semitones">0xEE: Pitch Bend (±2 Semitones)<a class="headerlink" href="#0xee-pitch-bend-2-semitones" title="Permanent link">&para;</a></h2>
+<p>placeholoder</p>
+<p>sets the pitch bend amount using a scaling of 2. equal to pitch bend with rpn pitch bend data entry of 2 coarse 0 fine.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="0xee-pitch-bend-2-semitones-c" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="0xee-pitch-bend-2-semitones-c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3h2Z"/></svg></span> &nbsp;C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">f32</span><span class="w"> </span><span class="n">gBendPitchTwoSemitonesFrequencies</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="mf">0.890899f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.890899f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.89171f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.892521f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.893333f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.894146f</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="mf">0.89496f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.895774f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.89659f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.897406f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.898222f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.89904f</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="mf">0.899858f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.900677f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.901496f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.902317f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.903138f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.90396f</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="mf">0.904783f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.905606f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.90643f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.907255f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.908081f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.908907f</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="mf">0.909734f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.910562f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.911391f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.91222f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.91305f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.913881f</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="mf">0.914713f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.915545f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.916379f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.917213f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.918047f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.918883f</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="mf">0.919719f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.920556f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.921394f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.922232f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.923072f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.923912f</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="mf">0.924752f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.925594f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.926436f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.927279f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.928123f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.928968f</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="mf">0.929813f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.93066f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.931507f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.932354f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.933203f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.934052f</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="mf">0.934902f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.935753f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.936604f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.937457f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.93831f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.939164f</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="mf">0.940019f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.940874f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.94173f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.942587f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.943445f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.944304f</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="mf">0.945163f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.946023f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.946884f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.947746f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.948608f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.949472f</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="mf">0.950336f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.951201f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.952066f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.952933f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9538f</span><span class="p">,</span><span class="w">   </span><span class="mf">0.954668f</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="mf">0.955537f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.956406f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.957277f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.958148f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.95902f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.959893f</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="mf">0.960766f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.961641f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.962516f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.963392f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.964268f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.965146f</span><span class="p">,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="mf">0.966024f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.966903f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.967783f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.968664f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.969546f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.970428f</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="mf">0.971311f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.972195f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.97308f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.973965f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.974852f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.975739f</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="mf">0.976627f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.977516f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.978405f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.979296f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.980187f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.981079f</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="mf">0.981972f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.982865f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.98376f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.984655f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.985551f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.986448f</span><span class="p">,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="mf">0.987346f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.988244f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.989144f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.990044f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.990945f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.991847f</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="mf">0.992749f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.993653f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.994557f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.995462f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.996368f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.997275f</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="mf">0.998182f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.999091f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">,</span><span class="w">      </span><span class="mf">1.00091f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.001821f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.002733f</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="mf">1.003645f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.004559f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.005473f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.006388f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.007304f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.00822f</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="mf">1.009138f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.010056f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.010975f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.011896f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.012816f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.013738f</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="mf">1.014661f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.015584f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.016508f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.017433f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.018359f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.019286f</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="mf">1.020214f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.021142f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.022071f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.023002f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.023933f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.024864f</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="mf">1.025797f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.026731f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.027665f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0286f</span><span class="p">,</span><span class="w">   </span><span class="mf">1.029536f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.030473f</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="mf">1.031411f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.03235f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.033289f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.03423f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.035171f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.036113f</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="mf">1.037056f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.038f</span><span class="p">,</span><span class="w">    </span><span class="mf">1.038944f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.03989f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.040836f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.041783f</span><span class="p">,</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="mf">1.042731f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.04368f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.04463f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.045581f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.046532f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.047485f</span><span class="p">,</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="mf">1.048438f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.049392f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.050347f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.051303f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.05226f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.053217f</span><span class="p">,</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="mf">1.054176f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.055135f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.056095f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.057056f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.058018f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.058981f</span><span class="p">,</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="mf">1.059945f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.06091f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.061875f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.062842f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.063809f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.064777f</span><span class="p">,</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="mf">1.065746f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.066716f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.067687f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.068658f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.069631f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.070604f</span><span class="p">,</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="mf">1.071578f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.072554f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.07353f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.074507f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.075485f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.076463f</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="mf">1.077443f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.078424f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.079405f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.080387f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.08137f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.082355f</span><span class="p">,</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="mf">1.08334f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.084325f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.085312f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0863f</span><span class="p">,</span><span class="w">   </span><span class="mf">1.087289f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.088278f</span><span class="p">,</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">    </span><span class="mf">1.089268f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.09026f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.091252f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.092245f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.093239f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.094234f</span><span class="p">,</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="mf">1.09523f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.096226f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.097224f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.098223f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.099222f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.100222f</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="mf">1.101224f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.102226f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.103229f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.104233f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.105238f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.106244f</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="mf">1.10725f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.108258f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.109267f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.110276f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.111287f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.112298f</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">    </span><span class="mf">1.11331f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.114323f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.115337f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.116352f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.117368f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.118385f</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">    </span><span class="mf">1.119403f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.120422f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.121441f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.122462f</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h2 id="0xed-set-hilo-gain">0xED: Set HiLo Gain<a class="headerlink" href="#0xed-set-hilo-gain" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xec-reset-channel">0xEC: Reset Channel<a class="headerlink" href="#0xec-reset-channel" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xeb-set-soundfont-instrument">0xEB: Set Soundfont &amp; Instrument<a class="headerlink" href="#0xeb-set-soundfont-instrument" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the soundfont and instrument from said soundfont the channel will use, soundfont must be loaded into ram (0x00 is always loaded into ram. most audiobanks have a soundfont value of 255 however).</p>
+<h2 id="0xea-stop-script">0xEA: Stop Script<a class="headerlink" href="#0xea-stop-script" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe9-set-note-priority">0xE9: Set Note Priority<a class="headerlink" href="#0xe9-set-note-priority" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>dewtermines the note priority to be assigned to the channel. default note priority is 0x03, default "other" prio is 0x01. channel priority is shifted to determine actual priority used for priority calculation. sfx priority is calculated using distance from the camera as well as the default sfx priority (at some point sfx priority goes up by 300).</p>
+<p>priority 0x0A is equal to 625 (if <code>priority &amp; 0x0F != 0</code> then <code>priority = priority</code> and <code>priority = priority &gt;&gt; 4</code> (priority/2^4). if <code>priority != 0</code> then <code>otherprio = priority</code>)</p>
+<p>no matter what sfx will cut voices out because only so many voices can be playing at once, and due to the way sfx are assigned to channels.</p>
+<h2 id="0xe8-set-channel-parameters">0xE8: Set Channel Parameters<a class="headerlink" href="#0xe8-set-channel-parameters" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe7-load-channel-parameters">0xE7: Load Channel Parameters<a class="headerlink" href="#0xe7-load-channel-parameters" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe6-set-codebook-offset">0xE6: Set Codebook Offset<a class="headerlink" href="#0xe6-set-codebook-offset" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe5-set-reverb-index">0xE5: Set Reverb Index<a class="headerlink" href="#0xe5-set-reverb-index" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe4-dyncall">0xE4: Dyncall<a class="headerlink" href="#0xe4-dyncall" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe3-set-vibrato-delay">0xE3: Set Vibrato Delay<a class="headerlink" href="#0xe3-set-vibrato-delay" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe2-set-vibrato-depth-linear">0xE2: Set Vibrato Depth (Linear)<a class="headerlink" href="#0xe2-set-vibrato-depth-linear" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe1-set-vibrato-rate-linear">0xE1: Set Vibrato Rate (Linear)<a class="headerlink" href="#0xe1-set-vibrato-rate-linear" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xe0-set-volume-scale-expression">0xE0: Set Volume Scale (Expression)<a class="headerlink" href="#0xe0-set-volume-scale-expression" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>equal to midi <abbr title="MIDI Control Change #11: Expression">cc11</abbr> channel expression.</p>
+<h2 id="0xdf-set-volume">0xDF: Set Volume<a class="headerlink" href="#0xdf-set-volume" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the total volume for the channel.</p>
+<h2 id="0xde-set-freqscale">0xDE: Set Freqscale<a class="headerlink" href="#0xde-set-freqscale" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xdd-set-pan">0xDD: Set Pan<a class="headerlink" href="#0xdd-set-pan" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>amount of panning to be used in the channel. 0x00 is full left, 0x40 is center, 0x7F is full right. </p>
+<h2 id="0xdc-set-pan-mix">0xDC: Set Pan Mix<a class="headerlink" href="#0xdc-set-pan-mix" title="Permanent link">&para;</a></h2>
+<p>Sets the proportion of panning that comes from the channel for key-based instruments.</p>
+<ul>
+<li>A value of 0x00 (0) will use only the key-based instrument pan values.</li>
+<li>A Value of 0x80 (128) will use only the channel pan value.</li>
+</ul>
+<h2 id="0xdb-set-transposition-channel">0xDB: Set Transposition (Channel)<a class="headerlink" href="#0xdb-set-transposition-channel" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>number of semitones to increase or decrease all notes in the channel by</p>
+<h2 id="0xda-set-envelope">0xDA: Set Envelope<a class="headerlink" href="#0xda-set-envelope" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>address start value must be aligned to even numbers</p>
+<h2 id="0xd9-set-release">0xD9: Set Release<a class="headerlink" href="#0xd9-set-release" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the release rate to be used by the channel. 0x00 is longest decay, 0xFF is shortest decay.</p>
+<h2 id="0xd8-set-vibrato-depth">0xD8: Set Vibrato Depth<a class="headerlink" href="#0xd8-set-vibrato-depth" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xd7-set-vibrato-rate">0xD7: Set Vibrato Rate<a class="headerlink" href="#0xd7-set-vibrato-rate" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xd4-set-reverb">0xD4: Set Reverb<a class="headerlink" href="#0xd4-set-reverb" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the amount of echo instruments in the channel will have. the effect is not 1:1 with midi reverb.</p>
+<h2 id="0xd3-pitch-bend-12-semitones">0xD3: Pitch Bend (±12 Semitones)<a class="headerlink" href="#0xd3-pitch-bend-12-semitones" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the pitch bend amount using a scaling of 12. equal to pitch bend with rpn pitch bend data entry of 12 coarse 0 fine.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="0xd3-pitch-bend-12-semitones-c" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="0xd3-pitch-bend-12-semitones-c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3h2Z"/></svg></span> &nbsp;C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">f32</span><span class="w"> </span><span class="n">gBendPitchOneOctaveFrequencies</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="mf">0.5f</span><span class="p">,</span><span class="w">      </span><span class="mf">0.5f</span><span class="p">,</span><span class="w">      </span><span class="mf">0.502736f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.505488f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.508254f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.511036f</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="mf">0.513833f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.516645f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.519472f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.522315f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.525174f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.528048f</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="mf">0.530938f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.533843f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.536765f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.539702f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.542656f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.545626f</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="mf">0.548612f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.551614f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.554633f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.557669f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.560721f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.563789f</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="mf">0.566875f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.569977f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.573097f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.576233f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.579387f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.582558f</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="mf">0.585746f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.588951f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.592175f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.595415f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.598674f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.60195f</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="mf">0.605245f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.608557f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.611888f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.615236f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.618603f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.621989f</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="mf">0.625393f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.628815f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.632257f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.635717f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.639196f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.642694f</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="mf">0.646212f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.649748f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.653304f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.65688f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.660475f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.664089f</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="mf">0.667724f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.671378f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.675052f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.678747f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.682461f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.686196f</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="mf">0.689952f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.693727f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.697524f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.701341f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.70518f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.709039f</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="mf">0.712919f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.716821f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.720744f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.724689f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.728655f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.732642f</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="mf">0.736652f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.740684f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.744737f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.748813f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.752911f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.757031f</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="mf">0.761175f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.76534f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.769529f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.77374f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.777975f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.782232f</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="mf">0.786513f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.790818f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.795146f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.799497f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.803873f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.808272f</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="mf">0.812696f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.817144f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.821616f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.826112f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.830633f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.835179f</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="mf">0.83975f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.844346f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.848966f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.853613f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.858284f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.862982f</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="mf">0.867704f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.872453f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.877228f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.882029f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.886856f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.891709f</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="mf">0.89659f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.901496f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.90643f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.911391f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.916379f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.921394f</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="mf">0.926436f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.931507f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.936604f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.94173f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.946884f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.952066f</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="mf">0.957277f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.962516f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.967783f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.97308f</span><span class="p">,</span><span class="w">  </span><span class="mf">0.978405f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.98376f</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="mf">0.989144f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.994557f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">,</span><span class="w">      </span><span class="mf">1.005473f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.010975f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.016508f</span><span class="p">,</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="mf">1.022071f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.027665f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.033289f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.038944f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.04463f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.050347f</span><span class="p">,</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="mf">1.056095f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.061875f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.067687f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.07353f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.079405f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.085312f</span><span class="p">,</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">    </span><span class="mf">1.091252f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.097224f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.103229f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.109267f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.115337f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.121441f</span><span class="p">,</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="mf">1.127579f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.13375f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.139955f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.146193f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.152466f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.158773f</span><span class="p">,</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="mf">1.165115f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.171491f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.177903f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.184349f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.190831f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.197348f</span><span class="p">,</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="mf">1.203901f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.210489f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.217114f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.223775f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.230473f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.237207f</span><span class="p">,</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="mf">1.243978f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.250786f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.257631f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.264514f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.271434f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.278392f</span><span class="p">,</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="mf">1.285389f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.292423f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.299497f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.306608f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.313759f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.320949f</span><span class="p">,</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="mf">1.328178f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.335447f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.342756f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.350104f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.357493f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.364922f</span><span class="p">,</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="mf">1.372392f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.379903f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.387455f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.395048f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.402683f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.41036f</span><span class="p">,</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="mf">1.418078f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.425839f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.433642f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.441488f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.449377f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.457309f</span><span class="p">,</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="mf">1.465285f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.473304f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.481367f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.489474f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.497626f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.505822f</span><span class="p">,</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="mf">1.514063f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.522349f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.530681f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.539058f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.547481f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.55595f</span><span class="p">,</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">    </span><span class="mf">1.564465f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.573027f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.581636f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.590292f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.598995f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.607746f</span><span class="p">,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">    </span><span class="mf">1.616545f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.625392f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.634287f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.643231f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.652224f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.661266f</span><span class="p">,</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">    </span><span class="mf">1.670358f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6795f</span><span class="p">,</span><span class="w">   </span><span class="mf">1.688691f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.697933f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.707225f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.716569f</span><span class="p">,</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span><span class="mf">1.725963f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.735409f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.744906f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.754456f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.764058f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.773712f</span><span class="p">,</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">    </span><span class="mf">1.783419f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.793179f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.802993f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.81286f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.822782f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.832757f</span><span class="p">,</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">    </span><span class="mf">1.842788f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.852873f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.863013f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.873209f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.883461f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.893768f</span><span class="p">,</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">    </span><span class="mf">1.904132f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.914553f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.925031f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.935567f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.946159f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.95681f</span><span class="p">,</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">    </span><span class="mf">1.96752f</span><span class="p">,</span><span class="w">  </span><span class="mf">1.978287f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.989114f</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">,</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h2 id="0xd2-set-sustain">0xD2: Set Sustain<a class="headerlink" href="#0xd2-set-sustain" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xd1-set-note-allocation-policy">0xD1: Set Note Allocation Policy<a class="headerlink" href="#0xd1-set-note-allocation-policy" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xd0-set-stereo-headset-effect">0xD0: Set Stereo Headset Effect<a class="headerlink" href="#0xd0-set-stereo-headset-effect" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xcf-store-pointer">0xCF: Store Pointer<a class="headerlink" href="#0xcf-store-pointer" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xce-unk_22">0xCE: Unk_22<a class="headerlink" href="#0xce-unk_22" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xcd-disable-channel">0xCD: Disable Channel<a class="headerlink" href="#0xcd-disable-channel" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xcc-v-set-value">0xCC: [v] = Set Value<a class="headerlink" href="#0xcc-v-set-value" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xcb">0xCB:<a class="headerlink" href="#0xcb" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xca-set-mute-behavior">0xCA: Set Mute Behavior<a class="headerlink" href="#0xca-set-mute-behavior" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xc9-v-set-value">0xC9: [v] &amp;= Set Value<a class="headerlink" href="#0xc9-v-set-value" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xc8-v-set-value">0xC8: [v] -= Set Value<a class="headerlink" href="#0xc8-v-set-value" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xc7">0xC7:<a class="headerlink" href="#0xc7" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xc6-set-soundfont">0xC6: Set Soundfont<a class="headerlink" href="#0xc6-set-soundfont" title="Permanent link">&para;</a></h2>
+<p>placeholde</p>
+<p>sets the audiobank for the channel to pull instruments from. see 0xEB.</p>
+<h2 id="0xc5-dyn-set-dyntable">0xC5: Dyn Set Dyntable<a class="headerlink" href="#0xc5-dyn-set-dyntable" title="Permanent link">&para;</a></h2>
+<p>placholder</p>
+<h2 id="0xc4-large-notes-on-short-notes-off">0xC4: Large Notes On (Short Notes Off)<a class="headerlink" href="#0xc4-large-notes-on-short-notes-off" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets legato on. stacatto off.</p>
+<h2 id="0xc3-large-notes-off-short-notes-on">0xC3: Large Notes Off (Short Notes On)<a class="headerlink" href="#0xc3-large-notes-off-short-notes-on" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets legato off. stacatto on.</p>
+<h2 id="0xc1-set-instrument">0xC1: Set Instrument<a class="headerlink" href="#0xc1-set-instrument" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>sets the instrument from the currently loaded audiobank for the channel to use.</p>
+<h2 id="0xbe">0xBE:<a class="headerlink" href="#0xbe" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xbd-set-sample-start">0xBD: Set Sample Start<a class="headerlink" href="#0xbd-set-sample-start" title="Permanent link">&para;</a></h2>
+<p>placeholder
+loop start</p>
+<h2 id="0xbc-p-cmdarg0">0xBC: [p] += cmdArg[0]<a class="headerlink" href="#0xbc-p-cmdarg0" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xbb-set-chorus">0xBB: Set Chorus<a class="headerlink" href="#0xbb-set-chorus" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>also called comb filter, the devs called it chorus; they are essentially the same thing with different names. equivalent to MIDI chorus to create a second delayed sample play in the channel. arg 1 defines the delay as a codebook offset(?), and arg 2 determines the chorus amount/volume. the effect is not 1:1 with midi chorus.</p>
+<p>arg1 value should always have a second nibble value of <code>0</code>, the game will crash or produce static or robotic noise otherwise. only put data in the first nibble of the u8 byte.</p>
+<h2 id="0xba-set-gatetime-humanization">0xBA: Set Gatetime Humanization<a class="headerlink" href="#0xba-set-gatetime-humanization" title="Permanent link">&para;</a></h2>
+<p>bugged</p>
+<p>this command uses a parameter from velocity humanization to affect the amount of gatetime humanization.</p>
+<h2 id="0xb9-set-velocity-humanization">0xB9: Set Velocity Humanization<a class="headerlink" href="#0xb9-set-velocity-humanization" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>this command sets a random amount of variation in the velocity of notes, or humanization.</p>
+<h2 id="0xb8-v-random-value">0xB8: [v] = Random Value<a class="headerlink" href="#0xb8-v-random-value" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb7">0xB7:<a class="headerlink" href="#0xb7" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb6-read-dyntable">0xB6: Read Dyntable<a class="headerlink" href="#0xb6-read-dyntable" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb5-read-dyntable-large">0xB5: Read Dyntable Large<a class="headerlink" href="#0xb5-read-dyntable-large" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb4-set-dyntable-large">0xB4: Set Dyntable Large<a class="headerlink" href="#0xb4-set-dyntable-large" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb3-load-filter">0xB3: Load Filter<a class="headerlink" href="#0xb3-load-filter" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb2-dynread-sequence-large">0xB2: Dynread Sequence Large<a class="headerlink" href="#0xb2-dynread-sequence-large" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb1-clear-filter">0xB1: Clear Filter<a class="headerlink" href="#0xb1-clear-filter" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xb0-set-filter">0xB0: Set Filter<a class="headerlink" href="#0xb0-set-filter" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0xa8-random-range-large">0xA8: Random Range Large<a class="headerlink" href="#0xa8-random-range-large" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! COMMAND IS 0xBD IN OOT !!</p>
+<h2 id="0xa7">0xA7:<a class="headerlink" href="#0xa7" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa6">0xA6:<a class="headerlink" href="#0xa6" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa5-v-channel-index">0xA5: [v] += Channel Index<a class="headerlink" href="#0xa5-v-channel-index" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa4-set-surround-effect-index">0xA4: Set Surround Effect Index<a class="headerlink" href="#0xa4-set-surround-effect-index" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa3-sfxstatep-v">0xA3: sfxState[p] = [v]<a class="headerlink" href="#0xa3-sfxstatep-v" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa2-sfxstatecmdarg0-v">0xA2: sfxState[cmdArg[0]] = [v]<a class="headerlink" href="#0xa2-sfxstatecmdarg0-v" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa1-v-sfxstatep">0xA1: [v] = sfxState[p]<a class="headerlink" href="#0xa1-v-sfxstatep" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0xa0-v-sfxstatecmdarg0">0xA0: [v] = sfxState[cmdArg[0]]<a class="headerlink" href="#0xa0-v-sfxstatecmdarg0" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<p>!! NOT AVAILABLE IN OOT !!</p>
+<h2 id="0x98-dynset-layer">0x98: Dynset Layer<a class="headerlink" href="#0x98-dynset-layer" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x90-stop-layer">0x90: Stop Layer<a class="headerlink" href="#0x90-stop-layer" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x88-set-layer-absolute">0x88: Set Layer (Absolute)<a class="headerlink" href="#0x88-set-layer-absolute" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x80-test-layer-finished">0x80: Test Layer Finished<a class="headerlink" href="#0x80-test-layer-finished" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x78-set-layer-relative">0x78: Set Layer (Relative)<a class="headerlink" href="#0x78-set-layer-relative" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x70-ioc-v">0x70: IO[c] = [v]<a class="headerlink" href="#0x70-ioc-v" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x60-v-ioc">0x60: [v] = IO[c]<a class="headerlink" href="#0x60-v-ioc" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x50-v-ioc">0x50: [v] -= IO[c]<a class="headerlink" href="#0x50-v-ioc" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x40-io-read-value-2">0x40: IO Read Value 2<a class="headerlink" href="#0x40-io-read-value-2" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x30-io-write-value-2">0x30: IO Write Value 2<a class="headerlink" href="#0x30-io-write-value-2" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x20-start-channel">0x20: Start Channel<a class="headerlink" href="#0x20-start-channel" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x10-load-sample">0x10: Load Sample<a class="headerlink" href="#0x10-load-sample" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<h2 id="0x00-channel-delay">0x00: Channel Delay<a class="headerlink" href="#0x00-channel-delay" title="Permanent link">&para;</a></h2>
+<p>placeholder</p>
+<hr />
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-25T19:20:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-25</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-25T19:20:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-25</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/bombchus" class="md-author" title="@bombchus">
+          
+          <img src="https://avatars.githubusercontent.com/u/172332477?v=4&size=72" alt="bombchus">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../seq-player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sequence Player Commands">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Sequence Player Commands
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../seq-layer/" class="md-footer__link md-footer__link--next" aria-label="Next: Sequence Layer Commands">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sequence Layer Commands
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 <a href="https://github.com/bombchus" target="_blank" rel="noopener">Bombchus</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": false, "loop": false, "zoomable": false, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
